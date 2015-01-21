@@ -2,12 +2,12 @@
 %
 %  $Description: Author guidelines and sample document in LaTeX 2.09$ 
 %
-%  $Author: ienne $
-%  $Date: 1995/09/15 15:20:59 $
-%  $Revision: 1.4 $
+%  $Author: John Burchell & William Granli $
+%  $Date: 2015/01/21 15:20:59 $
+%  $Revision: 1.0
 %
 
-\documentclass[times, 10pt,twocolumn]{article} 
+\documentclass[times, 10pt,twocolumn]{IEEEtran} 
 \usepackage{latex8}
 \usepackage{times}
 
@@ -20,22 +20,17 @@
 %------------------------------------------------------------------------- 
 \begin{document}
 
-\title{\LaTeX\ Author Guidelines 
-       for {\boldmath $8.5 \times 11$-Inch} Proceedings Manuscripts}
+\title{Title of the document here}
 
-\author{Paolo Ienne\\
-Swiss Federal Institute of Technology\\ Microcomputing Laboratory \\ IN-F 
-Ecublens, 1015 Lausanne, Switzerland\\ Paolo.Ienne@di.epfl.ch\\
-% For a paper whose authors are all at the same institution, 
-% omit the following lines up until the closing ``}''.
-% Additional authors and addresses can be added with ``\and'', 
-% just like the second author.
-\and
-Second Author\\
-Institution2\\
-First line of institution2 address\\ Second line of institution2 address\\ 
-SecondAuthor@institution2.com\\
+% author names and affiliations
+\author{\IEEEauthorblockN{
+  John Burchell\IEEEauthorrefmark{1} and
+  William Granli\IEEEauthorrefmark{1}}
+
+  \IEEEauthorblockA{\IEEEauthorrefmark{1}john.a.burchell, william.granli@gmail.com}
+
 }
+
 
 \maketitle
 \thispagestyle{empty}
