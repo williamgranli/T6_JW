@@ -1,0 +1,6 @@
+#Ignores for Latex
+*.aux
+*.log
+*.pdf
+*.fls
+*.blg
