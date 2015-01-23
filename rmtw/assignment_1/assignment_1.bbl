@@ -1,13 +1,20 @@
 \begin{thebibliography}{1}\setlength{\itemsep}{-1ex}\small
 
-\bibitem{ex1}
-I.~M. Author.
-\newblock Some related article {I} wrote.
-\newblock {\em Some Fine Journal}, 99(7):1--100, January 1999.
+\bibitem{buse2010learning}
+R.~P. Buse and W.~R. Weimer.
+\newblock Learning a metric for code readability.
+\newblock {\em Software Engineering, IEEE Transactions on}, 36(4):546--558,
+  2010.
 
-\bibitem{ex2}
-A.~N. Expert.
-\newblock {\em A Book He Wrote}.
-\newblock His Publisher, Erewhon, NC, 1999.
+\bibitem{hansen2013makes}
+M.~Hansen, R.~L. Goldstone, and A.~Lumsdaine.
+\newblock What makes code hard to understand?
+\newblock {\em arXiv preprint arXiv:1304.5257}, 2013.
+
+\bibitem{posnett2011simpler}
+D.~Posnett, A.~Hindle, and P.~Devanbu.
+\newblock A simpler model of software readability.
+\newblock In {\em Proceedings of the 8th Working Conference on Mining Software
+  Repositories}, pages 73--82. ACM, 2011.
 
 \end{thebibliography}
