@@ -17,6 +17,11 @@ J.~L. Elshoff and M.~Marcotty.
 \newblock Improving computer program readability to aid modification.
 \newblock {\em Communications of the ACM}, 25(8):512--521, 1982.
 
+\bibitem{halstead1977elements}
+M.~H. Halstead.
+\newblock Elements of software science.
+\newblock 1977.
+
 \bibitem{hansen2013makes}
 M.~Hansen, R.~L. Goldstone, and A.~Lumsdaine.
 \newblock What makes code hard to understand?
