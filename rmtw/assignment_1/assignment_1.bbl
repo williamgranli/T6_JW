@@ -1,10 +1,21 @@
 \begin{thebibliography}{1}\setlength{\itemsep}{-1ex}\small
 
+\bibitem{aggarwal2002integrated}
+K.~K. Aggarwal, Y.~Singh, and J.~K. Chhabra.
+\newblock An integrated measure of software maintainability.
+\newblock In {\em Reliability and maintainability symposium, 2002. Proceedings.
+  Annual}, pages 235--241. IEEE, 2002.
+
 \bibitem{buse2010learning}
 R.~P. Buse and W.~R. Weimer.
 \newblock Learning a metric for code readability.
 \newblock {\em Software Engineering, IEEE Transactions on}, 36(4):546--558,
   2010.
+
+\bibitem{elshoff1982improving}
+J.~L. Elshoff and M.~Marcotty.
+\newblock Improving computer program readability to aid modification.
+\newblock {\em Communications of the ACM}, 25(8):512--521, 1982.
 
 \bibitem{hansen2013makes}
 M.~Hansen, R.~L. Goldstone, and A.~Lumsdaine.
