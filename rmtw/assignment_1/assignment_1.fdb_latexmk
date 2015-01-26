@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex assignment_1"] 1422276374 "assignment_1.aux" "assignment_1.bbl" "assignment_1" 1422276374
+["bibtex assignment_1"] 1422282660 "assignment_1.aux" "assignment_1.bbl" "assignment_1" 1422285546
   "./assignment_1.bst" 1422022790 20659 905972de4c2ed361a9e19361a92cf806 ""
-  "assignment_1.aux" 1422276374 1186 0c577f16ccb22bfcb862dde52e066a9a ""
+  "assignment_1.aux" 1422285546 1332 aede6d34905ddc090d356dc422cd6a49 ""
   "assignment_1.bcf" 0 -1 0 ""
-  "assignment_1.bib" 1422274878 1711 e615caea7292197ad16c2fff4c1b5d84 ""
+  "assignment_1.bib" 1422281800 2054 1e75f7c7af73f61712f8ad17e3744721 ""
   (generated)
-  "assignment_1.blg"
   "assignment_1.bbl"
-["pdflatex"] 1422276374 "/home/john/Desktop/T6/rmtw/assignment_1/assignment_1.tex" "/home/john/Desktop/T6/rmtw/assignment_1/assignment_1.pdf" "assignment_1" 1422276374
+  "assignment_1.blg"
+["pdflatex"] 1422285546 "/home/john/Desktop/T6/rmtw/assignment_1/assignment_1.tex" "/home/john/Desktop/T6/rmtw/assignment_1/assignment_1.pdf" "assignment_1" 1422285546
   "/etc/texmf/web2c/texmf.cnf" 1413466443 1101 af7716885e081ab43982cab7b4672c1a ""
-  "/home/john/Desktop/T6/rmtw/assignment_1/assignment_1.aux" 1422276374 1186 0c577f16ccb22bfcb862dde52e066a9a ""
-  "/home/john/Desktop/T6/rmtw/assignment_1/assignment_1.tex" 1422276339 6687 da566673bc2d5191690e3180ded5a97d ""
+  "/home/john/Desktop/T6/rmtw/assignment_1/assignment_1.aux" 1422285546 1332 aede6d34905ddc090d356dc422cd6a49 ""
+  "/home/john/Desktop/T6/rmtw/assignment_1/assignment_1.tex" 1422285544 8769 c2f19e3a2df6cf45ec720136644e433c ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1136768653 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -46,15 +46,15 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1392645748 31083 1dfd8bf685ce0009c40532fedf8a7c53 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1413466640 1346346 7f2b8b715a9ddb095afe3697a6ba02b5 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1413466563 3822875 e3597fde5097d5008d8ea7cd1e014038 ""
-  "assignment_1.aux" 1422276374 1186 0c577f16ccb22bfcb862dde52e066a9a ""
-  "assignment_1.bbl" 1422276374 1248 f59b5c03c2d2b5039bf19864a782e226 "bibtex assignment_1"
-  "assignment_1.tex" 1422276339 6687 da566673bc2d5191690e3180ded5a97d ""
+  "assignment_1.aux" 1422285546 1332 aede6d34905ddc090d356dc422cd6a49 ""
+  "assignment_1.bbl" 1422282660 1516 52517c8f69a01f0e6dbea24797d6154b "bibtex assignment_1"
+  "assignment_1.tex" 1422285544 8769 c2f19e3a2df6cf45ec720136644e433c ""
   "latex8.sty" 1422022790 4821 b677c7b0074f481f290aa9f93ec8774d ""
   (generated)
-  "assignment_1.aux"
-  "/home/john/Desktop/T6/rmtw/assignment_1/assignment_1.pdf"
   "/home/john/Desktop/T6/rmtw/assignment_1/assignment_1.log"
-  "/home/john/Desktop/T6/RMTW/Assignment_1/assignment_1.log"
-  "/home/john/Desktop/T6/RMTW/Assignment_1/assignment_1.pdf"
   "assignment_1.log"
+  "/home/john/Desktop/T6/rmtw/assignment_1/assignment_1.pdf"
+  "/home/john/Desktop/T6/RMTW/Assignment_1/assignment_1.log"
+  "assignment_1.aux"
+  "/home/john/Desktop/T6/RMTW/Assignment_1/assignment_1.pdf"
   "assignment_1.pdf"

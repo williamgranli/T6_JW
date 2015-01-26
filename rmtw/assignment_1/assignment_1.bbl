@@ -12,6 +12,12 @@ R.~P. Buse and W.~R. Weimer.
 \newblock {\em Software Engineering, IEEE Transactions on}, 36(4):546--558,
   2010.
 
+\bibitem{easterbrook2008selecting}
+S.~Easterbrook, J.~Singer, M.-A. Storey, and D.~Damian.
+\newblock Selecting empirical methods for software engineering research.
+\newblock In {\em Guide to advanced empirical software engineering}, pages
+  285--311. Springer, 2008.
+
 \bibitem{elshoff1982improving}
 J.~L. Elshoff and M.~Marcotty.
 \newblock Improving computer program readability to aid modification.
