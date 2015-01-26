@@ -50,14 +50,18 @@
 
 %------------------------------------------------------------------------- 
 \Section{Introduction}
-Comparisons between programming languages are difficult to perform, due to characteristical differences between languages, such as syntax. One aspect of code is its readability, which in turn is a determining factor of a piece of software's quality and maintainability \cite{aggarwal2002integrated, elshoff1982improving}. Buse \& Westley define readability as ``a property that influences how easily a given piece of code can be read and understood'' \cite{buse2010learning}. Existing studies related to the concept of code readability focus on differences between specific languages, which can be seen in \cite{buse2010learning}. Buse \& Westley introduce a metrics system for measuring the readability of code, and Java is the language of choice in the study \cite{buse2010learning}. Buse \& Westley also discuss readability and its impact on programming language design, but they do not explore the readability differences between languages \cite{buse2010learning}. Posnett et al. \cite{posnett2011simpler} have further developed Buse \& Westley's metrics model to provide a simpler and more practical model which builds on size metrics as well as Halstead metrics \cite{halstead1977elements}. 
- 
-2. Existing literature
-  No previous studies have compared the readability of different programming languages. There are however existing papers that explore the concept of readability. \cite{buse2010learning} talks about readability and presents a metric system to automatically measure readability. \cite{posnett2011simpler} build on \cite{buse2010learning}'s concept to provide a simpler and more accessible metric system. \cite{hansen2013makes} focus on what makes code hard to read and presents those factors. 
- 3. Why is it important?
-\cite{aggarwal2002integrated} talks about code maintainability and mentions readability as a factor related to maintainability. 
+%Problem and definition
+Comparisons between programming languages are difficult to perform, due to inherent differences between languages, such as syntax. One aspect of code is its readability, which in turn is a determining factor of a piece of software's quality and maintainability \cite{aggarwal2002integrated, elshoff1982improving}. Buse \& Westley define readability as ``a property that influences how easily a given piece of code can be read and understood'' \cite{buse2010learning}. 
+\newline
 
-\cite{elshoff1982improving} also talks about readability and how it impacts maintainability. \cite{elshoff1982improving} brings up specific coding standards/conventions/practices to show differences in readability. 
+%%Existing literature
+Existing studies in the field focus on readability within of different coding styles for a set language, which can be seen in for example \cite{buse2010learning}. Buse \& Westley introduce a metrics system for measuring the readability of code, and Java is the language of choice in the study \cite{buse2010learning}. Buse \& Westley also discuss readability and its impact on programming language design, but they do not explore the readability differences between languages \cite{buse2010learning}. Posnett et al. \cite{posnett2011simpler} have further developed Buse \& Westley's metrics model to provide a simpler and more practical model which builds on size metrics as well as Halstead metrics \cite{halstead1977elements}. Hanen et al. have presented a study in the field which aims to identify details in code which makes it hard to read and the main focus is put on syntactical elements such as indentation or curly brackets \cite{hansen2013makes}. Even though direct comparisons between languages were not presented in the study \cite{hansen2013makes}, conclusions related to this can be drawn thanks to the fact that these syntactical elements only exist in some languages. 
+\newline
+
+The importance of code readability may be overlooked, since it does not directly affect runtime performance. Aggarwal et al., however claim that code's readability impacts it's maintainability \cite{aggarwal2002integrated}. This claim is also supported by \cite{elshoff1982improving} et al. who also introduce examples of certain coding practices that are more readable and maintainable than others \cite{elshoff1982improving}.
+\newline
+
+
 
 
 \textbf{Industry}: To compare code of different language to be able to prioritize them. \\
