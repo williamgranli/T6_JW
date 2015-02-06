@@ -66,10 +66,10 @@ The importance of code readability may be overlooked, since it does not directly
 
 %Introduction, specifying why this is urgent, needed etc from the notes above
 
-Both industry and academia face the problem of maintainability. As stated previously, many times the readability of code affects the codes maintainability. This study could help some in industry to pick languages for certain tasks for maintainability reasons alone. Further studies could be conducted by to determine if there is a correlation between the popularity of projects and the readability of their languages. Furthermore, academia would be interested in which languages are more popular and useful for learning. By further investigating the design of the programming languages themselves, future languages which are developed could build upon the success of those which came before them.
+Industry and academia both face the problem of code maintainability, and by association, readability and as was highlighte previously, the readability of code can affect its maintainability. This study could help some in industry to decide which languages should be used if maintainability is of high concern. Further studies could be conducted by to determine if there is a correlation between the popularity of projects and the readability of their languages. Furthermore, academia would be interested in which languages are more popular and those that have a higher readability, especially for novice developers. Further investigation into the design of these programming languages could yield insights into what makes them so popular and potentially well suited for teaching.
 \newline
 
-The purpose of this survey study is therefore to test what are the differences in readability between five common and well known programming languages. With the aim of developing a metric to describe the readability of a given program, which takes into account the inherent readability of the language in which it is written.
+The purpose of this survey study is therefore to test what are the differences in readability between five common and well known programming languages. With the aim of suggesting a metric which describes the readability of a given program, taking into account the inherent readability of the language in which it is written.
 \newline
 
 The purpose of this survey study is therefore to find what are the differences in readability between five common and well known programming languages. With the aim of developing a metric to describe the readability of a given program, which takes into account the inherent readability of the language in which it is written.
@@ -78,7 +78,7 @@ The purpose of this survey study is therefore to find what are the differences i
 The Independent variables will be defined as the experience, occupation, preferred language, least preferred language and the working language of the participant. The dependent variable in this example will be the readability of the language.
 \newline
 
-The survey data will be collected from professionals, teachers, students and hobbyists via a series of on-line surveys. The respondents will then be asked to review a series of code snippets from popular languages and will be subsequently asked to rate their readability. 
+The survey data will be collected from professionals, teachers, students and hobbyists via a series of on-line surveys. The respondents will then be asked some information about their development background. The will then be asked to review a series of code snippets from popular languages and to rate their readability. 
 \newline
 
 %------------------------------------------------------------------------- 
@@ -98,7 +98,20 @@ The results of RQ1 will then be used to answer the following two sub research qu
 
 %------------------------------------------------------------------------- 
 \Section{Methodology}
-The main purpose of this study is to discover differences in the perceived readability of code. The study will be carried out in three phases. In phase 1, we will identify the target population. In phase 2, the survey will be designed and carried out. In phase 3, the results of the survey will be analysed. The investigation method will be in the form of a questionnaire. The main argument for the questionnaire is that the survey must be distributed to a large amount of people. A quantitative is also well-suited for this study since there are no existing publications that explore readability differences between languages. 
+The main purpose of this study is to discover differences in the perceived readability of code. The study will be carried out in three phases. In phase 1, we will identify the target population. In phase 2, the survey will be designed and carried out. In phase 3, the results of the survey will be analysed. The investigation method will be in the form of a questionnaire. The main argument for the questionnaire is that the survey must be distributed to a large amount of people. A quantitative study is also well-suited for this study since there are no existing publications that explore readability differences between languages. 
+
+Longitudinal servey - Collected over time (cross-sectional is one isntance in time)
+Purpose: To generalise perceived readability of different programming languages by novices - Ref papers from the book
+Indicate why a survey is the preferred type of data collection - Consider advantages of surveys (economy and design and rapid data collection - (Fowler 2009) -> discuss advantage of identifying attributes of a large population from a small group of individuals 
+Form: Internet based (nesbary 2000, sue \& ritter 2012) - Provide a rationale for its use, strengths and weaknesses. Costs, data availability and convenience
+  peer reviewed with collegues, tested on a small group that we supervise
+
+  Population: limited to the SEM program. (Count students if it's available somewhere).
+  Cluster sampling / single stage - Not possible to get all the names of all possible respondents - Babbie 2007
+  nonprobability sample - convenience sample - chosen on their availability and convenience. Not ideal, but best we can probably do considering its single stage etc (ideally we would do random sampling)
+  stratification will not occur. Ideally we will have a good representation, but again, due to not having all the names and the convenience method, we cannot ensure that the population is stratisfied plus irrelevent
+  total at SEM = ~300. (Count how many in the facebook groups, that's the sample size - Estimate how many will actually respond, how much error we can tolerate (\%4 probably - confidence interval) - Use the sample size method by fowler?
+
 
 \SubSection{Identifying the Population}
 As mentioned before, the goal of this study is to identify the inherent differences in readability of programming languages. To research this, a broad population is required, to avoid results influenced by a possible correlation between the perception of readability and the previously defined independent variables. As such, a research survey has been conducted. This reasoning is reinforced by Easterbrook et al. \cite{easterbrook2008selecting} who state ``Survey research is used to identify the characteristics of a broad population of individuals''. 
@@ -107,33 +120,49 @@ As mentioned before, the goal of this study is to identify the inherent differen
 The population of this survey is the students of the Software Engineering and Management programme (SEM) at Gothenburg University. The industry is left out of the population since they are more likely to have a lot of experience with certain languages which may cause them to be biased towards that language. The SEM program was chosen due to it being accessible for the researchers. 
 \newline
 
-
+TABLE HERE
+Variable : RQ : Item on Survey
 
 \SubSection{Questionnaire Design}
-TODO: 
-Write briefly about why we chose the languages we chose. (different paradigms etc)
-Write some formal stuff about how the survey was designed. (Shit about open-ended questions etc.)
-Write which tool was used etc. 
 
+The five languages represented in the questionnaire were C++, Erlang, Go, Java and Python. They were chosen for multiple reasons. One being that all the students in the SE\&M course will have taken an introductory Java programming course by now and as such should be familiar with the syntax. The other languages were chosen for similar reasons. Erlang was chosen as it's the first language taught after Java and it uses a different development paradigm. C++ was chosen as it is used heavily in project course during the 4th semester and python was chosen for similars reasons. Golang was picked as we wanted to see how students would perceive a language that is popular but has not really entered the academic landscape as of yet.
 
-Write how the questionnaire was distributed. (I.e. facebook pages of all 3 years --> Sampling bias is a considerable challenge in research \cite{easterbrook2008selecting} and thus the questionnaire will be distributed to the Facebook page of all three years (and not only 1st years with Java experience, for example).  
+Google Sheets was decided upon as the appropriate tool of choice for our survey. It has a good reputation for use in surveys and it was recommended to us by Branson. We also have prior experience the tool from previous research projects.
+The questionnaire consists of structured and partially structured questions. The questions are followed by two code snippets per language mentioned previously with a scale requesting the respondent to rate whether they feel that the code is easy or difficult to read in the style of the Likert Scale. The questions were written with as little ambiguity as possible. They were field tested by colleagues in a small example of our survey. Examples of these questions can be found in ***Appendix Item Here***. The aforementioned chart shows how some of our independent variables, research questions and survey items correlate.
 
+Taking into consideration potential biases that may occur, the code snippets were designed so that the code should be easily understood by first year students who have only had exposure to Java. For example, each code snippet has a standard ``Hello World'' example and a simple for loop with a counter that is returned at the conclusion of the loop. The only exception to this is Erlang. While erlang does support for loops, recursion is the tool of choice to perform iterations. As such, we feel it was a valid example and should not affect the results for this specific language drastically considering, by this point and time in their education, all SE\&M students will have been exposed to recursion. The choices of languages do leave us open to a potential validity and bias issue. Inexperienced students who have only seen Java may rate it as easily readable purely because they are only familiar with Java, this is why the relative level of experience is requested first in the survey, so that we might be able to pick up this potential bias during the results analysis. To help alleviate this issue, the questionnaire was distributed to all three year groups currently studying at SE\&M (2012,2013,2014).
+
+Other potential validity threats we must take into consideration are those that arise from the nature of survey. Since we are performing single stage data collection, the respondents of the surveys are answering our questions at their convenience. This opens the door for some validity threats, such as the willingness to participate. Our data are at the mercy of those willing to participate; we cannot anticipate how many will respond. There is little incentive for the respondents to partake in the survey other than for their own self interest.
+
+Non responses are another issue we will likely face. *** add more?
 
 
 \SubSection{Results Analysis}
 TODO:
 * Describe  and motive  method  for analyzing the data
 
+Results Anal
+- Present data 
+- Check for response bias
+- conduct descriptive analysis
+- collapse items into scales
+- check for reliability of scales
+- Run inferential statistics to answer research question or results
+** If number is too small, do we stop there?
+- How will the results be interpreted?
+
 
 \SubSection{Threats to Validity}
 Bias in languages and experience
 
+  Validity threats:
+    Willingness to participate - There is no incentive other than that they might have to do this next year
+    The results could be meaningless
+    How we will handle response bias:
+      Non responses, how we handle them
+  Potential errors - sampling errors and biases
 
-
-
-
-
-
+  Sampling bias is a considerable challenge in research \cite{easterbrook2008selecting}
 
 
 \bibliographystyle{assignment_1}
