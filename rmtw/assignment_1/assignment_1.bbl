@@ -23,15 +23,26 @@ J.~L. Elshoff and M.~Marcotty.
 \newblock Improving computer program readability to aid modification.
 \newblock {\em Communications of the ACM}, 25(8):512--521, 1982.
 
+\bibitem{fowler2008survey}
+F.~J. Fowler~Jr.
+\newblock {\em Survey research methods}.
+\newblock Sage publications, 2008.
+
 \bibitem{halstead1977elements}
 M.~H. Halstead.
 \newblock Elements of software science.
-\newblock 1977.
+\newblock {\em test}, 1977.
 
 \bibitem{hansen2013makes}
 M.~Hansen, R.~L. Goldstone, and A.~Lumsdaine.
 \newblock What makes code hard to understand?
 \newblock {\em arXiv preprint arXiv:1304.5257}, 2013.
+
+\bibitem{host2000using}
+M.~H{\"o}st, B.~Regnell, and C.~Wohlin.
+\newblock Using students as subjects—a comparative study of students and
+  professionals in lead-time impact assessment.
+\newblock {\em Empirical Software Engineering}, 5(3):201--214, 2000.
 
 \bibitem{posnett2011simpler}
 D.~Posnett, A.~Hindle, and P.~Devanbu.

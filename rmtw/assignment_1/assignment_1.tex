@@ -11,7 +11,7 @@
 \usepackage{latex8}
 \usepackage{times}
 
-
+\usepackage[utf8]{inputenc}
 
 
 %\documentstyle[times,art10,twocolumn,latex8]{article}
@@ -23,7 +23,7 @@
 %------------------------------------------------------------------------- 
 \begin{document}
 
-\title{Title of the document here}
+\title{Measuring the Inherent Readability of Five Common Programming Languages}
 
 % author names and affiliations
 \author{\IEEEauthorblockN{
@@ -68,7 +68,7 @@ The survey data will be collected from professionals, teachers, students and hob
 \newline
 
 %------------------------------------------------------------------------- 
-\SubSection{Research Question}
+\SubSection{Research Questions}
 This study has been designed with one main research question in mind:
 \begin{itemize}
 \item \textit{RQ1:} What are the measurable differences in readability between programming languages?
@@ -84,51 +84,35 @@ The results of RQ1 will then be used to answer the following two sub research qu
 
 %------------------------------------------------------------------------- 
 \Section{Methodology}
-The main purpose of this study is to discover differences in the perceived readability of code. The study will be carried out in three phases. In phase 1, we will identify the target population. In phase 2, the survey will be designed and carried out. In phase 3, the results of the survey will be analysed. The investigation method will be in the form of a questionnaire. The main argument for the questionnaire is that the survey must be distributed to a large amount of people. A quantitative study is also well-suited for this study since there are no existing publications that explore readability differences between languages. 
-
-Longitudinal servey - Collected over time (cross-sectional is one isntance in time)
-Purpose: To generalise perceived readability of different programming languages by novices - Ref papers from the book
-Indicate why a survey is the preferred type of data collection - Consider advantages of surveys (economy and design and rapid data collection - (Fowler 2009) -> discuss advantage of identifying attributes of a large population from a small group of individuals 
-Form: Internet based (nesbary 2000, sue \& ritter 2012) - Provide a rationale for its use, strengths and weaknesses. Costs, data availability and convenience
-  peer reviewed with collegues, tested on a small group that we supervise
-
-  Population: limited to the SEM program. (Count students if it's available somewhere).
-  Cluster sampling / single stage - Not possible to get all the names of all possible respondents - Babbie 2007
-  nonprobability sample - convenience sample - chosen on their availability and convenience. Not ideal, but best we can probably do considering its single stage etc (ideally we would do random sampling)
-  stratification will not be enforced. Ideally we will have 1/3,1/3,1/3 but we cannot enfore. The groups are open and public
-  total at SEM = ~300. (Count how many in the facebook groups, that's the sample size - Estimate how many will actually respond, how much error we can tolerate (\%4 probably - confidence interval) - Use the sample size method by fowler?
+The main purpose of this study is to discover differences in the perceived readability of code and use that to be able to generalise percieved readability of different programming languages by novice programmers. The study will be performed as a survey, mainly due to economy and time constraints \cite{fowler2008survey}. The study will be carried out in three phases. In phase 1, we will identify the target population. In phase 2, the survey will be designed and carried out. The data will be collected over time, and thus this study can be characterized as a longitudinal survey. In phase 3, the results of the survey will be analysed. The investigation method will be in the form of a questionnaire. The main argument for the questionnaire is that the survey must be distributed to a large amount of people. A quantitative study is also well-suited for this study since there are no existing publications that explore readability differences between languages. 
 
 
 \SubSection{Identifying the Population}
 As mentioned before, the goal of this study is to identify the inherent differences in readability of programming languages. To research this, a broad population is required, to avoid results influenced by a possible correlation between the perception of readability and the previously defined independent variables. As such, a research survey has been conducted. This reasoning is reinforced by Easterbrook et al. \cite{easterbrook2008selecting} who state ``Survey research is used to identify the characteristics of a broad population of individuals''. 
 \newline
 
-The population of this survey is the students of the Software Engineering and Management programme (SEM) at Gothenburg University. The industry is left out of the population since they are more likely to have a lot of experience with certain languages which may cause them to be biased towards that language. Furthermore, Höst, Regnell and Whohlin \cite{host2000using} make the case that ``The reason to use students as subjects is often that they are available at universities
-and they are willing to participate in studies as part of courses they attend.'' which is highly approprpiate given that we will be asking our peers and those in lower years who will eventually also be required to perform research tasks. The SEM program was chosen due to it being accessible for the researchers. 
+The population of this survey is the students of the Software Engineering and Management programme (SE\&M) at Gothenburg University. The number of students attending the SE\&M programme is 270. 110 of those are in the 1st year, 90 are in the 2nd year and the remaining 70 are in the 3rd year. The desired response rate is 10\%. Stratification of the population will not be enforced and thus there may be a stastistically incorrect representation of the independent variables. This has, however, been taken into account in the analysis of the results. 
+\newline
 
-99 - 3rd year
-168 - 2nd year
-190 - 1st year
-
-Overlap: 50 (Those who are in another group)
-Total: 397
-
-Population in the facebook groups.
-
-count here - estimate desired response rate, error rate etc
-Sampling bias is a considerable challenge in research \cite{easterbrook2008selecting}
+The industry is left out of the population since they are more likely to have a lot of experience with certain languages which may cause them to be biased towards that language. Furthermore, Höst, Regnell and Whohlin \cite{host2000using} make the case that ``The reason to use students as subjects is often that they are available at universities and they are willing to participate in studies as part of courses they attend.'' which is highly appropriate given that we will be asking our peers and those in lower years who will eventually also be required to perform research tasks. The SE\&M program was chosen due to it being accessible for the researchers. More sophisticated sampling methods such as cluster-sampling or random sampling have not been used due to time-constraints. 
 
 
 \SubSection{Questionnaire Design}
 
 The five languages represented in the questionnaire were C++, Erlang, Go, Java and Python. They were chosen for multiple reasons. One being that all the students in the SE\&M course will have taken an introductory Java programming course by now and as such should be familiar with the syntax. The other languages were chosen for similar reasons. Erlang was chosen as it's the first language taught after Java and it uses a different development paradigm. C++ was chosen as it is used heavily in project course during the 4th semester and python was chosen for similars reasons. Golang was picked as we wanted to see how students would perceive a language that is popular but has not really entered the academic landscape as of yet.
+\newline
 
 Google Sheets was decided upon as the appropriate tool of choice for our survey. It has a good reputation for use in surveys and it was recommended to us by Branson. We also have prior experience the tool from previous research projects.
 The questionnaire consists of structured and partially structured questions. The questions are followed by two code snippets per language mentioned previously with a scale requesting the respondent to rate whether they feel that the code is easy or difficult to read in the style of the Likert Scale. The questions were written with as little ambiguity as possible. They were field tested by colleagues in a small example of our survey. Examples of these questions can be found in ***Appendix Item Here***. The aforementioned chart shows how some of our independent variables, research questions and survey items correlate.
+\newline
 
 Taking into consideration potential biases that may occur, the code snippets were designed so that the code should be easily understood by first year students who have only had exposure to Java. For example, each code snippet has a standard ``Hello World'' example and a simple for loop with a counter that is returned at the conclusion of the loop. The only exception to this is Erlang. While erlang does support for loops, recursion is the tool of choice to perform iterations. As such, we feel it was a valid example and should not affect the results for this specific language drastically considering, by this point and time in their education, all SE\&M students will have been exposed to recursion. The choices of languages do leave us open to a potential validity and bias issue. Inexperienced students who have only seen Java may rate it as easily readable purely because they are only familiar with Java, this is why the relative level of experience is requested first in the survey, so that we might be able to pick up this potential bias during the results analysis. To help alleviate this issue, the questionnaire was distributed to all three year groups currently studying at SE\&M (2012,2013,2014).
+\newline
 
 Other potential validity threats we must take into consideration are those that arise from the nature of survey. Since we are performing single stage data collection, the respondents of the surveys are answering our questions at their convenience. This opens the door for some validity threats, such as the willingness to participate. Our data are at the mercy of those willing to participate; we cannot anticipate how many will respond. There is little incentive for the respondents to partake in the survey other than for their own self interest. 
+\newline
+
+The questionnaire has been peer reviewed by colleagues Jani Kellaris and Patrik Bäckström and it has been tested on a 6 students in 2nd year which we supervise. 
 
 \begin{table}[ht]
   \centering
@@ -156,14 +140,47 @@ The data was collected with a questionnaire consisting of 15 questions. The data
 
 \SubSection{Threats to Validity}
 As in all research there are threats to the validty of the study being undertaken. Our largest threat would be the external validty of the data collected. The students were selected from the three current years studying at the University of Gothenburg. Most of the respondants indicated that they are in the first year of their studties and as such their inexperience could be a limiting factor on their answers to the survey. The students may also have had a bias for one of the languages; Java. So far, the students in the first year have been formally taught in only Java. This means that there is a lower chance they would be familiar with reading other language syntax other than java and as such they would be more likely to see Java favourably than others. We cannot therefore generalise that Java has higher readability than that of the other languages despite what the results show. 
+\newline
 
 A further threat that we were unable to counteract adequately was the willing to participate of our respondants. The participants had little or no incentive to actually partake in the study and as such many most likely simply ingored it. This is to be expected when one attempts to undertakes a single stage sampling method. One idea to improve the response rate for further surveys could be to form some incentive for the respondants.
+\newline
 
 The fact that the questionnaire was distributed online via facebook groups also meant that there was another threat to the validty of the responses. These groups are not offically controled by the university and as such admission into these groups is up to the students who are organising them. This means that there is potential that some of the responses came from people not within the SE\&M isntitutions and this should be taken into consideration when analysing the results.
+
+
 
 \bibliographystyle{assignment_1}
 \bibliography{assignment_1}
 
+\vfill
+\eject
+
+
+\Section{Acknowledgments}
+\textbf{William} has had the main responsibility for the following sections:
+\begin{itemize} \renewcommand{\labelitemi}{$\bullet$} 
+\item I. Introduction
+\item II. A. Research Questions
+\item III. Methodology
+\item III. A. Identifying the Population
+\item III. C. Results Analysis
+\end{itemize}
+\ 
+
+
+\textbf{John} has had the main responsibility for the following sections:
+\begin{itemize} \renewcommand{\labelitemi}{$\bullet$} 
+\item II. Purpose of the Study
+\item III. B. Questionnaire Design
+\item III. D. Threats to Validity
+\item *Creating the questionnaire (writing code snippets etc.)
+\end{itemize}
+\
+
+We have, however, worked on all sections jointly - and all sections have been reviewed by both William and John. 
+\newline
+
+We would also like to note that the numbers related to how many are in the SE\&M program are estimated. We saw no real purpose of asking teachers for the real numbers for this assignment. (We assume this is fine). 
 
 
 \end{document}
