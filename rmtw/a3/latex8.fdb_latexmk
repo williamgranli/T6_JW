@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1423752626 "/home/john/Desktop/T6/rmtw/a3/latex8.tex" "/home/john/Desktop/T6/rmtw/a3/latex8.pdf" "latex8" 1423752626
+["pdflatex"] 1423835969 "/home/john/Desktop/T6/rmtw/a3/latex8.tex" "/home/john/Desktop/T6/rmtw/a3/latex8.pdf" "latex8" 1423835969
   "/etc/texmf/web2c/texmf.cnf" 1413466443 1101 af7716885e081ab43982cab7b4672c1a ""
-  "/home/john/Desktop/T6/rmtw/a3/latex8.aux" 1423752626 1392 3e8562735c703d22ea9614a1c83e3f6a ""
-  "/home/john/Desktop/T6/rmtw/a3/latex8.tex" 1423752623 8952 5aa17512395f98f9a24815c5401dc3d4 ""
+  "/home/john/Desktop/T6/rmtw/a3/latex8.aux" 1423835969 2147 8ef8dc728ae65f13b68a3e2338c4b2a7 ""
+  "/home/john/Desktop/T6/rmtw/a3/latex8.tex" 1423835959 10651 368d117651443a8155c5175220d86c3c ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1136768653 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -36,14 +36,14 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1392645748 31083 1dfd8bf685ce0009c40532fedf8a7c53 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1413466640 1346346 7f2b8b715a9ddb095afe3697a6ba02b5 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1413466563 3822875 e3597fde5097d5008d8ea7cd1e014038 ""
-  "latex8.aux" 1423752626 1392 3e8562735c703d22ea9614a1c83e3f6a ""
+  "latex8.aux" 1423835969 2147 8ef8dc728ae65f13b68a3e2338c4b2a7 ""
   "latex8.sty" 1423572035 4821 b677c7b0074f481f290aa9f93ec8774d ""
-  "latex8.tex" 1423752623 8952 5aa17512395f98f9a24815c5401dc3d4 ""
+  "latex8.tex" 1423835959 10651 368d117651443a8155c5175220d86c3c ""
   (generated)
-  "/home/john/Desktop/T6/IEEE_CS_Latex/latex8.log"
-  "latex8.log"
-  "latex8.pdf"
   "/home/john/Desktop/T6/rmtw/a3/latex8.pdf"
-  "/home/john/Desktop/T6/rmtw/a3/latex8.log"
+  "/home/john/Desktop/T6/IEEE_CS_Latex/latex8.log"
   "latex8.aux"
   "/home/john/Desktop/T6/IEEE_CS_Latex/latex8.pdf"
+  "latex8.log"
+  "/home/john/Desktop/T6/rmtw/a3/latex8.log"
+  "latex8.pdf"
