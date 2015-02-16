@@ -1,9 +1,25 @@
-\begin{thebibliography}{1}\setlength{\itemsep}{-1ex}\small
+\begin{thebibliography}{10}\setlength{\itemsep}{-1ex}\small
 
 \bibitem{dyba2005evidence}
 T.~Dyba, B.~A. Kitchenham, and M.~Jorgensen.
 \newblock Evidence-based software engineering for practitioners.
 \newblock {\em Software, IEEE}, 22(1):58--65, 2005.
+
+\bibitem{a8}
+Ericsson - {Company} {Facts}.
+\newblock http://www.ericsson.com/thecompany/companyfacts, nov 2014.
+\newblock Accessed: 2014-11-23.
+
+\bibitem{a9}
+Ericsson - {Evolved} {Packet} {Gateway}.
+\newblock http://www.ericsson.com/ourportfolio/products/evolved-packet-gateway,
+  nov 2014.
+\newblock Accessed: 2014-11-23.
+
+\bibitem{a7}
+Ericsson - {The} {Company}.
+\newblock http://www.ericsson.com/thecompany, nov 2014.
+\newblock Accessed: 2014-11-23.
 
 \bibitem{hall2002implementing}
 T.~Hall, A.~Rainer, and N.~Baddoo.
@@ -15,6 +31,12 @@ K.~J. Klein and J.~S. Sorra.
 \newblock The challenge of innovation implementation.
 \newblock {\em Academy of management review}, 21(4):1055--1080, 1996.
 
+\bibitem{lethbridge2005studying}
+T.~C. Lethbridge, S.~E. Sim, and J.~Singer.
+\newblock Studying software engineers: Data collection techniques for software
+  field studies.
+\newblock {\em Empirical software engineering}, 10(3):311--341, 2005.
+
 \bibitem{millermda}
 J.~Miller, J.~Mukerji, et~al.
 \newblock Mda guide version 1.0. 1. object management group (2003).
@@ -24,6 +46,12 @@ F.~Pettersson, M.~Ivarsson, T.~Gorschek, and P.~{\"O}hman.
 \newblock A practitioner’s guide to light weight software process assessment
   and improvement planning.
 \newblock {\em Journal of Systems and Software}, 81(6):972--995, 2008.
+
+\bibitem{runeson2009guidelines}
+P.~Runeson and M.~H{\"o}st.
+\newblock Guidelines for conducting and reporting case study research in
+  software engineering.
+\newblock {\em Empirical software engineering}, 14(2):131--164, 2009.
 
 \bibitem{staron2006adopting}
 M.~Staron.
