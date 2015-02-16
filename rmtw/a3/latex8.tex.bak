@@ -7,7 +7,7 @@
 %  $Revision: 1.0
 %
 
-\documentclass[times, 10pt,twocolumn]{IEEEtran} 
+\documentclass[times, 10pt,twocolumn]{Article} 
 \usepackage{latex8}
 \usepackage{times}
 
@@ -20,58 +20,126 @@
 %------------------------------------------------------------------------- 
 \begin{document}
 
-\title{Review of Group 8 by Group 1}
+\title{Assignment 3}
 
 % author names and affiliations
-\author{\IEEEauthorblockN{
-  John Burchell\IEEEauthorrefmark{1} and
-  William Granli\IEEEauthorrefmark{1}}
-
-  \IEEEauthorblockA{\IEEEauthorrefmark{1}john.a.burchell, william.granli@gmail.com}
-
-}
+\author{John Burchell and William Granli \\
+john.a.burchell, william.granli@gmail.com}
 
 
 \maketitle
 \thispagestyle{empty}
 
-
-
-
-
 %------------------------------------------------------------------------- 
 
+%Deficiencies introduction model
 
-\Section{Introduction}
-The literature review is well-written, exstensive and seems to cover a lot of surrounding studies. It is good that a paper supporting the importance of personal fulfilment has been cited, since your paper almost stands and falls by this. One improvement for the Related Work section could be to write it as one text where you content drive the text instead of listing the papers one by one. This way you would get a more condensed text which is constructed around your paper. 
+Give a clear introduction to what we mean by different paradigms. Just introduce manual/mdsd and the difference.
 
-\Section{Purpose Statement}
-The problem statement is very clear. It would be good to state a couple of incentives for the industry, however. What would your paper bring to the industry? The benefits to academia have been mentioned in a good way. The sentence ``The purpose of this survey is to collect data about'' could probably be elaborated a bit. Explain what you will do with the data, for example. 
-\\
+give examples of what we mean by changes, i.e. implementing scrum, TDD. 
 
-The defintion of expertise is a bit too vague and ambiguous, in our opinion. You can probably replace expertise with years of experience and achieve the same results, since there should be a strong correlation between the two. The same goes for partner's skill level. It is a bit unclear from the paper what partner's skill level means. It can probably be clarified that partner's skill level is a 1-5 rating made by the other partner. 
+​\Section{Introduction}
 
+Coping with change in the software development domain is difficult at best, it is further exasperated by trying to apply changes that do not mesh well with existing development paradigms. How then, do large companies, especially those utilising multiple development paradigms, cope with this kind of change?
 
-\Section{Research Question}
-The research questions are yes-no questions. The main research question could be rephrased to, for example: ``How does pair programming affect/correlate to personal fulfilment of a developer?''. The sub-questions could be rephrased in similar style. 
-\\
-
-The sub-questions are good, but it is quite unclear what your intent with them is. The difference between expertise and skill-level isn't really clear and it should probably be emphasised that you want to measure the difference between ``actual skill-level'' and ``skill-level as percieved by your partner''. 
+\SubSection{Problem Statement}
+%big problem in industry implementing change
+%could a reason for this be because they're trying to fit one thing onto something different. Focus on implementation rather than what the changes are
 
 
-\Section{Suitable Research Design}
-The description of your population is clear and well-researched. It is good that you spent time to research how you find the most meaningful population, by for example leaving out inexperienced developers. One improvement to your research design section would be to, in the introduction, briefly outline your research process and describe which stages it includes and it what order they will be carried out. 
-\\
+\SubSection{Existing Literature}
+According to literature, changes in companies are commonly implemented following either Software Process Improvement (SPI)\cite{pettersson2008practitioner}\cite{unterkalmsteiner2012evaluation} or change management (CM) strategies. SPI is an attempt to alter an existing company or organisations software process, the main intention of which is to increase product quality, time to market all the while reducing inefficiency and other obstacles for creating good software. 
 
-In the results analysis section, you should probably mention which type of analysis you will apply. It is probaby descriptive analysis in your case. You should also motivate why a more extensive approach was not ensued. 
-\\
+Similar to SPI is the concept of Evidence Based Software Engineering \cite{dyba2005evidence}. EBSE can be used as support for SPI, as suggested by the creators of the strategy. The main aim of which is to find a technology which is suitable for use and to then implement it in an organisation.
 
-The identified limitations are good. One suggestion we have would be to research how different types of pair-programming impact personal fulfilment. You mentioned the driver and navigator style. Maybe there are other styles that would get widely different results in the survey. If this seems feasible, a ``type of pair-programming'' independent variable could be added to your survey. 
+CM on the other hand could be seen as an umbrella for a plethora of theories and strategies. An example of a theory is the concept of innovation values fit by \cite{klein1996challenge} which aims to describe if and when a company should make changes, based upon how a potential change fits with the values currently held by the company.
+
+In 2002 Hall, Rainer and Baddoo \cite{hall2002implementing} published a report wherein they illustrated results of a study which looked at 85 companies throughout the UK. The study focused mostly on how the companies perform SPI and how effective their efforts were. The authors discovered that, while most companies do attempt SPI, many are unsuccessful due to a combined lack of evaluation and funding.
+
+A further, more specific example is a study conducted by Staron \cite{staron2006adopting}. In this study a case study is conducted with two companies wishing or in the process of adopting MDSD. In the findings, Staron provides a set of conditions for adopting MDSD, one being the compatibility of MDSD and existing principles in the company. Staron states that the adoption of this new process must be usable by the previous processes in place \cite{staron2006adopting}. He concludes by stating that this compatibility is especially important for larger companies due to the heavy effort required to implement the change. In a second study \cite{staron2008transitioning}, Staron provides possible reasons for the adoption of MDSD to fail. He suggests that the large investment in time and money, immature technology and organisational resistance are all factors to overcome in the adoption of new processes.
+
+However, there are is no existing research that aims to tackle the problem of applying the same change to an organisation that utilises two differing development paradigms.
+
+\SubSection{Motivation for Research}
+Performing this study would therefore (XXX same) be an attempt at filling in a gap in literature. Academia would be interested in this for its own merit or, most likely, as a stepping stone towards further research.
+
+Industry is just as likely to be interested as change is something they face regularly. If this study can help to shed some light about specific methods of to help accommodate change. The study will be conducted in tandem with an organisation, to which the results would also be of great value. The organisation in question has had problems in the past with implementing effective change to keep up with their competition. 
+
+Furthermore, companies that operate in a similar, or even a different manner would most likely be able to appreciate the efforts made in the study. In the most hopeful of cases, applying the lessons learned to their own situations.
+
+Given that MDSD has seen a considerable rise in adoption by many companies\cite{millermda}, the results of the research would undoubtedly be of use to these companies also.
+
+\Section{Purpose of the Study}
+The purpose of this case study is to explore how changes to software processes are incorporated into a company where multiple development paradigms are used. The study has been designed for change agents and it has been conducted at the EPG department at Ericsson. At this stage in the research, the central phenomenon being studied, how changes are implemented in companies where more than one development paradigms are used, will be generally defined as implementing change in multi-paradigm environments. 
 
 
-\Section{Other}
-Below sentence does not make sense: \\
-``The purpose of this survey study is to assess the impact of pair programming on personal fulfilment, controlling for expertise of developers with pair programming at mid sized software development organisations. ''
+\SubSection{Research Question(s)}
+RQ: How is change managed in multi-paradigm environments?
+SRQ1: What are the challanges of implementing change in multi-paradigm environments?
+SRQ2: How can a company determine if a change will conflict with the currently used development paradigms?
+SRQ3: How can an organisation's development paradigm be used as a basis for deciding which changes to adopt? 
+
+\Section{Case Company Description}
+TBA
+
+\Section{Methodology}
+
+
+\SubSection{Case Study Design}
+The study has been conducted with an exploratory goal in mind. Analysing how Company X tackle the problems related to the research questions has been the most central part of the study. Because of the exploratory nature of the study, a flexible process design has been used. The study has been carried out using an iterative approach, where the data collected, and the results gathered from analysing the data has been the main driver for shaping and improving the scope and goal of the study. The research has been conducted using a case study approach. The reason for this is that the goal of our study is to analyse MDSD, which is a common practice in software engineering, in a very specific setting. This line of thought is supported by Runesson \& Höst in CITE XXX. Runesson \& Höst also outline that a case study approach is well-suited for exploratory studies CITE XXX. 
+
+During the initial stage of the study, careful planning was conducted. The two major goals of this phase were to find meaningful objectives with an appropriate design for the research and secondly to facilitate and design the interviews. Although a flexible approach was taken, major effort was spent on planning the study. Most of the planning was related to communicating with Company X to facilitate the interviews. A time-line for the interviews was created and established with company X. The objective of analysing change implementation in environments which are split into by two different development activities was also defined during this stage. 
+
+\SubSection{Preparation for Data Collection}
+During this stage the interviews were designed. The initial design of the interview was pilot tested on three employees of Company X. The results from the pilot tests were used to test if the interviews would fulfil the objective of the study. The number of subjects for the main interviews was 15. They were sampled randomly from employment records at Company X. 
+
+During this stage, all ethical precautions of the study were taken. It was established that Company X wanted to remain anonymous and that all interviews must happen on a voluntary basis. An agreement on to what extent Company X's documentation could be used was also made during this stage.
+%Add what was agreed 
+
+\SubSection{Data Gathering}
+The data has mainly been gathered through first degree interviews CITE LETHBRIDGE 2005 XXX. The subjects of the interviews were divided into three sub-groups; Managers, Developers and Change Agents. Data triangulation was performed to compare and verify the results based on which role the interviewee had. The reason this was done was to reduce risk of, for example, change agents having a positive bias towards previously implemented changes. The interviews were carried out using a mix of open-ended and close-ended questions in combination with a semi-structured approach. The fact that the interviewees had widely differing backgrounds and roles was the main reason for not using a structured approach. A semi-structured approach was chosen over a unstructured approach to be able to obtain results which were closely related to each other. This was performed so that meaningful comparison and analysis could be carried out. Company X's change process documentation was also analysed to provide further depth to the analysis already performed. Please see Appendix A for a full list of interview questions.
+
+\SubSection{Data Analysis}
+The data analysis of the interviews were completed in tandem with the data gathering phase. This was performed so that we could iteratively improve upon the data collection process. The main purpose of analysing this data was to generate hypotheses and to refine the proposed research questions. The interviews were analysed by manually reading and comparing answers between the respondents. Spreadsheets and tables were used to provide an overview of the results.
+
+Once all the interview data had been collected, the goal of the data analysis shifted to focus upon confirmation of the hypothesis. As mentioned in Section IV. C, data triangulation was the primary tool used to confirm the hypothesis. 
+
+
+\begin{itemize}
+\item Create questions for your interviews (include the questions in your report)
+\item Discuss validity threats
+\item Triangulation = counteract research bias
+\item In meth, mention how the interviewees were selected and contacted (you have a gatekeeper which selects the people for you)
+\item Mention how many of each role and why each role was included (triangulation)
+\item convenience sampling (yo uhave contact at company already and use them) and maximum varation (i aim to have as many as possible)
+\item Mention how the company was selected and what the criteria was (there was some lazy w)
+\item the documents analysis (triangulation) will mostly be used to verify what the change agents say
+\end{itemize}
+
+
+
+\Section{Threats to Validity}
+%getting too close, potential bias
+%change manager bias, if they implemented
+%generalisability 
+
+%Check text for more.
+%% Talk about generalisability tomorrow with willski
+
+%gatekeeper to help sample, he could, in some way, select persons that are positive. We give up control to the judgement of the gatekeeper
+
+%only doing it at EPG.
+%doing it at different times, only one company -> generalise
+
+
+
+
+\bibliographystyle{latex8}
+\bibliography{latex8}
+
+
+\Section{Acknowledgements}
+Write who did what
 
 
 
