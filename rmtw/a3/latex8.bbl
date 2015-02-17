@@ -7,19 +7,20 @@ T.~Dyba, B.~A. Kitchenham, and M.~Jorgensen.
 
 \bibitem{a8}
 Ericsson - {Company} {Facts}.
-\newblock http://www.ericsson.com/thecompany/companyfacts, nov 2014.
-\newblock Accessed: 2014-11-23.
+\newblock \url{http://www.ericsson.com/thecompany/company_facts}, nov 2014.
+\newblock Accessed: 2015-02-15.
 
 \bibitem{a9}
 Ericsson - {Evolved} {Packet} {Gateway}.
-\newblock http://www.ericsson.com/ourportfolio/products/evolved-packet-gateway,
+\newblock
+  \url{http://www.ericsson.com/ourportfolio/products/evolved-packet-gateway},
   nov 2014.
-\newblock Accessed: 2014-11-23.
+\newblock Accessed: 2015-02-15.
 
 \bibitem{a7}
 Ericsson - {The} {Company}.
-\newblock http://www.ericsson.com/thecompany, nov 2014.
-\newblock Accessed: 2014-11-23.
+\newblock \url{http://www.ericsson.com/thecompany}, nov 2014.
+\newblock Accessed: 2015-02-15.
 
 \bibitem{hall2002implementing}
 T.~Hall, A.~Rainer, and N.~Baddoo.
