@@ -7,9 +7,9 @@
 %  $Revision: 1.0
 %
 
-\documentclass[times, 10pt,twocolumn]{Article} 
+\documentclass[10pt,twocolumn]{article} 
 \usepackage{latex8}
-\usepackage{times}
+\usepackage{url}
 
 %\documentstyle[times,art10,twocolumn,latex8]{article}
 
@@ -19,6 +19,9 @@
 
 %------------------------------------------------------------------------- 
 \begin{document}
+
+\overfullrule=2cm
+
 
 \title{Assignment 3}
 
@@ -34,17 +37,15 @@ john.a.burchell, william.granli@gmail.com}
 
 %Deficiencies introduction model
 
-Give a clear introduction to what we mean by different paradigms. Just introduce manual/mdsd and the difference.
-
-give examples of what we mean by changes, i.e. implementing scrum, TDD. 
 
 ​\Section{Introduction}
 
 Coping with change in the software development domain is difficult at best, it is further exasperated by trying to apply changes that do not mesh well with existing development paradigms. How then, do large companies, especially those utilising multiple development paradigms, cope with this kind of change?
 
+Paradigms in this context will be considered to be those which relate to software development. For example, we would consider Model Driven Software Development[CITE] to be a development paradigm. In this study we use the term manual coding to mean development without the use of any particular paradigm. The difference being that MDSD is heavily focused upon models and a high level of abstraction for the design of code, whereas manual coding is a standard development process. Our definition of change is not limited to the aforementioned examples, we would consider any changes to development paradigms such as a company wishing to implement processes such as Scrum or introducing Test Driven Development.
+
 \SubSection{Problem Statement}
-%big problem in industry implementing change
-%could a reason for this be because they're trying to fit one thing onto something different. Focus on implementation rather than what the changes are
+Change is always a challenge in industry and one that is not going away any time soon. This is especially true when it comes to changing development processes or paradigms. One possible reason that these changes are far more difficult than others could be because the companies introducing these changes overlook the possibility that the changes they wish to implement are at odds with their current development paradigms or processes. This is the problem that this paper will attempt to address; how industry can determine what changes are suitable to implement taking into consideration their existing paradigms?
 
 
 \SubSection{Existing Literature}
@@ -75,29 +76,38 @@ The purpose of this case study is to explore how changes to software processes a
 
 \SubSection{Research Question(s)}
 RQ: How is change managed in multi-paradigm environments?
-SRQ1: What are the challanges of implementing change in multi-paradigm environments?
-SRQ2: How can a company determine if a change will conflict with the currently used development paradigms?
-SRQ3: How can an organisation's development paradigm be used as a basis for deciding which changes to adopt? 
 
-\Section{Case Company Description}
-TBA
+SRQ1: What are the challenges of implementing change in multi-paradigm environments?
+
+SRQ2: How can a company determine if a change will conflict with the currently used development paradigms?
+
+SRQ3: How can an organisation's development paradigm be used as a basis for deciding which changes to adopt? 
 
 \Section{Methodology}
 
+\SubSection{Case Company Description}
+The subject case organisation in this study is Ericsson. Ericsson operates in the domain of communications technology, and their main products are in the domain of mobility, broadband and cloud-based services \cite{a7} \cite{a8}. Ericsson has 117,508 employees (as of September 30, 2014), 25,300 of which work in R\&D (Research and Development). \cite{a7}. 
+
+Our research has been conducted at the Evolved Packet Gateway (EPG) department of Ericsson. The EPG department consists of approximately 700 employees, the majority of hwich work on software development related tasks. EPG delivers and maintains the EPG product which is a part of Ericsson's product for deployment of Long Term Evolution (LTE) networks \cite{a9}. The EPG product serves as a gateway between Ericsson's packet core network and other packet data networks, such as the Internet \cite{a9}. The EPG product is utilized in technologies such as 2G, 2G+, 3G, 4G and Wi-Fi hotspots \cite{a9}. 
+
+The company was sampled through convenience sampling, and a maximum varation strategy was used. As such, the goal was to include as many companies as possible in this study. Since the study is conducted at a large communications technology company, it indicates that the study may be generalisable to similar companies. 
 
 \SubSection{Case Study Design}
-The study has been conducted with an exploratory goal in mind. Analysing how Company X tackle the problems related to the research questions has been the most central part of the study. Because of the exploratory nature of the study, a flexible process design has been used. The study has been carried out using an iterative approach, where the data collected, and the results gathered from analysing the data has been the main driver for shaping and improving the scope and goal of the study. The research has been conducted using a case study approach. The reason for this is that the goal of our study is to analyse MDSD, which is a common practice in software engineering, in a very specific setting. This line of thought is supported by Runesson \& Höst in CITE XXX. Runesson \& Höst also outline that a case study approach is well-suited for exploratory studies CITE XXX. 
+The study has been conducted with an exploratory goal in mind. Analysing how Ericsson tackle the problems related to the research questions has been the most central part of the study. Because of the exploratory nature of the study, a flexible process design has been used. The study has been carried out using an iterative approach, where the data collected, and the results gathered from analysing the data has been the main driver for shaping and improving the scope and goal of the study. The research has been conducted using a case study approach. The reason for this is that the goal of our study is to analyse MDSD, which is a common practice in software engineering, in a very specific setting. This line of thought is supported by Runesson \& Höst in \cite{runeson2009guidelines}. Runesson \& Höst also outline that a case study approach is well-suited for exploratory studies \cite{runeson2009guidelines}. 
 
-During the initial stage of the study, careful planning was conducted. The two major goals of this phase were to find meaningful objectives with an appropriate design for the research and secondly to facilitate and design the interviews. Although a flexible approach was taken, major effort was spent on planning the study. Most of the planning was related to communicating with Company X to facilitate the interviews. A time-line for the interviews was created and established with company X. The objective of analysing change implementation in environments which are split into by two different development activities was also defined during this stage. 
+During the initial stage of the study, careful planning was conducted. The two major goals of this phase were to find meaningful objectives with an appropriate design for the research and secondly to facilitate and design the interviews. Although a flexible approach was taken, major effort was spent on planning the study. Most of the planning was related to communicating with Ericsson to facilitate the interviews. A time-line for the interviews was created and established with Ericsson. The objective of analysing change implementation in environments which are split into by two different development activities was also defined during this stage. 
 
 \SubSection{Preparation for Data Collection}
-During this stage the interviews were designed. The initial design of the interview was pilot tested on three employees of Company X. The results from the pilot tests were used to test if the interviews would fulfil the objective of the study. The number of subjects for the main interviews was 15. They were sampled randomly from employment records at Company X. 
+The interviewees were sampled using random sampling, with help of a gatekeeper at the company. The reason a gatekeeper was used was to reduce research bias. The random sampling was done on official employee records. The number of subjects for the interviews was (XXX or were?) 15. The subjects of the interviews were divided into three sub-groups; Managers, Developers and Change Agents, and 5 of each role were interviewed. The main reason the three different roles were included was to be able to reduce reserach bias through data triangulation.
 
-During this stage, all ethical precautions of the study were taken. It was established that Company X wanted to remain anonymous and that all interviews must happen on a voluntary basis. An agreement on to what extent Company X's documentation could be used was also made during this stage.
-%Add what was agreed 
+The interviewees were selected based on two criterion: they must have been employed at Ericsson for a minimum of 5 years and they must work at the EPG department. 5 years expirence was set as a minimum to ensure that all interviewees had experienced a fair number of changes at Ericsson. The reason only employees from EPG were accepted was to ensure that the population was cohesive. 
+
+During this stage, all ethical precautions of the study were taken. It was established that Ericsson did not require anonymity and that all interviews must happen on a voluntary basis. An agreement that Ericsson's change process documentation could be used as a data source in the study was also made. 
 
 \SubSection{Data Gathering}
-The data has mainly been gathered through first degree interviews CITE LETHBRIDGE 2005 XXX. The subjects of the interviews were divided into three sub-groups; Managers, Developers and Change Agents. Data triangulation was performed to compare and verify the results based on which role the interviewee had. The reason this was done was to reduce risk of, for example, change agents having a positive bias towards previously implemented changes. The interviews were carried out using a mix of open-ended and close-ended questions in combination with a semi-structured approach. The fact that the interviewees had widely differing backgrounds and roles was the main reason for not using a structured approach. A semi-structured approach was chosen over a unstructured approach to be able to obtain results which were closely related to each other. This was performed so that meaningful comparison and analysis could be carried out. Company X's change process documentation was also analysed to provide further depth to the analysis already performed. Please see Appendix A for a full list of interview questions.
+The data has mainly been gathered through first degree interviews \cite{lethbridge2005studying}. The interviews were carried out using a mix of open-ended and close-ended questions in combination with a semi-structured approach. The fact that the interviewees had widely differing backgrounds and roles was the main reason for not using a structured approach. A semi-structured approach was chosen over a unstructured approach to be able to obtain results which were closely related to each other. This was performed so that meaningful comparison and analysis could be carried out. Data triangulation was performed to compare and verify the results based on which role the interviewee had. The reason this was done was to reduce risk of, for example, change agents having a positive bias towards previously implemented changes. 
+
+Ericsson's change process documentation was also analysed to provide further depth to the analysis already performed. The documentation was also used to triangulate the interview answers that related to Ericsson's change strategy. The reason for was to reduce risks of research bias. Please see Appendix A (XXX or 1?) for a full list of interview questions.
 
 \SubSection{Data Analysis}
 The data analysis of the interviews were completed in tandem with the data gathering phase. This was performed so that we could iteratively improve upon the data collection process. The main purpose of analysing this data was to generate hypotheses and to refine the proposed research questions. The interviews were analysed by manually reading and comparing answers between the respondents. Spreadsheets and tables were used to provide an overview of the results.
@@ -107,31 +117,14 @@ Once all the interview data had been collected, the goal of the data analysis sh
 
 \begin{itemize}
 \item Create questions for your interviews (include the questions in your report)
-\item Discuss validity threats
-\item Triangulation = counteract research bias
-\item In meth, mention how the interviewees were selected and contacted (you have a gatekeeper which selects the people for you)
-\item Mention how many of each role and why each role was included (triangulation)
-\item convenience sampling (yo uhave contact at company already and use them) and maximum varation (i aim to have as many as possible)
 \item Mention how the company was selected and what the criteria was (there was some lazy w)
-\item the documents analysis (triangulation) will mostly be used to verify what the change agents say
 \end{itemize}
 
-
-
 \Section{Threats to Validity}
-%getting too close, potential bias
-%change manager bias, if they implemented
-%generalisability 
 
-%Check text for more.
-%% Talk about generalisability tomorrow with willski
+While designing the study, validity concerns were taken into consideration. The most pressing of which would be the limited scope of the study. The fact that the study only occurred in a subset of Ericsson and not a larger part of the company means that we cannot reliably make any generalities about the results. This is something that could be overcome during a potential triangulation period. For example, further studies could be conducted within Ericsson at other departments which could then be used to strengthen or diminish the results from this study.
 
-%gatekeeper to help sample, he could, in some way, select persons that are positive. We give up control to the judgement of the gatekeeper
-
-%only doing it at EPG.
-%doing it at different times, only one company -> generalise
-
-
+Other validity issues concern bias. The potential for bias lies with both the subjects and researchers of the study [maybe cite?]. There is a risk that we, the researches, can be drawn too close to the company and as such might overlook or miss certain results that would otherwise be obvious to someone not so intimately involved. The potential for this bias is greater considering one of the researchers has previously held employment in the EPG department where the study took place. This potential for bias extends further to the respondents of the interviews. The respondents might have been intimidated by the interview procedure and potentially for repercussions to their positions within the company based on their answers to the questions. This is entirely possible despite the assurance that the responses would be anonymous. Finally, the gatekeeper is also a potential point of bias. In this study, the gatekeeper assisted with the sampling of potential interview candidates, while unlikely, there is potential that the gatekeeper could have selected individuals whom would have a favourable opinion about the material that the interview questions were concerned with.
 
 
 \bibliographystyle{latex8}
@@ -139,11 +132,42 @@ Once all the interview data had been collected, the goal of the data analysis sh
 
 
 \Section{Acknowledgements}
-Write who did what
+John had the main responsibility for sections 1 \& 2. William had the main responsibility for section 3. Section 4 and the interview questions were written together. We have, however, worked on all sections jointly - and all sections have been reviewed by both William and John. 
+
+We have re-used some material from our DIT037 course. (Mostly in literature review and case company description). Because of this some of the text might show up on Urkund. For the most important parts, such as methodology and research questions we have not used any material from our DIT035 paper. 
+
+\newpage
+\appendix
+
+\section{Interview Questions}
+\begin{itemize}
+\item \textbf{Organisation}
+\begin{itemize}
+\item How long have you worked at Ericsson?
+\item How would you describe your role?
+\item Do you work in a manual coding or MDSD team?
+\end{itemize}
+
+\item \textbf{General Change}
+\begin{itemize}
+\item Do you feel that the changes in Ericsson have had a clear plan?
+\item How have the goals of the changes been communicated? 
+\item What has been the largest obstactle for change?
+\item What has been the main driving for change previously?
+\item Do you feel that some previously introduced changes do not work well together?
+\item Do you feel that the changes are targeted towards individuals or teams? 
+\item If you have had previous experience of changes, how is change at Ericsson different? 
+\end{itemize}
+
+\item \textbf{Multi-paradigm Change}
+\begin{itemize}
+\item Do you feel that changes are implemented differently based on what development paradigm is used?
+\item Do you feel that the implemented changes work well with both paradigms? 
+\item Do you feel that anything has changed in the change strategy since MDSD was introduced? 
+\end{itemize}
 
 
-
-
+\end{itemize}
 
 
 \end{document}
