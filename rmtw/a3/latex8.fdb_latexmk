@@ -1,15 +1,16 @@
 # Fdb version 3
-["bibtex latex8"] 1424094743 "latex8.aux" "latex8.bbl" "latex8" 1424094743
+["bibtex latex8"] 1424166807 "latex8.aux" "latex8.bbl" "latex8" 1424166808
   "./latex8.bst" 1423572035 20659 905972de4c2ed361a9e19361a92cf806 ""
-  "latex8.aux" 1424094743 2171 c89977420f3f697c2bfdf9989f0f8fb5 ""
+  "latex8.aux" 1424166807 2483 35331c5d0377fccc9f44c39f039e4d63 ""
   "latex8.bcf" 0 -1 0 ""
-  "latex8.bib" 1424091189 2655 69dfaaf2510f1a4ac51daba55afb77a2 ""
+  "latex8.bib" 1424166775 4066 4e4abd22be5c58ac36c8b9e51fcbf5fc ""
   (generated)
+  "latex8.blg"
   "latex8.bbl"
-["pdflatex"] 1424094743 "/home/john/Desktop/T6/rmtw/a3/latex8.tex" "/home/john/Desktop/T6/rmtw/a3/latex8.pdf" "latex8" 1424094743
+["pdflatex"] 1424166807 "/home/john/Desktop/T6/rmtw/a3/latex8.tex" "/home/john/Desktop/T6/rmtw/a3/latex8.pdf" "latex8" 1424166808
   "/etc/texmf/web2c/texmf.cnf" 1413466443 1101 af7716885e081ab43982cab7b4672c1a ""
-  "/home/john/Desktop/T6/rmtw/a3/latex8.aux" 1424094743 2171 c89977420f3f697c2bfdf9989f0f8fb5 ""
-  "/home/john/Desktop/T6/rmtw/a3/latex8.tex" 1424094738 11467 badd5016c50a2ca47d8f77556da6ce2f ""
+  "/home/john/Desktop/T6/rmtw/a3/latex8.aux" 1424166807 2483 35331c5d0377fccc9f44c39f039e4d63 ""
+  "/home/john/Desktop/T6/rmtw/a3/latex8.tex" 1424166803 15770 37772184d3c19097fb0e2e3a55effb57 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1136768653 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -46,15 +47,15 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1413466640 1346346 7f2b8b715a9ddb095afe3697a6ba02b5 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1413466563 3822875 e3597fde5097d5008d8ea7cd1e014038 ""
   "Article.cls" 1424091185 20495 a5b048e49d350e2ad23ed3b99264a932 ""
-  "latex8.aux" 1424094743 2171 c89977420f3f697c2bfdf9989f0f8fb5 ""
-  "latex8.bbl" 1424094743 1905 c326e93b31e1c4eccc6a56de99933a0c "bibtex latex8"
+  "latex8.aux" 1424166807 2483 35331c5d0377fccc9f44c39f039e4d63 ""
+  "latex8.bbl" 1424166807 2832 9bf1fbb0dffb8b267af943a9672f38a3 "bibtex latex8"
   "latex8.sty" 1423572035 4821 b677c7b0074f481f290aa9f93ec8774d ""
-  "latex8.tex" 1424094738 11467 badd5016c50a2ca47d8f77556da6ce2f ""
+  "latex8.tex" 1424166803 15770 37772184d3c19097fb0e2e3a55effb57 ""
   (generated)
-  "/home/john/Desktop/T6/rmtw/a3/latex8.pdf"
-  "/home/john/Desktop/T6/rmtw/a3/latex8.log"
   "/home/john/Desktop/T6/IEEE_CS_Latex/latex8.pdf"
-  "latex8.pdf"
+  "/home/john/Desktop/T6/rmtw/a3/latex8.log"
   "latex8.aux"
-  "latex8.log"
+  "latex8.pdf"
+  "/home/john/Desktop/T6/rmtw/a3/latex8.pdf"
   "/home/john/Desktop/T6/IEEE_CS_Latex/latex8.log"
+  "latex8.log"
