@@ -1,3 +1,36 @@
-\begin{thebibliography}{}\setlength{\itemsep}{-1ex}\small
+\begin{thebibliography}{1}\setlength{\itemsep}{-1ex}\small
+
+\bibitem{mattsson2009linking}
+A.~Mattsson, B.~Lundell, B.~Lings, and B.~Fitzgerald.
+\newblock Linking model-driven development and software architecture: a case
+  study.
+\newblock {\em Software Engineering, IEEE Transactions on}, 35(1):83--93, 2009.
+
+\bibitem{staron2006adopting}
+M.~Staron.
+\newblock Adopting model driven software development in industry--a case study
+  at two companies.
+\newblock In {\em Model Driven Engineering Languages and Systems}, pages
+  57--72. Springer, 2006.
+
+\bibitem{staron2008transitioning}
+M.~Staron.
+\newblock Transitioning from code-centric to model-driven industrial
+  projects--empirical studies in industry and academia.
+\newblock {\em Model Driven Software Development: Integrating Quality
+  Assurance}, pages 236--262, 2008.
+
+\bibitem{volter2013model}
+M.~V{\"o}lter, T.~Stahl, J.~Bettin, A.~Haase, and S.~Helsen.
+\newblock {\em Model-driven software development: technology, engineering,
+  management}.
+\newblock John Wiley \& Sons, 2013.
+
+\bibitem{whittle2012mismatches}
+J.~Whittle and J.~Hutchinson.
+\newblock Mismatches between industry practice and teaching of model-driven
+  software development.
+\newblock In {\em Models in Software Engineering}, pages 40--47. Springer,
+  2012.
 
 \end{thebibliography}
