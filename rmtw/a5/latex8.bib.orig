@@ -32,6 +32,17 @@
   publisher={John Wiley \& Sons}
 }
 
+<<<<<<< HEAD
+@article{mattsson2009linking,
+  title={Linking model-driven development and software architecture: a case study},
+  author={Mattsson, Anders and Lundell, Bj{\"o}rn and Lings, Brian and Fitzgerald, Brian},
+  journal={Software Engineering, IEEE Transactions on},
+  volume={35},
+  number={1},
+  pages={83--93},
+  year={2009},
+  publisher={IEEE}
+=======
 
 @incollection{whittle2012mismatches,
   title={Mismatches between industry practice and teaching of model-driven software development},
@@ -40,4 +51,5 @@
   pages={40--47},
   year={2012},
   publisher={Springer}
+>>>>>>> 29b48d256e0d739606c963cc479c60e3bb5ff74c
 }
