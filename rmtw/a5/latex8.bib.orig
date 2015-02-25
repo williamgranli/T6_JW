@@ -32,7 +32,16 @@
   publisher={John Wiley \& Sons}
 }
 
-<<<<<<< HEAD
+
+@incollection{whittle2012mismatches,
+  title={Mismatches between industry practice and teaching of model-driven software development},
+  author={Whittle, Jon and Hutchinson, John},
+  booktitle={Models in Software Engineering},
+  pages={40--47},
+  year={2012},
+  publisher={Springer}
+}
+
 @article{mattsson2009linking,
   title={Linking model-driven development and software architecture: a case study},
   author={Mattsson, Anders and Lundell, Bj{\"o}rn and Lings, Brian and Fitzgerald, Brian},
@@ -42,14 +51,59 @@
   pages={83--93},
   year={2009},
   publisher={IEEE}
-=======
+  }
 
-@incollection{whittle2012mismatches,
-  title={Mismatches between industry practice and teaching of model-driven software development},
-  author={Whittle, Jon and Hutchinson, John},
-  booktitle={Models in Software Engineering},
-  pages={40--47},
+<<<<<<< HEAD
+
+%% Traceability management
+  @article{santiago2012model,
+  title={Model-Driven Engineering as a new landscape for traceability management: A systematic literature review},
+  author={Santiago, Iv{\'a}n and Jim{\'e}nez, {\'A}lvaro and Vara, Juan Manuel and De Castro, Valeria and Bollati, Ver{\'o}nica A and Marcos, Esperanza},
+  journal={Information and Software Technology},
+  volume={54},
+  number={12},
+  pages={1340--1356},
   year={2012},
+  publisher={Elsevier}
+}
+
+
+%%Testing
+@inproceedings{dias2007survey,
+  title={A survey on model-based testing approaches: a systematic review},
+  author={Dias Neto, Arilo C and Subramanyan, Rajesh and Vieira, Marlon and Travassos, Guilherme H},
+  booktitle={Proceedings of the 1st ACM international workshop on Empirical assessment of software engineering languages and technologies: held in conjunction with the 22nd IEEE/ACM International Conference on Automated Software Engineering (ASE) 2007},
+  pages={31--36},
+  year={2007},
+  organization={ACM}
+}
+
+
+%% requirements engineering
+@incollection{loniewski2010systematic,
+  title={A systematic review of the use of requirements engineering techniques in model-driven development},
+  author={Loniewski, Grzegorz and Insfran, Emilio and Abrah{\~a}o, Silvia},
+  booktitle={Model driven engineering languages and systems},
+  pages={213--227},
+  year={2010},
   publisher={Springer}
->>>>>>> 29b48d256e0d739606c963cc479c60e3bb5ff74c
+}
+
+%% requirements engineering
+@article{nicolas2009generation,
+  title={On the generation of requirements specifications from software engineering models: A systematic literature review},
+  author={Nicol{\'a}s, Joaqu{\'\i}n and Toval, Ambrosio},
+  journal={Information and Software Technology},
+  volume={51},
+  number={9},
+  pages={1291--1307},
+  year={2009},
+  publisher={Elsevier}
+=======
+  @techreport{keele2007guidelines,
+  title={Guidelines for performing systematic literature reviews in software engineering},
+  author={Keele, Staffs},
+  year={2007},
+  institution={Technical report, EBSE Technical Report EBSE-2007-01}
+>>>>>>> e64e520fce48f773f28255b173be902f52cc8538
 }
