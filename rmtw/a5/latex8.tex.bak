@@ -20,14 +20,13 @@
 %------------------------------------------------------------------------- 
 \begin{document}
 
-\overfullrule=2cm
 
 
-\title{Assignment 3}
+\title{Assignment 5}
 
 % author names and affiliations
 \author{John Burchell and William Granli \\
-john.a.burchell, william.granli@gmail.com}
+john.a.burchell@gmail.com, william.granli@gmail.com}
 
 
 \maketitle
@@ -35,138 +34,107 @@ john.a.burchell, william.granli@gmail.com}
 
 %------------------------------------------------------------------------- 
 
-%Deficiencies introduction model
 
 
 ​\Section{Introduction}
+Ever since the first computer programs were written, researchers and developers have been working on new programming concepts in order to decrease the level of complexity needed to develop programs. The abstraction level has been increased with help of compilers, object-oriented programming and Unified Modelling Language (UML). The current trend within software engineering (SE) is Model-driven Software Development (MDSD) which uses UML to generate object-oriented code \cite{staron2006adopting}. 
 
-Coping with change in the software development domain is difficult at best, it is further exasperated by trying to apply changes that do not mesh well with existing development paradigms. How then, do large companies, especially those utilising multiple development paradigms, cope with this kind of change?
+The benefits of MDSD have consistently been reported in academia \cite{staron2006adopting} \cite{volter2013model}. Many large companies such as Ericsson and ABB \cite{staron2006adopting} also use MDSD as a part of their development chain. In industry, however, MDSD struggles to make a (full) (x-wide) (XXX) breakthrough and it is mostly used for niche systems such as embedded and safety-critical systems.
 
-Paradigms in this context will be considered to be those which relate to software development. For example, we would consider Model Driven Software Development[CITE] to be a development paradigm. In this study we use the term manual coding to mean development without the use of any particular paradigm. The difference being that MDSD is heavily focused upon models and a high level of abstraction for the design of code, whereas manual coding is a standard development process. Our definition of change is not limited to the aforementioned examples, we would consider any changes to development paradigms such as a company wishing to implement processes such as Scrum or introducing Test Driven Development.
+\SubSection{Statement of the Problem}
 
-\SubSection{Problem Statement}
-Change is always a challenge in industry and one that is not going away any time soon. This is especially true when it comes to changing development processes or paradigms. One possible reason that these changes are far more difficult than others could be because the companies introducing these changes overlook the possibility that the changes they wish to implement are at odds with their current development paradigms or processes. This is the problem that this paper will attempt to address; how industry can determine what changes are suitable to implement taking into consideration their existing paradigms?
-
+The selection of development process, programming language and programming paradigm has a high impact on the development speed depending on what the the system requirements are and in which environment the system is developed. Selecting for example MDSD for the wrong system and setting may have a very negative impact on development speed, quality and maintainability. 
 
 \SubSection{Existing Literature}
-According to literature, changes in companies are commonly implemented following either Software Process Improvement (SPI)\cite{pettersson2008practitioner}\cite{unterkalmsteiner2012evaluation} or change management (CM) strategies. SPI is an attempt to alter an existing company or organisations software process, the main intention of which is to increase product quality, time to market all the while reducing inefficiency and other obstacles for creating good software. 
 
-Similar to SPI is the concept of Evidence Based Software Engineering \cite{dyba2005evidence}. EBSE can be used as support for SPI, as suggested by the creators of the strategy. The main aim of which is to find a technology which is suitable for use and to then implement it in an organisation.
+Volter et al\cite{volter2013model} says that successful adoption of MDSD should increase development speed, increase software quality, improve reusability and improve manageability through abstraction.
 
-CM on the other hand could be seen as an umbrella for a plethora of theories and strategies. An example of a theory is the concept of innovation values fit by \cite{klein1996challenge} which aims to describe if and when a company should make changes, based upon how a potential change fits with the values currently held by the company.
-
-In 2002 Hall, Rainer and Baddoo \cite{hall2002implementing} published a report wherein they illustrated results of a study which looked at 85 companies throughout the UK. The study focused mostly on how the companies perform SPI and how effective their efforts were. The authors discovered that, while most companies do attempt SPI, many are unsuccessful due to a combined lack of evaluation and funding.
+Whittle and Hutchinson \cite{whittle2012mismatches} conducted a study whereby they examined 17 companies who were adopting MDSD. While they agreed that the successful adoption of MDSD can improve productivity through code generation, there are many pitfalls which can cause the adoption to fail. Whittle and Hutchinson found that in companies where the change was implemented bottom up, there was a higher degree of success. On the contrary to this, when change was top down, as suggested by academia and education, the adoption was often not as successful. A focus on Domain Specific Languages (DSLs) is what Whittle and Hutchinson suggest helps MDSD become successful in a company setting.
 
 A further, more specific example is a study conducted by Staron \cite{staron2006adopting}. In this study a case study is conducted with two companies wishing or in the process of adopting MDSD. In the findings, Staron provides a set of conditions for adopting MDSD, one being the compatibility of MDSD and existing principles in the company. Staron states that the adoption of this new process must be usable by the previous processes in place \cite{staron2006adopting}. He concludes by stating that this compatibility is especially important for larger companies due to the heavy effort required to implement the change. In a second study \cite{staron2008transitioning}, Staron provides possible reasons for the adoption of MDSD to fail. He suggests that the large investment in time and money, immature technology and organisational resistance are all factors to overcome in the adoption of new processes.
 
-However, there are is no existing research that aims to tackle the problem of applying the same change to an organisation that utilises two differing development paradigms.
+Mattsson et al. \cite{mattsson2009linking} discuss the correlation between MDSD and software architecture. The idea that MDSD is beneficial if performed correctly is presented, and one important factor discussed is the need of automatic enforcement of architectural rules \cite{mattsson2009linking}. If this has to be performed manually, it will become a bottleneck in large MDSD projects \cite{mattsson2009linking}.
 
-\SubSection{Motivation for Research}
-Performing this study would therefore (XXX same) be an attempt at filling in a gap in literature. Academia would be interested in this for its own merit or, most likely, as a stepping stone towards further research.
+\SubSection{Motivation for Study}
 
-Industry is just as likely to be interested as change is something they face regularly. If this study can help to shed some light about specific methods of to help accommodate change. The study will be conducted in tandem with an organisation, to which the results would also be of great value. The organisation in question has had problems in the past with implementing effective change to keep up with their competition. 
+Academia appears to be united in the opinion that MDSD is an improvement compared with traditional software development \cite{staron2006adopting} \cite{volter2013model}. However, why then do most large software companies chose not to adopt MDSD?
 
-Furthermore, companies that operate in a similar, or even a different manner would most likely be able to appreciate the efforts made in the study. In the most hopeful of cases, applying the lessons learned to their own situations.
+This gap in the literature is the motivation for our study. There is therefore a need to methodically investigate the existing literature in which studies of the adoption of MDSD, advantages and disadvantages of MDSD are explored. Not only this but how and when should MDSD be adopted and how it can be ensured to succeed.
 
-Given that MDSD has seen a considerable rise in adoption by many companies\cite{millermda}, the results of the research would undoubtedly be of use to these companies also.
+\SubSection{Research Questions}
+\begin{itemize}
+\item \textbf{RQ1:} In which situations should companies expect that changing to MDSD would lead to positive effects? 
+\item \textbf{RQ1.1:} In which domain(s) is MDSD the most successful? 
+\item \textbf{RQ1.2:} Which software development process(es) has been most successfully used in conjunction with MDSD?
+\item \textbf{RQ1.3:} What are the characteristics of the systems of the companies that successfully use MDSD?
+\item \textbf{RQ1.4:} Which change strategy has most successful in implementing MDSD? 
+\end{itemize}
 
-\Section{Purpose of the Study}
-The purpose of this case study is to explore how changes to software processes are incorporated into a company where multiple development paradigms are used. The study has been designed for change agents and it has been conducted at the EPG department at Ericsson. At this stage in the research, the central phenomenon being studied, how changes are implemented in companies where more than one development paradigms are used, will be generally defined as implementing change in multi-paradigm environments. 
+\begin{itemize}
+\item They are probably not worded optimally... Here're some alturnutuves:
+\item In which situations should companies expect MDD to be successfully adopted?
+\item In which situations should companies expect that the adoption of MDD would lead to a performance boost?
+\end{itemize}
 
-
-\SubSection{Research Question(s)}
-RQ: How is change managed in multi-paradigm environments?
-
-SRQ1: What are the challenges of implementing change in multi-paradigm environments?
-
-SRQ2: How can a company determine if a change will conflict with the currently used development paradigms?
-
-SRQ3: How can an organisation's development paradigm be used as a basis for deciding which changes to adopt? 
 
 \Section{Methodology}
 
-\SubSection{Case Company Description}
-The subject case organisation in this study is Ericsson. Ericsson operates in the domain of communications technology, and their main products are in the domain of mobility, broadband and cloud-based services \cite{a7} \cite{a8}. Ericsson has 117,508 employees (as of September 30, 2014), 25,300 of which work in R\&D (Research and Development). \cite{a7}. 
+The method used to attempt to answer our research questions was a Systematic Literature Review (SLR) \cite{keele2007guidelines}. An SLR was the most appropriate research methodology for two main reasons. Firstly, we wished to summarise the existing evidence of when MDSD is applicable in industry and secondly to fill gaps in literature for examples of when MDSD is not applicable \cite{keele2007guidelines}. For these same reasons, other methodology techniques were not as applicable. For example, a quantitative study was not appropriate as we were not trying to prove, disprove or generalise a hypothesis. A qualitative study would have been useful if we were interested in exploring a hypothesis. For similar reasons a case study would also not have been applicable as we were not concerning ourselves with how MDSD works in a real setting. Likewise, as industry and academia seem to differ in opinion, there is an implication that there could have been be bias in both sides of the argument. By performing an SLR we helped to alleviate some of this bias but we did not eliminate it entirely \cite{keele2007guidelines}.
 
-Our research has been conducted at the Evolved Packet Gateway (EPG) department of Ericsson. The EPG department consists of approximately 700 employees, the majority of hwich work on software development related tasks. EPG delivers and maintains the EPG product which is a part of Ericsson's product for deployment of Long Term Evolution (LTE) networks \cite{a9}. The EPG product serves as a gateway between Ericsson's packet core network and other packet data networks, such as the Internet \cite{a9}. The EPG product is utilized in technologies such as 2G, 2G+, 3G, 4G and Wi-Fi hotspots \cite{a9}. 
+It is important to note that did not perform either a Systematic Mapping Study nor a Tertiary Review of existing literature. There was sufficient evidence in existence for the applicability of MDSD such that we could rule out the need to perform a Systematic Mapping Study. Furthermore, there was insufficient SLRs that had been conducted prior to our study, thus, a Tertiary Review was not possible nor appropriate at that time.
 
-The company was sampled through convenience sampling, and a maximum varation strategy was used. As such, the goal was to include as many companies as possible in this study. Since the study is conducted at a large communications technology company, it indicates that the study may be generalisable to similar companies. 
 
-\SubSection{Case Study Design}
-The study has been conducted with an exploratory goal in mind. Analysing how Ericsson tackle the problems related to the research questions has been the most central part of the study. Because of the exploratory nature of the study, a flexible process design has been used. The study has been carried out using an iterative approach, where the data collected, and the results gathered from analysing the data has been the main driver for shaping and improving the scope and goal of the study. The research has been conducted using a case study approach. The reason for this is that the goal of our study is to analyse MDSD, which is a common practice in software engineering, in a very specific setting. This line of thought is supported by Runesson \& Höst in \cite{runeson2009guidelines}. Runesson \& Höst also outline that a case study approach is well-suited for exploratory studies \cite{runeson2009guidelines}. 
+\SubSection{Planning the Study}
+Initially, existing SLRs were identified and evaluated, with the goal of mapping and identifying the gap in the existing literature. All identified SLRs \cite{santiago2012model} \cite{dias2007survey} \cite{loniewski2010systematic} \cite{nicolas2009generation} were, however, researching the usage of model-driven techniques in other fields, such as traceability management \cite{santiago2012model}, testing \cite{dias2007survey} and requirements engineering \cite{loniewski2010systematic} \cite{nicolas2009generation}. Based on these results, the need to evaluate previous research on model driven \textit{software} development was identified. 
 
-During the initial stage of the study, careful planning was conducted. The two major goals of this phase were to find meaningful objectives with an appropriate design for the research and secondly to facilitate and design the interviews. Although a flexible approach was taken, major effort was spent on planning the study. Most of the planning was related to communicating with Ericsson to facilitate the interviews. A time-line for the interviews was created and established with Ericsson. The objective of analysing change implementation in environments which are split into by two different development activities was also defined during this stage. 
+The next step was to define the research questions. The main research question was constructed to create a wide scope to be able to investigate which characteristics are most vital to consider when adopting MDSD. The sub-questions were constructed to provide more detailed answers for specific questions that are valuable to the industry and companies who are condering to implement MDSD. 
 
-\SubSection{Preparation for Data Collection}
-The interviewees were sampled using random sampling, with help of a gatekeeper at the company. The reason a gatekeeper was used was to reduce research bias. The random sampling was done on official employee records. The number of subjects for the interviews was (XXX or were?) 15. The subjects of the interviews were divided into three sub-groups; Managers, Developers and Change Agents, and 5 of each role were interviewed. The main reason the three different roles were included was to be able to reduce reserach bias through data triangulation.
 
-The interviewees were selected based on two criterion: they must have been employed at Ericsson for a minimum of 5 years and they must work at the EPG department. 5 years expirence was set as a minimum to ensure that all interviewees had experienced a fair number of changes at Ericsson. The reason only employees from EPG were accepted was to ensure that the population was cohesive. 
 
-During this stage, all ethical precautions of the study were taken. It was established that Ericsson did not require anonymity and that all interviews must happen on a voluntary basis. An agreement that Ericsson's change process documentation could be used as a data source in the study was also made. 
-
-\SubSection{Data Gathering}
-The data has mainly been gathered through first degree interviews \cite{lethbridge2005studying}. The interviews were carried out using a mix of open-ended and close-ended questions in combination with a semi-structured approach. The fact that the interviewees had widely differing backgrounds and roles was the main reason for not using a structured approach. A semi-structured approach was chosen over a unstructured approach to be able to obtain results which were closely related to each other. This was performed so that meaningful comparison and analysis could be carried out. Data triangulation was performed to compare and verify the results based on which role the interviewee had. The reason this was done was to reduce risk of, for example, change agents having a positive bias towards previously implemented changes. 
-
-Ericsson's change process documentation was also analysed to provide further depth to the analysis already performed. The documentation was also used to triangulate the interview answers that related to Ericsson's change strategy. The reason for was to reduce risks of research bias. Please see Appendix A (XXX or 1?) for a full list of interview questions.
-
-\SubSection{Data Analysis}
-The data analysis of the interviews were completed in tandem with the data gathering phase. This was performed so that we could iteratively improve upon the data collection process. The main purpose of analysing this data was to generate hypotheses and to refine the proposed research questions. The interviews were analysed by manually reading and comparing answers between the respondents. Spreadsheets and tables were used to provide an overview of the results.
-
-Once all the interview data had been collected, the goal of the data analysis shifted to focus upon confirmation of the hypothesis. As mentioned in Section IV. C, data triangulation was the primary tool used to confirm the hypothesis. 
 
 
 \begin{itemize}
-\item Create questions for your interviews (include the questions in your report)
-\item Mention how the company was selected and what the criteria was (there was some lazy w)
+
+\item Developing a review protocol (5.4)
+
+\item Evaluating the review protocol (5.5)
 \end{itemize}
 
-\Section{Threats to Validity}
 
-While designing the study, validity concerns were taken into consideration. The most pressing of which would be the limited scope of the study. The fact that the study only occurred in a subset of Ericsson and not a larger part of the company means that we cannot reliably make any generalities about the results. This is something that could be overcome during a potential triangulation period. For example, further studies could be conducted within Ericsson at other departments which could then be used to strengthen or diminish the results from this study.
+\SubSection{Conducting}
+\textbf{Conducting the review}
+\begin{itemize}
+\item Identification of research (6.1)
 
-Other validity issues concern bias. The potential for bias lies with both the subjects and researchers of the study [maybe cite?]. There is a risk that we, the researches, can be drawn too close to the company and as such might overlook or miss certain results that would otherwise be obvious to someone not so intimately involved. The potential for this bias is greater considering one of the researchers has previously held employment in the EPG department where the study took place. This potential for bias extends further to the respondents of the interviews. The respondents might have been intimidated by the interview procedure and potentially for repercussions to their positions within the company based on their answers to the questions. This is entirely possible despite the assurance that the responses would be anonymous. Finally, the gatekeeper is also a potential point of bias. In this study, the gatekeeper assisted with the sampling of potential interview candidates, while unlikely, there is potential that the gatekeeper could have selected individuals whom would have a favourable opinion about the material that the interview questions were concerned with.
+\item Selection of primary studies (6.2)
+\item Study quality assessment (6.3)
+\item Data extraction and monitoring (6.4)
+\item Data synthesis
+\end{itemize}
 
+\SubSection{Reporting (probably skip)}
+\textbf{Reporting the review}
+\begin{itemize}
+\item Specifying dissemination mechanisms (7.1)
+\item Formatting the main report (7.2)
+\item Evaluating the report (7.3)
+\end{itemize} 
 
 \bibliographystyle{latex8}
 \bibliography{latex8}
 
 
 \Section{Acknowledgements}
-John had the main responsibility for sections 1 \& 2. William had the main responsibility for section 3. Section 4 and the interview questions were written together. We have, however, worked on all sections jointly - and all sections have been reviewed by both William and John. 
 
-We have re-used some material from our DIT037 course. (Mostly in literature review and case company description). Because of this some of the text might show up on Urkund. For the most important parts, such as methodology and research questions we have not used any material from our DIT035 paper. 
-
-\newpage
-\appendix
-
-\section{Interview Questions}
 \begin{itemize}
-\item \textbf{Organisation}
-\begin{itemize}
-\item How long have you worked at Ericsson?
-\item How would you describe your role?
-\item Do you work in a manual coding or MDSD team?
-\end{itemize}
-
-\item \textbf{General Change}
-\begin{itemize}
-\item Do you feel that the changes in Ericsson have had a clear plan?
-\item How have the goals of the changes been communicated? 
-\item What has been the largest obstactle for change?
-\item What has been the main driving for change previously?
-\item Do you feel that some previously introduced changes do not work well together?
-\item Do you feel that the changes are targeted towards individuals or teams? 
-\item If you have had previous experience of changes, how is change at Ericsson different? 
-\end{itemize}
-
-\item \textbf{Multi-paradigm Change}
-\begin{itemize}
-\item Do you feel that changes are implemented differently based on what development paradigm is used?
-\item Do you feel that the implemented changes work well with both paradigms? 
-\item Do you feel that anything has changed in the change strategy since MDSD was introduced? 
-\end{itemize}
-
-
+\item \textbf{these bulletins are from the assignment specification}
+\item Describe and explain the research strategy (i.e. SLR) and investigation methods that will be used for the study. 
+\item Motivate your choice of experiment using relevant references. 
+\item Search string including keywords and used databases
+\item inclusion/exclusion criteria
+\item data extraction
+\item data synthesis
+\item quality assessment
 \end{itemize}
 
 
