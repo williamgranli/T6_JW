@@ -1,10 +1,45 @@
-\begin{thebibliography}{1}\setlength{\itemsep}{-1ex}\small
+\begin{thebibliography}{10}\setlength{\itemsep}{-1ex}\small
+
+\bibitem{dias2007survey}
+A.~C. Dias~Neto, R.~Subramanyan, M.~Vieira, and G.~H. Travassos.
+\newblock A survey on model-based testing approaches: a systematic review.
+\newblock In {\em Proceedings of the 1st ACM international workshop on
+  Empirical assessment of software engineering languages and technologies: held
+  in conjunction with the 22nd IEEE/ACM International Conference on Automated
+  Software Engineering (ASE) 2007}, pages 31--36. ACM, 2007.
+
+\bibitem{keele2007guidelines}
+S.~Keele.
+\newblock Guidelines for performing systematic literature reviews in software
+  engineering.
+\newblock Technical report, Technical report, EBSE Technical Report
+  EBSE-2007-01, 2007.
+
+\bibitem{loniewski2010systematic}
+G.~Loniewski, E.~Insfran, and S.~Abrah{\~a}o.
+\newblock A systematic review of the use of requirements engineering techniques
+  in model-driven development.
+\newblock In {\em Model driven engineering languages and systems}, pages
+  213--227. Springer, 2010.
 
 \bibitem{mattsson2009linking}
 A.~Mattsson, B.~Lundell, B.~Lings, and B.~Fitzgerald.
 \newblock Linking model-driven development and software architecture: a case
   study.
 \newblock {\em Software Engineering, IEEE Transactions on}, 35(1):83--93, 2009.
+
+\bibitem{nicolas2009generation}
+J.~Nicol{\'a}s and A.~Toval.
+\newblock On the generation of requirements specifications from software
+  engineering models: A systematic literature review.
+\newblock {\em Information and Software Technology}, 51(9):1291--1307, 2009.
+
+\bibitem{santiago2012model}
+I.~Santiago, {\'A}.~Jim{\'e}nez, J.~M. Vara, V.~De~Castro, V.~A. Bollati, and
+  E.~Marcos.
+\newblock Model-driven engineering as a new landscape for traceability
+  management: A systematic literature review.
+\newblock {\em Information and Software Technology}, 54(12):1340--1356, 2012.
 
 \bibitem{staron2006adopting}
 M.~Staron.
