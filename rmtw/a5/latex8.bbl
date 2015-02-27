@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}\setlength{\itemsep}{-1ex}\small
 
+\bibitem{brereton2007lessons}
+P.~Brereton, B.~A. Kitchenham, D.~Budgen, M.~Turner, and M.~Khalil.
+\newblock Lessons from applying the systematic literature review process within
+  the software engineering domain.
+\newblock {\em Journal of systems and software}, 80(4):571--583, 2007.
+
 \bibitem{dias2007survey}
 A.~C. Dias~Neto, R.~Subramanyan, M.~Vieira, and G.~H. Travassos.
 \newblock A survey on model-based testing approaches: a systematic review.

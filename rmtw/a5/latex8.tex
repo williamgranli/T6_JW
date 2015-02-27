@@ -10,6 +10,8 @@
 \documentclass[10pt,twocolumn]{article} 
 \usepackage{latex8}
 \usepackage{url}
+\usepackage{tabularx}
+\usepackage{appendix}
 
 %\documentstyle[times,art10,twocolumn,latex8]{article}
 
@@ -19,6 +21,7 @@
 
 %------------------------------------------------------------------------- 
 \begin{document}
+
 
 
 
@@ -70,15 +73,7 @@ This gap in the literature is the motivation for our study. There is therefore a
 \item \textbf{RQ1.4:} Which change strategy has most successful in implementing MDSD? 
 \end{itemize}
 
-\begin{itemize}
-\item They are probably not worded optimally... Here're some alternatives:
-\item In which situations should companies expect MDD to be successfully adopted?
-\item In which situations should companies expect that the adoption of MDD would lead to a performance boost?
-\end{itemize}
-
-
 \Section{Methodology}
-
 The method used to attempt to answer our research questions was a Systematic Literature Review (SLR) \cite{keele2007guidelines}. An SLR was the most appropriate research methodology for two main reasons. Firstly, we wished to summarise the existing evidence of when MDSD is applicable in industry and secondly to fill gaps in literature for examples of when MDSD is not applicable \cite{keele2007guidelines}. For these same reasons, other methodology techniques were not as applicable. For example, a quantitative study was not appropriate as we were not trying to prove, disprove or generalise a hypothesis. A qualitative study would have been useful if we were interested in exploring a hypothesis. For similar reasons a case study would also not have been applicable as we were not concerning ourselves with how MDSD works in a real setting. Likewise, as industry and academia seem to differ in opinion, there is an implication that there could have been be bias in both sides of the argument. By performing an SLR we helped to alleviate some of this bias but we did not eliminate it entirely \cite{keele2007guidelines}.
 
 It is important to note that did not perform either a Systematic Mapping Study nor a Tertiary Review of existing literature. There was sufficient evidence in existence for the applicability of MDSD such that we could rule out the need to perform a Systematic Mapping Study. Furthermore, there were insufficient SLRs that had been conducted prior to our study, thus, a Tertiary Review was not possible nor appropriate at that time.
@@ -89,34 +84,54 @@ Initially, existing SLRs were identified and evaluated, with the goal of mapping
 
 The next step was to define the research questions. The main research question was constructed to create a wide scope to be able to investigate which characteristics are most vital to consider when adopting MDSD. The sub-questions were constructed to provide more detailed answers for specific questions that are valuable to the industry and companies who are considering to implement MDSD. 
 
+\subsubsection{Review Protocol}
+The next step was to (<- XXX re-phrase that) define the review protocol. The list of databases included can be seen in Table I. The included databases have been chosen based on recommendations in \cite{brereton2007lessons}. SpringerLink was included as advised in \cite{keele2007guidelines}. The databases were divided evenly between the two researchers. 
 
+The search terms used can be found in Appendix A. The main search terms are related to MDSD, but related terms such as Model Driven Engineering and code generation were also included. 
 
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|l|l|} 
+		\hline
+		\textbf{Database} & \textbf{Link}  \\
+		\hline
+		IEEExplore &  Granli \\
+		\hline
+		ACM Digital library &  Granli \\
+		\hline
+		Google Scholar &  Granli \\
+		\hline
+		Citeseer Library & Granli \\
+		\hline
+		Inspec &  Burchell \\
+		\hline
+		ScienceDirect & Burchell \\
+		\hline
+		EI Compendex &  Burchell \\
+		\hline
+		SpringerLink & Burchell \\
+		\hline
+	\end{tabular}
+	\caption{Databases included in review}
+\end{table}
 
-Protocol
-1. Search process (table)
-
-2. Incl
-	include search terms here and databases
-
-3. Excl 
-
-* Informal literature surveys (no defined research questions, no search process, no defined data extraction or data analysis process). 
-* Papers not subject to peer-review, such as book
-* non-english
-
-Make a table somwhere stating that william picks some and john checks the same vice versa. 
-
-4. Tabulate the findings (overview)
-
-5. check the data colleciton part
-
-\begin{itemize}
-
-\item Developing a review protocol (5.4)
-
-\item Evaluating the review protocol (5.5)
+The inclusion criteria were defined as follows: \newline
+\begin{itemize} 
+\item Studies including examples about the application of MDSD in industry
 \end{itemize}
 
+
+The exclusion critiera were defined as follows: \newline
+\begin{itemize}
+\item Informal papers (no defined research questions, no methodology)
+\item Non-peer reviewed papers (books, white papers etc.)
+\end{itemize}
+
+Once papers were selected, the following data was selected: Publication year, topic area, methodology type, authors, summary of the paper, conclusion. This data was the used as a base for analysis when evaluating the research questions for each paper. 
+
+
+
+Evaluating the review protocol (5.5)
 
 \SubSection{Conducting}
 \textbf{Conducting the review}
@@ -179,6 +194,10 @@ Quality of the papers must also be considered before they are examined for use i
 \item quality assessment
 \end{itemize}
 
+\begin{appendices}
+\section{Search Terms}
+MDD, MDSD, model-driven software development, model-driven development, MDE, model-driven engineering, model driven engineering, code generation
+\end{appendices}
 
 \end{document}
 
