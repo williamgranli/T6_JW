@@ -56,22 +56,13 @@ Industry and academia both face the problem of code maintainability and by assoc
 
 The purpose of this survey study is therefore to test what are the differences in readability between five common and well known programming languages. With the aim of suggesting a metric which describes the readability of a given program, taking into account the inherent readability of the language in which it is written.
 
-The independent variables will be defined as the experience, occupation, preferred language, least preferred language and the working language of the participant. The dependent variable in this example will be the readability of the language.
-
 The survey data will be collected from students studying at the University of Gothenburg via a series of on-line surveys. The respondents will then be asked some information about their development background. They will then be asked to review a series of code snippets from popular languages and to rate their readability. 
 
 %------------------------------------------------------------------------- 
 \SubSection{Research Questions}
 This study has been designed with one main research question in mind:
 \begin{itemize}
-\item \textit{RQ1:} What are the measurable differences in perceived readability between programming languages?
-\end{itemize}
-
-
-The results of RQ1 will then be used to answer the following two sub research questions. 
-\begin{itemize}
-\item \textit{SRQ1}: How do the measurable differences between languages correlate to their use in academia for teaching?
-\item \textit{SRQ2}: How do the measurable differences between languages correlate to the popularity of the language?
+\item \textit{RQ1:} What are the inherent differences in perceived readability between programming languages?
 \end{itemize}
 
 
@@ -81,9 +72,9 @@ The main purpose of this study is to discover differences in the perceived reada
 
 
 \SubSection{Identifying the Population}
-As mentioned before, the goal of this study is to identify the inherent differences in readability of programming languages. To research this, a broad population is required, to avoid results influenced by a possible correlation between the perception of readability and the previously defined independent variables. As such, a research survey has been conducted. This reasoning is reinforced by Easterbrook et al. \cite{easterbrook2008selecting} who state ``Survey research is used to identify the characteristics of a broad population of individuals''. 
+As mentioned before, the goal of this study is to identify the inherent differences in readability of programming languages. To research this, a broad population is required, to avoid results influenced by a possible correlation between the perception of readability and for example experience. As such, a research survey has been conducted. This reasoning is reinforced by Easterbrook et al. \cite{easterbrook2008selecting} who state ``Survey research is used to identify the characteristics of a broad population of individuals''. 
 
-The population of this survey are the students of the Software Engineering and Management programme (SE\&M) at Gothenburg University. The number of students attending the SE\&M programme is 270. 110 of those are in the 1st year, 90 are in the 2nd year and the remaining 70 are in the 3rd year. The desired response rate is 10\%. Stratification of the population will not be enforced and thus there may be a statistically incorrect representation of the independent variables. This has, however, been taken into account in the analysis of the results. 
+The population of this survey are the students of the Software Engineering and Management programme (SE\&M) at Gothenburg University. The number of students attending the SE\&M programme is 270. 110 of those are in the 1st year, 90 are in the 2nd year and the remaining 70 are in the 3rd year. The desired response rate is 10\%. Stratification of the population will not be enforced and thus there may be a statistically incorrect representation based on experience or preferred language of the participant. This has, however, been taken into account in the analysis of the results. 
 
 The industry is left out of the population since they are more likely to have a lot of experience with certain languages which may cause them to be biased towards that language. Furthermore, Höst, Regnell and Whohlin \cite{host2000using} make the case that ``The reason to use students as subjects is often that they are available at universities and they are willing to participate in studies as part of courses they attend.'' which is highly appropriate given that we will be asking our peers and those in lower years who will eventually also be required to perform research tasks. The SE\&M program was chosen due to it being accessible for the researchers. More sophisticated sampling methods such as cluster-sampling or random sampling have not been used due to time-constraints. 
 
@@ -95,8 +86,6 @@ Google Sheets was decided upon as the appropriate tool of choice for our survey.
 The questionnaire consists of structured and partially structured questions. The questions are followed by two code snippets per language mentioned previously with a scale requesting the respondent to rate whether they feel that the code is easy or difficult to read in the style of the Likert Scale. The questions were written with as little ambiguity as possible. They were field tested by colleagues in a small example of our survey. An example of one question used in the survey is as follows:
 
 Taking into consideration potential biases that may occur, the code snippets were designed so that the code should be easily understood by first year students who have only had exposure to Java. For example, each code snippet has a standard ``Hello World'' example and a simple for-loop with a counter that is returned at the conclusion of the loop. The only exception to this is Erlang. While Erlang does support for-loops, recursion is the tool of choice to perform iterations. As such, we feel it was a valid example and should not affect the results for this specific language drastically considering, by this point and time in their education, all SE\&M students will have been exposed to recursion. The choices of languages do leave us open to a potential validity and bias issue. Inexperienced students who have only seen Java may rate it as easily readable purely because they are only familiar with Java, this is why the relative level of experience is requested first in the survey, so that we might be able to pick up this potential bias during the results analysis. To help alleviate this issue, the questionnaire was distributed to all three year groups currently studying at SE\&M (2012,2013,2014).
-
-Other potential validity threats we must take into consideration are those that arise from the nature of survey. Since we are performing single stage data collection, the respondents of the surveys are answering our questions at their convenience. This opens the door for some validity threats, such as the willingness to participate. Our data are at the mercy of those willing to participate; we cannot anticipate how many will respond. There is little incentive for the respondents to partake in the survey other than for their own self interest. 
 
 The questionnaire has been peer reviewed by colleagues Jani Kellaris and Patrik Bäckström and it has been tested on a 6 students in 2nd year which we supervise. 
 
@@ -113,15 +102,15 @@ The questionnaire has been peer reviewed by colleagues Jani Kellaris and Patrik 
     Experience of Language & RQ1, SQ2 & 5 \\ 
     \hline
   \end{tabularx}
-  \caption{Independent variables' relation to Research Questions}
+  \caption{Survey variables' relation to Research Questions}
 \end{table}
 
 \SubSection{Results Analysis}
 The response rate for the questionnaire was 11\%. The questionnaire was distributed to 270 members of the sample group and 29 members returned the survey.
 
-Response bias has been determined mostly through analysing the correlation between the independent variables and the dependent variables. Readability of a language is likely to be strongly correlated with the reader's experience of the language. Due to there being a high response rate amongst 1st year students, it suggests that the non-responses may have affected the results. This is not necessarily negative, since our study aims to measure the inherent readability of a programming language, where the experience of the reader has as little effect as possible.
+Response bias has been determined mostly through analysing the correlation between the previously defined variables and readability score. Readability of a language is likely to be strongly correlated with the reader's experience of the language. Due to there being a high response rate amongst 1st year students, it suggests that the non-responses may have affected the results. This is not necessarily negative, since our study aims to measure the inherent readability of a programming language, where the experience of the reader has as little effect as possible.
 
-The data was collected with a questionnaire consisting of 15 questions. The data has been analysed with simple descriptive analysis gwhere mean values have been the main source to analyse the readability of a language (RQ1). Correlation between the independent and dependent variables have been the main analysis to answer SRQ1 and SRQ2. Score ranges have been used to analyse the strength of replies. More advanced data analysis methods have not been utilised due to the relatively low number of respondent. 
+The data was collected with a questionnaire consisting of 15 questions. The data has been analysed with simple descriptive analysis gwhere mean values have been the main source to analyse the readability of a language (RQ1). Correlation between the variables and the readability score have been the main analysis to answer SRQ1 and SRQ2. Score ranges have been used to analyse the strength of replies. More advanced data analysis methods have not been utilised due to the relatively low number of respondent. 
 
 \SubSection{Threats to Validity}
 As in all research there are threats to the validity of the study being undertaken. Our largest threat would be the external validity of the data collected. The students were selected from the three current years studying at the University of Gothenburg. Most of the respondents indicated that they are in the first year of their studies and as such their inexperience could be a limiting factor on their answers to the survey. The students may also have had a bias for one of the languages; Java. So far, the students in the first year have been formally taught in only Java. This means that there is a lower chance they would be familiar with reading other language syntax other than Java and as such they would be more likely to see Java favourably than others. We cannot therefore generalise that Java has higher readability than that of the other languages despite what the results show. 
@@ -129,6 +118,8 @@ As in all research there are threats to the validity of the study being undertak
 A further threat that we were unable to counteract adequately was the willing to participate of our respondents. The participants had little or no incentive to actually partake in the study and as such many most likely simply ignored it. This is to be expected when one attempts to undertakes a single stage sampling method. One idea to improve the response rate for further surveys could be to form some incentive for the respondents.
 
 The fact that the questionnaire was distributed online via Facebook groups also meant that there was another threat to the validity of the responses. These groups are not officially controlled by the university and as such admission into these groups is up to the students who are organising them. This means that there is potential that some of the responses came from people not within the SE\&M institutions and this should be taken into consideration when analysing the results.
+
+Other potential validity threats we must take into consideration are those that arise from the nature of survey. Since we are performing single stage data collection, the respondents of the surveys are answering our questions at their convenience. This opens the door for some validity threats, such as the willingness to participate. Our data are at the mercy of those willing to participate; we cannot anticipate how many will respond. There is little incentive for the respondents to partake in the survey other than for their own self interest.
 
 
 \bibliographystyle{assignment_1}
