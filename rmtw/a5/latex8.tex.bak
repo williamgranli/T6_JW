@@ -10,6 +10,8 @@
 \documentclass[10pt,twocolumn]{article} 
 \usepackage{latex8}
 \usepackage{url}
+\usepackage{tabularx}
+\usepackage{appendix}
 
 %\documentstyle[times,art10,twocolumn,latex8]{article}
 
@@ -19,6 +21,7 @@
 
 %------------------------------------------------------------------------- 
 \begin{document}
+
 
 
 
@@ -39,7 +42,7 @@ john.a.burchell@gmail.com, william.granli@gmail.com}
 ​\Section{Introduction}
 Ever since the first computer programs were written, researchers and developers have been working on new programming concepts in order to decrease the level of complexity needed to develop programs. The abstraction level has been increased with help of compilers, object-oriented programming and Unified Modelling Language (UML). The current trend within software engineering (SE) is Model-driven Software Development (MDSD) which uses UML to generate object-oriented code \cite{staron2006adopting}. 
 
-The benefits of MDSD have consistently been reported in academia \cite{staron2006adopting} \cite{volter2013model}. Many large companies such as Ericsson and ABB \cite{staron2006adopting} also use MDSD as a part of their development chain. In industry, however, MDSD struggles to make a (full) (x-wide) (XXX) breakthrough and it is mostly used for niche systems such as embedded and safety-critical systems.
+The benefits of MDSD have consistently been reported in academia \cite{staron2006adopting} \cite{volter2013model}. Many large companies such as Ericsson and ABB \cite{staron2006adopting} also use MDSD as a part of their development chain. In industry, however, MDSD has struggled to make a complete breakthrough and it is mostly used for niche systems such as embedded and safety-critical systems.
 
 \SubSection{Statement of the Problem}
 
@@ -57,7 +60,7 @@ Mattsson et al. \cite{mattsson2009linking} discuss the correlation between MDSD 
 
 \SubSection{Motivation for Study}
 
-Academia appears to be united in the opinion that MDSD is an improvement compared with traditional software development \cite{staron2006adopting} \cite{volter2013model}. However, why then do most large software companies chose not to adopt MDSD?
+Academia appears to be united in the opinion that MDSD is an improvement compared with traditional software development \cite{staron2006adopting} \cite{volter2013model}. However, why do many large software companies chose not to adopt MDSD?
 
 This gap in the literature is the motivation for our study. There is therefore a need to methodically investigate the existing literature in which studies of the adoption of MDSD, advantages and disadvantages of MDSD are explored. Not only this but how and when should MDSD be adopted and how it can be ensured to succeed.
 
@@ -70,46 +73,97 @@ This gap in the literature is the motivation for our study. There is therefore a
 \item \textbf{RQ1.4:} Which change strategy has most successful in implementing MDSD? 
 \end{itemize}
 
-\begin{itemize}
-\item They are probably not worded optimally... Here're some alturnutuves:
-\item In which situations should companies expect MDD to be successfully adopted?
-\item In which situations should companies expect that the adoption of MDD would lead to a performance boost?
-\end{itemize}
-
-
 \Section{Methodology}
-
 The method used to attempt to answer our research questions was a Systematic Literature Review (SLR) \cite{keele2007guidelines}. An SLR was the most appropriate research methodology for two main reasons. Firstly, we wished to summarise the existing evidence of when MDSD is applicable in industry and secondly to fill gaps in literature for examples of when MDSD is not applicable \cite{keele2007guidelines}. For these same reasons, other methodology techniques were not as applicable. For example, a quantitative study was not appropriate as we were not trying to prove, disprove or generalise a hypothesis. A qualitative study would have been useful if we were interested in exploring a hypothesis. For similar reasons a case study would also not have been applicable as we were not concerning ourselves with how MDSD works in a real setting. Likewise, as industry and academia seem to differ in opinion, there is an implication that there could have been be bias in both sides of the argument. By performing an SLR we helped to alleviate some of this bias but we did not eliminate it entirely \cite{keele2007guidelines}.
 
-It is important to note that did not perform either a Systematic Mapping Study nor a Tertiary Review of existing literature. There was sufficient evidence in existence for the applicability of MDSD such that we could rule out the need to perform a Systematic Mapping Study. Furthermore, there was insufficient SLRs that had been conducted prior to our study, thus, a Tertiary Review was not possible nor appropriate at that time.
+It is important to note that did not perform either a Systematic Mapping Study nor a Tertiary Review of existing literature. There was sufficient evidence in existence for the applicability of MDSD such that we could rule out the need to perform a Systematic Mapping Study. Furthermore, there were insufficient SLRs that had been conducted prior to our study, thus, a Tertiary Review was not possible nor appropriate at that time.
 
 
 \SubSection{Planning the Study}
 Initially, existing SLRs were identified and evaluated, with the goal of mapping and identifying the gap in the existing literature. All identified SLRs \cite{santiago2012model} \cite{dias2007survey} \cite{loniewski2010systematic} \cite{nicolas2009generation} were, however, researching the usage of model-driven techniques in other fields, such as traceability management \cite{santiago2012model}, testing \cite{dias2007survey} and requirements engineering \cite{loniewski2010systematic} \cite{nicolas2009generation}. Based on these results, the need to evaluate previous research on model driven \textit{software} development was identified. 
 
-The next step was to define the research questions. The main research question was constructed to create a wide scope to be able to investigate which characteristics are most vital to consider when adopting MDSD. The sub-questions were constructed to provide more detailed answers for specific questions that are valuable to the industry and companies who are condering to implement MDSD. 
+The next step was to define the research questions. The main research question was constructed to create a wide scope to be able to investigate which characteristics are most vital to consider when adopting MDSD. The sub-questions were constructed to provide more detailed answers for specific questions that are valuable to the industry and companies who are considering to implement MDSD. 
 
+\subsubsection{Review Protocol}
+The next step was to (<- XXX re-phrase that) define the review protocol. The list of databases included can be seen in Table I. The included databases have been chosen based on recommendations in \cite{brereton2007lessons}. SpringerLink was included as advised in \cite{keele2007guidelines}. The databases were divided evenly between the two researchers. 
 
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|l|l|} 
+		\hline
+		\textbf{Database} & \textbf{Link}  \\
+		\hline
+		IEEExplore &  Granli \\
+		\hline
+		ACM Digital library &  Granli \\
+		\hline
+		Google Scholar &  Granli \\
+		\hline
+		Citeseer Library & Granli \\
+		\hline
+		Inspec &  Burchell \\
+		\hline
+		ScienceDirect & Burchell \\
+		\hline
+		EI Compendex &  Burchell \\
+		\hline
+		SpringerLink & Burchell \\
+		\hline
+	\end{tabular}
+	\caption{Databases included in review}
+\end{table}
 
+The search terms used can be found in Appendix A. The main search terms are related to MDSD, but related terms such as Model Driven Engineering and code generation were also included. 
 
-
-\begin{itemize}
-
-\item Developing a review protocol (5.4)
-
-\item Evaluating the review protocol (5.5)
+The inclusion criteria were defined as follows: \newline
+\begin{itemize} 
+\item Studies including examples about the application of MDSD in industry
 \end{itemize}
 
+The exclusion critiera were defined as follows: \newline
+\begin{itemize}
+\item Informal papers (no defined research questions, no methodology)
+\item Non-peer reviewed papers (books, white papers etc.)
+\end{itemize}
 
-\SubSection{Conducting}
+Once papers were selected, the following data was selected: Publication year, topic area, methodology type, authors, summary of the paper, conclusion. This data was the used as a base for analysis when evaluating the research questions for each paper. 
+
+The protocol was evaluated by Ioannis Kellaris and Patrik B\"ackstr\"om. The main objective of the review was to ascertain that the current protocol would properly address the research questions. Each step of the review protocol was evaluated based on this criteria. 
+
+\SubSection{Conducting the Study}
 \textbf{Conducting the review}
 \begin{itemize}
 \item Identification of research (6.1)
 
+Trial Search, Checking vs already performed studies.
+We picked 6 well known studies, our search strings did manage to find them all.
+
+Didn't check other disciplines as the area is not relevant. 
+
+Summarise publication bias.
+
+Table, showing what sources we searched, what dates, what strategy, Years covered by search, what journal and conference proceedings were covered.
+
+Justify the when, the where and the how.
+
 \item Selection of primary studies (6.2)
-\item Study quality assessment (6.3)
-\item Data extraction and monitoring (6.4)
-\item Data synthesis
+Sources that provide direct evidence about the research question. Refined search criteria here?
+
+\item Study quality assessment (6.3) x
+
+Apply the inclusion and exclusion criteria here, keeping a list of all excluded articles. 
+
+Studies not related to Software Engineering were excluded first and as such have not been included in the exclusion list due to their irrelevance.
+
+Cohen Kappa statistic. Initial value here. Disagreements will be discussed and resolved.
+
+\item Data extraction and monitoring (6.4) x
+
+Quality of the papers must also be considered before they are examined for use in the study, this is done along with the inclusion and exclusion criteria.
+
+
+
+\item Data synthesis x
 \end{itemize}
 
 \SubSection{Reporting (probably skip)}
@@ -137,6 +191,10 @@ The next step was to define the research questions. The main research question w
 \item quality assessment
 \end{itemize}
 
+\begin{appendices}
+\section{Search Terms}
+MDD, MDSD, model-driven software development, model-driven development, MDE, model-driven engineering, model driven engineering, code generation
+\end{appendices}
 
 \end{document}
 
