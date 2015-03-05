@@ -18,10 +18,23 @@ cl_rate <- c(0.05, 0.03, 0.21, 0.26, 0.16, 0.21, 0.16, 0.26, 0.18,
 cl_rate_mean = mean(cl_rate)
 
 eff_data <- data.frame(uc_eff, cl_eff)
-
 rate_data <- data.frame(uc_rate, cl_rate)
 
-boxplot(rate_data)
+rate_box <- boxplot(rate_data)
+eff_box <- boxplot(eff_data)
+
+
+
+
+
+var.test(uc_eff, cl_eff)
+
+t.test(uc_eff, cl_eff, var.equal=TRUE)
+
+var.test(uc_rate, cl_rate)
+
+t.test(uc_rate, cl_rate, var.equal=TRUE)
+
 
 
 

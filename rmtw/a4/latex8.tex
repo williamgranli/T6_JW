@@ -72,6 +72,77 @@ Read \url{https://dl.dropboxusercontent.com/u/2437798/Juristo%20Basics%20of%20So
 
 *Discuss what does the results means, how do we interpret it
 
+\Section{Tests for eff}
+
+%R output start
+	F test to compare two variances
+
+data:  uc_eff and cl_eff
+F = 1.61, num df = 25, denom df = 25, p-value = 0.2407
+alternative hypothesis: true ratio of variances is not equal to 1
+95 percent confidence interval:
+ 0.721893 3.590874
+sample estimates:
+ratio of variances 
+          1.610039 
+%R output end
+
+
+Since the p-value is larger than 0.05, we can deduce that the variances are homogeneous (cite expe) and that the T-test is the optimal approach.
+
+------------------------------------------------------------
+
+%R output start
+	Two Sample t-test
+
+data:  uc_eff and cl_eff
+t = -1.0786, df = 50, p-value = 0.286
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -3.2585387  0.9816156
+sample estimates:
+mean of x mean of y 
+ 6.161538  7.300000 
+ %R output end
+
+
+According to the test, the efficiency of CL is 7.3 while the efficiency of UC is 6.16 and H1 eff is therefore accepted. 
+
+\Section{Tests for rate}
+
+%R output start
+	F test to compare two variances
+
+data:  uc_rate and cl_rate
+F = 1.7018, num df = 25, denom df = 25, p-value = 0.1907
+alternative hypothesis: true ratio of variances is not equal to 1
+95 percent confidence interval:
+ 0.7630304 3.7955018
+sample estimates:
+ratio of variances 
+          1.701788 
+%R output end
+
+Since the p-value is larger than 0.05, we can deduce that the variances are homogeneous (cite expe) and that the T-test is the optimal approach.
+
+------------------------------------------------------------
+
+%R output start
+	Two Sample t-test
+
+data:  uc_rate and cl_rate
+t = -1.1416, df = 50, p-value = 0.2591
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.06525100  0.01795869
+sample estimates:
+mean of x mean of y 
+0.1211538 0.1448000 
+%R output end
+
+According to the test, the rate of CL is 1.45 while the effectiveness of UC is 0.12 and H1 rate is therefore accepted. 
+
+
 
 \bibliographystyle{latex8}
 \bibliography{latex8}
