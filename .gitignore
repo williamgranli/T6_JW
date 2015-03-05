@@ -5,3 +5,4 @@
 *.fls
 *.blg
 *.gz
+.Rproj.user
