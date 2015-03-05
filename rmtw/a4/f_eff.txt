@@ -1,0 +1,12 @@
+	F test to compare two variances
+
+data:  uc_eff and cl_eff
+F = 1.61, num df = 25, denom df = 25, 
+p-value = 0.2407
+alternative hypothesis: true ratio of varian- 
+ces is not equal to 1
+95 percent confidence interval:
+ 0.721893 3.590874
+sample estimates:
+ratio of variances 
+          1.610039 

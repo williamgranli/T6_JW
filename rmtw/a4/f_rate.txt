@@ -1,0 +1,12 @@
+	F test to compare two variances
+
+data:  uc_rate and cl_rate
+F = 1.7018, num df = 25, denom df = 25, 
+p-value = 0.1907
+alternative hypothesis: true ratio of varian-
+ces is not equal to 1
+95 percent confidence interval:
+ 0.7630304 3.7955018
+sample estimates:
+ratio of variances 
+          1.701788 

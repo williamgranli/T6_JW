@@ -10,6 +10,7 @@
 \documentclass[10pt,twocolumn]{article} 
 \usepackage{latex8}
 \usepackage{url}
+\usepackage{verbatim}
 
 %\documentstyle[times,art10,twocolumn,latex8]{article}
 
@@ -34,31 +35,6 @@ john.a.burchell, william.granli@gmail.com}
 
 %------------------------------------------------------------------------- 
 
-%Deficiencies introduction model
-
-
-​\Section{Introduction}
-Software inspections have since its inception [1] more than
-25 years ago spawned quite some interest both from the
-research community and industrial practice. The research
-includes changes to the inspection process, e.g. [2], support to
-the process, e.g. [3] and empirical studies, e.g. [4]. The
-suggested improvements include active design reviews [5] and
-perspective-based reading [6]. Industry has studied the
-benefits of conducting software inspections [7].
-The objective of this study is to compare and hence
-evaluate how well the use-case based reading performs in
-comparison to other methods. The study presents a controlled
-experiment where use-case based reading is compared to
-checklist-based reading.
-
-
-\Section{Purpose of the Study}
-* Purpose statement (copy paste from the file ‘Experiment\_Design.pdf’ file)
-
-* Research Questions (copy paste from the file ‘Experiment\_Design.pdf’ file)
-
-* Hypothesis (copy paste from the file ‘Experiment\_Design.pdf’ file)
 
 \Section{Methodology}
 * Method(s) for analyzing the data (Statistical analysis)
@@ -66,7 +42,6 @@ checklist-based reading.
 * Motivation of why these statistical tests where used
 
 \Section{Results}
-Read \url{https://dl.dropboxusercontent.com/u/2437798/Juristo%20Basics%20of%20Software%20Engineering%20Experimentation.pdf} pp. 133
 
 *Report the results
 
@@ -74,76 +49,47 @@ Read \url{https://dl.dropboxusercontent.com/u/2437798/Juristo%20Basics%20of%20So
 
 \Section{Tests for eff}
 
-%R output start
-	F test to compare two variances
-
-data:  uc_eff and cl_eff
-F = 1.61, num df = 25, denom df = 25, p-value = 0.2407
-alternative hypothesis: true ratio of variances is not equal to 1
-95 percent confidence interval:
- 0.721893 3.590874
-sample estimates:
-ratio of variances 
-          1.610039 
-%R output end
-
+\verbatiminput{f_eff.txt}
 
 Since the p-value is larger than 0.05, we can deduce that the variances are homogeneous (cite expe) and that the T-test is the optimal approach.
 
-------------------------------------------------------------
+\verbatiminput{t_eff.txt}
 
-%R output start
-	Two Sample t-test
-
-data:  uc_eff and cl_eff
-t = -1.0786, df = 50, p-value = 0.286
-alternative hypothesis: true difference in means is not equal to 0
-95 percent confidence interval:
- -3.2585387  0.9816156
-sample estimates:
-mean of x mean of y 
- 6.161538  7.300000 
- %R output end
-
-
-According to the test, the efficiency of CL is 7.3 while the efficiency of UC is 6.16 and H1 eff is therefore accepted. 
+According to the test, the efficiency of CL is 7.3 while the efficiency of UC is 6.16 and H0 eff is therefore rejected. 
 
 \Section{Tests for rate}
 
-%R output start
-	F test to compare two variances
+\verbatiminput{f_rate.txt}
 
-data:  uc_rate and cl_rate
-F = 1.7018, num df = 25, denom df = 25, p-value = 0.1907
-alternative hypothesis: true ratio of variances is not equal to 1
-95 percent confidence interval:
- 0.7630304 3.7955018
-sample estimates:
-ratio of variances 
-          1.701788 
-%R output end
+
 
 Since the p-value is larger than 0.05, we can deduce that the variances are homogeneous (cite expe) and that the T-test is the optimal approach.
 
-------------------------------------------------------------
 
-%R output start
-	Two Sample t-test
+\verbatiminput{t_rate.txt}
 
-data:  uc_rate and cl_rate
-t = -1.1416, df = 50, p-value = 0.2591
-alternative hypothesis: true difference in means is not equal to 0
-95 percent confidence interval:
- -0.06525100  0.01795869
-sample estimates:
-mean of x mean of y 
-0.1211538 0.1448000 
-%R output end
+According to the test, the rate of CL is 1.45 while the effectiveness of UC is 0.12 and h0 rate is therefore rejected. 
 
-According to the test, the rate of CL is 1.45 while the effectiveness of UC is 0.12 and H1 rate is therefore accepted. 
+\Section{Tests for #3}
 
+%%R output
+	Chi-squared test for given probabilities
+
+data:  ct
+X-squared = 5.4847, df = 2, p-value = 0.06442
+
+Since our significance level is 0.05 and p > 0.05, there is no significant difference and h1 is rejected. 
+%%R output
 
 
+Chi-square test requirements[edit]
+Quantitative data.
+One or more categories.
+Independent observations.
+Adequate sample size (at least 10).
+Simple random sample.
+Data in frequency form.
+All observations must be used.
 \bibliographystyle{latex8}
 \bibliography{latex8}
 

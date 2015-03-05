@@ -1,0 +1,11 @@
+	Two Sample t-test
+
+data:  uc_eff and cl_eff
+t = -1.0786, df = 50, p-value = 0.286
+alternative hypothesis: true difference in 
+means is not equal to 0
+95 percent confidence interval:
+ -3.2585387  0.9816156
+sample estimates:
+mean of x mean of y 
+ 6.161538  7.300000 
