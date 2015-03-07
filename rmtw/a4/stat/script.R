@@ -17,6 +17,8 @@ cl_rate <- c(0.05, 0.03, 0.21, 0.26, 0.16, 0.21, 0.16, 0.26, 0.18,
              0.08, 0.11, 0.05, 0.11, 0.11, 0.11, 0.26, 0.1448)
 cl_rate_mean = mean(cl_rate)
 
+
+
 eff_data <- data.frame(uc_eff, cl_eff)
 rate_data <- data.frame(uc_rate, cl_rate)
 
@@ -38,242 +40,17 @@ t.test(uc_rate, cl_rate, var.equal=TRUE)
 
 
 
-data <- read.table(header=TRUE, text='
-          condition result
-                  CL  A
-                  CL	B
-                  CL	C
-                   CL	C
-                   CL	B
-                   CL	B
-                   CL	C
-                   CL	B
-                   CL	B
-                   CL	B
-                   CL	C
-                   CL	A
-                   CL	B
-                   CL	A
-                   CL	B
-                   CL	A
-                   CL	B
-                   CL	C
-                   CL	C
-                   CL	A
-                   CL	A
-                   CL	C
-                   CL	C
-                   CL	C
-                   CL	B
-                   CL	C
-                   CL	C
-                   CL	C
-                   CL	C
-                   CL	A
-                   CL	A
-                   CL	A
-                   CL	B
-                   CL	A
-                   CL	B
-                   CL	A
-                   CL	B
-                   CL	A
-                   CL	B
-                   CL	A
-                   CL	C
-                   CL	C
-                   CL	B
-                   CL	B
-                   CL	B
-                   CL	B
-                   CL	A
-                   CL	A
-                   CL	A
-                   CL	B
-                   CL	A
-                   CL	B
-                   CL	B
-                   CL	A
-                   CL	C
-                   CL	C
-                   CL	C
-                   CL	A
-                   CL	A
-                   CL	C
-                   CL	B
-                   CL	C
-                   CL	B
-                   CL	B
-                   CL	B
-                   CL	B
-                   CL	B
-                   CL	B
-                   CL	B
-                   CL	B
-                   CL	B
-                   CL	B
-                   CL	A
-                   CL	C
-                   CL	B
-                   CL	A
-                   CL	B
-                   CL	C
-                   CL	B
-                   CL	A
-                   CL	A
-                   CL	B
-                   CL	C
-                   CL	C
-                   CL	A
-                   CL	A
-                   CL	B
-                   CL	A
-                   CL	B
-                   CL	B
-                   CL	A
-                   CL	A
-                   CL	B
-                   CL	B
-                   CL	A
-                   CL	B
-                   CL	C
-                   CL	A
-                   CL	B
-                   CL	C
-                   CL	C
-                   CL	C
-                   CL	B
-                   CL	B
-                   CL	B
-                   CL	C
-                   CL	C
-                   CL	B
-                   CL	B
-                   CL	B
-                   CL	C
-                   CL	B
-                   CL	B
-                   CL	B
-                   CL	A
-                   CL	A
-                   CL	B
-                   CL	C
-                  UC  C
-                  UC	B
-                  UC	B
-                   UC	B
-                   UC	B
-                   UC	A
-                   UC	A
-                   UC	A
-                   UC	B
-                   UC	C
-                   UC	B
-                   UC	C
-                   UC	C
-                   UC	C
-                   UC	B
-                   UC	B
-                   UC	B
-                   UC	A
-                   UC	A
-                   UC	A
-                   UC	A
-                   UC	B
-                   UC	B
-                   UC	A
-                   UC	A
-                   UC	A
-                   UC	B
-                   UC	A
-                   UC	B
-                   UC	B
-                   UC	C
-                   UC	A
-                   UC	C
-                   UC	A
-                   UC	B
-                   UC	A
-                   UC	A
-                   UC	C
-                   UC	A
-                   UC	B
-                   UC	A
-                   UC	B
-                   UC	C
-                   UC	B
-                   UC	A
-                   UC	B
-                   UC	C
-                   UC	C
-                   UC	A
-                   UC	A
-                   UC	C
-                   UC	C
-                   UC	B
-                   UC	A
-                   UC	C
-                   UC	B
-                   UC	B
-                   UC	A
-                   UC	C
-                   UC	C
-                   UC	A
-                   UC	A
-                   UC	B
-                   UC	A
-                   UC	B
-                   UC	B
-                   UC	B
-                   UC	A
-                   UC	C
-                   UC	C
-                   UC	B
-                   UC	B
-                   UC	B
-                   UC	C
-                   UC	A
-                   UC	C
-                   UC	B
-                   UC	C
-                   UC	C
-                   UC	A
-                   UC	C
-                   UC	A
-                   UC	B
-                   UC	C
-                   UC	C
-                   UC	B
-                   UC	C
-                   UC	B
-                   UC	C
-                   UC	B
-                   UC	C
-                   UC	C
-                   UC	A
-                   UC	A
-                   UC	B
-                   UC	B
-                   UC	B
-                   UC	B
-                   UC	A
-                   UC	A
-                   UC	A
-                   UC	C
-                   UC	C
-                   UC	B
-                   UC	B
-                   UC	A
-                   UC	C
-                   UC	C
-                   UC	C
-                   UC	A
-                   UC	C
-                   ')
+
 
 ct <- table(data$result)
 
 chisq.test(ct, correct=FALSE)
 
 
+qqnorm(uc_eff); qqline(uc_eff, col = 2,lwd=2,lty=2)
+
+qqnorm(cl_eff); qqline(cl_eff, col = 2,lwd=2,lty=2)
+
+ks.test(uc_eff, cl_eff)
+#shapiro.test(cl_eff)
 
