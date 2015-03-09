@@ -38,38 +38,58 @@ john.a.burchell, william.granli@gmail.com}
 
 
 \Section{Methodology}
-This section will describe which statistical tests were used, and why. The level of significance used for all tests is 5\%. 
+This section will describe which statistical tests were used, and why. The level of significance used for all tests is 0.05. 
 
 \SubSection{Tests Used for H\textsubscript{eff} and H\textsubscript{rate}}
-Initially, Kolmogorov-Smirnov (KS) Goodness-of-Fit and Shapiro-Wilks (SW) tests were used to determine if the assumption of normality could be held for the data set. The KS and SW tests both reported p-values < 0.05 and thus the null hypotheses of the data being normally distributed was rejected. See Table 1 for the results of the KS and SW tests. 
+Initially, Kolmogorov-Smirnov (KS) Goodness-of-Fit and Shapiro-Wilks (SW) tests were used to determine if the assumption of normality could be held for the data set. The data used for the tests was the number faults found by each participant. The reason this data was chosen was that it directly correlates to the data used in H\textsubscript{eff} and H\textsubscript{rate}. The KS and SW tests both reported p-values < 0.05. See Table 1 for the p-values of the KS and SW tests. The critical value analysis for the KS and SW showed similar results and thus the null hypotheses of the data being normally distributed was rejected. See Table 2 for more information about the critical value results of the KS and SW tests.
 
 \begin{table}
 	\centering
-	\begin{tabular}[ht]{| l | l | l |}
+	\begin{tabular}[Ht]{| l | l | l |}
 	\hline
 	Test & Sample & p-value  \\
 	\hline
-	KS & UC & =< 2.2e-16 \\
+	KS & UC & \textless 2.2e-16 \\
 	\hline
 	SW & UC & 0.000969 \\
 	\hline
-	KS & CL & =< 2.2e-16 \\
+	KS & CL & \textless 2.2e-16 \\
 	\hline
 	SW & CL & 0.309 \\	
 	\hline
 	\end{tabular}
-	\caption{Results of normality tests}
+	\caption{KS \& SW tests - p-value}
 \end{table}
+
+
+\begin{table}
+	\centering
+	\begin{tabular}[Ht]{| l | l | l | l |}
+	\hline
+	Test & Sample & Critical Value & D (result)  \\
+	\hline
+	KS & UC & 0.270 & 0.9388 \\
+	\hline
+	SW & UC & 0.964 &  0.8412 \\
+	\hline
+	KS & CL & 0.270 & 0.9388 \\
+	\hline
+	SW & CL & 0.964 & 0.9553 \\	
+	\hline
+	\end{tabular}
+	\caption{KS \& SW tests - Critical Value}
+\end{table}
+
 
 A graphical representation of the level of normalisation can be seen in Figure 1 and 2. The results from the tests are supported by the sparseness of the data points. 
 
-\begin{figure}[Ht!]
+\begin{figure}[Ht]
 \centering
 \includegraphics[width=90mm]{uc_qq.png}
 \caption{Use Case Q-Q plot}
 \end{figure}
 
-\begin{figure}[Ht!]
+\begin{figure}[Ht]
 \centering
 \includegraphics[width=90mm]{cl_qq.png}
 \caption{Checklist Q-Q plot}
