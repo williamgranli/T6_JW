@@ -32,6 +32,12 @@ m = mean(CL)
 #qqnorm(UC, main="Use Case Q-Q"); qqline(UC, col = 2,lwd=2,lty=2)
 #qqnorm(CL, main="Checklist Q-Q"); qqline(CL, col = 2,lwd=2,lty=2)
 
-wilcox.test(uc_eff, cl_eff) 
-wilcox.test(uc_rate, cl_rate)
+#wilcox.test(uc_eff, cl_eff) 
+#wilcox.test(uc_rate, cl_rate)
 
+uc_row = c(36, 40, 35)
+cl_row = c(31, 47, 28)
+
+data.table = rbind(uc_row, cl_row)
+
+chisq.test(data.table)
