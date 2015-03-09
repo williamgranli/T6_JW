@@ -33,4 +33,5 @@ m = mean(CL)
 #qqnorm(CL, main="Checklist Q-Q"); qqline(CL, col = 2,lwd=2,lty=2)
 
 wilcox.test(uc_eff, cl_eff) 
+wilcox.test(uc_rate, cl_rate)
 
