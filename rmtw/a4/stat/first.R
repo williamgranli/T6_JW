@@ -1,7 +1,7 @@
 uc_eff <- c(1.3, 8.0, 2.7, 2.7, 6.7, 9.3, 2.7, 5.3, 2.7, 16.0, 4.0, 
           2.7, 4.0, 14.7, 5.3, 6.7, 4.0, 2.7, 4.0, 13.3, 2.7, 6.7, 
           13.3, 5.3, 2.7, 10.7)
-uc_eff <- c(2.7, 1.3, 10.7, 13.3, 8.0, 10.7, 8.0, 13.3, 9.3, 8.0, 
+cl_eff <- c(2.7, 1.3, 10.7, 13.3, 8.0, 10.7, 8.0, 13.3, 9.3, 8.0, 
             9.3, 8.0, 4.0, 10.7, 6.7, 6.7, 5.3, 5.3, 4.0, 5.3, 
             2.7, 5.3, 5.3, 5.3, 13.3, 7.3)
 uc_rate <- c(0.03, 0.16, 0.05, 0.05, 0.13, 0.18, 0.05, 0.11, 0.05, 
@@ -16,18 +16,21 @@ UC = c(1, 6, 2, 2, 5, 7, 2, 4, 2, 12, 3, 2, 3, 11, 4, 5, 3, 2, 3, 10, 2, 5, 10, 
 CL = c(2, 1, 8, 10, 6, 8, 6, 10, 7, 6, 7, 6, 3, 8, 5, 5, 4, 4, 3, 4, 2, 4, 4, 4, 10, 5.48)
 m = mean(CL)
 
+
+
+
 #box_data <- data.frame(UC, CL)
 #boxplot(box_data)
-boxplot(UC, main = "UC Boxplot")
+#boxplot(UC, main = "UC Boxplot")
 #boxplot(CL, main = "CL Boxplot")
 
 
 #ks.test(UC, "pnorm")
-shapiro.test(UC)
+#shapiro.test(UC)
 #ks.test(CL, "pnorm")
-shapiro.test(CL)
+#shapiro.test(CL)
 #qqnorm(UC, main="Use Case Q-Q"); qqline(UC, col = 2,lwd=2,lty=2)
 #qqnorm(CL, main="Checklist Q-Q"); qqline(CL, col = 2,lwd=2,lty=2)
 
-#wilcox.test(UC, CL) 
-#wilcox.test(x,z, paired=TRUE)
+wilcox.test(uc_eff, cl_eff) 
+

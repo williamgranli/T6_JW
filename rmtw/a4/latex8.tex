@@ -96,21 +96,27 @@ A graphical representation of the level of normalisation can be seen in Figure 1
 \end{figure}
 
 
-The next step was to perform outlier test. The method used was boxplots. As seen in Figure 3 and 4, no outliers were detected and thus no data points were removed in the tests performed. 
+The next step was to perform an outlier test. The method used was boxplots. As seen in Figure 3 and 4, no outliers were detected and thus no data points were removed in the tests performed. 
 
-\begin{figure}[Ht!]
+\begin{figure}[Ht]
 \centering
 \includegraphics[width=90mm]{uc_box.png}
 \caption{Use Case Boxplot}
 \end{figure}
 
-\begin{figure}[Ht!]
+\begin{figure}[Ht]
 \centering
 \includegraphics[width=90mm]{cl_box.png}
 \caption{Checklist Boxplot}
 \end{figure}
 
-Since the data is non-normalised, the Wilcoxon-Mann-Whitney (WMW) two-sample rank-sum teset was chosen instead of the Student's T-test as the final test. The result of the WMW test was W=250, p=0.1063 and with the significance level of 89 (cite www.sussex) H0 is rejected. (Note that this was done on the raw data and not /45*60).
+
+\Section{Results}
+
+\subsection{first hypothesis}
+Since the data is non-normalised, the Wilcoxon-Mann-Whitney (WMW) two-sample rank-sum teset was chosen instead of the Student's T-test as the final test. The data used for the WMW test was the efficiency of each participant. The result of the WMW test was W=250, p=0.1063 and with the significance level of 536 H0 is rejected. 
+
+\subsection{second hyphothesis}
 
 
 http://www.sussex.ac.uk/Users/grahamh/RM1web/WilcoxonTable2005.pdf
@@ -120,59 +126,17 @@ http://www.sussex.ac.uk/Users/grahamh/RM1web/WilcoxonTable2005.pdf
 MWW = good for cont tests as well.
  Mann, Henry B.; Whitney, Donald R. (1947). "On a Test of Whether one of Two Random Variables is Stochastically Larger than the Other". Annals of Mathematical Statistics 18 (1): 50–60. doi:10.1214/aoms/1177730491. MR 22058. Zbl 0041.26103.
 
-1 and 2.
-Box
-->
-Histo, QQ, kolmogorov, z-test?
-->
-T
 
-3.
-Z-test verkar vara ett alternativ till chi
 
-* Method(s) for analyzing the data (Statistical analysis)
 
-* Motivation of why these statistical tests where used
 
-\Section{Results}
 
-*Report the results
-
-*Discuss what does the results means, how do we interpret it
 
 \Section{Tests for eff}
 
-\verbatiminput{f_eff.txt}
-
-Since the p-value is larger than 0.05, we can deduce that the variances are homogeneous (cite expe) and that the T-test is the optimal approach.
-
-\verbatiminput{t_eff.txt}
-
-According to the test, the efficiency of CL is 7.3 while the efficiency of UC is 6.16 and H0 eff is therefore rejected. 
-
-\Section{Tests for rate}
-
-\verbatiminput{f_rate.txt}
-
-
-
-Since the p-value is larger than 0.05, we can deduce that the variances are homogeneous (cite expe) and that the T-test is the optimal approach.
-
-
-\verbatiminput{t_rate.txt}
-
-According to the test, the rate of CL is 1.45 while the effectiveness of UC is 0.12 and h0 rate is therefore rejected. 
 
 \Section{Tests for 3}
 
-%%R output
-	Chi-squared test for given probabilities
-
-data:  ct
-X-squared = 5.4847, df = 2, p-value = 0.06442
-
-Since our significance level is 0.05 and p > 0.05, there is no significant difference and h1 is rejected. 
-%%R output
 
 
 Chi-square test requirements[edit]
