@@ -228,7 +228,11 @@ When looking at the results of the study, UC appears to find many more class A a
 	\hline
 	& UC & CL \\
 	\hline
+<<<<<<< HEAD
+	UC & 36 & 40 & 35 & 4.61hthth & 3.5 & 0.12 \\
+=======
 	Mean(Total faults found) & 4.61 & 5.48 \\
+>>>>>>> affb42d89568409fd6cb34df1bfb5e6ce707e94e
 	\hline
 	Median(Total faults found) & 3.5 & 5.0 \\
 	\hline
