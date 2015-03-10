@@ -12,6 +12,7 @@
 \usepackage{verbatim}
 \usepackage{fixltx2e}
 \usepackage{graphicx}
+\usepackage{enumitem}
 %\documentstyle[times,art10,twocolumn,latex8]{article}
 
 %------------------------------------------------------------------------- 
@@ -35,6 +36,77 @@ john.a.burchell, william.granli@gmail.com}
 
 %------------------------------------------------------------------------- 
 
+\section{Introduction}
+Software inspections have since its inception [1] more than
+25 years ago spawned quite some interest both from the
+research community and industrial practice. The research
+includes changes to the inspection process, e.g. [2], support to
+the proceThe dependent variables are analyzed to evaluate the
+hypotheses of the experiment. The main null and alternative
+hypotheses [12] are stated below. These are evaluated for all
+faults, class A faults and class A\&B faults. The hypotheses
+concern efficiency, effectiveness and fault detecting
+differences:ss, e.g. [3] and empirical studies, e.g. [4]. The
+suggested improvements include active design reviews [5] and
+perspective-based reading [6]. Industry has studied the
+benefits of conducting software inspections [7].
+
+\section{Purpose of the Study}
+This section will describe the purpose of the study, the research questions and the hypotheses. 
+
+\subsection{Purpose Statement}
+The objective of this study is to compare and hence
+evaluate how well the use-case based reading performs in
+comparison to other methods. The study presents a controlled
+experiment where use-case based reading is compared to
+checklist-based reading.
+
+\subsubsection{Variables}
+Three types of variables are defined for the experiment,
+independent, controlled, and dependent variables.
+
+\begin{enumerate}[label=(\alph*)]
+
+\item Independent Variable: The independent variable is
+the reading technique used. The experiment groups used either
+Use-Cased Based Reading or Checklist-Based Reding.
+\item Controlled Variable: The controll variable is the
+experience of the reviwers and it is measured on an ordinal
+scale. The reviwers were asked to fill in a questionnare
+comprising seven questions.
+\item Dependent Variables: The dependent varialbles
+measured are faults. The four variables are: (1) Number of
+faults found by each reviwer, (2) Number of faults found by
+each experiment group, (3) efficiency (faults/hour) and is
+measured as: 60*(number of fault found/inspection time which
+is 45 min), and (4) effectivness (detection rate) and is mesured
+as: number of faults found/total number of faults.
+
+\end{enumerate}
+
+\subsection{Research Questions}
+
+\subsection{Hypothesis}
+The general hypothesis of the experiment is that Use-Case
+Based Reading is more efficient and effective in finding faults
+of the most critical fault classes, i.e. Checklist-Based Reading
+is assumed to find more faults per time unit, and to find a
+larger rate of the critical faults.
+The dependent variables are analyzed to evaluate the
+hypotheses of the experiment. The main null and alternative
+hypotheses [12] are stated below. These are evaluated for all
+faults, class A faults and class A\&B faults. The hypotheses
+concern efficiency, effectiveness and fault detecting
+differences:
+\begin{itemize}
+\item H\textsubscript{0 Eff} - There is no difference in efficiency (i.e.found faults per hour) between the reviewers applying use cases and the reviewers using a checklist.
+\item H\textsubscript{1 Eff} - There is a difference in efficiency between the reviewers applying prioritized use cases and the reviewers using a checklist.
+\item H\textsubscript{0 Rate} - There is no difference in effectiveness (i.e. rate of faults found) between the reviewers applying use cases and the reviewers using a checklist.
+\item H\textsubscript{1 Rate} - There is a difference in effectiveness between the reviewers applying use cases and the reviewers using a checklist.
+\item H\textsubscript{0 Fault} - The reviewers applying use cases do not detect different faults than the reviewers using a checklist.
+\item H\textsubscript{1 Fault} - The reviewers applying use cases detect different faults than the reviewers using a checklist.
+
+\end{itemize}
 
 \Section{Methodology}
 This section will describe which statistical tests were used, and why. The level of significance used for all tests is 0.05. 
@@ -44,7 +116,7 @@ Initially, Kolmogorov-Smirnov (KS) Goodness-of-Fit and Shapiro-Wilks (SW) tests 
 
 \begin{table}
 	\centering
-	\begin{tabular}[Ht]{| l | l | l |}
+	\begin{tabular}[ht]{| l | l | l |}
 	\hline
 	Test & Sample & p-value  \\
 	\hline
@@ -63,7 +135,7 @@ Initially, Kolmogorov-Smirnov (KS) Goodness-of-Fit and Shapiro-Wilks (SW) tests 
 
 \begin{table}
 	\centering
-	\begin{tabular}[Ht]{| l | l | l | l |}
+	\begin{tabular}[ht]{| l | l | l | l |}
 	\hline
 	Test & Sample & Critical Value & D (result)  \\
 	\hline
@@ -82,13 +154,13 @@ Initially, Kolmogorov-Smirnov (KS) Goodness-of-Fit and Shapiro-Wilks (SW) tests 
 
 A graphical representation of the level of normalisation can be seen in Figure 1 and 2. The results from the tests are supported by the sparseness of the data points. 
 
-\begin{figure}[Ht]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=90mm]{uc_qq.png}
 \caption{Use Case Q-Q plot}
 \end{figure}
 
-\begin{figure}[Ht]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=90mm]{cl_qq.png}
 \caption{Checklist Q-Q plot}
@@ -97,13 +169,13 @@ A graphical representation of the level of normalisation can be seen in Figure 1
 
 The next step was to perform an outlier test. The method used was boxplots. As seen in Figure 3 and 4, no outliers were detected and thus no data points were removed in the tests performed. 
 
-\begin{figure}[Ht]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=90mm]{uc_box.png}
 \caption{Use Case Boxplot}
 \end{figure}
 
-\begin{figure}[Ht]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=90mm]{cl_box.png}
 \caption{Checklist Boxplot}
