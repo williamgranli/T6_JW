@@ -209,6 +209,8 @@ This section will cover the results of the experiment.
 \subsection{Efficiency and Effectiveness A}
 Since the data is non-normalised, the Wilcoxon-Mann-Whitney (WMW) two-sample rank-sum test was chosen instead of the Student's T-test as the final test. The data used for the WMW test was the efficiency of each participant. The result of the WMW test was W=250, p=0.1063 and with the significance level of 536, thus the null hypothesis H\textsubscript{0} Eff is rejected. 
 
+The results of the study show some interesting results. The rejection of \textsubscript{0} Eff indicates that there is a difference between the efficiency of the inspection methods. This difference could be down to the
+
 \subsection{Efficiency and Effectiveness B}
 The same test was chosen for Hrate, based on the same reasoning. The result of the WMW test for Hrate was W=250, p=0.1063 and with the significance level of 536 thus the null hypothesis H\textsubscript{0} Rate is rejected. 
 
@@ -219,6 +221,22 @@ As mentioned previously, the Chi-Square test of independence was used to determi
 
 data:  data.table
 X-squared = 1.5998, df = 2, p-value = 0.4494
+
+\begin{table}
+	\centering
+	\begin{tabular}[Ht]{| l | l | l | l | l | l | l |}
+	\hline
+	 & A Faults & B Faults & C Faults & Mean & Median & Detection Rate\\
+	\hline
+	UC & 36 & 40 & 35 & 4.615384615 & 3.5 & 0.12 \\
+	\hline
+	CL & 31 & 47 & 28 & 5.48 & 5 & 0.14 \\
+	\hline
+	\end{tabular}
+	\caption{Results Summary}
+\end{table}
+
+The results of the experiment appear to suggest that a check-list(CL) based review technique is more effective than a use-case(UC) based review technique. Given that the null hypothesis H\textsubscript{Eff} was rejected, it is a fair assumption to make. UC appears to find many more class A faults than CL, however, CL finds more class B faults and UC finds more class C faults. However, on average, the CL reviews found more faults overall and as such could be considered more effective than UC. The slight variation in favour of the CL technique is further evidence that CL is more efficient and therefore more effective than UC.
 
 
 
