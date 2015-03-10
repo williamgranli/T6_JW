@@ -196,13 +196,13 @@ The frequency of A, B and C risks found were tabulated against the inspection gr
 
 \begin{table}
 	\centering
-	\begin{tabular}[ht]{| l | l | l | l |}
+	\begin{tabular}[ht]{| l | l | l | l | l |}
 	\hline
-	 & A Faults & B Faults & C Faults  \\
+	 & A Faults & B Faults & C Faults & Excluded\\
 	\hline
-	Group A & 36 & 40 & 35 \\
+	UC & 36 & 40 & 35 & 9\\
 	\hline
-	Group B & 31 & 47 & 28 \\
+	CL & 31 & 47 & 28 & 27\\
 	\hline
 	\end{tabular}
 	\caption{Fault frequency of risk type per group}
@@ -216,9 +216,8 @@ Since the data is non-normalised, the Wilcoxon-Mann-Whitney (WMW) two-sample ran
 
 The same test was chosen for H\textsubscript{Rate}, based on the same reasoning. The result of the WMW test for H\textsubscript{Rate} was W=250, p=0.1063 and with the significance level of 536 thus the null hypothesis H\textsubscript{0 Rate} is rejected. 
 
-As evident from the tests, and as can be seen in Table 4, the results for H\textsubscript{Eff} and H\textsubscript{Rate} are similar. Both show that there is a difference between the two inspection methods, and both show greater results for CL.
+As evident from the tests, and as can be seen in Table 4, the results for H\textsubscript{Eff} and H\textsubscript{Rate} are similar. Both show that there is a difference between the two inspection methods, and both show greater results for CL. Table 3 shows that UC finds more faults of risk type A and C, but the fact that the CL data contained 18 more faults that contained an incorrect fault risk entry could be a possible explanation for that. 
 
-%% ctrl+F for "exactly  and why one inspection process"
 
 \subsection{Results for H\textsubscript{Fault}}
 As mentioned previously, the CS test was used to determine if the reviewers discovered the same frequency of results. The result of the X\textsuperscript{2} was 1.5998, generating a p-value of 0.4494. For v=2 and alpha = 0.05, the upper critical value is 5.991 and the lower critical value is 0.103. Since 1.5998 is \textless 5.991 and \textgreater 0.103, the alternative hypothesis of the CS test is rejected. Since \textsubscript{0 Fault} and \textsubscript{1 Fault} are inverted compared to the hypothesis of the CS test, the null hypothesis of H\textsubscript{Fault} is rejected.
