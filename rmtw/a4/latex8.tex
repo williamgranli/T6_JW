@@ -13,6 +13,8 @@
 \usepackage{fixltx2e}
 \usepackage{graphicx}
 \usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{mathtools}
 %\documentstyle[times,art10,twocolumn,latex8]{article}
 
 %------------------------------------------------------------------------- 
@@ -41,12 +43,7 @@ Software inspections have since its inception \cite{fagan2002design} more than
 25 years ago spawned quite some interest both from the
 research community and industrial practice. The research
 includes changes to the inspection process, e.g. \cite{bisant1989two}, support to
-the proceThe dependent variables are analyzed to evaluate the
-hypotheses of the experiment. The main null and alternative
-hypotheses \cite{montgomery2008design} are stated below. These are evaluated for all
-faults, class A faults and class A\&B faults. The hypotheses
-concern efficiency, effectiveness and fault detecting
-differences:ss, e.g. \cite{basili1996empirical} and empirical studies, e.g. \cite{basili1999building}. The
+the process, e.g. \cite{basili1996empirical} and empirical studies, e.g. \cite{basili1999building}. The
 suggested improvements include active design reviews \cite{parnas1985active} and
 perspective-based reading \cite{shull2000perspective}. Industry has studied the
 benefits of conducting software inspections \cite{weller1993lessons}.
@@ -69,22 +66,27 @@ independent, controlled, and dependent variables.
 
 	\item Independent Variable: The independent variable is
 	the reading technique used. The experiment groups used either
-	Use-Cased Based Reading or Checklist-Based Reding.
-	\item Controlled Variable: The controll variable is the
-	experience of the reviwers and it is measured on an ordinal
-	scale. The reviwers were asked to fill in a questionnare
+	Use-Cased Based Reading or Checklist-Based Reading.
+	\item Controlled Variable: The controlled variable is the
+	experience of the reviewers and it is measured on an ordinal
+	scale. The reviewers were asked to fill in a questionnaire
 	comprising seven questions.
-	\item Dependent Variables: The dependent varialbles
+	\item Dependent Variables: The dependent variables
 	measured are faults. The four variables are: (1) Number of
-	faults found by each reviwer, (2) Number of faults found by
+	faults found by each reviewer, (2) Number of faults found by
 	each experiment group, (3) efficiency (faults/hour) and is
 	measured as: 60*(number of fault found/inspection time which
-	is 45 min), and (4) effectivness (detection rate) and is mesured
+	is 45 min), and (4) effectiveness (detection rate) and is measured
 	as: number of faults found/total number of faults.
 
 \end{enumerate}
 
 \subsection{Research Questions}
+\begin{itemize}
+\item RQ1 - Is there a difference in effectiveness between Use-Case Based Reading and Checklist-Based Reading?
+\item RQ2 - Is there a difference in efficiency between Use-Case Based Reading and Checklist-Based Reading?
+\item RQ3 - Are different faults found by inspectors using Use-Case Based Reading than faults found by inspectors using Checklist-Based Reading? 
+\end{itemize}
 
 \subsection{Hypothesis}
 The general hypothesis of the experiment is that Use-Case
@@ -92,7 +94,7 @@ Based Reading is more efficient and effective in finding faults
 of the most critical fault classes, i.e. Checklist-Based Reading
 is assumed to find more faults per time unit, and to find a
 larger rate of the critical faults.
-The dependent variables are analyzed to evaluate the
+The dependent variables are analysed to evaluate the
 hypotheses of the experiment. The main null and alternative
 hypotheses \cite{montgomery2008design} are stated below. These are evaluated for all
 faults, class A faults and class A\&B faults. The hypotheses
@@ -101,7 +103,7 @@ differences:
 
 \begin{itemize}
 \item H\textsubscript{0 Eff} - There is no difference in efficiency (i.e.found faults per hour) between the reviewers applying use cases and the reviewers using a checklist.
-\item H\textsubscript{1 Eff} - There is a difference in efficiency between the reviewers applying prioritized use cases and the reviewers using a checklist.
+\item H\textsubscript{1 Eff} - There is a difference in efficiency between the reviewers applying prioritised use cases and the reviewers using a checklist.
 \item H\textsubscript{0 Rate} - There is no difference in effectiveness (i.e. rate of faults found) between the reviewers applying use cases and the reviewers using a checklist.
 \item H\textsubscript{1 Rate} - There is a difference in effectiveness between the reviewers applying use cases and the reviewers using a checklist.
 \item H\textsubscript{0 Fault} - The reviewers applying use cases do not detect different faults than the reviewers using a checklist.
@@ -113,7 +115,7 @@ differences:
 This section will describe which statistical tests were used, and why. The level of significance used for all tests is 0.05. 
 
 \SubSection{Tests Used for H\textsubscript{Eff} and H\textsubscript{Rate}}
-Initially, Kolmogorov-Smirnov (KS) Goodness-of-Fit and Shapiro-Wilks (SW) tests were used to determine if the assumption of normality could be held for the data set. The data used for the tests was the number faults found by each participant. The reason this data was chosen was that it directly correlates to the data used in H\textsubscript{Eff} and H\textsubscript{Rate}. No data points were removed from the data set before performing any tests for H\textsubscript{Eff} or H\textsubscript{Rate}. The reasoning for this was that the hypotheses only concern number of occurances and not the qualitative attributes of the data. This means that data points which, for example, contained ``incorrect'' \textit{Item numbers} were still used in the calculation.
+Initially, Kolmogorov-Smirnov (KS) Goodness-of-Fit and Shapiro-Wilks (SW) tests were used to determine if the assumption of normality could be held for the data set. The data used for the tests was the number faults found by each participant. The reason this data was chosen was that it directly correlates to the data used in H\textsubscript{Eff} and H\textsubscript{Rate}. No data points were removed from the data set before performing any tests for H\textsubscript{Eff} or H\textsubscript{Rate}. The reasoning for this was that the hypotheses only concern number of occurrences and not the qualitative attributes of the data. This means that data points which, for example, contained ``incorrect'' \textit{Item numbers} were still used in the calculation.
 
 The KS and SW tests both reported p-values \textless 0.05. See Table 1 for the p-values of the KS and SW tests. The critical value analysis for the KS and SW showed similar results and thus the null hypotheses of the data being normally distributed was rejected. See Table 2 for more information about the critical value results of the KS and SW tests.
 
@@ -187,7 +189,7 @@ The next step was to perform an outlier test. The method used was boxplots. As s
 
 
 \SubSection{Test Used for H\textsubscript{Fault}}
-The frequency of A, B and C faults found were tabularised against the groups which found them. Any response that was not not applicable (NA) was discarded from the table. An example of this is found in table 3. In order to determine if they do find the same faults, a Chi-Square test of independence was performed on the tabulated results. The reason the Chi-Square test of independence was used was primarily because the data we wished to use were categorical and the frequency of each category was at least 5. Other tests, such as Fishers Exact Test were not applicable, for example, our table was greater than 2x2 rows. Fishers test should only be used for 2x2 tables.
+The frequency of A, B and C faults found were tabularised against the groups which found them. Any response that was not not applicable (NA) was discarded from the table. An example of this is found in table 3. In order to determine if they do find the same faults, a Chi-Square (CS) test of independence was performed on the tabulated results. The reason the CS was used was primarily because the data we wished to use were categorical and the frequency of each category was at least 5. Other tests, such as Fishers Exact Test were not applicable, for example, our table was greater than 2x2 rows. Fishers test should only be used for 2x2 tables.
 
 \begin{table}
 	\centering
@@ -216,11 +218,9 @@ The same test was chosen for Hrate, based on the same reasoning. The result of t
 
 
 \subsection{Results for H\textsubscript{Fault}}
-As mentioned previously, the Chi-Square test of independence was used to determine if the reviewers discovered the same frequency of results. The result of the X\textsubscript{2} was 1.5998, generating a p-value of 0.4494. Thus, the null hypothesis H\textsubscript{0} Fault is rejected.
+As mentioned previously, the CS test was used to determine if the reviewers discovered the same frequency of results. The result of the X\textsubscript{2} was 1.5998, generating a p-value of 0.4494. For v=2 and alpha = 0.05, the upper critical value is 5.991 and the lower critical value is 0.103. Since 1.5998 is \textless 5.991 and \textgreater 0.103, the alternative hypothesis of the CS test is rejected. Since \textsubscript{0 Fault} and \textsubscript{1 Fault} are inverted compared to the hypothesis of the CS test, the null hypothesis of H\textsubscript{Fault} is rejected. 
 
 
-data:  data.table
-X-squared = 1.5998, df = 2, p-value = 0.4494
 
 \begin{table}
 	\centering
