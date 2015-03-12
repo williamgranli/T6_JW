@@ -1,5 +1,12 @@
 \begin{thebibliography}{10}\setlength{\itemsep}{-1ex}\small
 
+\bibitem{brereton2008using}
+P.~Brereton, B.~Kitchenham, D.~Budgen, and Z.~Li.
+\newblock Using a protocol template for case study planning.
+\newblock In {\em Proceedings of the 12th International Conference on
+  Evaluation and Assessment in Software Engineering. University of Bari,
+  Italy}, 2008.
+
 \bibitem{dyba2005evidence}
 T.~Dyba, B.~A. Kitchenham, and M.~Jorgensen.
 \newblock Evidence-based software engineering for practitioners.
