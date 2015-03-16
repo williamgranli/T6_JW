@@ -1,0 +1,64 @@
+
+%
+%  $Description: Author guidelines and sample document in LaTeX 2.09$ 
+%
+%  $Author: John Burchell & William Granli $
+%  $Date: 2015/01/21 15:20:59 $
+%  $Revision: 1.0
+%
+
+\documentclass[times, 10pt,twocolumn]{article} 
+\usepackage{latex8}
+\usepackage{url}
+\usepackage{tabularx}
+\usepackage{appendix}
+\usepackage{pbox}
+
+
+%\documentstyle[times,art10,twocolumn,latex8]{article}
+
+%------------------------------------------------------------------------- 
+% take the % away on next line to produce the final camera-ready version 
+\pagestyle{empty}
+
+%------------------------------------------------------------------------- 
+\begin{document}
+
+\title{Review of Group 9 by Group 1}
+
+% author names and affiliations
+\author{John Burchell and William Granli \\
+john.a.burchell@gmail.com, william.granli@gmail.com}
+
+
+
+\maketitle
+\thispagestyle{empty}
+
+
+%------------------------------------------------------------------------- 
+
+
+\Section{Introduction}
+The text for Section I and II are good, and fit the purpose of the sections. We chose to copy and paste the same part from Richard's pdf. The formatting of the sections could be improved, however. The overall structure of the paper is good, but it has some minor issues. 
+
+\section{Tests}
+It is not clear how you performed the normality tests or which tests you used. Our tests showed that the sampling was non-normal, so I suggest that you with suitable tests try it again. It is hard to comment on or give more feedback on this since your approach was is not transparent from the paper. Possible tests you could use to determine the normality are Kolmogorov-Smirnov or Shapiro-Wilks. You could also plot the data using density plots or QQ-plots to visualise the normality of the data. We also suggest that you check the data for outliers, and explain what you chose to do with possible outliers. 
+
+If you perform the normality tests again, and get a different result; you should probably consider using another test, since the t-test is not appropriate for non-normal data. We also could not find information on which test was used for the third hypothesis. 
+
+We also suggest that you calculate the p-values for each test to be able to determine if your results are statistically significant. Doing this (and all statistical testing) by hand, is quite tedious - so we suggest that you use a language like R to perform the tests. 
+
+Based on what we have seen in other papers which analyse the data using a statistical approach, we also suggest that you leave out the calculations (in Appendix). If other researchers want to cross-check your results, they probably would not look at your calculations, but perform the tests again and compare the results. 
+
+\section{Writing and Structure}​​
+​​The two first paragraphs of Section III don't really apply to this study. It seems to be more of a general explanation of why and when one should perform a statistical analysis. 
+
+Most of what is discussed in Section IV should probably be put in Section III. The 3 first paragraphs explain how the tests were performed, and is related to the Methodology and not the Results. Only the last paragraph relates to the actual results of the tests. 
+
+In general, it seems that you do not back your statements and explain why you choose to do something. Try to make it clear what the reasoning is behind each decision, especially in the Methodology section. 
+
+You also did not make any attempt at rejecting any hypothesis, which should be the main goal of an experiment.
+
+\end{document}
+
