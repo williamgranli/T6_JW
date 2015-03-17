@@ -6,14 +6,12 @@
 %  $Date: 1995/09/15 15:20:59 $
 %  $Revision: 1.4 $
 %
-
-\documentclass[times, 10pt,twocolumn]{Article} 
+\documentclass[10pt,twocolumn]{article} 
 \usepackage{latex8}
 \usepackage{times}
 \usepackage{url}
 \usepackage[utf8]{inputenc}
 \usepackage{tabularx}
-
 
 %\documentstyle[times,art10,twocolumn,latex8]{article}
 
@@ -39,7 +37,7 @@ john.a.burchell, william.granli@gmail.com}
 %------------------------------------------------------------------------- 
 \Section{Introduction}
 %Problem and definition
-Comparisons between programming languages are difficult to perform, due to inherent differences between languages, such as syntax. One aspect of code is its readability, which in turn is a determining factor of a piece of software's quality and maintainability \cite{aggarwal2002integrated, elshoff1982improving}. Buse \& Westley define readability as ``a property that influences how easily a given piece of code can be read and understood'' \cite{buse2010learning}. 
+Comparisons between programming languages are difficult to perform, due to inherent differences between languages, such as syntax. One aspect of code is its readability, which in turn is a determining factor of a piece of software's quality and maintainability \cite{aggarwal2002integrated},\cite{elshoff1982improving}. Buse \& Westley define readability as ``a property that influences how easily a given piece of code can be read and understood'' \cite{buse2010learning}. 
 
 %%Existing literature
 Existing studies in the field focus on readability within different coding styles for a set language, which can be seen in for example \cite{buse2010learning}. Buse \& Westley introduce a metrics system for measuring the readability of code, and Java is the language of choice in the study \cite{buse2010learning}. Buse \& Westley also discuss readability and its impact on programming language design, but they do not explore the readability differences between languages \cite{buse2010learning}. Posnett et al. \cite{posnett2011simpler} have further developed Buse \& Westley's metrics model to provide a simpler and more practical model which builds on size metrics as well as Halstead metrics \cite{halstead1977elements}. Hanen et al. have presented a study in the field which aims to identify details in code which makes it hard to read and the main focus is put on syntactical elements such as indentation or curly brackets \cite{hansen2013makes}. Even though direct comparisons between languages were not presented in the study \cite{hansen2013makes}, conclusions related to this can be drawn thanks to the fact that these syntactical elements only exist in some languages. 
@@ -52,9 +50,9 @@ The importance of code readability may be overlooked, since it does not directly
 
 %Introduction, specifying why this is urgent, needed etc from the notes above
 
-Industry and academia both face the problem of code maintainability and by association, readability. As was highlighted previously, the readability of code can affect its maintainability. This study could help some in industry to decide which languages should be used if maintainability is of high concern. Further studies could be conducted by to determine if there is a correlation between the popularity of projects and the readability of their languages. Furthermore, academia would be interested in which languages are more popular and those that have a higher readability, especially for novice developers. Further investigation into the design of these programming languages could yield insights into what makes them so popular and potentially well suited for teaching.
+Industry and academia both face the problem of code maintainability and by association, readability. As was highlighted previously, the readability of code can affect its maintainability. This study could help some in industry to decide which languages should be used if maintainability is of high concern. Further studies could be conducted to determine if there is a correlation between the popularity of projects and the readability of their languages. Furthermore, academia would be interested in which languages are more popular and those that have a higher readability, especially for novice developers. Further investigation into the design of these programming languages could yield insights into what makes them so popular and potentially well suited for teaching.
 
-The purpose of this survey study is therefore to test what are the differences in readability between five common and well known programming languages. With the aim of suggesting a metric which describes the readability of a given program, taking into account the inherent readability of the language in which it is written.
+The purpose of this survey study is therefore to discover how different levels of experience affect the perceived readability of code.
 
 The survey data will be collected from students studying at the University of Gothenburg via a series of on-line surveys. The respondents will then be asked some information about their development background. They will then be asked to review a series of code snippets from popular languages and to rate their readability. 
 
@@ -62,7 +60,11 @@ The survey data will be collected from students studying at the University of Go
 \SubSection{Research Questions}
 This study has been designed with one main research question in mind:
 \begin{itemize}
-\item \textit{RQ1:} What are the inherent differences in perceived readability between programming languages?
+\item \textit{RQ1:} How do different programming languages differ in readability?
+\begin{itemize}
+\item \textit{SQ1:} How does readability correlate to popularity?
+\end{itemize}
+\item \textit{RQ2:} How differently do students of differing levels of experience rate code readability?
 \end{itemize}
 
 
@@ -76,16 +78,16 @@ As mentioned before, the goal of this study is to identify the inherent differen
 
 The population of this survey are the students of the Software Engineering and Management programme (SE\&M) at Gothenburg University. The number of students attending the SE\&M programme is 270. 110 of those are in the 1st year, 90 are in the 2nd year and the remaining 70 are in the 3rd year. The desired response rate is 10\%. Stratification of the population will not be enforced and thus there may be a statistically incorrect representation based on experience or preferred language of the participant. This has, however, been taken into account in the analysis of the results. 
 
-The industry is left out of the population since they are more likely to have a lot of experience with certain languages which may cause them to be biased towards that language. Furthermore, Höst, Regnell and Whohlin \cite{host2000using} make the case that ``The reason to use students as subjects is often that they are available at universities and they are willing to participate in studies as part of courses they attend.'' which is highly appropriate given that we will be asking our peers and those in lower years who will eventually also be required to perform research tasks. The SE\&M program was chosen due to it being accessible for the researchers. More sophisticated sampling methods such as cluster-sampling or random sampling have not been used due to time-constraints. 
+The industry is left out of the population since they are more likely to have a lot of experience with certain languages which may cause them to be biased towards that language. Furthermore, Höst, Regnell and Whohlin \cite{host2000using} make the case that ``The reason to use students as subjects is often that they are available at universities and they are willing to participate in studies as part of courses they attend.'' which is highly appropriate given that we will be asking our peers and those in lower years who will eventually also be required to perform research tasks. The SE\&M program was chosen due to it being accessible for the researchers.
 
 \SubSection{Questionnaire Design}
 
-The five languages represented in the questionnaire were C++, Erlang, Go, Java and Python. They were chosen for multiple reasons. One being that all the students in the SE\&M course will have taken an introductory Java programming course by now and as such should be familiar with the syntax. The other languages were chosen for similar reasons. Erlang was chosen as it's the first language taught after Java and it uses a different development paradigm. C++ was chosen as it is used heavily in project course during the 4th semester and Python was chosen for similar reasons. Golang was picked as we wanted to see how students would perceive a language that is popular but has not really entered the academic landscape as of yet.
+The five languages represented in the questionnaire were C++, Erlang, Go, Java and Python. They were chosen for multiple reasons. One being that all the students in the SE\&M course will have taken an introductory Java programming course by now and as such should be familiar with the syntax. The other languages were chosen for similar reasons. Erlang was chosen as it's the first language taught after Java and it uses a different development paradigm. C++ was chosen as it is used heavily in project course during the 4th semester and Python was chosen for similar reasons. Golang was picked as we wanted to see how students would perceive a language that is popular but has not really entered the academic landscape as of yet. The code snippets do not show which language they are written in. This was done to help eliminate bias towards known languages by their names.
 
 Google Sheets was decided upon as the appropriate tool of choice for our survey. It has a good reputation for use in surveys and it was recommended to us by Dr. Richard Berntsson Svensson. We also have prior experience the tool from previous research projects.
 The questionnaire consists of structured and partially structured questions. The questions are followed by two code snippets per language mentioned previously with a scale requesting the respondent to rate whether they feel that the code is easy or difficult to read in the style of the Likert Scale. The questions were written with as little ambiguity as possible. They were field tested by colleagues in a small example of our survey. An example of one question used in the survey is as follows:
 
-Taking into consideration potential biases that may occur, the code snippets were designed so that the code should be easily understood by first year students who have only had exposure to Java. For example, each code snippet has a standard ``Hello World'' example and a simple for-loop with a counter that is returned at the conclusion of the loop. The only exception to this is Erlang. While Erlang does support for-loops, recursion is the tool of choice to perform iterations. As such, we feel it was a valid example and should not affect the results for this specific language drastically considering, by this point and time in their education, all SE\&M students will have been exposed to recursion. The choices of languages do leave us open to a potential validity and bias issue. Inexperienced students who have only seen Java may rate it as easily readable purely because they are only familiar with Java, this is why the relative level of experience is requested first in the survey, so that we might be able to pick up this potential bias during the results analysis. To help alleviate this issue, the questionnaire was distributed to all three year groups currently studying at SE\&M (2012,2013,2014).
+Taking into consideration potential biases that may occur, the code snippets were designed so that the code should be easily understood by first year students who have only had exposure to Java. For example, each code snippet has a standard ``Hello World'' example and a simple for-loop with a counter that is returned at the conclusion of the loop. The only exception to this is Erlang. While Erlang does support for-loops, recursion is the tool of choice to perform iterations. As such, we feel it was a valid example and should not affect the results for this specific language drastically considering, by this point and time in their education, all SE\&M students will have been exposed to recursion. The choices of languages do leave us open to a potential validity and bias issue. Inexperienced students who have only seen Java may rate it as easily readable purely because they are only familiar with Java, this is why the relative level of experience is requested first in the survey, so that we might be able to pick up this potential bias during the results analysis. Complicated code snippets were therefore excluded as we were not specifically aiming for a ``Code reading'' exercise. The questionnaire was distributed to all three year groups currently studying at SE\&M (2012,2013,2014).
 
 The questionnaire has been peer reviewed by colleagues Jani Kellaris and Patrik Bäckström and it has been tested on a 6 students in 2nd year which we supervise. 
 
@@ -95,11 +97,11 @@ The questionnaire has been peer reviewed by colleagues Jani Kellaris and Patrik 
   {\linewidth}{| l | X | X |}
     \hline
     \textbf{Variable Name} & \textbf{Research Question} & \textbf{Item on Survey} \\ \hline
-    Experience & RQ1, SQ1 & 1 \\ \hline
-    Academic Year & RQ1, SQ1 & 2 \\ \hline
-    Preferred Language & RQ1, SQ2 & 3 \\ \hline
-    Least Preferred Language & RQ1, SQ2& 4 \\  \hline
-    Experience of Language & RQ1, SQ2 & 5 \\ 
+    Experience & RQ1 & 1 \\ \hline
+    Academic Year & RQ1 & 2 \\ \hline
+    Preferred Language & RQ1, SQ1 & 3 \\ \hline
+    Least Preferred Language & RQ1, SQ1 & 4 \\  \hline
+    Experience of Language & RQ1, SQ1 & 5 \\ 
     \hline
   \end{tabularx}
   \caption{Survey variables' relation to Research Questions}
@@ -113,22 +115,21 @@ Response bias has been determined mostly through analysing the correlation betwe
 The data was collected with a questionnaire consisting of 15 questions. The data has been analysed with simple descriptive analysis where mean values have been the main source to analyse the readability of a language (RQ1). Correlation between the variables and the readability score have been the main analysis to answer SRQ1 and SRQ2. Score ranges have been used to analyse the strength of replies. More advanced data analysis methods have not been utilised due to the relatively low number of respondent. 
 
 \SubSection{Threats to Validity}
-As in all research there are threats to the validity of the study being undertaken. The comparison of the perceived readability of programming languages cannot be fully determined from a single study, as such, more are required to make more concrete generalisations. Given this, the threats to internal and construct validity are among the most important for this study. The most import however would be the external validity of the study.
+As in all research there are threats to the validity of the study being undertaken. The comparison of the perceived readability of programming languages cannot be fully determined from a single study, as such, more are required to make more concrete generalisations. Given this, the threats to internal and construct validity are among the most important for this study with the most import being the external validity of the study.
 
-The students were selected from the three current years studying at the University of Gothenburg. Most of the respondents indicated that they are in the first year of their studies and as such their inexperience could be a limiting factor on their answers to the survey. The students may also have had a bias for one of the languages; Java. So far, the students in the first year have been formally taught in only Java. This means that there is a lower chance they would be familiar with reading other language syntax other than Java and as such they would be more likely to see Java favourably than others. We cannot therefore generalise that Java has higher readability than that of the other languages despite what the results show. 
+Threats to \textit{external validity} include using students as participants, the size of the code snippets used in the survey and the distribution of the survey. Using students as participants is a threat mainly due to their experience levels. This threat is diminished as we are interesting in the disparity between the levels of experience, furthermore, the use of students in surveys is recommended by Höst, Regnell and Whohlin \cite{host2000using}. The size and complexity of the code snippets provided was minimised. The students have all had at least one course in Java and as such we felt that the simplicity of the code snippets used for the other languages would be appropriate.
 
-A further threat that we were unable to counteract adequately was the willing to participate of our respondents. The participants had little or no incentive to actually partake in the study and as such many most likely simply ignored it. This is to be expected when one attempts to undertakes a single stage sampling method. One idea to improve the response rate for further surveys could be to form some incentive for the respondents.
+As mentioned previously, a pilot study was conducted among peers and students whom we supervise. The goal of this action was to identify and thereby reduce ambiguity in our questionnaire, thus limiting \textit{construction validity} threats.
 
-The fact that the questionnaire was distributed online via Facebook groups also meant that there was another threat to the validity of the responses. These groups are not officially controlled by the university and as such admission into these groups is up to the students who are organising them. This means that there is potential that some of the responses came from people not within the SE\&M institutions and this should be taken into consideration when analysing the results.
+In regards to \textit{internal validity} threats, we had to cope with performing a convenience survey and random distribution of the surveys. The participants had little or no incentive to actually partake in the study and as such many most likely simply ignored it. One idea to improve the response rate for further surveys could be to form some incentive for the respondents.
 
-Other potential validity threats we must take into consideration are those that arise from the nature of survey. Since we are performing single stage data collection, the respondents of the surveys are answering our questions at their convenience. This opens the door for some validity threats, such as the willingness to participate. Our data are at the mercy of those willing to participate; we cannot anticipate how many will respond. There is little incentive for the respondents to partake in the survey other than for their own self interest.
+The questionnaire being distributed online via Facebook groups was another threat to the \textit{internal validity}. These groups are not officially controlled by the university and as such admission into these groups is up to the students who are organising them. This means that there is potential that some of the responses came from people not within the SE\&M institutions and this should be taken into consideration when analysing the results. One way to overcome this in future studies could be to use formal mailing lists, thus limiting the participants to only those students whom are enrolled at the university.
+
+A final \textit{internal validity} threat is that the students were selected from the three current years studying at the University of Gothenburg. Most of the respondents indicated that they are in the first year of their studies and as such their inexperience could be a limiting factor of their responses. The students may also have had a bias for one of the languages; Java. So far, the students in the first year have been formally taught in only Java. This means that there is a lower chance they would be familiar with reading other language syntax other than Java and as such they would be more likely to see Java favourably than others. This is both an internal and external threat and in order to overcome it, we would most likely need to perform further studies.
 
 
 \bibliographystyle{assignment_1}
 \bibliography{assignment_1}
-
-\vfill
-\eject
 
 
 \Section{Acknowledgements}
