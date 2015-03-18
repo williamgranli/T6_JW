@@ -1,47 +1,53 @@
 \begin{thebibliography}{1}\setlength{\itemsep}{-1ex}\small
 
-\bibitem{basili1996empirical}
-V.~R. Basili, S.~Green, O.~Laitenberger, F.~Lanubile, F.~Shull,
-  S.~S{\o}rumg{\aa}rd, and M.~V. Zelkowitz.
-\newblock The empirical investigation of perspective-based reading.
-\newblock {\em Empirical Software Engineering}, 1(2):133--164, 1996.
+\bibitem{google_talk}
+J.~Bloch.
+\newblock How to design a good api and why it matters.
+\newblock In {\em Companion to the 21st ACM SIGPLAN symposium on
+  Object-oriented programming systems, languages, and applications}, pages
+  506--507. ACM, 2006.
 
-\bibitem{basili1999building}
-V.~R. Basili, F.~Shull, and F.~Lanubile.
-\newblock Building knowledge through families of experiments.
-\newblock {\em Software Engineering, IEEE Transactions on}, 25(4):456--473,
-  1999.
+\bibitem{dig2005role}
+D.~Dig and R.~Johnson.
+\newblock The role of refactorings in api evolution.
+\newblock In {\em Software Maintenance, 2005. ICSM'05. Proceedings of the 21st
+  IEEE International Conference on}, pages 389--398. IEEE, 2005.
 
-\bibitem{bisant1989two}
-D.~B. Bisant and J.~R. Lyle.
-\newblock A two-person inspection method to improve programming productivity.
-\newblock {\em IEEE Transactions on Software Engineering}, 15(10):1294--1304,
-  1989.
+\bibitem{henning2007api}
+M.~Henning.
+\newblock Api design matters.
+\newblock {\em Queue}, 5(4):24--36, 2007.
 
-\bibitem{fagan2002design}
-M.~Fagan.
-\newblock Design and code inspections to reduce errors in program development.
-\newblock In {\em Software pioneers}, pages 575--607. Springer, 2002.
+\bibitem{hou2011exploring}
+D.~Hou and X.~Yao.
+\newblock Exploring the intent behind api evolution: A case study.
+\newblock In {\em Reverse Engineering (WCRE), 2011 18th Working Conference on},
+  pages 131--140. IEEE, 2011.
 
-\bibitem{montgomery2008design}
-D.~C. Montgomery.
-\newblock {\em Design and analysis of experiments}.
-\newblock John Wiley \& Sons, 2008.
+\bibitem{lientz1980software}
+B.~P. Lientz and E.~B. Swanson.
+\newblock Software maintenance management.
+\newblock 1980.
 
-\bibitem{parnas1985active}
-D.~L. Parnas and D.~M. Weiss.
-\newblock Active design reviews: principles and practices.
-\newblock In {\em Proceedings of the 8th international conference on Software
-  engineering}, pages 132--136. IEEE Computer Society Press, 1985.
+\bibitem{mcdonnell2013empirical}
+T.~McDonnell, B.~Ray, and M.~Kim.
+\newblock An empirical study of api stability and adoption in the android
+  ecosystem.
+\newblock In {\em Software Maintenance (ICSM), 2013 29th IEEE International
+  Conference on}, pages 70--79. IEEE, 2013.
 
-\bibitem{shull2000perspective}
-F.~Shull, I.~Rus, and V.~Basili.
-\newblock How perspective-based reading can improve requirements inspections.
-\newblock {\em Computer}, 33(7):73--79, 2000.
+\bibitem{robbes2012developers}
+R.~Robbes, M.~Lungu, and D.~R{\"o}thlisberger.
+\newblock How do developers react to api deprecation?: the case of a smalltalk
+  ecosystem.
+\newblock In {\em Proceedings of the ACM SIGSOFT 20th International Symposium
+  on the Foundations of Software Engineering}, page~56. ACM, 2012.
 
-\bibitem{weller1993lessons}
-E.~F. Weller.
-\newblock Lessons from three years of inspection data (software development).
-\newblock {\em Software, IEEE}, 10(5):38--45, 1993.
+\bibitem{xing2006refactoring}
+Z.~Xing and E.~Stroulia.
+\newblock Refactoring practice: How it is and how it should be supported-an
+  eclipse case study.
+\newblock In {\em Software Maintenance, 2006. ICSM'06. 22nd IEEE International
+  Conference on}, pages 458--468. IEEE, 2006.
 
 \end{thebibliography}
