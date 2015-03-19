@@ -1,9 +1,5 @@
 \begin{thebibliography}{10}\setlength{\itemsep}{-1ex}\small
 
-\bibitem{iso}
-!!!
-\newblock Iso/iec 14764:2006.
-
 \bibitem{afonso2012evaluating}
 L.~M. Afonso, R.~F. d.~G. Cerqueira, and C.~S. de~Souza.
 \newblock Evaluating application programming interfaces as communication
@@ -48,6 +44,13 @@ D.~Hou and X.~Yao.
 \newblock Exploring the intent behind api evolution: A case study.
 \newblock In {\em Reverse Engineering (WCRE), 2011 18th Working Conference on},
   pages 131--140. IEEE, 2011.
+
+\bibitem{iso}
+ISO/IEC.
+\newblock Software engineering---{S}oftware lifecycle
+  processes---{M}aintenance---{D}efinition and terms.
+\newblock Standard, International Organization for Standardization and
+  International Electrotechnical Commission, Geneva, Switzerland, 2006.
 
 \bibitem{lientz1980software}
 B.~P. Lientz and E.~B. Swanson.
