@@ -10,6 +10,11 @@ L.~M. Afonso, R.~F. d.~G. Cerqueira, and C.~S. de~Souza.
   artefacts.
 \newblock {\em System}, 100:8--31, 2012.
 
+\bibitem{benbasat1987case}
+I.~Benbasat, D.~K. Goldstein, and M.~Mead.
+\newblock The case research strategy in studies of information systems.
+\newblock {\em MIS quarterly}, pages 369--386, 1987.
+
 \bibitem{google_talk}
 J.~Bloch.
 \newblock How to design a good api and why it matters.
@@ -22,6 +27,11 @@ D.~Dig and R.~Johnson.
 \newblock The role of refactorings in api evolution.
 \newblock In {\em Software Maintenance, 2005. ICSM'05. Proceedings of the 21st
   IEEE International Conference on}, pages 389--398. IEEE, 2005.
+
+\bibitem{flyvbjerg2006five}
+B.~Flyvbjerg.
+\newblock Five misunderstandings about case-study research.
+\newblock {\em Qualitative inquiry}, 12(2):219--245, 2006.
 
 \bibitem{henning2007api}
 M.~Henning.
@@ -58,6 +68,12 @@ R.~Robbes, M.~Lungu, and D.~R{\"o}thlisberger.
   ecosystem.
 \newblock In {\em Proceedings of the ACM SIGSOFT 20th International Symposium
   on the Foundations of Software Engineering}, page~56. ACM, 2012.
+
+\bibitem{runeson2009guidelines}
+P.~Runeson and M.~H{\"o}st.
+\newblock Guidelines for conducting and reporting case study research in
+  software engineering.
+\newblock {\em Empirical software engineering}, 14(2):131--164, 2009.
 
 \bibitem{shi2011empirical}
 L.~Shi, H.~Zhong, T.~Xie, and M.~Li.
