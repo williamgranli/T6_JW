@@ -130,6 +130,7 @@
   year={2006}
 }
 
+<<<<<<< HEAD
 @article{runeson2009guidelines,
   title={Guidelines for conducting and reporting case study research in software engineering},
   author={Runeson, Per and H{\"o}st, Martin},
@@ -159,11 +160,11 @@
   pages={369--386},
   year={1987},
   publisher={JSTOR}
-}
-
+=======
 @book{bloch2008effective,
   title={Effective java},
   author={Bloch, Joshua},
   year={2008},
   publisher={Pearson Education India}
+>>>>>>> ff3828d5f6954db35ed96d935914d3c8162c5272
 }

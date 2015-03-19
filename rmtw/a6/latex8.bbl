@@ -22,6 +22,11 @@ J.~Bloch.
   Object-oriented programming systems, languages, and applications}, pages
   506--507. ACM, 2006.
 
+\bibitem{bloch2008effective}
+J.~Bloch.
+\newblock {\em Effective java}.
+\newblock Pearson Education India, 2008.
+
 \bibitem{dig2005role}
 D.~Dig and R.~Johnson.
 \newblock The role of refactorings in api evolution.
