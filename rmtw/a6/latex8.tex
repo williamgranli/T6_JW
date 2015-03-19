@@ -8,29 +8,35 @@
 
 \documentclass[10pt,twocolumn]{article} 
 \usepackage{latex8}
-%\documentstyle[times,art10,twocolumn,latex8]{article}
+\usepackage{authblk}
 
-%------------------------------------------------------------------------- 
-% take the % away on next line to produce the final camera-ready version 
-\pagestyle{empty}
+\title{Wu-Tang Clan}
 
-%------------------------------------------------------------------------- 
+% \author[*]{John Burchell}
+% \author[x]{William Granli}
+% \affil[*x]{Software Engineering \& Management}
+% \affil[*x]{University Of Gothenburg}
+% \affil[*]{john.a.burchell@gmail.com}
+% \affil[x]{william.granli@gmail.com}
+
 \begin{document}
 
 
 
-\title{A Comparison of Use-Case Based and Checklist-
-Based Reading: A Controlled Experiment}
 
-% author names and affiliations
-\author{John Burchell and William Granli \\
-john.a.burchell, william.granli@gmail.com}
+
+\author{\textsuperscript{*}John Burchell \qquad \textsuperscript{x}William Granli \\
+		\textsuperscript{*}john.a.burchell@gmail.com \qquad \textsuperscript{x}william.granli@gmail.com \\
+		\textsuperscript{*x}Software Engineering \& Management  \\
+		\textsuperscript{*x}University of Gothenburg }
+
 
 
 \maketitle
-\thispagestyle{empty}
 
-%------------------------------------------------------------------------- 
+
+
+
 
 \section{Introduction}
 %API Design (and a little bit of ecosystems, and a bit of problem statement)
@@ -44,6 +50,7 @@ Existing studies that explore the intent behind API modifications exist \cite{ho
 %Purpose (and a bit of problem statement)
 Because of the negative implications that modifications to to APIs cause for the API users, it is important to understand why changes to APIs happen. If most common pitfalls are known before the development of new APIs begin, these mistakes could be mitigated. Before the industry can make use of this information, we must also critically assess to what degree we trace such motives. To achieve this, we will perform a case study which aims to investigate the underlying factors behind what drives changes to APIs. This will be done by empirically analysing the changes between two versions of an API. Subsequently, the designers of the API will be interviewed and to verify (!!!does this imply that our findings will be accurate?) the results of our analysis. 
 
+%Structure of the paper
 The sections following the Introduction are structured as follows: In Section II, we present a literature review on research related to our study. Section II describes the case company and how it was selected. A description of our methodology is introduced in Section III. 
 
 \subsection{Research Questions}
@@ -55,7 +62,7 @@ The sections following the Introduction are structured as follows: In Section II
 
 
 \section{Related Work}
-Our work is mainly related to the research area of APIs. This discipline will be discussed in both section 2.1 and 2.2. Our research is directly related to the fields of software evolution and software ecosystems. Section 2.2 will describe APIs in the context of those two fields. 
+Our work is mainly related to the research area of API design. This discipline is discussed in Section 2.1. The motives and effects of changes to APIs is directly related related to the fields of software evolution and software ecosystems, and this will be discussed in Section 2.2. 
 
 \subsection{API Design}
 
