@@ -34,22 +34,21 @@ john.a.burchell, william.granli@gmail.com}
 
 \section{Introduction}
 %API Design (and a little bit of ecosystems, and a bit of problem statement)
-An API is an interface defined in a programming language (in code) which can be accessed programmatically by other software. (!!!Re-word this sentence a bit) There is a consensus in that modifying APIs generally should be avoided if possible \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api} \cite{robbes2012developers} since it will require the users of the API to update the code that is accessing the API (!!!re-word), and thus cause a disruption in the software ecosystem \cite{messerschmitt2005software} that the API's platform is a part of. Most commonly, already deployed APIs are modified due to code refactoring being made. \cite{dig2005role} \cite{xing2006refactoring}. 
+As the software industry and the open source movement are growing steadily, number of public APIs is increasing. APIs can improve the development speed \cite{stylos2006comparing}, contribute to higher quality software \cite{stylos2006comparing} and increase the reusability of software \cite{afonso2012evaluating}.  There is a consensus in that modifying APIs generally should be avoided if possible \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api} \cite{robbes2012developers} since it will require the users of the API to update the code that is accessing the API, thus causing a disruption in the software ecosystem \cite{messerschmitt2005software} that the API's platform is a part of. Most commonly, already deployed APIs are modified due to code refactoring being made \cite{dig2005role} \cite{xing2006refactoring}. 
 %Software Evolution 
 In the discipline of Software Evolution, such updates to software are studied from an evolutionary standpoint. Software can be updated for different reasons and these motives can be grouped into corrective, adaptive, perfective and preventive changes \cite{lientz1980software} \cite{iso}. 
 
 %Gap in Literature
-Existing studies that explore the intent behind API modifications exist \cite{hou2011exploring}. There are however no studies that attempt to map the motives behind changes to business needs or existing software evolution theories such as the four categories of maintenance \cite{lientz1980software}. The area of programming language APIs is well-explored \cite{hou2011exploring} \cite{shi2011empirical}, but few studies that explore platform APIs exist \cite{robbes2012developers}. No studies that explore the motives behind or the effects of API evolution have previously been performed on embedded platform APIs. 
+Existing studies that explore the intent behind API modifications exist \cite{hou2011exploring}. There are however no studies that attempt to map the motives behind changes to business needs or existing software evolution theories such as the four categories of maintenance \cite{lientz1980software}. The area of programming language APIs is well-explored \cite{hou2011exploring} \cite{shi2011empirical}, but few studies that explore platform APIs exist \cite{robbes2012developers}. To the best of our knowledge, no studies that explore the motives behind or the effects of API evolution have previously been performed on embedded platform APIs. 
 
 %Purpose (and a bit of problem statement)
-Because of the negative implications that modifications to to APIs cause for the API users, it is important to understand why changes to APIs happen. If most common pitfalls are known before the development of new APIs are known, these mistakes can mitigated. Before the industry can make use of this information, we must also critically assess to what degree we trace such motives. 
-
+Because of the negative implications that modifications to to APIs cause for the API users, it is important to understand why changes to APIs happen. If most common pitfalls are known before the development of new APIs begin, these mistakes could be mitigated. Before the industry can make use of this information, we must also critically assess to what degree we trace such motives. To achieve this, we will perform a case study which aims to investigate the underlying factors behind what drives changes to APIs. This will be done by empirically analysing the changes between two versions of an API. Subsequently, the designers of the API will be interviewed and to verify (!!!does this imply that our findings will be accurate?) the results of our analysis. 
 
 \subsection{Research Questions}
 \begin{itemize}
 \item RQ1: What drives API evolution? 
 \item RQ1.1: To what extent can we reverse engineer API change decisions?
-\item SRQ1.2: Are changes/improvements to APIs made for good reasons? (Compare why the changes were made to best practises for why you should change APIs)
+% \item SRQ1.2: Are changes/improvements to APIs made for good reasons? (Compare why the changes were made to best practises for why you should change APIs)
 \end{itemize}
 
 

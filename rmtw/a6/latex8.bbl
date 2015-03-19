@@ -4,6 +4,12 @@
 !!!
 \newblock Iso/iec 14764:2006.
 
+\bibitem{afonso2012evaluating}
+L.~M. Afonso, R.~F. d.~G. Cerqueira, and C.~S. de~Souza.
+\newblock Evaluating application programming interfaces as communication
+  artefacts.
+\newblock {\em System}, 100:8--31, 2012.
+
 \bibitem{google_talk}
 J.~Bloch.
 \newblock How to design a good api and why it matters.
@@ -58,6 +64,12 @@ L.~Shi, H.~Zhong, T.~Xie, and M.~Li.
 \newblock An empirical study on evolution of api documentation.
 \newblock In {\em Fundamental Approaches to Software Engineering}, pages
   416--431. Springer, 2011.
+
+\bibitem{stylos2006comparing}
+J.~Stylos, S.~Clarke, and B.~Myers.
+\newblock Comparing api design choices with usability studies: A case study and
+  future directions.
+\newblock In {\em Proceedings of the 18th PPIG Workshop}, 2006.
 
 \bibitem{xing2006refactoring}
 Z.~Xing and E.~Stroulia.
