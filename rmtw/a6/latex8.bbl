@@ -1,4 +1,8 @@
-\begin{thebibliography}{1}\setlength{\itemsep}{-1ex}\small
+\begin{thebibliography}{10}\setlength{\itemsep}{-1ex}\small
+
+\bibitem{iso}
+!!!
+\newblock Iso/iec 14764:2006.
 
 \bibitem{google_talk}
 J.~Bloch.
@@ -36,12 +40,24 @@ T.~McDonnell, B.~Ray, and M.~Kim.
 \newblock In {\em Software Maintenance (ICSM), 2013 29th IEEE International
   Conference on}, pages 70--79. IEEE, 2013.
 
+\bibitem{messerschmitt2005software}
+D.~G. Messerschmitt and C.~Szyperski.
+\newblock Software ecosystem: understanding an indispensable technology and
+  industry.
+\newblock {\em MIT Press Books}, 1, 2005.
+
 \bibitem{robbes2012developers}
 R.~Robbes, M.~Lungu, and D.~R{\"o}thlisberger.
 \newblock How do developers react to api deprecation?: the case of a smalltalk
   ecosystem.
 \newblock In {\em Proceedings of the ACM SIGSOFT 20th International Symposium
   on the Foundations of Software Engineering}, page~56. ACM, 2012.
+
+\bibitem{shi2011empirical}
+L.~Shi, H.~Zhong, T.~Xie, and M.~Li.
+\newblock An empirical study on evolution of api documentation.
+\newblock In {\em Fundamental Approaches to Software Engineering}, pages
+  416--431. Springer, 2011.
 
 \bibitem{xing2006refactoring}
 Z.~Xing and E.~Stroulia.
