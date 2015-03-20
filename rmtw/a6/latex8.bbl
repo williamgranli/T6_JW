@@ -77,6 +77,11 @@ R.~Robbes, M.~Lungu, and D.~R{\"o}thlisberger.
 \newblock In {\em Proceedings of the ACM SIGSOFT 20th International Symposium
   on the Foundations of Software Engineering}, page~56. ACM, 2012.
 
+\bibitem{robson2002real}
+C.~Robson.
+\newblock {\em Real world research}, volume~2.
+\newblock Blackwell publishers Oxford, 2002.
+
 \bibitem{runeson2009guidelines}
 P.~Runeson and M.~H{\"o}st.
 \newblock Guidelines for conducting and reporting case study research in
@@ -101,5 +106,10 @@ Z.~Xing and E.~Stroulia.
   eclipse case study.
 \newblock In {\em Software Maintenance, 2006. ICSM'06. 22nd IEEE International
   Conference on}, pages 458--468. IEEE, 2006.
+
+\bibitem{yin2013case}
+R.~K. Yin.
+\newblock {\em Case study research: Design and methods}.
+\newblock Sage publications, 2013.
 
 \end{thebibliography}
