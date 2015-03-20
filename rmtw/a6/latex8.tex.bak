@@ -41,7 +41,7 @@
 
 \section{Introduction}
 %API Design (and a little bit of ecosystems, and a bit of problem statement)
-As the software industry and the open source movement steadily grow, the number of public APIs is increasing. APIs can improve the development speed \cite{stylos2006comparing}, contribute to higher quality software \cite{stylos2006comparing} and increase the reusability of software \cite{afonso2012evaluating}. There is a consensus in that modifications to APIs could negatively impact the users of the API \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api} \cite{robbes2012developers}. The main reason being that it will require the users to update the code, which is using the API, thus causing a disruption in the application's software ecosystem \cite{messerschmitt2005software}. The most common changes to APIs occur from refactoring \cite{dig2005role} \cite{xing2006refactoring}. 
+As the software industry and the open source movement steadily grow, the number of public APIs is increasing. APIs can improve the development speed \cite{stylos2006comparing}, contribute to higher quality software \cite{stylos2006comparing} and increase the reusability of software \cite{afonso2012evaluating}. There is a consensus in that modifications to APIs could negatively impact the users of the API \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api} \cite{robbes2012developers}. The main reason being that it will require the users to update the code, which is using the API, thus causing a disruption in the applicaiton's software ecosystem \cite{messerschmitt2005software}. The most common changes to APIs occur from refactoring \cite{dig2005role} \cite{xing2006refactoring}. 
 %software evolution 
 In the discipline of software evolution, such updates to software are studied from an evolutionary standpoint. Software can be updated for different reasons and these motives can be grouped into corrective, adaptive, perfective and preventive changes \cite{lientz1980software} \cite{iso}. 
 
@@ -104,12 +104,12 @@ A double inspection and a single joint inspection were used to collect the infor
 
 These collection methods were the most appropriate given that the data were readily available from the company. This brought concerns that the data were not produced for the purpose of our research \cite{runeson2009guidelines}, meaning there was a risk of data being irrelevant or erroneous. 
 
-First degree interviews were also conducted after the initial source code inspections had taken place. The main purpose was to validate our findings with the architects of the APIs. Furthermore, the interviews were conducted to provide additional insight into decisions and motives behind changes that might have been overlooked during the code inspection. The final reason for interviewing the architects of the APIs was to provide further insight of the users of the API. 
+First degree interviews were also conducted after the initial source code inspections had taken place. The main purpose was to validate our findings with the architects of the APIs. Furthemore, the interviews were conducted to provide additional insight into decisions and motives behind changes that might have been overlooked during the code inspection. The final reason for interviewing the architects of the APIs was to provide further insight of the users of the API. 
 
 
 
 \subsection{Data Analysis}
-• method for analysing the data (grounded theory? Thematic analysis? Statistical analysis?) strategies for validating findings
+• method for analyzing the data (grounded theory? Thematic analysis? Statistical analysis?) strategies for validating findings
 
 
 
