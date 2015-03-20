@@ -10,7 +10,7 @@
 \usepackage{latex8}
 \usepackage{authblk}
 
-\title{Exploring and Validating the Motives Behind API Evolution: A Case Study}
+\title{To Be Announced}
 
 % \author[*]{John Burchell}
 % \author[x]{William Granli}
@@ -72,6 +72,7 @@ API design is notoriously difficult as a myriad of design and performance decisi
 An additional study involved combining semiotic and cognitive methods to evaluate APIs as a means of facilitating communication, between programmers and designers. \cite{afonso2012evaluating}. However, these studies do not highlight the motives behind changes to APIs.
 
 \subsection{API Change}
+%%The first sentence of this pargraph... did all 3 really look at motive/intent?
 Previous studies that have attempted to identify the motives behind API changes have primarily focused on APIs that are a part of large programming languages, such as Java \cite{shi2011empirical} \cite{hou2011exploring} and Smalltalk \cite{robbes2012developers}. One study attempted to uncover the intents behind the changes made in the AWT and Swing Java libraries. This particular study found that the use of a strong architecture was vital in ensuring a successful evolution of the API \cite{hou2011exploring}.
 
 However, when APIs are changed, problems tend to occur. One study \cite{dig2005role} investigated three frameworks and one library in which the study found that 80\% of refactoring changes to APIs negatively affected existing applications. Refactorings are not the only changes to APIs that can impact existing projects negatively. Another study was conducted regarding the changes, which the researchers refer to as ripple effects \cite{robbes2012developers}. They found that changes in APIs have an effect upon the entire ecosystem. This particular empirical study found that 14\% of non-trivial API deprecations caused errors in at least one project, with the worst case of 79 projects being affected \cite{robbes2012developers}.
@@ -79,24 +80,24 @@ However, when APIs are changed, problems tend to occur. One study \cite{dig2005r
 Furthermore, a study of the impact of reliable APIs was undertaken in the Android ecosystem \cite{mcdonnell2013empirical}. The study aimed to discover if APIs with high rates of faults affected the success of an application. The study found that the 50 least popular applications had APIs which were 500\% more error prone, ultimately concluding that there is indeed a correlation between API stability and application success \cite{mcdonnell2013empirical}. 
 
 \section{Case Company Description}
-The case company is a medium-sized company in the domain of security cameras. The company has its headquarters in Lund, Sweden, but it operates worldwide. The company is the global market leader in the markets of network cameras and video encoders. The company develops embedded software for the security cameras, and some cameras are designed to be accessible by APIs that are also developed by the company. 
+The case company is a medium-sized company in the domain of security cameras. The company has its headquarters in Lund, Sweden, but it operates worldwide. The company is the global market leader in the markets of network cameras and video encoders. The company develops embedded software for the security cameras, and some of their products are designed to be accessible through APIs that are also developed by the company. 
 
 %Try to get information about the users of the API. Either through Imed, or through the interviews. 
 
-The case was selected using convenience sampling \cite{flyvbjerg2006five}, and a maximum variation strategy was used \cite{benbasat1987case}. As such, the goal was to include as many companies as possible in this study. [!!!Note to Richard \#1: Do you think we can claim that our case is typical, critical, revelatory or unique? Or is our current description adequate?]
+The case was selected using convenience sampling \cite{flyvbjerg2006five}, and a maximum variation strategy was used \cite{benbasat1987case}. As such, the goal was to include as many companies as possible in this study. [Note to reviewer \#1: Do you think we can claim that our case is typical, critical, revelatory or unique? Or is the current description adequate?]
 
 %Try to motivate why other sampling methods weren't used.
 
 
 \section{Methodology}
-This study has been conducted using the case study methodology \cite{runeson2009guidelines}. The goal of the study was twofold. Firstly, the aim was to empirically \textit{explore} the motives behind changes to APIs, and secondly, our ambition was to \textit{validate} the results' level of correctness by comparing our findings with the case company's explanation of their motives. Our research can be classified as an embedded case study \cite{yin2013case}, since both the API code and API documentation have been used as units of analysis [!!!Note to Richard \#2: Do you agree with this?] 
+This study has been conducted using the case study methodology \cite{runeson2009guidelines}. The goal of the study was twofold. Firstly, the aim was to empirically \textit{explore} the motives behind changes to APIs, and secondly, our ambition was to \textit{validate} the results' level of correctness by comparing our findings with the case company's explanation of their motives. Our research can be classified as an embedded case study \cite{yin2013case}, since both the API code and API documentation have been used as units of analysis [Note to reviewer \#2: Do you agree with this?] 
 
-The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing studies \cite{runeson2009guidelines} \cite{benbasat1987case} \cite{yin2013case} \cite{robson2002real}. An alternative approach that was considered was design research, but if a ``toy program" was to be used instead of an API tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines} [!!!Note to Richard \#3: Do you think this is a valid reason? Or is it a stretch to assume that all design research involves toy programs]. 
+The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing studies \cite{runeson2009guidelines} \cite{benbasat1987case} \cite{yin2013case} \cite{robson2002real}. An alternative approach that was considered was design research, but if a ``toy program" was to be used instead of an API tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines} [Note to reviewer \#3: Do you think this is a valid reason? Or does it imply that all design research involves toy programs?]. 
 
-An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change, and that input from the industry is vital to the success of the research; especially to be able to assess the validity of the findings related to RQ1. 
+An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change, and that input from the industry is vital to the success of the research; especially to be able to answer RQ1.1. 
 
 \subsection{Data Collection}
-The data were collected primarily through third degree methods, such as first hand inspections of the source code and the archival analysis of accompanying  documentation. The source code was comprised of two versions of APIs which the company had developed. An older version which is currently released and a newer version which is soon to be deployed. Each version of the API had its own respective documentation. The documentation was inspected and organised to find explanations of the features offered by the API.
+The data were collected primarily through third degree methods, such as first hand inspections of the source code and the archival analysis of accompanying  documentation. The source code was comprised of two versions of the same API which the company had developed. An older version which is currently released and a newer version which is soon to be deployed. Each version of the API had its own respective documentation. The documentation was inspected and organised to find explanations of the features offered by the API.
 
 From the APIs we collected data about method names, parameters and return types. The data were collected from both versions of the APIs, with the changes between the two versions being of particular interest. The collected data were input into tables and spreadsheets, according to the API version. From the archival documentation we collected data regarding the motive behind the functionality in API calls. Data gathered from the documentation was also stored in tables and spreadsheets and was organised together with its corresponding method.
 
@@ -104,44 +105,43 @@ To reduce risks of research bias and human errors, the data collection was perfo
 
 These collection methods were the most appropriate given that the data were readily available from the company. This brought concerns that the data were not produced for the purpose of our research \cite{runeson2009guidelines}, meaning there was a risk of data being irrelevant or erroneous. 
 
-First degree interviews were also conducted after the initial source code inspections had taken place. The main purpose was to validate our findings with the architects of the APIs. Furthermore, the interviews were conducted to provide additional insight into decisions and motives behind changes that might have been overlooked during the code inspection. The final reason for interviewing the architects of the APIs was to provide further insight of the users of the API. 
+First degree interviews were also conducted after the initial source code inspections had taken place. The main purpose of these was to validate our findings with the architects of the APIs. Furthermore, the interviews were conducted to provide additional insight into decisions and motives behind changes that might have been overlooked during the code inspection. The final reason for interviewing the architects of the APIs was to provide further insight of the users of the API. 
 
 
 
 \subsection{Data Analysis}
-The data analysis was conducted in two major phases \cite{andersson2007spiral}. During the first phase, a hypothesis generating approach \cite{seaman1999qualitative} was used to be able to fulfil the exploratory goal of the study. It was during this phase that the analysis of the API code and documentation was carried out. The second phase included analysis of the interviews, the goal of it was to confirm the hypotheses \cite{seaman1999qualitative} that were formulated in the first phase.  
+The data analysis was conducted in two major phases \cite{andersson2007spiral}. During the first phase, a hypothesis generating approach \cite{seaman1999qualitative} was used to be able to fulfil the exploratory goal of the study. It was during this phase that the analysis of the API code and documentation was carried out. The second phase included analysis of the interviews, the goal of which was to confirm the hypotheses \cite{seaman1999qualitative} that were formulated in the first phase.  
 
-Both phases were performed iteratively, together with the data collection. The reason for this create the opportunity of being able to improve the process of analysis as the study progressed, as well as to be able to adapt to possible changes in direction due to the hypothesis generating approach of the first phase \cite{andersson2007spiral}. 
+Both phases were performed iteratively, together with the data collection. The reason for this created the opportunity to improve the process of analysis as the study progressed, as well as to be able to adapt to possible changes in direction, due to the hypothesis generating approach of the first phase \cite{andersson2007spiral}. 
 
-The analysis of the code and documentation was performed using grounded theory analysis \cite{seaman1999qualitative}, as it is recommended for hypothesis generating studies \cite{runeson2009guidelines} \cite{seaman1999qualitative}. More specifically, the approach undertaken was divided into three steps where the data first was coded based on which category of maintenance \cite{iso} the motive of the change corresponded with. Secondly, the codes were analysed from a high-level point of view, and the main goal was to identify trends in the codes. The third step involved analysis of these trends, and it was during this stage the hypotheses were generated and formulated. 
+The analysis of the code and documentation was performed using grounded theory analysis \cite{seaman1999qualitative}, as it is recommended for hypothesis generating studies \cite{runeson2009guidelines} \cite{seaman1999qualitative}. More specifically, the approach undertaken was divided into three steps where the data was first coded based on which category of maintenance \cite{iso} the motive of the change corresponded to. Secondly, the codes were analysed from a high-level point of view, and the main goal was to identify trends in the codes. The third step involved analysis of these trends, and it was during this stage the hypotheses were generated and formulated. 
 
-Following the analysis of the archival data, the results of the interviews were analysed. The interviews were analysed using the same approach taken for the archival data. The results of this analysis was then compared and correlated with the results of the code analysis, with the goal of confirming the hypotheses that were formulated. This was done to triangulate the our findings, to help reduce internal validity. 
+Following the analysis of the archival data, the results of the interviews were analysed. The interviews were analysed using the same approach taken for the archival data. The results of this analysis was then compared and correlated with the results of the code analysis, with the goal of confirming the hypotheses that were formulated. This was done to triangulate our findings, to help reduce internal validity. 
 
 The same approach taken to reduce risks of research bias and human error in the data collection was performed during results analysis. 
 
 
 \subsection{Validity Threats}
-This section highlights how we have either diminished or overcome the most concerning validity threats facing our study.
+% This section highlights how we have either diminished or overcome the most concerning validity threats facing our study.
 
 %Internal Validity
-\textit{Internal validity} threats for our study have been greatly reduced by the methodologies we have employed. By performing a individual inspection of  the API source code, documentation and individual results analysis, \textit{internal validity} is significantly reduced. Triangulation of the results with the use of interviewing the architects is key step in reducing potential validity threats in our study.
+\textit{Internal validity} threats for our study have been greatly reduced by the methodologies we have employed. By performing a individual inspection of  the API source code, documentation and individual results analysis, internal validity is significantly reduced. Triangulation of the results with the use of interviewing the architects is key step in reducing potential validity threats in our study.
 
 %External Validity
 Regarding \textit{external validity}, generalisability and the appropriateness of our results are at risk. In our study we have striven to ensure that our findings will be as useful as possible to others. Given that there are some similar studies to ours and that ours is an exploratory study, our results will be useful to others who perform similar studies in the future. Our results come from both APIs either in production or soon to be in production. As such, the results of this study will hopefully be of use to the company at which they were studied, be it now for their current API or in the future when they inevitably develop others. Likewise, other companies in similar positions could use the results of our study when creating their own APIs.
 
 %Reliability
-The largest \textit{reliability} threat facing our study was the reproducibility. To counter this threat, we have provided a clear and concise coding method for the collected data. Furthermore, as mentioned previously, we have attempted to limit bias and ambiguity in our interview questions where possible. To ensure clarity of the questions, we have field tested the interview with some of our peers, altering the questions based on their feedback.
+The largest \textit{reliability} threat facing our study was the reproducibility. To counter this threat, we have followed a well-proven method for analysing the collected data. Furthermore, as mentioned previously, we have attempted to limit bias and ambiguity in our interview questions where possible. To ensure clarity of the questions, we have field tested the interview with some of our peers, improving the questions based on their feedback.
 
-[!!!Note to Richard \#4: We struggled to find construct threats as we've not done the study so we don't know any yet, is it normal or OK to exclude one of the categories?]
+[Note to reviewer \#4: We struggled to find construct threats as we've not done the study so we don't know any yet, is it normal or OK to exclude one of the categories?]
 
 \bibliographystyle{latex8}
 \bibliography{latex8}
 
 
 \Section{Acknowledgement}
-John had the main responsibility for sections 1, 2. William had the main responsibility for section 3. Section 3.6 and the interview questions were written together. We have, however, worked on all sections jointly and all sections have been reviewed by both William and John. 
+John had the main responsibility for sections 2, 4.1 and 4.3. William had the main responsibility for sections 1, 3, 4.0 and 4.3. We have, however, worked on all sections jointly and all sections have been reviewed by both of us. 
 
 
-\noindent
 \end{document}
 
