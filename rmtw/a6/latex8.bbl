@@ -6,6 +6,13 @@ L.~M. Afonso, R.~F. d.~G. Cerqueira, and C.~S. de~Souza.
   artefacts.
 \newblock {\em System}, 100:8--31, 2012.
 
+\bibitem{andersson2007spiral}
+C.~Andersson and P.~Runeson.
+\newblock A spiral process model for case studies on software quality
+  monitoring—method and metrics.
+\newblock {\em Software Process: Improvement and Practice}, 12(2):125--140,
+  2007.
+
 \bibitem{benbasat1987case}
 I.~Benbasat, D.~K. Goldstein, and M.~Mead.
 \newblock The case research strategy in studies of information systems.
@@ -87,6 +94,12 @@ P.~Runeson and M.~H{\"o}st.
 \newblock Guidelines for conducting and reporting case study research in
   software engineering.
 \newblock {\em Empirical software engineering}, 14(2):131--164, 2009.
+
+\bibitem{seaman1999qualitative}
+C.~B. Seaman.
+\newblock Qualitative methods in empirical studies of software engineering.
+\newblock {\em Software Engineering, IEEE Transactions on}, 25(4):557--572,
+  1999.
 
 \bibitem{shi2011empirical}
 L.~Shi, H.~Zhong, T.~Xie, and M.~Li.
