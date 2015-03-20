@@ -8,262 +8,143 @@
 
 \documentclass[10pt,twocolumn]{article} 
 \usepackage{latex8}
-\usepackage{url}
-\usepackage{verbatim}
-\usepackage{fixltx2e}
-\usepackage{graphicx}
-\usepackage{enumitem}
-\usepackage{amsmath}
-\usepackage{mathtools}
-%\documentstyle[times,art10,twocolumn,latex8]{article}
+\usepackage{authblk}
 
-%------------------------------------------------------------------------- 
-% take the % away on next line to produce the final camera-ready version 
-\pagestyle{empty}
+\title{Exploring and Validating the Motives Behind API Evolution: A Case Study}
 
-%------------------------------------------------------------------------- 
+% \author[*]{John Burchell}
+% \author[x]{William Granli}
+% \affil[*x]{Software Engineering \& Management}
+% \affil[*x]{University Of Gothenburg}
+% \affil[*]{john.a.burchell@gmail.com}
+% \affil[x]{william.granli@gmail.com}
+
 \begin{document}
 
+% \author{\textsuperscript{*}John Burchell \qquad \textsuperscript{x}William Granli \\
+% 		\textsuperscript{*}john.a.burchell@gmail.com \qquad \textsuperscript{x}william.granli@gmail.com \\
+% 		\textsuperscript{*x} Computer Science and Engineering  \\
+% 		\textsuperscript{*x}University of Gothenburg }
 
 
-\title{Assignment 4}
-
-% author names and affiliations
-\author{John Burchell and William Granli \\
-john.a.burchell, william.granli@gmail.com}
+\author{John Burchell \qquad William Granli \\
+		john.a.burchell@gmail.com \qquad william.granli@gmail.com \\
+		Computer Science and Engineering  \\
+		University of Gothenburg }
 
 
 \maketitle
-\thispagestyle{empty}
 
-%------------------------------------------------------------------------- 
+
+
+
 
 \section{Introduction}
-Software inspections have since its inception \cite{fagan2002design} more than
-25 years ago spawned quite some interest both from the
-research community and industrial practice. The research
-includes changes to the inspection process, e.g. \cite{bisant1989two}, support to
-the process, e.g. \cite{basili1996empirical} and empirical studies, e.g. \cite{basili1999building}. The
-suggested improvements include active design reviews \cite{parnas1985active} and
-perspective-based reading \cite{shull2000perspective}. Industry has studied the
-benefits of conducting software inspections \cite{weller1993lessons}.
+%API Design (and a little bit of ecosystems, and a bit of problem statement)
+As the software industry and the open source movement steadily grow, the number of public APIs is increasing. APIs can improve the development speed \cite{stylos2006comparing}, contribute to higher quality software \cite{stylos2006comparing} and increase the reusability of software \cite{afonso2012evaluating}. There is a consensus in that modifications to APIs could negatively impact the users of the API \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api} \cite{robbes2012developers}. The main reason being that it will require the users to update the code, which is using the API, thus causing a disruption in the application's software ecosystem \cite{messerschmitt2005software}. The most common changes to APIs occur from refactoring \cite{dig2005role} \cite{xing2006refactoring}. 
+%software evolution 
+In the discipline of software evolution, such updates to software are studied from an evolutionary standpoint. Software can be updated for different reasons and these motives can be grouped into corrective, adaptive, perfective and preventive changes \cite{lientz1980software} \cite{iso}. 
 
-\section{Purpose of the Study}
-This section will describe the purpose of the study, the research questions and the hypotheses. 
+%Gap in Literature
+Studies that explore the intent behind API modifications exist \cite{hou2011exploring}. There are, however, no studies that attempt to map the motives behind changes to business needs or existing software evolution theories, such as the four categories of maintenance \cite{lientz1980software} \cite{iso}. The area of programming language APIs is well-explored \cite{hou2011exploring} \cite{shi2011empirical}, but few studies that explore platform APIs exist \cite{robbes2012developers}. To the best of our knowledge, no studies that explore the motives behind or the effects of API evolution have previously been performed on embedded platform APIs. 
 
-\subsection{Purpose Statement}
-The objective of this study is to compare and hence
-evaluate how well the use-case based reading performs in
-comparison to other methods. The study presents a controlled
-experiment where use-case based reading is compared to
-checklist-based reading.
+%Purpose (and a bit of problem statement)
+Due to the negative implications that modifications to to APIs cause for API users, it is important to understand why changes to APIs occur. If most common pitfalls are known before the development of new APIs begin, these mistakes could be mitigated. Before the industry can make use of this information, we must also critically assess to what degree we can trace such motives. To achieve this, we will perform a case study which aims to investigate the underlying factors behind API changes. This will be achieved by empirically analysing the changes between two versions of an API. Subsequently, the architects of the API will be interviewed and asked to verify the accuracy of our findings. 
 
-\subsubsection{Variables}
-Three types of variables are defined for the experiment,
-independent, controlled, and dependent variables.
-
-\begin{enumerate}[label=(\alph*)]
-
-	\item Independent Variable: The independent variable is
-	the reading technique used. The experiment groups used either
-	Use-Cased Based Reading or Checklist-Based Reading.
-	\item Controlled Variable: The controlled variable is the
-	experience of the reviewers and it is measured on an ordinal
-	scale. The reviewers were asked to fill in a questionnaire
-	comprising seven questions.
-	\item Dependent Variables: The dependent variables
-	measured are faults. The four variables are: (1) Number of
-	faults found by each reviewer, (2) Number of faults found by
-	each experiment group, (3) efficiency (faults/hour) and is
-	measured as: 60*(number of fault found/inspection time which
-	is 45 min), and (4) effectiveness (detection rate) and is measured
-	as: number of faults found/total number of faults.
-
-\end{enumerate}
+%Structure of the paper
+The sections following the Introduction are structured as follows: In Section 2, we present a literature review on research related to our study. Section 3 describes the case company and how it was selected. A description of our methodology is introduced in Section 4. 
 
 \subsection{Research Questions}
 \begin{itemize}
-\item RQ1 - Is there a difference in effectiveness between Use-Case Based Reading and Checklist-Based Reading?
-\item RQ2 - Is there a difference in efficiency between Use-Case Based Reading and Checklist-Based Reading?
-\item RQ3 - Are different faults found by inspectors using Use-Case Based Reading than faults found by inspectors using Checklist-Based Reading? 
+\item RQ1: What drives API evolution? 
+\item RQ1.1: To what extent can we reverse engineer API change decisions?
+%\item SRQ1.2: Are changes/improvements to APIs made for good reasons? (Compare why the changes were made to best practises for why you should change APIs)
 \end{itemize}
 
-\subsection{Hypothesis}
-The general hypothesis of the experiment is that Use-Case
-Based Reading is more efficient and effective in finding faults
-of the most critical fault classes, i.e. Checklist-Based Reading
-is assumed to find more faults per time unit, and to find a
-larger rate of the critical faults.
-The dependent variables are analysed to evaluate the
-hypotheses of the experiment. The main null and alternative
-hypotheses \cite{montgomery2008design} are stated below. These are evaluated for all
-faults, class A faults and class A\&B faults. The hypotheses
-concern efficiency, effectiveness and fault detecting
-differences:
 
-\begin{itemize}
-\item H\textsubscript{0 Eff} - There is no difference in efficiency (i.e.found faults per hour) between the reviewers applying use cases and the reviewers using a checklist.
-\item H\textsubscript{1 Eff} - There is a difference in efficiency between the reviewers applying prioritised use cases and the reviewers using a checklist.
-\item H\textsubscript{0 Rate} - There is no difference in effectiveness (i.e. rate of faults found) between the reviewers applying use cases and the reviewers using a checklist.
-\item H\textsubscript{1 Rate} - There is a difference in effectiveness between the reviewers applying use cases and the reviewers using a checklist.
-\item H\textsubscript{0 Fault} - The reviewers applying use cases do not detect different faults than the reviewers using a checklist.
-\item H\textsubscript{1 Fault} - The reviewers applying use cases detect different faults than the reviewers using a checklist.
+\section{Related Work}
+Our work is mainly related to the research area of API design. This discipline is discussed in Section 2.1. The motives and effects of changes to APIs is directly related related to the fields of software evolution and software ecosystems. This will be discussed in Section 2.2. 
 
-\end{itemize}
+\subsection{API Design}
 
-\Section{Methodology}
-This section will describe which statistical tests were used, and why. The level of significance used for all tests is 0.05. 
+API design is notoriously difficult as a myriad of design and performance decisions must be taken into consideration when creating APIs \cite{bloch2008effective} \cite{afonso2012evaluating} \cite{stylos2006comparing}. In previous research generalisable usability studies have been created, with the aim of analysing the design decisions taken when creating an API \cite{stylos2006comparing}. Another empirical study, which involved working with 25 programmers, highlighted API design problems such as assigning names to API features and difficulty in naming types \cite{shi2011empirical}. The study also introduced four factors which are important to consider when creating an API: a) The API  must be understandable through good documentation, b) the API must not be overly abstract, c) the API must be reusable and d) the API must be easy to learn \cite{shi2011empirical}. Both studies also highlighted that the intent of the API must be clear to the user when using design patters, such as the concrete factory pattern \cite{shi2011empirical} \cite{stylos2006comparing}.
 
-\SubSection{Tests Used for H\textsubscript{Eff} and H\textsubscript{Rate}}
-Initially, Kolmogorov-Smirnov (KS) Goodness-of-Fit and Shapiro-Wilks (SW) tests were used to determine if the assumption of normality could be held for the data set. The data used for the tests was the number faults found by each participant. The reason this data was chosen was that it directly correlates to the data used in H\textsubscript{Eff} and H\textsubscript{Rate}. No data points were removed from the data set before performing any tests for H\textsubscript{Eff} or H\textsubscript{Rate}. The reasoning for this was that the hypotheses only concern number of occurrences and not the qualitative attributes of the data. This means that data points which, for example, contained ``incorrect'' \textit{Item numbers} were still used in the calculation.
+An additional study involved combining semiotic and cognitive methods to evaluate APIs as a means of facilitating communication, between programmers and designers. \cite{afonso2012evaluating}. However, these studies do not highlight the motives behind changes to APIs.
 
-The KS and SW tests both reported p-values \textless 0.05. See Table 1 for the p-values of the KS and SW tests. The critical value analysis for the KS and SW showed similar results and thus the null hypotheses of the data being normally distributed was rejected. See Table 2 for more information about the critical value results of the KS and SW tests.
+\subsection{API Change}
+Previous studies that have attempted to identify the motives behind API changes have primarily focused on APIs that are a part of large programming languages, such as Java \cite{shi2011empirical} \cite{hou2011exploring} and Smalltalk \cite{robbes2012developers}. One study attempted to uncover the intents behind the changes made in the AWT and Swing Java libraries. This particular study found that the use of a strong architecture was vital in ensuring a successful evolution of the API \cite{hou2011exploring}.
+
+However, when APIs are changed, problems tend to occur. One study \cite{dig2005role} investigated three frameworks and one library in which the study found that 80\% of refactoring changes to APIs negatively affected existing applications. Refactorings are not the only changes to APIs that can impact existing projects negatively. Another study was conducted regarding the changes, which the researchers refer to as ripple effects \cite{robbes2012developers}. They found that changes in APIs have an effect upon the entire ecosystem. This particular empirical study found that 14\% of non-trivial API deprecations caused errors in at least one project, with the worst case of 79 projects being affected \cite{robbes2012developers}.
+
+Furthermore, a study of the impact of reliable APIs was undertaken in the Android ecosystem \cite{mcdonnell2013empirical}. The study aimed to discover if APIs with high rates of faults affected the success of an application. The study found that the 50 least popular applications had APIs which were 500\% more error prone, ultimately concluding that there is indeed a correlation between API stability and application success \cite{mcdonnell2013empirical}. 
+
+\section{Case Company Description}
+The case company is a medium-sized company in the domain of security cameras. The company has its headquarters in Lund, Sweden, but it operates worldwide. The company is the global market leader in the markets of network cameras and video encoders. The company develops embedded software for the security cameras, and some cameras are designed to be accessible by APIs that are also developed by the company. 
+
+%Try to get information about the users of the API. Either through Imed, or through the interviews. 
+
+The case was selected using convenience sampling \cite{flyvbjerg2006five}, and a maximum variation strategy was used \cite{benbasat1987case}. As such, the goal was to include as many companies as possible in this study. [!!!Note to Richard \#1: Do you think we can claim that our case is typical, critical, revelatory or unique? Or is our current description adequate?]
+
+%Try to motivate why other sampling methods weren't used.
 
 
-\begin{table}
-	\centering
-	\begin{tabular}[ht]{| l | l | l |}
-	\hline
-	Test & Sample & p-value  \\
-	\hline
-	KS & UC & \textless 2.2e-16 \\
-	\hline
-	SW & UC & 0.000969 \\
-	\hline
-	KS & CL & \textless 2.2e-16 \\
-	\hline
-	SW & CL & 0.309 \\	
-	\hline
-	\end{tabular}
-	\caption{KS \& SW tests - p-value}
-\end{table}
+\section{Methodology}
+This study has been conducted using the case study methodology \cite{runeson2009guidelines}. The goal of the study was twofold. Firstly, the aim was to empirically \textit{explore} the motives behind changes to APIs, and secondly, our ambition was to \textit{validate} the results' level of correctness by comparing our findings with the case company's explanation of their motives. Our research can be classified as an embedded case study \cite{yin2013case}, since both the API code and API documentation have been used as units of analysis [!!!Note to Richard \#2: Do you agree with this?] 
+
+The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing studies \cite{runeson2009guidelines} \cite{benbasat1987case} \cite{yin2013case} \cite{robson2002real}. An alternative approach that was considered was design research, but if a ``toy program" was to be used instead of an API tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines} [!!!Note to Richard \#3: Do you think this is a valid reason? Or is it a stretch to assume that all design research involves toy programs]. 
+
+An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change, and that input from the industry is vital to the success of the research; especially to be able to assess the validity of the findings related to RQ1. 
+
+\subsection{Data Collection}
+The data were collected primarily through third degree methods, such as first hand inspections of the source code and the archival analysis of accompanying  documentation. The source code was comprised of two versions of APIs which the company had developed. An older version which is currently released and a newer version which is soon to be deployed. Each version of the API had its own respective documentation. The documentation was analysed to find explanations of the features offered by the API.
+
+From the APIs we collected data about method names, parameters and return types. The data were collected from both versions of the APIs, with the changes between the two versions being of particular interest. From the archival documentation we collected information regarding the motive behind the functionality in API calls. The reason this was analysed was to provide insight into the motives behind the changes. For example, we examined differences in descriptions of methods prior to and after parameters were renamed.
+
+To reduce risks of research bias and human error, the data collection was performed by both researchers individually and indepenedtly. If the data differed, the cause was investigated and resolved. As part of the collection phase, the data were input into tables and spreadsheets, according to the API version.
+
+These collection methods were the most appropriate given that the data were readily available from the company. This brought concerns that the data were not produced for the purpose of our research \cite{runeson2009guidelines}, meaning there was a risk of data being irrelevant or erroneous. 
+
+First degree interviews were also conducted after the initial source code inspections had taken place. The main purpose was to validate our findings with the architects of the APIs. Furthermore, the interviews were conducted to provide additional insight into decisions and motives behind changes that might have been overlooked during the code inspection. The final reason for interviewing the architects of the APIs was to provide further insight of the users of the API. 
 
 
-\begin{table}
-	\centering
-	\begin{tabular}[ht]{| l | l | l | l |}
-	\hline
-	Test & Sample & Critical Value & D (result)  \\
-	\hline
-	KS & UC & 0.270 & 0.9388 \\
-	\hline
-	SW & UC & 0.964 &  0.8412 \\
-	\hline
-	KS & CL & 0.270 & 0.9388 \\
-	\hline
-	SW & CL & 0.964 & 0.9553 \\	
-	\hline
-	\end{tabular}
-	\caption{KS \& SW tests - Critical Value}
-\end{table}
 
+\subsection{Data Analysis}
+The data analysis was conducted in two major phases \cite{andersson2007spiral}. During the first phase, a hypothesis generating approach \cite{seaman1999qualitative} was used to be able to fulfil the exploratory goal of the study. It was during this phase that the analysis of the API code and documentation was carried out. The second phase included analysis of the interviews, the goal of it was to confirm the hypotheses \cite{seaman1999qualitative} that were formulated in the first phase.  
 
-A graphical representation of the level of normalisation can be seen in Figure 1 and 2. The results from the tests are supported by the sparseness of the data points. 
+Both phases were performed iteratively, together with the data collection. The reason for this create the opportunity of being able to improve the process of analysis as the study progressed, as well as to be able to adapt to possible changes in direction due to the hypothesis generating approach of the first phase \cite{andersson2007spiral}. 
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=90mm]{uc_qq.png}
-\caption{Use Case Q-Q plot}
-\end{figure}
+The analysis of the code and documentation was performed using grounded theory analysis \cite{seaman1999qualitative}, as it is recommended for hypothesis generating studies \cite{runeson2009guidelines} \cite{seaman1999qualitative}. More specifically, the approach undertaken was divided into three steps where the data first was coded based on which category of maintenance \cite{iso} the motive of the change corresponded with. Secondly, the codes were analysed from a high-level point of view, and the main goal was to identify trends in the codes. The third step involved analysis of these trends, and it was during this stage the hypotheses were generated and formulated. 
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=90mm]{cl_qq.png}
-\caption{Checklist Q-Q plot}
-\end{figure}
+Following the analysis of the archival data, the results of the interviews were analysed. The interviews were analysed using the same approach taken for the archival data. The results of this analysis was then compared and correlated with the results of the code analysis. 
 
-
-The next step was to perform an outlier test. The method used was boxplots. As seen in Figure 3 and 4, no outliers were detected and thus no data points were removed in the tests performed. 
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=90mm]{uc_box.png}
-\caption{Use Case Boxplot}
-\end{figure}
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=90mm]{cl_box.png}
-\caption{Checklist Boxplot}
-\end{figure}
-
-
-\SubSection{Test Used for H\textsubscript{Fault}}
-The frequency of A, B and C faults found were tabulated against the inspection groups which found them. Any response that was not not applicable (NA) was discarded from the table. An example of this is found in table 3. In order to determine if they do find the same faults, a Chi-Square (CS) test of independence was performed on the tabulated results. The reason the CS was used was primarily because the data we wished to use were categorical and the frequency of each category was at least 5. Other tests, such as Fishers Exact Test were not applicable, for example, our table was greater than 2x2 rows. Fishers test should only be used for 2x2 tables.
-
-\begin{table}
-	\centering
-	\begin{tabular}[Ht]{| l | l | l | l |}
-	\hline
-	 & A Faults & B Faults & C Faults  \\
-	\hline
-	Group A & 36 & 40 & 35 \\
-	\hline
-	Group B & 31 & 47 & 28 \\
-	\hline
-	\end{tabular}
-	\caption{Fault frequency of risk type per group}
-\end{table}
-
-\Section{Results}
-This section will cover the results of the experiment.
-
-\subsection{Efficiency and Effectiveness A}
-Since the data is non-normalised, the Wilcoxon-Mann-Whitney (WMW) two-sample rank-sum test was chosen instead of the Student's T-test as the final test. The data used for the WMW test was the efficiency of each participant. The result of the WMW test was W=250, p=0.1063 and with the significance level of 536, thus the null hypothesis H\textsubscript{0} Eff is rejected. 
-
-The results of the study show some interesting results. The rejection of \textsubscript{0} Eff indicates that there is a difference between the efficiency of the inspection methods.
-
-\subsection{Efficiency and Effectiveness B}
-The same test was chosen for Hrate, based on the same reasoning. The result of the WMW test for Hrate was W=250, p=0.1063 and with the significance level of 536 thus the null hypothesis H\textsubscript{0} Rate is rejected. 
-
-
-\subsection{Results for H\textsubscript{Fault}}
-As mentioned previously, the CS test was used to determine if the reviewers discovered the same frequency of results. The result of the X\textsubscript{2} was 1.5998, generating a p-value of 0.4494. For v=2 and alpha = 0.05, the upper critical value is 5.991 and the lower critical value is 0.103. Since 1.5998 is \textless 5.991 and \textgreater 0.103, the alternative hypothesis of the CS test is rejected. Since \textsubscript{0 Fault} and \textsubscript{1 Fault} are inverted compared to the hypothesis of the CS test, the null hypothesis of H\textsubscript{Fault} is rejected.
-
-When looking at the results of the study, UC appears to find many more class A and class B faults than CL, however, CL finds more class B faults. However, on average, the CL reviews found more faults overall and as such could be considered more effective than UC. This, coupled with the rejection of the H\textsubscript{Fault} null hypothesis, provides ample evidence that the review techniques do differ in which faults they are finding. A suggestion for a follow up study would be to determine exactly  and why one inspection process finds them over the other.
-
-\begin{table}
-	\centering
-	\begin{tabular}[Ht]{|l|l|l|}
-	\hline
-	& UC & CL \\
-	\hline
 <<<<<<< HEAD
-	UC & 36 & 40 & 35 & 4.61hthth & 3.5 & 0.12 \\
+We took the same approach (roles/double stuff) as in the collection to reduce human rerror + reseach bias.  
+
+
+Another added benefit was that we were able to triangulate our results with responses in the interviews, allowing us to validate, or refute our findings.
 =======
-	Mean(Total faults found) & 4.61 & 5.48 \\
->>>>>>> affb42d89568409fd6cb34df1bfb5e6ce707e94e
-	\hline
-	Median(Total faults found) & 3.5 & 5.0 \\
-	\hline
-	Detection Rate & 0.12 & 0.14 \\
-	\hline
-	A Faults & 36 & 31 \\
-	\hline
-	B Faults & 40 & 47 \\
-	\hline
-	C Faults & 35 & 20 \\
-	\hline
-	\end{tabular}
-	\caption{Results Summary}
-\end{table}
+\subsection{Validity Threats}
+This section highlights how we have either diminished or overcome the most concerning validity threats facing our study.
+>>>>>>> 9dd2c68b23224aba7049d2e89e58f679f63ce3c8
 
+%Internal Validity
+\textit{Internal Validity} threats for our study have been greatly reduced by the methodologies we have employed. By performing a dual inspection and then a joint inspection of both the API source code, documentation and results analysis, \textit{internal validity} is significantly reduced. Triangulation of the results with the use of interviewing the architects is key step in reducing potential validity threats in our study.
 
+%External Validity
+Regarding \textit{external validity}, generalisability and the appropriateness of our results are at risk. In our study we have striven to ensure that our findings will be as useful as possible to others. Given that there are some similar studies to ours and that ours is an exploratory study, our results will be useful to others who perform similar studies in the future. Our results come from both APIs either in production or soon to be in production. As such, the results of this study will hopefully be of use to the company at which they were studied, be it now for their current API or in the future when they inevitably develop others. Likewise, other companies in similar positions could use the results of our study when creating their own APIs.
 
+%Reliability
+The largest \textit{reliability} threat facing our study was the reproducibility. To counter this threat, we have provided a clear and concise coding method for the collected data. Furthermore, as mentioned previously, we have attempted to limit bias and ambiguity in our interview questions where possible. To ensure clarity of the questions, we have field tested the interview with some of our peers, altering the questions based on their feedback.
 
-
-The slight variation in favour of the CL technique is further evidence that CL is more efficient and therefore more effective than UC.
-
-
-
+[!!!Note to Richard \#4: We struggled to find construct threats as we've not done the study so we don't know any yet, is it normal or OK to exclude one of the categories?]
 
 \bibliographystyle{latex8}
 \bibliography{latex8}
 
 
-\Section{Acknowledgements}
-U w0T m8
+\Section{Acknowledgement}
+John had the main responsibility for sections 1, 2. William had the main responsibility for section 3. Section 3.6 and the interview questions were written together. We have, however, worked on all sections jointly and all sections have been reviewed by both William and John. 
 
-
+\noindent
 \end{document}
 
