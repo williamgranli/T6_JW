@@ -5,7 +5,7 @@
 \usepackage[utf]{inputenc}
 \usepackage{url}
 
-%8.5 pages is 60% 14 pages, which is the max
+%8.5 pages is 60% 14 (max) pages
 \title{Industrial Best Practice}
 
 
@@ -26,12 +26,16 @@ Do this last!
 \url{http://unilearning.uow.edu.au/report/4bi1.html}
 
 \section{Problem Formulation, 3p}
+This section will describe the problem that we are trying to solve, why it is important and what related products exist on the market today.
 
-As the software industry and the open source movement steadily grow, the number of publicly available APIs is increasing. APIs can improve development speed \cite{stylos2006comparing}, improve software quality \cite{stylos2006comparing} and can increase software reusability \cite{afonso2012evaluating}. There is a consensus amount literature and experts that modifications to deployed APIs can have negative impacts on the users of the API \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api}. The main reason is that it will require the users to update the code using the API, thus causing a disruption in the application's software ecosystem \cite{messerschmitt2005software}. The most common changes to APIs occur from refactoring \cite{dig2005role} \cite{xing2006refactoring}.
+\subsection{Description of the Problem}
+
+As the software industry and the open source movement steadily grow, the number of publicly available APIs is increasing. APIs can improve development speed \cite{stylos2006comparing}, improve software quality \cite{stylos2006comparing} and can increase software reusability \cite{afonso2012evaluating}. There is a consensus among literature and experts that modifications to deployed APIs can have negative impacts on the users of the API \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api}. The main reason is that it will require the users to update the code using the API, thus causing a disruption in the application's software ecosystem \cite{messerschmitt2005software}. The most common changes to APIs occur from refactoring \cite{dig2005role} \cite{xing2006refactoring}.
 
 The problem, put simply, is this; how can effective changes be made to deployed APIs with minimal impact upon the ecosystem in which the API is utilised?
 
 %Highlight problem and who it's for here.
+\subsection{Why is this important?}
 Having a stable and well designed API is vital to the success of a company or product, especially if they are built around a particular API. For example, a study on the impact of reliable APIs was undertaken in the Android ecosystem \cite{mcdonnell2013empirical}. The study aimed to discover if APIs with high rates of faults affected the success of an application. The study found that the 50 least popular applications had APIs which were 500\% more error prone, ultimately concluding that there is indeed a correlation between API stability and application success \cite{mcdonnell2013empirical}. 
 
 Due to the negative implications that modifications to APIs cause for users, it is important to understand why changes occur. If the most common pitfalls are known before the development of new APIs begin, these mistakes could be mitigated. Likewise, if common dangers of changes to existing APIs are fully studied and understood, informed changes can be made to lessen the affect on the users. Furthermore, industry and academia can use these lessons learned to create, or enhance existing best practices of API design.
@@ -41,36 +45,27 @@ Given that software is prevalent in our lives, it is likely that poor API design
 %This needs fluffing
 Our solution is to provide a set of guidelines, or framework with which to follow when making changes to APIs. The framework will prioritise business motives and needs when tackling design decisions.
 
-Exhaustive research has found that there exists very few similar soultions similar to our own. While there are countless books related to the subject [!!!list some?], very few actually aim to address the needs of busniness and customers; they are primarily focused on the developer.
+\subsection{Related Products}
+Exhaustive research has found that there exists very few similar solutions similar to our own. While there are countless books related to the subject, very few actually aim to address the needs of busniness and customers; they are primarily focused on the developer.
 
-%Examples of similar products
-Apiary is a popular online API design service. Apiary focuses on a collaborative approach to creating APIs, the tool offers the ability to work with between 5 and 50 contributors on a single project. The unique part of this tool is that it provides a "mock" API by which customers, developers or anyone with access can work with. This stage allows quick prototyping and testing of an API before any real coding has taken place. The tool, while useful, doesn't aim to solve the problem of handling changes to APIs but is instead a good platform to quickly prototype ideas.
+Apiary is a popular online API design service. Apiary focuses on a collaborative approach to creating APIs, the tool offers the ability to work with between 5 and 50 contributors on a single project. The unique part of this tool is that it provides a ``mock" API by which customers, developers or anyone with access can work with. This stage allows quick prototyping and testing of an API before any real coding has taken place. The tool, while useful, doesn't aim to solve the problem of handling changes to APIs but is instead a good platform to quickly prototype ideas.
 
 Mashery provide a more business oriented approach to API development. They offer a wide variety of services with API management being one of them. Quoting their website, they:
 
-Increase productivity through uniformity and accessibility of data
-Develop better customer experiences faster, for mobile and web-based applications
-Achieve real-time data exchange between platforms and applications
-Enhance visibility into data consumption to optimize APIs
+\begin{itemize}
+\item Increase productivity through uniformity and accessibility of data
+\item Develop better customer experiences faster, for mobile and web-based applications
+\item Achieve real-time data exchange between platforms and applications
+\item Enhance visibility into data consumption to optimize APIs
+\end{itemize}
 
 While mashery have a more business oriented approach, they do not offer anything resembling a framework for both business and developers to use when making API design decisions.
 
-
-\begin{itemize}
-	\item Description of what problem you are trying to solve
-	\item The description should highlight why the problem is important, for whom it is important and how it advances the state of the art/company business
-	\item Description of similar solutions available for the market
-\end{itemize}
-
-
-
-
-
 \section{Plan and Roadmap, 5p}
-As mentioned in Section 2, the effects modifications to APIs have on the platform’s ecosystem are explored as being negative. However, there are no existing systematic guidelines or frameworks that take the ecosystem into account for how to best modify an API. Our proposed process for creating such a framework can be seen in Figure \ref{fig:roadmap}. This is an initial version of the roadmap \cite{!!!roadmap}, and it is advised that it is updated during the process. The main reason for this is that it is important to adapt to changes in the market, and if new needs are identified, the strategy should be redesigned to meet them. 
+As mentioned in Section 2, the effects modifications to APIs have on the platform’s ecosystem are explored as being negative. However, there are no existing systematic guidelines or frameworks that take the ecosystem into account for how to best modify an API. Our proposed process for creating such a framework can be seen in Figure \ref{fig:roadmap}. This is an initial version of the roadmap \cite{phaal2004technology}, and it is advised that it is updated during the process. The main reason for this is that it is important to adapt to changes in the market, and if new needs are identified, the strategy should be redesigned to meet them. 
 
 \subsection{Designing the Roadmap}
-The roadmap was developed using the standard T-Plan process \cite{!!!roadmap}. As such, identifying the market need was done as a part of the initial step. Following that, the products and technology needed to fill that gap were identified. As a final step the dependencies and ordering of the identified activities were sorted out which resulted in the current version of the roadmap. An overview of the process used to create the roadmap can be seen in Table \ref{tab:proc}
+The roadmap was developed using the standard T-Plan process \cite{phaal2004technology}. As such, identifying the market need was done as a part of the initial step. Following that, the products and technology needed to fill that gap were identified. As a final step the dependencies and ordering of the identified activities were sorted out which resulted in the current version of the roadmap. An overview of the process used to create the roadmap can be seen in Table \ref{tab:proc}
 
 \begin{table}[ht]
 \centering
@@ -144,6 +139,7 @@ If companies start developing their APIs to fit the needs of ecosystems, it woul
 \end{itemize}
 
 
-
+\bibliographystyle{bib}
+\bibliography{bib}
 
 \end{document}
