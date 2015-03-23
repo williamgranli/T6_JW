@@ -18,7 +18,7 @@
 		University of Gothenburg }
 
 \maketitle
-\section{Executive Summary}
+\section{Executive Summary, 1p}
 This report presents a plan for how to develop and distribute a framework for designing and improving APIs in the context of software evolution and software ecosystems. 
 
 The research behind the framework has been made through reviewing existing literature, and through analysing changes between  different versions on an industry API. The main way of assessing the API has been through measuring the impact it has on its ecosystem. The development of the framework has been supported by a solid technology roadmap, dissemination plan and impact assessment. 
@@ -33,9 +33,9 @@ With this report we conclude that the improvement potential to the current ways 
 \item A software ecosystem existing in symbiosis
 \end{itemize}
 
-One limitation to this report is that the development of the framework has not started yet, and that only the initial studies have been started. Another limitation is that the no extensive research on whether or not companies have the desire spend resources that do not have an immediate impact on their revenue. 
+One limitation to this report is that the development of the framework has not started yet, and that only the initial studies have been started. Another limitation is that the no extensive research on wether or not companies have the desire spend resources that do not have an immediate impact on their revenue. 
 
-\section{Problem Formulation}
+\section{Problem Formulation, 3p}
 This section will describe the problem that we are trying to solve, why it is important and what related products exist on the market today.
 
 \subsection{Description of the Problem}
@@ -56,7 +56,7 @@ Given that software is prevalent in our lives, it is likely that poor API design
 Our solution is to provide a set of guidelines, or framework with which to follow when making changes to APIs. The framework will prioritise business motives and needs when tackling design decisions.
 
 \subsection{Related Products}
-Exhaustive research has found that there exists very few similar solutions similar to our own. While there are countless books related to the subject, very few actually aim to address the needs of business and customers; they are primarily focused on the developer.
+Exhaustive research has found that there exists very few similar solutions similar to our own. While there are countless books related to the subject, very few actually aim to address the needs of busniness and customers; they are primarily focused on the developer.
 
 Apiary is a popular online API design service. Apiary focuses on a collaborative approach to creating APIs, the tool offers the ability to work with between 5 and 50 contributors on a single project. The unique part of this tool is that it provides a ``mock" API by which customers, developers or anyone with access can work with. This stage allows quick prototyping and testing of an API before any real coding has taken place. The tool, while useful, doesn't aim to solve the problem of handling changes to APIs but is instead a good platform to quickly prototype ideas.
 
@@ -66,12 +66,12 @@ Mashery provide a more business oriented approach to API development. They offer
 \item Increase productivity through uniformity and accessibility of data
 \item Develop better customer experiences faster, for mobile and web-based applications
 \item Achieve real-time data exchange between platforms and applications
-\item Enhance visibility into data consumption to optimise APIs
+\item Enhance visibility into data consumption to optimize APIs
 \end{itemize}
 
-While Mashery have a more business oriented approach, they do not offer anything resembling a framework for both business and developers to use when making API design decisions.
+While mashery have a more business oriented approach, they do not offer anything resembling a framework for both business and developers to use when making API design decisions.
 
-\section{Plan and Roadmap}
+\section{Plan and Roadmap, 5p}
 As mentioned in Section 2, the effects modifications to APIs have on the platform’s ecosystem are explored as being negative. However, there are no existing systematic guidelines or frameworks that take the ecosystem into account for how to best modify an API. Our proposed process for creating such a framework can be seen in Figure \ref{fig:roadmap}. This is an initial version of the roadmap \cite{phaal2004technology}, and it is advised that it is updated during the process. The main reason for this is that it is important to adapt to changes in the market, and if new needs are identified, the strategy should be redesigned to meet them. 
 
 \subsection{Designing the Roadmap}
@@ -97,15 +97,15 @@ The roadmap was developed using the standard T-Plan process \cite{phaal2004techn
 \end{table}
 
 \subsection{Knowledge Development}
-Since we have made the assessment that the market need will to remain relatively stable, careful research is essential to be able to deliver a product that meets the market needs. The primary method of performing the initial study, to be able to improve knowledge, will be through studying the existing literature. The reason for this is that three fields, API design, software evolution and software ecosystems, are currently well-explored, but the correlation and relationship between them has not yet been identified. Therefore, these fields will be explored in literature and a set of ``best practices" will be gathered from each of them. 
+Since we have made the assessment that the market need will remain relatively stable, careful research is essential to be able to deliver a product that meets the market needs. The main way of performing the initial study, to be able to increase the knowledge, will be through studying the existing literature. The reason for this is that three fields (API design, software evolution and software ecosystems) are currently well-explored, but the correlation and relationship between them has not yet been identified. Therefore, these fields will be explored in literature and a set of ``best practices" will be gathered from each field. 
 
-In addition to the literature review, a case study will be conducted to gather information from a company leading its field. The goal of the data collection performed in the case study will also be to gather a set of best practices for each of the three fields. To determine these best practices, an analysis of the companies current API and a future API will be performed. The changes between the two versions of the company's platform API will be of great significance and it is from these changes that we will base some of our best practices upon.
+In addition to the literature review, a case study will be conducted to gather information from a state of the art company. The goal of the data collection made in the case study, will also be to gather a set of best practices for each of the three fields. This will be achieved by analysing the changes between two versions of the company's platform API. 
 
 \subsection{Implementing the Framework}
-In order to collate as much existing knowledge and research as possible, a thorough, extensive literature review will be conducted. This will be complimented by a case study which is shall be performed in conjunction with the previously mentioned case company. The results of both the review and the case study will be analysed and compared. A set of best practices, based on the data collected in the review and case study, will be used to create the basis of the framework that will make up our best practices. Bringing in important factors from each of the three fields in the discussion is of the highest importance. The goal of this phase is therefore to create an Minimum Viable Product (MVP) that can be adopted and evaluated at the case company. 
+To be able to create a framework which uses as much as possible of the knowledge and technology that exists in the world, the results from the literature review and the case study will both be analysed and compared. A set of best practices based on both data collections will be defined and become the basis for the framework. That we bring in important factors from each of the three fields in the discussion is of the highest importance. The goal of this phase is to create an Minimum Viable Product (MVP) that can be adopted and evaluated at the case company. 
 
 \subsection{Adoption and Evaluation}
-The final stage of the roadmap will be performed using an iterative approach, where the MVP will be continuously evaluated and improved at the case company. The primary result of evaluating the success of the framework will be to measure if there is any visible reduction in the amount of negative effects that changes to an API has on its ecosystem, while retaining the original complexity and usability before the changes were made.
+The final stage of the roadmap will take a more iterative approach, where the MVP will be continuously evaluated and improved at the case company. The main way of evaluating the success of the framework will be to measure if there is an decrease in the negative effects that the API has on its ecosystem, while it still is able to remain its original complexity and usability. 
 
 \begin{sidewaysfigure}[p]
 \centering
@@ -120,31 +120,27 @@ This section will describe the dissemination plan for our framework.
 
 \subsection{End-users}
 
-Two immediate end-users of our framework have been identified, 1) open-source projects and 2) web development APIs. Open-source projects have been identified as potential users of our API as they generally have a good-will mindset when it comes to furthering and helping to improve the software engineering industry. Generally speaking, most open-source developers do no prioritise making a profit from their work, instead, they focus on delivering a product that is as complete and functional as possible. The open-source community is a well established and has existed for a long time, with a long tradition of autonomy, it can be said that they care about the well-being of their software ecosystems. 
-
-The second area where this could have an especially great impact would be in the area of web development APIs. Web APIs are widely used by vast amount of developers, performing many varied tasks. The web is a constantly evolving and expanding market, as such many companies rise and fall based on the success of their API. Therefore, it's not surprising that changes to a web API have significant impacts on the ecosystems of the systems. The toolchain in web development is usually referred to as a ``stack" which literally is a set of frameworks and APIs that you use together to develop your application.
+Two major end-users of our framework have been identified, 1) open-source projects and 2) web development APIs. The reason open-source projects have been identified as potential users of our API is that they generally have a good-will mindset when it comes to developing the software engineering industry. Their goals are not set on making profit, but delivering a product that is as good as possible. The open-source community also takes care of itself and thus it cares about the well-being of its ecosystems. The second area where this could have an especially great impact would be in the area of web development APIs, since they are widely used by a great amount of users. Another reason that web APIs would be impacted is that very clear boundaries between the ecosystems exist. The toolchain in web development is usually referred to as a ``stack" which literally is a set of frameworks and APIs that you use together to develop your application. 
 
 \subsection{Presentation and Communication}
-The most appropriate method of conveying our message and findings would be through the research community. The initial studies that will be conducted (as mentioned in Section 3) will lead to a number of published research papers. These papers will be used to generate awareness and attention of our framework and the successes that it can bring. The papers may propagate research and act as a stepping stone for other research. Other researchers could quite easily build upon the research which we have conducted. The outcome of which would only help our cause; to improve APIs everywhere. 
+The main way of conveying our message would be through the research community. The initial studies that will be conducted (as mentioned in Section 3) will lead to a number of published research papers. These will be used to create awareness and attention of our framework. The papers may also lead to other researchers building on our research which would only help our cause which is to improve APIs everywhere. 
 
-In addition to reaching out to the research community, conferences, especially those related to web development, would be targeted for publication. One example of such a conference is JDays, where many APIs that are developed in JavaScript are discussed. The main reason for targeting such conferences is that, generally speaking, these types of conferences tend to attract the prominent figures in a particular industry or a narrower aspect of it. Bringing this to the awareness of these key players would help to create further awareness and publicity of the research, and by association, the best practices that we shall develop.
+In addition to reaching out to the research community, conferences related to web development would be targeted especially. One example of such a conference is JDays, where many APIs that are developed in JavaScript are discussed. The main reason for targeting such conferences is that a large part of the important persons of the community attend. This would help to create further awereness and publicity. 
 
 The last way of presenting our framework would be through directly targeting a set of companies that operate in the same software ecosystem. One example of that would be to target a company which develops a game engine, and at the same time contact the most prominent game developers which utilise this game engine. If the company developing the game engine realises that there is large interest from the main users of their API, it is much more likely that they would be interested in using our API. 
 
 
-\section{Impact Assessment}
+\section{Impact Assessment, 2p}
 This section will describe the impact that our framework will have. 
 
 \subsection{Background}
-The most significant impact of our new API framework would be that it could potentially transform the way companies and organisations motivate their design decisions for APIs. Today's software engineering companies mainly take into account their own agendas, and APIs are changed for refactoring reasons, such as name changes, or to reduce complexity. The most important factor when designing or changing APIs is, however, how the changes will impact the users of the API and how their needs are being met. In the recent years, this has been realised by the software engineering industry. As a result, the consensus is to have less deprecations when changing APIs and thus these changes have had their impact upon users reduced. 
+The key impact of our new API framework would be that it would transform the way companies and organisations motivate their design decisions for APIs. Today's software engineering companies mainly take into account their own agendas, and APIs are commonly changes for refactoring reasons or to reduce complexity. The most important factor when designing or changing APIs is, however, the users of the API and their needs. In the recent years, this has been realised by the software engineering industry. This has lead to less deprecations in the code of the API users. 
 
 \subsection{Impact on Technology and State of the Art}
-The next step that we propose the industry takes, is to weigh the needs of the whole ecosystem and not just the immediate needs of the user when creating or modifying APIs. By doing this, a more homogeneous environment would be possible where API platforms and API users can change their code simultaneously. For example, it would have the potential to reduce the risks taken when deprecating methods as users and developers would be able to communicate their needs effectively. The impact of this could even be that companies begin changing and improving their APIs with the view of helping the ecosystem instead of purely their own immediate needs. This would have the potential to cause a a domino effect in the ecosystem which would hopefully spread to other ecosystems and ultimately would become a part of their overall software design process. 
+The next step that we propose the industry takes, is to weigh the needs of the whole ecosystem in the assessment when creating APIs. This would lead to a more homogeneous environment where API platforms and API users can change their code jointly, to reduce the risk of deprecating for example methods. The impact of this could even be that companies start changing and improving their APIs to help the ecosystem, and thus causing a domino effect in the ecosystem which can even spread to other ecosystems. 
 
 \subsection{Impact on Society}
-If companies begin developing their APIs to fit the needs of ecosystems, it would not only have a great impact on these specific isolated environments; it would develop the whole software engineering industry. Therefore, the impact on society is potentially huge. Given that software is used by everyone, daily, improving software overall could improve peoples quality of life.
-
-In modern software development, very few applications are written without the use of APIs. The consequence of which means, if APIs are designed more thoroughly, software performance is likely to rise. It might be difficult to envision that companies would actually spend resources to help their ecosystem without seeing and direct and immediate improvements for themselves. However, examples of where similar changes are happening can already be found today. One example is Ericsson. Ericsson are spending a lot of resources to develop open-source software such as Eclipse and Papyrus. The improvement of this software helps Ericsson directly, as they are using the software themselves. However, by improving open source software, they inadvertently help anyone else who uses this software. If this trend were to catch on, it could potentially lead to a world where all software has higher quality and is developed faster. 
+If companies start developing their APIs to fit the needs of ecosystems, it would not only have a great impact on these specific isolated environments; it would develop the whole software engineering industry. In modern software development, very few applications are written without the use of APIs, and this means if APIs become better; it can increase the performance of software development. It might be hard to envision that companies would actually spend resources to help their ecosystem without helping themselves (directly). But examples of where similar things are happening can already be found today, and one example is that Ericsson are spending a lot of resources to develop open-source software such as Eclipse and Papyrus. If this would catch on, it would basically lead to a world where all software has better quality and is developed faster. 
 
 \section{Summary, 1p}
 
