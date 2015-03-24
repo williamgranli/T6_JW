@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex latex8"] 1425391234 "latex8.aux" "latex8.bbl" "latex8" 1425391234
+["bibtex latex8"] 1427189120 "latex8.aux" "latex8.bbl" "latex8" 1427189138
   "./latex8.bst" 1424693535 20659 905972de4c2ed361a9e19361a92cf806 ""
-  "latex8.aux" 1425391234 3253 7fa864e26366c81e6afee27c169bb747 ""
+  "latex8.aux" 1427189138 3140 09027aca0ecd565ca62f537ebb0d64d1 ""
   "latex8.bcf" 0 -1 0 ""
   "latex8.bib" 1425377535 4133 e70e00ec83d0f7ca17a3bfc774b45092 ""
   (generated)
   "latex8.bbl"
   "latex8.blg"
-["pdflatex"] 1425391234 "/home/john/Desktop/T6/rmtw/a5/latex8.tex" "/home/john/Desktop/T6/rmtw/a5/latex8.pdf" "latex8" 1425391234
+["pdflatex"] 1427189138 "/home/john/Desktop/T6/rmtw/a5/latex8.tex" "/home/john/Desktop/T6/rmtw/a5/latex8.pdf" "latex8" 1427189138
   "/etc/texmf/web2c/texmf.cnf" 1413466443 1101 af7716885e081ab43982cab7b4672c1a ""
-  "/home/john/Desktop/T6/rmtw/a5/latex8.aux" 1425391234 3253 7fa864e26366c81e6afee27c169bb747 ""
-  "/home/john/Desktop/T6/rmtw/a5/latex8.tex" 1425391229 16630 d1ac4408a55cb1845629e2fdaf045fd8 ""
+  "/home/john/Desktop/T6/rmtw/a5/latex8.aux" 1427189138 3140 09027aca0ecd565ca62f537ebb0d64d1 ""
+  "/home/john/Desktop/T6/rmtw/a5/latex8.tex" 1427189137 17272 ecf22714be03f037e3cf714403483848 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1136768653 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -53,17 +53,17 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1413466640 1346346 7f2b8b715a9ddb095afe3697a6ba02b5 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1413466563 3822875 e3597fde5097d5008d8ea7cd1e014038 ""
   "article.cls" 1424693535 20495 a5b048e49d350e2ad23ed3b99264a932 ""
-  "latex8.aux" 1425391234 3253 7fa864e26366c81e6afee27c169bb747 ""
-  "latex8.bbl" 1425391234 3140 cfcb7d7228a3f8a25252b5287d55a0dd "bibtex latex8"
+  "latex8.aux" 1427189138 3140 09027aca0ecd565ca62f537ebb0d64d1 ""
+  "latex8.bbl" 1427189120 3140 cfcb7d7228a3f8a25252b5287d55a0dd "bibtex latex8"
   "latex8.sty" 1424693535 4821 b677c7b0074f481f290aa9f93ec8774d ""
-  "latex8.tex" 1425391229 16630 d1ac4408a55cb1845629e2fdaf045fd8 ""
+  "latex8.tex" 1427189137 17272 ecf22714be03f037e3cf714403483848 ""
   (generated)
+  "latex8.log"
+  "/home/john/Desktop/T6/rmtw/a3/latex8.log"
   "/home/john/Desktop/T6/rmtw/a5/latex8.pdf"
   "/home/john/Desktop/T6/IEEE_CS_Latex/latex8.log"
-  "latex8.pdf"
-  "latex8.log"
   "latex8.aux"
-  "/home/john/Desktop/T6/rmtw/a3/latex8.log"
+  "/home/john/Desktop/T6/rmtw/a3/latex8.pdf"
   "/home/john/Desktop/T6/rmtw/a5/latex8.log"
   "/home/john/Desktop/T6/IEEE_CS_Latex/latex8.pdf"
-  "/home/john/Desktop/T6/rmtw/a3/latex8.pdf"
+  "latex8.pdf"
