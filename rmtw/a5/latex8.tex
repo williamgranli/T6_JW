@@ -46,25 +46,12 @@ Ever since the first computer programs were written, researchers and developers 
 
 The benefits of MDSD have consistently been reported in academia \cite{staron2006adopting} \cite{volter2013model}. Many large companies such as Ericsson and ABB \cite{staron2006adopting} also use MDSD as a part of their development chain. In industry, however, MDSD has struggled to make a complete breakthrough and it is mostly used for niche systems such as embedded and safety-critical systems.
 
-\SubSection{Statement of the Problem}
-
 The selection of development process, programming language and programming paradigm has a high impact on the development speed depending on what the system requirements are and in what environment the system is being developed. Selecting for example MDSD for the wrong system and setting may have a very negative impact on development speed, quality and maintainability. 
-
-\SubSection{Existing Literature}
-
-Volter et al. \cite{volter2013model} state that successful adoption of MDSD should increase development speed, increase software quality, improve reusability and improve manageability through abstraction.
-
-Whittle and Hutchinson \cite{whittle2012mismatches} conducted a study whereby they examined 17 companies who were adopting MDSD. While they agreed that the successful adoption of MDSD can improve productivity through code generation, there are many pitfalls which can cause the adoption to fail. Whittle and Hutchinson found that in companies where the change was implemented bottom up, there was a higher degree of success. Contrary to this, when change was top down, as suggested by academia and education, the adoption was often not as successful. A focus on Domain Specific Languages (DSLs) is what Whittle and Hutchinson suggest helps MDSD become successful in a company setting.
-
-A further, more specific example, is a study conducted by Staron \cite{staron2006adopting}. In this study a case study is conducted with two companies in the process of adopting MDSD. In the findings, Staron provides a set of conditions for adopting MDSD, one being the compatibility of MDSD and existing principles in the company. Staron states that the adoption of this new process must be usable by the previous processes in place \cite{staron2006adopting}. He concludes by stating that this compatibility is especially important for larger companies due to the heavy effort required to implement the change. In a second study \cite{staron2008transitioning}, Staron provides possible reasons for the adoption of MDSD to fail. He suggests that the large investment in time and money, immature technology and organisational resistance are all factors to overcome in the adoption of new processes.
-
-Mattsson et al. \cite{mattsson2009linking} discuss the correlation between MDSD and software architecture. The idea that MDSD is beneficial if performed correctly is presented, and one important factor discussed is the need of automatic enforcement of architectural rules \cite{mattsson2009linking}. If this has to be performed manually, it will become a bottleneck in large MDSD projects \cite{mattsson2009linking}.
-
-\SubSection{Motivation for Study}
 
 Academia appears to be united in the opinion that MDSD is an improvement compared with traditional software development \cite{staron2006adopting} \cite{volter2013model}. However, why do many large software companies choose to not adopt MDSD?
 
 This gap in the literature is the motivation for our study. There is therefore a need to methodically investigate the existing literature in which studies of the adoption of MDSD, advantages and disadvantages of MDSD are explored. Not only this but how and when should MDSD be adopted and how success can be assured.
+
 
 \SubSection{Research Questions}
 \begin{itemize}
@@ -74,6 +61,19 @@ This gap in the literature is the motivation for our study. There is therefore a
 \item \textbf{RQ1.3:} What are the characteristics of the systems of the companies that successfully use MDSD?
 \item \textbf{RQ1.4:} Which change strategy has most been successful in implementing MDSD? 
 \end{itemize}
+
+\SubSection{Related Work}
+
+Volter et al. \cite{volter2013model} state that successful adoption of MDSD should increase development speed, increase software quality, improve reusability and improve manageability through abstraction.
+
+Whittle and Hutchinson \cite{whittle2012mismatches} conducted a study whereby they examined 17 companies who were adopting MDSD. While they agreed that the successful adoption of MDSD can improve productivity through code generation, there are many pitfalls which can cause the adoption to fail. Whittle and Hutchinson found that in companies where the change was implemented bottom up, there was a higher degree of success. Contrary to this, when change was top down, as suggested by academia and education, the adoption was often not as successful. A focus on Domain Specific Languages (DSLs) is what Whittle and Hutchinson suggest helps MDSD become successful in a company setting.
+
+A further, more specific example, is a study conducted by Staron \cite{staron2006adopting}. In this study a case study is conducted with two companies in the process of adopting MDSD. In the findings, Staron provides a set of conditions for adopting MDSD, one being the compatibility of MDSD and existing principles in the company. Staron states that the adoption of this new process must be usable by the previous processes in place \cite{staron2006adopting}. He concludes by stating that this compatibility is especially important for larger companies due to the heavy effort required to implement the change. In a second study \cite{staron2008transitioning}, Staron provides possible reasons for the adoption of MDSD to fail. He suggests that the large investment in time and money, immature technology and organisational resistance are all factors to overcome in the adoption of new processes.
+
+Mattsson et al. \cite{mattsson2009linking} discuss the correlation between MDSD and software architecture. The idea that MDSD is beneficial if performed correctly is presented, and one important factor discussed is the need of automatic enforcement of architectural rules \cite{mattsson2009linking}. If this has to be performed manually, it will become a bottleneck in large MDSD projects \cite{mattsson2009linking}.
+
+
+
 
 \Section{Methodology}
 The method used to attempt to answer our research questions was a Systematic Literature Review (SLR) \cite{kitchenham2007guidelines}. An SLR was the most appropriate research methodology for two main reasons. Firstly, we wished to summarise the existing evidence of when MDSD is applicable in industry and secondly to fill gaps in literature for examples of when MDSD is not applicable \cite{kitchenham2007guidelines}. For these same reasons, other methodology techniques were not as applicable. For example, a quantitative study was not appropriate as we were not trying to prove, disprove or generalise a hypothesis. A qualitative study would have been useful if we were interested in exploring a particular hypothesis. For similar reasons, a case study would also not have been applicable as we were not concerning ourselves with how MDSD works in a real setting. Likewise, as industry and academia seem to differ in opinion, there is an implication that there could have been bias in both sides of the argument. By performing an SLR we helped to alleviate some of this bias but we did not eliminate it entirely \cite{kitchenham2007guidelines}.
