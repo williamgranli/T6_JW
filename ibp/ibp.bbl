@@ -1,5 +1,15 @@
 \begin{thebibliography}{10}\setlength{\itemsep}{-1ex}\small
 
+\bibitem{Apiary}
+Apiary api design tool.
+\newblock \url{http://apiary.io/}.
+\newblock Accessed: 24-03-2015.
+
+\bibitem{Mashery}
+Mashery api management.
+\newblock \url{http://www.mashery.com/}.
+\newblock Accessed: 24-03-2015.
+
 \bibitem{afonso2012evaluating}
 L.~M. Afonso, R.~F. d.~G. Cerqueira, and C.~S. de~Souza.
 \newblock Evaluating application programming interfaces as communication
