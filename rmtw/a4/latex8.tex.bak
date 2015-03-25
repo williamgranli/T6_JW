@@ -174,7 +174,7 @@ A graphical representation of the level of normalisation can be seen in Figure 1
 \end{figure}
 
 
-The next step was to perform an outlier test. To identify these, boxplots were generated and reviewed. As seen in Figure 3 and 4, no outliers were detected and thus no data points were removed in the subesequent tests. 
+The next step was to perform an outlier test. To identify these, boxplots were generated and reviewed. As seen in Figure 3 and 4, no outliers were detected and thus no data points were removed in the subsequent tests. 
 
 \begin{figure}[ht]
 \centering
@@ -214,15 +214,15 @@ The frequency of A, B and C risks found were tabulated against the inspection gr
 This section will cover the results of the experiment. The results for H\textsubscript{Eff} and H\textsubscript{Rate} are described in the same sub-section, since the results are similar and since the results both hypotheses are relative to the number of average faults found. 
 
 \subsection{Results for H\textsubscript{Eff} and H\textsubscript{Rate}}
-Since the data is non-normalised, the Wilcoxon-Mann-Whitney (WMW) two-sample rank-sum test was performed instead of the Student's T-test as the test for H\textsubscript{Eff}. The data used for the WMW test was the efficiency of each participant. The result of the WMW test was p=0.1063 and thus the alternative hypothesis, H\textsubscript{1 Eff}, is rejected. 
+Since the data is non-normalised, the Wilcoxon-Mann-Whitney (WMW) two-sample rank-sum test was performed instead of the Student's T-test as the test for H\textsubscript{Eff}. The data used for the WMW test was the efficiency of each participant. The result of the WMW test was p=0.1063 and thus the results are not statistically significant enough to reject the null hypothesis.  
 
-The same test was chosen for H\textsubscript{Rate}, based on the same reasoning. The result of the WMW test for H\textsubscript{Rate} was p=0.1063 and thus H\textsubscript{1 Rate} is rejected. 
+The same test was chosen for H\textsubscript{Rate}, based on the same reasoning. The result of the WMW test for H\textsubscript{Rate} was p=0.1063 and thus the results are not statistically significant enough to reject H\textsubscript{0 Rate}.  
 
-As evident from the tests, and as can be seen in Table 4, the results for H\textsubscript{Eff} and H\textsubscript{Rate} are similar. Both show that there is a slight difference between the two inspection methods, and there is a slight better result for CL. The results are, however, not statistically significant enough for the null hypotheses to be rejected. Table 3 shows that UC finds more faults of risk type A and C, but the fact that the CL data contained 18 more faults that contained an incorrect fault risk entry is be a possible explanation for this result. 
+As is evident from the tests, and as can be seen in Table 4, the results for H\textsubscript{Eff} and H\textsubscript{Rate} are similar. Both show that there is a slight difference between the two inspection methods, and there is a slightly better result for CL. The results are, however, not statistically significant enough for the null hypotheses to be rejected. Table 3 shows that UC finds more faults of risk type A and C, but the fact that the CL data contained 18 more faults that contained an incorrect fault risk entry is be a possible explanation for this result. 
 
 
 \subsection{Results for H\textsubscript{Fault}}
-As mentioned previously, the CS test was used to determine if the reviewers discovered the same frequency of results. The result of the $\chi $ \textsuperscript{2} was 1.5998, generating a p-value of 0.4494. For $\nu$=2 and $\alpha$=0.05, the upper critical value is 5.991 and the lower critical value is 0.103. Since 1.5998 is \textless 5.991 and \textgreater 0.103, the alternative hypothesis of the CS test is rejected. Since H\textsubscript{0 Fault} and H\textsubscript{1 Fault} are inverted compared to the hypothesis of the CS test, the null hypothesis of H\textsubscript{Fault} is rejected.
+As mentioned previously, the CS test was used to determine if the reviewers discovered the same frequency of results. The result of the $\chi $ \textsuperscript{2} was 1.5998, generating a p-value of 0.4494. For $\nu$=2 and $\alpha$=0.05, the upper critical value is 5.991 and the lower critical value is 0.103. Since 1.5998 is \textless 5.991 and \textgreater 0.103, the results are not statisticlaly significant enough for the null hypothesis to be rejected. 
 
 When looking at the results of the study, UC appears to find more class A and class B faults than CL, however, CL finds more class B faults. However, on average, the CL reviews found more faults overall and as such could be considered more effective than UC. This, coupled with the rejection of the H\textsubscript{Fault} null hypothesis, provides ample evidence that the review techniques do differ in which faults they are finding. 
 
