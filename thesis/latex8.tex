@@ -39,7 +39,7 @@
 
 
 
-\section{Introduction}
+\section{Main Idea of Study}
 %API Design (and a little bit of ecosystems, and a bit of problem statement)
 As the software industry and the open source movement steadily grow, the number of public APIs is increasing. APIs can improve the development speed \cite{stylos2006comparing}, contribute to higher quality software \cite{stylos2006comparing} and increase the reusability of software \cite{afonso2012evaluating}. There is a consensus in that modifications to APIs could negatively impact the users of the API \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api}. The main reason is that it will require the users to update the code, which is using the API, thus causing a disruption in the application's software ecosystem \cite{messerschmitt2005software}. The most common changes to APIs occur from refactoring \cite{dig2005role} \cite{xing2006refactoring}. 
 %software evolution 
@@ -51,20 +51,6 @@ Studies that explore the intent behind API modifications exist \cite{hou2011expl
 %Purpose (and a bit of problem statement)
 Due to the negative implications that modifications to APIs cause for its users, it is important to understand why changes to them occur. If most common pitfalls are known before the development of new APIs begin, these mistakes could be mitigated. Before the industry can make use of this information, we must also critically assess to what degree we can trace such motives. To achieve this, we will perform a case study which aims to investigate the underlying factors behind API changes. This will be achieved by empirically analysing the changes between two versions of an API. Subsequently, the architects of the API will be interviewed and asked to verify the accuracy of our findings. 
 
-%Didn't change:
-%* 'the motive behind...' behind what? I get the grammar, but drop 'behind', methinks
-
-
-\subsection{Research Questions}
-\begin{itemize}
-\item RQ1: What drives API evolution? 
-\item RQ2: To what extent can we reverse engineer API change decisions?
-%\item SRQ1.2: Are changes/improvements to APIs made for good reasons? (Compare why the changes were made to best practises for why you should change APIs)
-\end{itemize}
-
-%Structure of the paper
-The sections following the Introduction are structured as follows: In Section 2, we present a literature review on research related to our study. Section 3 describes the case company and how it was selected. A description of our methodology is introduced in Section 4. 
-
 \section{Related Work}
 Our work is mainly related to the research area of API design. This discipline is discussed in Section 2.1. The motives and effects of changes to APIs are directly related to the fields of software evolution and software ecosystems. This will be discussed in Section 2.2. 
 
@@ -75,8 +61,7 @@ API design is notoriously difficult, as a myriad of design and performance decis
 An additional study involved combining semiotic and cognitive methods to evaluate APIs as a means of facilitating communication, between programmers and designers. \cite{afonso2012evaluating}. However, these studies do not highlight the motives behind changes to APIs.
 
 \subsection{API Change}
-%%The first sentence of this pargraph... did all 3 really look at motive/intent?
-Previous studies that have attempted to identify the motives behind API changes have primarily focused on APIs that are a part of large programming languages, such as Java \cite{shi2011empirical} \cite{hou2011exploring} and Smalltalk \cite{robbes2012developers}. One study attempted to uncover the intents behind the changes made in the AWT and Swing Java libraries. This particular study found that the use of a strong architecture was vital in ensuring a successful evolution of the API \cite{hou2011exploring}.
+Previous studies that have attempted analyse APIs in the context of software evolution have primarily focused on APIs that are a part of large programming languages, such as Java \cite{shi2011empirical} \cite{hou2011exploring} and Smalltalk \cite{robbes2012developers}. One study attempted to uncover the intents behind the changes made in the AWT and Swing Java libraries. This particular study found that the use of a strong architecture was vital in ensuring a successful evolution of the API \cite{hou2011exploring}.
 
 However, when APIs are changed, problems tend to occur. One study \cite{dig2005role} investigated three frameworks and one library in which the study found that 80\% of refactoring changes to APIs negatively affected existing applications. Refactorings are not the only changes to APIs that can impact existing projects negatively. Another study was conducted regarding the changes, which the researchers refer to as ripple effects \cite{robbes2012developers}. They found that changes in APIs have an effect upon the entire ecosystem. This particular empirical study found that 14\% of non-trivial API deprecations caused errors in at least one project, with the worst case of 79 projects being affected \cite{robbes2012developers}.
 
@@ -90,6 +75,13 @@ The case company is a medium-sized company in the domain of security cameras. Th
 The case was selected using convenience sampling \cite{flyvbjerg2006five}, and a maximum variation strategy was used \cite{benbasat1987case}. As such, the goal was to include as many companies as possible in this study.
 
 %Try to motivate why other sampling methods weren't used.
+
+\section{Research Questions}
+\begin{itemize}
+\item RQ1: What drives API evolution? 
+\item RQ2: To what extent can we reverse engineer API change decisions?
+%\item SRQ1.2: Are changes/improvements to APIs made for good reasons? (Compare why the changes were made to best practises for why you should change APIs)
+\end{itemize}
 
 
 \section{Methodology}
@@ -134,13 +126,36 @@ Regarding \textit{external validity}, generalisability and the appropriateness o
 %Reliability
 The largest \textit{reliability} threat facing our study was the reproducibility. To counter this threat, we have followed a well-proven method for analysing the collected data. Furthermore, as mentioned previously, we have attempted to limit bias and ambiguity in our interview questions where possible. To ensure clarity of the questions, we have field tested the interview with some of our peers, improving the questions based on their feedback.
 
+\section{Timeplan}
+Table 1 is an initial timeline of milestones in our study. The dates are approximate and we aim to finish ahead of schedule. 
+
+\begin{table}
+	\centering
+	\begin{tabular}[!HT]{| l | l | l |}
+	\hline
+	\textbf{\#} & \textbf{Description} & \textbf{Deadline} \\
+	\hline
+	1 & Literature Review & 5 April \\
+	\hline
+	2 & Data Collection (Archival) & 12 April \\
+	\hline
+	3 & Data Analysis (Archival) & 19 April \\
+	\hline
+	4 & Data Collection (Interview) & 26 April \\
+	\hline
+	5 & Data Analysis (Everything) & 11 May \\
+	\hline
+	6 & Report Results & 25 May \\
+	\hline
+\end{tabular}
+	\caption{Timeplan}
+\end{table}
+
+
 
 \bibliographystyle{latex8}
 \bibliography{latex8}
 
-
-\Section{Acknowledgement}
-John had the main responsibility for sections 2, 4.1 and 4.3. William had the main responsibility for sections 1, 3, 4.0 and 4.3. We have, however, worked on all sections jointly and all sections have been reviewed by both of us. 
 
 
 \end{document}
