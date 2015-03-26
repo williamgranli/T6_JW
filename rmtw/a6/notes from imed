@@ -1,0 +1,37 @@
+
+map the changes to more evolution theories (create a big table of all different theories) (add lehman's)
+also search for pure business-related things (search for "business needs" + "change", for example)
+
+look up ecosystem drivers (co-development, co-innovation) "you want your api to enable innovation"
+another thing: for example one intention would be to kill a partner in the ecosystem
+
+
+we included as many methods as possible, to not have to before the study started think "these would be the most fitting theories/frameworks" and instead take the approach of "our study found interesting results related to these theories/frameworks"
+
+focus more on the selling point in the intro (who is it useful for, why does this need to be studied now?)
+
+
+divide up related work in these 3 sections:
+	write a good background in the related work (explain users, architects and api usability concepts)
+	and then a background on software evolution
+	write related works (such as intents study)
+
+the related work section should be standalone and not too related to your paper (it should talk about literature)
+
+
+method names, parameters etc (include more stuff)
+
+
+valditity threats - give a framework for the validity threats (for exampel runesson host) i.e. write a short intro for how are valdiity threats are structured
+also mention mitigation of validity threats. (can even be 2 subsections)
+maybe put validity threats as a part of discussion/conclusion (since it may reveal or refer to parts of the results)
+	it can be it's own as well (i like this more)
+
+
+the pair code reviewing thing should probabaly be mentioned a bit in valdiity threats as well (refer back to it and explain the effects it had on mitigating the threats)
+
+
+"first degree interviews" is worded a bit weirdly (add refs too)
+"third degree methods" put a reference there
+
+
