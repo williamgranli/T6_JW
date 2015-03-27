@@ -12,19 +12,9 @@
 
 \title{Exploring and Reverse Engineering the Motives Behind API Modifications}
 
-% \author[*]{John Burchell}
-% \author[x]{William Granli}
-% \affil[*x]{Software Engineering \& Management}
-% \affil[*x]{University Of Gothenburg}
-% \affil[*]{john.a.burchell@gmail.com}
-% \affil[x]{william.granli@gmail.com}
+
 
 \begin{document}
-
-% \author{\textsuperscript{*}John Burchell \qquad \textsuperscript{x}William Granli \\
-% 		\textsuperscript{*}john.a.burchell@gmail.com \qquad \textsuperscript{x}william.granli@gmail.com \\
-% 		\textsuperscript{*x} Computer Science and Engineering  \\
-% 		\textsuperscript{*x}University of Gothenburg }
 
 
 \author{John Burchell \qquad William Granli \\
@@ -61,7 +51,6 @@ Due to the negative implications that modifications to APIs cause for its users,
 \begin{itemize}
 \item RQ1: What drives API evolution? 
 \item RQ2: To what extent can we reverse engineer API change decisions?
-%\item SRQ1.2: Are changes/improvements to APIs made for good reasons? (Compare why the changes were made to best practises for why you should change APIs)
 \end{itemize}
 
 %Structure of the paper
@@ -76,17 +65,13 @@ API design is notoriously difficult, as a myriad of design and performance decis
 
 
 \subsection{Software Evolution}
+Software evolution can be described as being the application of software maintenance activities and processes, resulting in a new, evolved version of the software.
 
-Software evolution can be described as being the application of software maintenance activities and processes, resulting in a new, \textit{evolved} version of the software.
+The concept of software maintenance has existed since the 1960s. Well known studies from this era established the importance of software maintenance \cite{canning1972maintenance} \cite{lientz1980software}. One study would go on to have a particularly profound effect on software maintenance by establishing a set of four categories which describe the intents behind change to software \cite{lientz1980software}. These categories were refined in a further study, which saw the count of categories increase from four to twelve \cite{chapin2001types}; enhancive, corrective, reductive, adaptive, performance, preventive, groomative, updative, reformative, evaluative, consultive and training.
 
-The concept of software maintenance has existed since the 1960s. Well known studies from this era established the importance of software maintenance \cite{canning1972maintenance}\cite{lientz1980software}. One study would go on to have a particularly profound effect on software maintenance by establishing a set of four categories which describe the intents behind change to software. These categories were refined in a further study, which saw the count of categories increase from four to twelve \cite{chapin2001types}; enhancive,corrective, reductive, adaptive, performance, preventive, groomative, updative, reformative, evaluative, consultive and training.
+Each category describes an intent behind changes to software, focusing around one of 3 particular areas; the code, the software and the customer-experienced functionality \cite{chapin2001types}. This study also helped to further the distinction between software maintenance and software evolution. The study suggested that software maintenance is a part of software evolution and that the two are not interchangeable \cite{chapin2001types}. 
 
-Each category describes an intent behind changes to software, focusing around one of 3 particular areas; the code, the software and the customer-experienced functionality \cite{chapin2001types}. This study also helped to further the distinction between software maintenance and software evolution. The study suggested that software maintenance is a part of software evolution and that the two are not interchangeable \cite{chapin2001types}.
-
-
-\subsection{Software Ecosystems}
-
-
+An early study made in the area of software evolution suggests that changes to software must obey one of eight laws of software evolution \cite{lehman1980programs}. The laws presented in the study are 1) Continuing Change, 2) Increasing Complexity, 3) Self Regulation, 4) Conservation of Organisational Stability, 5) Conversation of Familiarities, 6)Continuing Growth, 7) Declining Quality and 8) Feedback System \cite{lehman1980programs}. The study also outlines that these laws only apply to E-programs, which are programs that are ``change prone" and that ``mechanise a human or societal activity". 
 
 \subsection{Related Work}
 Previous studies that have attempted analyse APIs in the context of software evolution have primarily focused on APIs that are a part of large programming languages, such as Java \cite{shi2011empirical} \cite{hou2011exploring} and Smalltalk \cite{robbes2012developers}. One study \cite{hou2011exploring} attempted to uncover the intents behind the changes made in the AWT and Swing Java libraries. They found that the use of a strong architecture was vital in ensuring a successful evolution of the API \cite{hou2011exploring}. In their study, the intents were categorised around programming related factors such as reducing coupling or conformance to naming conventions.
@@ -113,7 +98,7 @@ The reason the selected methodology was used is that it is essential to study th
 \subsection{Data Collection}
 The data were collected primarily through inspections of the source code and the archival analysis of accompanying  documentation. The source code was comprised of two versions of the same API which the company had developed. An older version which is currently released and a newer version which is soon to be deployed. Each version of the API had its own respective documentation. The documentation was inspected and organised to find explanations of the features offered by the API.
 
-From the APIs we collected method names, parameters and return types. (Additional data will collected. This is just an initial ``estimation" for the proposal). The data were collected from both versions of the APIs, with the changes between the two versions being of particular interest. The collected data were input into tables and spreadsheets, according to the API version. From the archival documentation we collected data regarding the motive behind the functionality in API calls. Data gathered from the documentation was also stored in tables and spreadsheets and was organised together with its corresponding method.
+From the APIs we collected method names, parameters and return types. (Note to Morgan: Additional data will collected. This is just an early ``estimation" for the proposal). The data were collected from both versions of the APIs, with the changes between the two versions being of particular interest. The collected data were input into tables and spreadsheets, according to the API version. From the archival documentation we collected data regarding the motive behind the functionality in API calls. Data gathered from the documentation was also stored in tables and spreadsheets and was organised together with its corresponding method.
 
 The data collection was performed independently by both researchers, to reduce the risk of human errors affecting the results. If the data collected by each researcher differed, the cause of the discrepancy was investigated and resolved. 
 
