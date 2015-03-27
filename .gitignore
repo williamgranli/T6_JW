@@ -7,3 +7,4 @@
 *.gz
 .Rproj.user
 *.fdb_latexmk
+*.bbl
