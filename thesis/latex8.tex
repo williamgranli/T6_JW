@@ -10,21 +10,9 @@
 \usepackage{latex8}
 \usepackage{authblk}
 
-\title{Exploring and Reverse Engineering the Motives Behind API Modifications}
-
-% \author[*]{John Burchell}
-% \author[x]{William Granli}
-% \affil[*x]{Software Engineering \& Management}
-% \affil[*x]{University Of Gothenburg}
-% \affil[*]{john.a.burchell@gmail.com}
-% \affil[x]{william.granli@gmail.com}
+\title{Exploring the Motives and Driving Forces Behind Modifications to APIs From a Software Evolution Perspective}
 
 \begin{document}
-
-% \author{\textsuperscript{*}John Burchell \qquad \textsuperscript{x}William Granli \\
-% 		\textsuperscript{*}john.a.burchell@gmail.com \qquad \textsuperscript{x}william.granli@gmail.com \\
-% 		\textsuperscript{*x} Computer Science and Engineering  \\
-% 		\textsuperscript{*x}University of Gothenburg }
 
 
 \author{John Burchell \qquad William Granli \\
@@ -42,30 +30,52 @@
 \section{Main Idea of Study}
 %API Design (and a little bit of ecosystems, and a bit of problem statement)
 As the software industry and the open source movement steadily grow, the number of public APIs is increasing. APIs can improve the development speed \cite{stylos2006comparing}, contribute to higher quality software \cite{stylos2006comparing} and increase the reusability of software \cite{afonso2012evaluating}. There is a consensus in that modifications to APIs could negatively impact the users of the API \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api}. The main reason is that it will require the users to update the code, which is using the API, thus causing a disruption in the application's software ecosystem \cite{messerschmitt2005software}. The most common changes to APIs occur from refactoring \cite{dig2005role} \cite{xing2006refactoring}. 
-%software evolution 
-In the discipline of software evolution, such updates to software are studied from an evolutionary standpoint. Software can be updated for different reasons and these motives can be grouped into corrective, adaptive, perfective and preventive changes \cite{lientz1980software} \cite{iso}. 
+%Software Evolution 
+In the discipline of software evolution, such updates to software are studied from an evolutionary standpoint. Software can be updated for different reasons and these motives can be grouped into corrective, adaptive, perfective and preventive changes \cite{lientz1980software}. 
 
 %Gap in Literature
-Studies that explore the intent behind API modifications exist \cite{hou2011exploring}. There are, however, no studies that attempt to map the motives behind changes to existing software evolution theories, such as the four categories of maintenance \cite{lientz1980software} \cite{iso}. The area of programming language APIs is well-explored \cite{hou2011exploring} \cite{shi2011empirical}, but few studies that explore platform APIs exist \cite{robbes2012developers}. To the best of our knowledge, no studies that explore the motives behind or the effects of API evolution have previously been performed on embedded platform APIs. 
+Studies that explore the intent behind API modifications exist \cite{hou2011exploring}. There are, however, no studies that attempt to map the motives behind changes to existing software evolution theories, such as the four categories of maintenance \cite{lientz1980software}. The area of programming language APIs is well-explored \cite{hou2011exploring} \cite{shi2011empirical}, but few studies that explore platform APIs exist \cite{robbes2012developers}. To the best of our knowledge, no studies that explore the motives behind or the effects of API evolution have previously been performed on embedded platform APIs. 
 
 %Purpose (and a bit of problem statement)
 Due to the negative implications that modifications to APIs cause for its users, it is important to understand why changes to them occur. If most common pitfalls are known before the development of new APIs begin, these mistakes could be mitigated. Before the industry can make use of this information, we must also critically assess to what degree we can trace such motives. To achieve this, we will perform a case study which aims to investigate the underlying factors behind API changes. This will be achieved by empirically analysing the changes between two versions of an API. Subsequently, the architects of the API will be interviewed and asked to verify the accuracy of our findings. 
 
-\section{Related Work}
-Our work is mainly related to the research area of API design. This discipline is discussed in Section 2.1. The motives and effects of changes to APIs are directly related to the fields of software evolution and software ecosystems. This will be discussed in Section 2.2. 
+%Didn't change:
+%* 'the motive behind...' behind what? I get the grammar, but drop 'behind', methinks
+
+%%Integrate this with Introduction:
+%Furthermore, a study on the impact of reliable APIs was undertaken in the Android ecosystem \cite{linares2013api}. The study aimed to discover if APIs with high rates of faults affected the success of an application. The study found that the 50 least popular applications had APIs which were 500\% more error prone, ultimately concluding that there is indeed a correlation between API stability and application success \cite{linares2013api}. 
+
+
+
+\section{Literature Review}
+This section will introduce the topics of API design and software evolution, and provide a review of literature which is directly related to our study. 
+
 
 \subsection{API Design}
+%%Wait a bit with adding a general introduction (explaining what an API is, what an API architect is etc.). Wait until we've read conference papers to see how they do it.
+API design is notoriously difficult, as a myriad of design and performance decisions must be taken into consideration when creating APIs \cite{bloch2008effective} \cite{afonso2012evaluating} \cite{stylos2006comparing}. In previous research, generalisable usability studies have been created, with the aim of analysing the design decisions taken when creating an API \cite{stylos2006comparing}. Another empirical study, which involved working with 25 programmers, highlighted API design problems such as assigning names to API features and difficulty in naming types \cite{shi2011empirical}. The study also introduced four factors which are important to consider when creating an API: a) The API  must be understandable through good documentation, b) the API must not be overly abstract, c) the API must be reusable and d) the API must be easy to learn \cite{shi2011empirical}. Both studies also highlighted that the intent of the API must be clear to the user when using design patters, such as the concrete factory pattern \cite{shi2011empirical} \cite{stylos2006comparing}. One study proposes an usability framework consisting of twelve cognitive dimensions that have an impact on the interaction between the user and the API \cite{clarke2004measuring}. 
 
-API design is notoriously difficult, as a myriad of design and performance decisions must be taken into consideration when creating APIs \cite{bloch2008effective} \cite{afonso2012evaluating} \cite{stylos2006comparing}. In previous research, generalisable usability studies have been created, with the aim of analysing the design decisions taken when creating an API \cite{stylos2006comparing}. Another empirical study, which involved working with 25 programmers, highlighted API design problems such as assigning names to API features and difficulty in naming types \cite{shi2011empirical}. The study also introduced four factors which are important to consider when creating an API: a) The API  must be understandable through good documentation, b) the API must not be overly abstract, c) the API must be reusable and d) the API must be easy to learn \cite{shi2011empirical}. Both studies also highlighted that the intent of the API must be clear to the user when using design patters, such as the concrete factory pattern \cite{shi2011empirical} \cite{stylos2006comparing}.
 
-An additional study involved combining semiotic and cognitive methods to evaluate APIs as a means of facilitating communication, between programmers and designers. \cite{afonso2012evaluating}. However, these studies do not highlight the motives behind changes to APIs.
+\subsection{Software Evolution}
+Software evolution can be described as being the application of software maintenance activities and processes, resulting in a new, evolved version of the software.
 
-\subsection{API Change}
-Previous studies that have attempted analyse APIs in the context of software evolution have primarily focused on APIs that are a part of large programming languages, such as Java \cite{shi2011empirical} \cite{hou2011exploring} and Smalltalk \cite{robbes2012developers}. One study attempted to uncover the intents behind the changes made in the AWT and Swing Java libraries. This particular study found that the use of a strong architecture was vital in ensuring a successful evolution of the API \cite{hou2011exploring}.
+The concept of software maintenance has existed since the 1960s. Well known studies from this era established the importance of software maintenance \cite{canning1972maintenance} \cite{lientz1980software}. One study would go on to have a particularly profound effect on software maintenance by establishing a set of four categories which describe the intents behind change to software \cite{lientz1980software}. These categories were refined in a further study, which saw the count of categories increase from four to twelve \cite{chapin2001types}; enhancive, corrective, reductive, adaptive, performance, preventive, groomative, updative, reformative, evaluative, consultive and training.
 
-However, when APIs are changed, problems tend to occur. One study \cite{dig2005role} investigated three frameworks and one library in which the study found that 80\% of refactoring changes to APIs negatively affected existing applications. Refactorings are not the only changes to APIs that can impact existing projects negatively. Another study was conducted regarding the changes, which the researchers refer to as ripple effects \cite{robbes2012developers}. They found that changes in APIs have an effect upon the entire ecosystem. This particular empirical study found that 14\% of non-trivial API deprecations caused errors in at least one project, with the worst case of 79 projects being affected \cite{robbes2012developers}.
+Each category describes an intent behind changes to software, focusing around one of 3 particular areas; the code, the software and the customer-experienced functionality \cite{chapin2001types}. This study also helped to further the distinction between software maintenance and software evolution. The study suggested that software maintenance is a part of software evolution and that the two are not interchangeable \cite{chapin2001types}. 
 
-Furthermore, a study on the impact of reliable APIs was undertaken in the Android ecosystem \cite{mcdonnell2013empirical}. The study aimed to discover if APIs with high rates of faults affected the success of an application. The study found that the 50 least popular applications had APIs which were 500\% more error prone, ultimately concluding that there is indeed a correlation between API stability and application success \cite{mcdonnell2013empirical}. 
+An early study made in the area of software evolution suggests that changes to software must obey one of eight laws of software evolution \cite{lehman1980programs}. The laws presented in the study are 1) Continuing Change, 2) Increasing Complexity, 3) Self Regulation, 4) Conservation of Organisational Stability, 5) Conversation of Familiarities, 6)Continuing Growth, 7) Declining Quality and 8) Feedback System \cite{lehman1980programs}. The study also outlines that these laws only apply to E-programs, which are programs that are ``change prone" and that ``mechanise a human or societal activity". 
+
+\subsection{Related Work}
+Previous studies that have attempted analyse APIs in the context of software evolution have primarily focused on APIs that are a part of large programming languages, such as Java \cite{shi2011empirical} \cite{hou2011exploring} and Smalltalk \cite{robbes2012developers}. One study \cite{hou2011exploring} attempted to uncover the intents behind the changes made in the AWT and Swing Java libraries. They found that the use of a strong architecture was vital in ensuring a successful evolution of the API \cite{hou2011exploring}. In their study, the intents were categorised around programming related factors such as reducing coupling or conformance to naming conventions.
+
+One study \cite{dig2005role} investigated three frameworks and one library in which the study found that 80\% of refactoring changes to APIs negatively affected existing applications. Refactorings are not the only changes to APIs that can impact existing projects negatively. Another study was conducted regarding the changes, which the researchers refer to as ripple effects \cite{robbes2012developers}. They found that changes in APIs have an effect upon the entire ecosystem. This particular empirical study found that 14\% of non-trivial API deprecations caused errors in at least one project, with the worst case of 79 projects being affected \cite{robbes2012developers}.
+
+\section{Research Questions}
+\begin{itemize}
+\item RQ1: What drives API evolution? 
+\item RQ2: To what extent can we reverse engineer API change decisions?
+\end{itemize}
+
 
 \section{Case Company Description}
 The case company is a medium-sized company in the domain of security cameras. The company has its headquarters in Lund, Sweden, but it operates worldwide. The company is the global market leader in the markets of network cameras and video encoders. The company develops embedded software for the security cameras, and some of their products are designed to be accessible through APIs that are also developed by the company. 
@@ -76,29 +86,22 @@ The case was selected using convenience sampling \cite{flyvbjerg2006five}, and a
 
 %Try to motivate why other sampling methods weren't used.
 
-\section{Research Questions}
-\begin{itemize}
-\item RQ1: What drives API evolution? 
-\item RQ2: To what extent can we reverse engineer API change decisions?
-%\item SRQ1.2: Are changes/improvements to APIs made for good reasons? (Compare why the changes were made to best practises for why you should change APIs)
-\end{itemize}
 
-
-\section{Methodology}
+\section{Research Strategy}
 This study has been conducted using the case study methodology \cite{runeson2009guidelines}. The goal of the study was twofold. Firstly, the aim was to empirically \textit{explore} the motives behind changes to APIs, and secondly, our ambition was to \textit{validate} the results' level of correctness by comparing our findings with the case company's explanation of their motives. Our research can be classified as an embedded case study \cite{yin2013case}, since both the API code and API documentation have been used as units of analysis. 
 
 The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing studies \cite{runeson2009guidelines} \cite{benbasat1987case} \cite{yin2013case} \cite{robson2002real}. An alternative approach that was considered was design research, but if a prototype API was to be used instead of one which is tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines}. An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change, and that input from the industry is vital to the success of the research; especially to be able to answer RQ2. 
 
 \subsection{Data Collection}
-The data were collected primarily through third degree methods, such as first hand inspections of the source code and the archival analysis of accompanying  documentation. The source code was comprised of two versions of the same API which the company had developed. An older version which is currently released and a newer version which is soon to be deployed. Each version of the API had its own respective documentation. The documentation was inspected and organised to find explanations of the features offered by the API.
+The data were collected primarily through inspections of the source code and the archival analysis of accompanying  documentation. The source code was comprised of two versions of the same API which the company had developed. An older version which is currently released and a newer version which is soon to be deployed. Each version of the API had its own respective documentation. The documentation was inspected and organised to find explanations of the features offered by the API.
 
-From the APIs we collected data about method names, parameters and return types. The data were collected from both versions of the APIs, with the changes between the two versions being of particular interest. The collected data were input into tables and spreadsheets, according to the API version. From the archival documentation we collected data regarding the motive behind the functionality in API calls. Data gathered from the documentation was also stored in tables and spreadsheets and was organised together with its corresponding method.
+From the APIs we collected method names, parameters and return types. (Note to Morgan: Additional data will collected. This is just an early ``estimation" for the proposal). The data were collected from both versions of the APIs, with the changes between the two versions being of particular interest. The collected data were input into tables and spreadsheets, according to the API version. From the archival documentation we collected data regarding the motive behind the functionality in API calls. Data gathered from the documentation was also stored in tables and spreadsheets and was organised together with its corresponding method.
 
 The data collection was performed independently by both researchers, to reduce the risk of human errors affecting the results. If the data collected by each researcher differed, the cause of the discrepancy was investigated and resolved. 
 
 These collection methods were the most appropriate given that the data were readily available from the company. This brought concerns that the data were not produced for the purpose of our research \cite{runeson2009guidelines}, meaning there was a risk of data being irrelevant or erroneous. 
 
-First degree interviews were also conducted after the initial source code inspections had taken place. The main purpose of these was to validate our findings with the architects of the APIs. Furthermore, the interviews were conducted to provide additional insight into decisions and motives behind changes that might have been overlooked during the code inspection. The final reason for interviewing the architects of the APIs was to provide further insight of the users of the API. 
+Interviews were also conducted after the initial source code inspections had taken place. The main purpose of these was to validate our findings with the architects of the APIs. Furthermore, the interviews were conducted to provide additional insight into decisions and motives behind changes that might have been overlooked during the code inspection. The final reason for interviewing the architects of the APIs was to provide further insight of the users of the API. 
 
 
 
@@ -107,15 +110,20 @@ The data analysis was conducted in two major phases \cite{andersson2007spiral}. 
 
 Both phases were performed iteratively, together with the data collection. The reason for this created the opportunity to improve the process of analysis as the study progressed, as well as to be able to adapt to possible changes in direction, due to the hypothesis generating approach of the first phase \cite{andersson2007spiral}. 
 
-The analysis of the code and documentation was performed using grounded theory analysis \cite{seaman1999qualitative}, as it is recommended for hypothesis generating studies \cite{runeson2009guidelines} \cite{seaman1999qualitative}. More specifically, the approach undertaken was divided into three steps where the data was first coded based on which category of maintenance \cite{iso} the motive of the change corresponded to. Secondly, the codes were analysed from a high-level point of view, and the main goal was to identify trends in the codes. The third step involved analysis of these trends, and it was during this stage the hypotheses were generated and formulated. 
+The analysis of the code and documentation was performed using grounded theory analysis \cite{seaman1999qualitative}, as it is recommended for hypothesis generating studies \cite{runeson2009guidelines} \cite{seaman1999qualitative}.
+
+More specifically, the approach undertaken was divided into three steps where the data was first coded based on which category of maintenance \cite{chapin2001types} the motive of the change corresponded to. The data were then mapped and coded to the laws presented by \cite{lehman1980programs}. The codes were then analysed from a high-level point of view, the main goal of which was to identify trends in the codes. The final step involved analysis of these trends, and it was during this stage the hypotheses were generated and formulated. The same approach taken to reduce risks of research bias and human error in the data collection was performed during results analysis. 
 
 Following the analysis of the archival data, the results of the interviews were analysed. The interviews were analysed using the same approach taken for the archival data. The results of this analysis was then compared and correlated with the results of the code analysis, with the goal of confirming the hypotheses that were formulated. This was done to triangulate our findings, to help reduce internal validity. 
 
-The same approach taken to reduce risks of research bias and human error in the data collection was performed during results analysis. 
+The software evolution categories \cite{chapin2001types} and Lehman's laws \cite{lehman1980programs} were analysed to allow us to be able to answer RQ1. The software evolution categories were used to map and explore motives behind changes and Lehman's laws were used to see what drives the natural evolution of APIs. Our ability to correctly predict the motives compared to the actual motives of the architects which were made clear during the interviews, will serve as the basis for answering RQ2.
+
+
 
 
 \subsection{Validity Threats}
 % This section highlights how we have either diminished or overcome the most concerning validity threats facing our study.
+This section has been structured around a well-known schema used for classifying validity threats \cite{runeson2009guidelines}.
 
 %Internal Validity
 \textit{Internal validity} threats for our study have been greatly reduced by the methodologies we have employed. By performing an individual inspection of  the API source code, documentation and individual results analysis, internal validity is significantly reduced. Triangulation of the results with the use of interviewing the architects is a key step in reducing potential validity threats in our study.
@@ -126,37 +134,9 @@ Regarding \textit{external validity}, generalisability and the appropriateness o
 %Reliability
 The largest \textit{reliability} threat facing our study was the reproducibility. To counter this threat, we have followed a well-proven method for analysing the collected data. Furthermore, as mentioned previously, we have attempted to limit bias and ambiguity in our interview questions where possible. To ensure clarity of the questions, we have field tested the interview with some of our peers, improving the questions based on their feedback.
 
-\section{Timeplan}
-Table 1 is an initial timeline of milestones in our study. The dates are approximate and we aim to finish ahead of schedule. 
-
-\begin{table}
-	\centering
-	\begin{tabular}[!HT]{| l | l | l |}
-	\hline
-	\textbf{\#} & \textbf{Description} & \textbf{Deadline} \\
-	\hline
-	1 & Literature Review & 5 April \\
-	\hline
-	2 & Data Collection (Archival) & 12 April \\
-	\hline
-	3 & Data Analysis (Archival) & 19 April \\
-	\hline
-	4 & Data Collection (Interview) & 26 April \\
-	\hline
-	5 & Data Analysis (Everything) & 11 May \\
-	\hline
-	6 & Report Results & 25 May \\
-	\hline
-\end{tabular}
-	\caption{Timeplan}
-\end{table}
-
-
 
 \bibliographystyle{latex8}
 \bibliography{latex8}
-
-
 
 \end{document}
 
