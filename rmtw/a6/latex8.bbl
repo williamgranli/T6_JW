@@ -68,6 +68,11 @@ D.~Hou and X.~Yao.
 \newblock In {\em Reverse Engineering (WCRE), 2011 18th Working Conference on},
   pages 131--140. IEEE, 2011.
 
+\bibitem{lehman1980programs}
+M.~M. Lehman.
+\newblock Programs, life cycles, and laws of software evolution.
+\newblock {\em Proceedings of the IEEE}, 68(9):1060--1076, 1980.
+
 \bibitem{lientz1980software}
 B.~P. Lientz and E.~B. Swanson.
 \newblock Software maintenance management.
