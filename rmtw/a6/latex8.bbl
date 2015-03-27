@@ -41,6 +41,11 @@ N.~Chapin, J.~E. Hale, K.~M. Khan, J.~F. Ramil, and W.-G. Tan.
 \newblock {\em Journal of software maintenance and evolution: Research and
   Practice}, 13(1):3--30, 2001.
 
+\bibitem{clarke2004measuring}
+S.~Clarke.
+\newblock Measuring api usability.
+\newblock {\em Doctor Dobbs Journal}, 29(5):S1--S5, 2004.
+
 \bibitem{dig2005role}
 D.~Dig and R.~Johnson.
 \newblock The role of refactorings in api evolution.
