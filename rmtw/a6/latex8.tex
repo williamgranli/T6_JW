@@ -37,12 +37,13 @@
 
 
 
+%Furthermore, a study on the impact of reliable APIs was undertaken in the Android ecosystem \cite{mcdonnell2013empirical}. The study aimed to discover if APIs with high rates of faults affected the success of an application. The study found that the 50 least popular applications had APIs which were 500\% more error prone, ultimately concluding that there is indeed a correlation between API stability and application success \cite{mcdonnell2013empirical}. 
 
 
 \section{Introduction}
 %API Design (and a little bit of ecosystems, and a bit of problem statement)
 As the software industry and the open source movement steadily grow, the number of public APIs is increasing. APIs can improve the development speed \cite{stylos2006comparing}, contribute to higher quality software \cite{stylos2006comparing} and increase the reusability of software \cite{afonso2012evaluating}. There is a consensus in that modifications to APIs could negatively impact the users of the API \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api}. The main reason is that it will require the users to update the code, which is using the API, thus causing a disruption in the application's software ecosystem \cite{messerschmitt2005software}. The most common changes to APIs occur from refactoring \cite{dig2005role} \cite{xing2006refactoring}. 
-%software evolution 
+%Software Evolution 
 In the discipline of software evolution, such updates to software are studied from an evolutionary standpoint. Software can be updated for different reasons and these motives can be grouped into corrective, adaptive, perfective and preventive changes \cite{lientz1980software} \cite{iso}. 
 
 %Gap in Literature
@@ -68,6 +69,22 @@ The sections following the Introduction are structured as follows: In Section 2,
 \section{Related Work}
 Our work is mainly related to the research area of API design. This discipline is discussed in Section 2.1. The motives and effects of changes to APIs are directly related to the fields of software evolution and software ecosystems. This will be discussed in Section 2.2. 
 
+\subsection{Background}
+
+\subsubsection{API}
+
+
+\subsubsection{Software Evolution}
+
+
+
+\subsubsection{Software Ecosystems}
+
+
+
+\subsection{Related Work}
+
+
 \subsection{API Design}
 API design is notoriously difficult, as a myriad of design and performance decisions must be taken into consideration when creating APIs \cite{bloch2008effective} \cite{afonso2012evaluating} \cite{stylos2006comparing}. In previous research, generalisable usability studies have been created, with the aim of analysing the design decisions taken when creating an API \cite{stylos2006comparing}. Another empirical study, which involved working with 25 programmers, highlighted API design problems such as assigning names to API features and difficulty in naming types \cite{shi2011empirical}. The study also introduced four factors which are important to consider when creating an API: a) The API  must be understandable through good documentation, b) the API must not be overly abstract, c) the API must be reusable and d) the API must be easy to learn \cite{shi2011empirical}. Both studies also highlighted that the intent of the API must be clear to the user when using design patters, such as the concrete factory pattern \cite{shi2011empirical} \cite{stylos2006comparing}.
 
@@ -78,7 +95,6 @@ Previous studies that have attempted analyse APIs in the context of software evo
 
 However, when APIs are changed, problems tend to occur. One study \cite{dig2005role} investigated three frameworks and one library in which the study found that 80\% of refactoring changes to APIs negatively affected existing applications. Refactorings are not the only changes to APIs that can impact existing projects negatively. Another study was conducted regarding the changes, which the researchers refer to as ripple effects \cite{robbes2012developers}. They found that changes in APIs have an effect upon the entire ecosystem. This particular empirical study found that 14\% of non-trivial API deprecations caused errors in at least one project, with the worst case of 79 projects being affected \cite{robbes2012developers}.
 
-Furthermore, a study on the impact of reliable APIs was undertaken in the Android ecosystem \cite{mcdonnell2013empirical}. The study aimed to discover if APIs with high rates of faults affected the success of an application. The study found that the 50 least popular applications had APIs which were 500\% more error prone, ultimately concluding that there is indeed a correlation between API stability and application success \cite{mcdonnell2013empirical}. 
 
 \section{Case Company Description}
 The case company is a medium-sized company in the domain of security cameras. The company has its headquarters in Lund, Sweden, but it operates worldwide. The company is the global market leader in the markets of network cameras and video encoders. The company develops embedded software for the security cameras, and some of their products are designed to be accessible through APIs that are also developed by the company. 
@@ -96,15 +112,15 @@ This study has been conducted using the case study methodology \cite{runeson2009
 The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing studies \cite{runeson2009guidelines} \cite{benbasat1987case} \cite{yin2013case} \cite{robson2002real}. An alternative approach that was considered was design research, but if a prototype API was to be used instead of one which is tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines}. An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change, and that input from the industry is vital to the success of the research; especially to be able to answer RQ2. 
 
 \subsection{Data Collection}
-The data were collected primarily through third degree methods, such as first hand inspections of the source code and the archival analysis of accompanying  documentation. The source code was comprised of two versions of the same API which the company had developed. An older version which is currently released and a newer version which is soon to be deployed. Each version of the API had its own respective documentation. The documentation was inspected and organised to find explanations of the features offered by the API.
+The data were collected primarily through inspections of the source code and the archival analysis of accompanying  documentation. The source code was comprised of two versions of the same API which the company had developed. An older version which is currently released and a newer version which is soon to be deployed. Each version of the API had its own respective documentation. The documentation was inspected and organised to find explanations of the features offered by the API.
 
-From the APIs we collected data about method names, parameters and return types. The data were collected from both versions of the APIs, with the changes between the two versions being of particular interest. The collected data were input into tables and spreadsheets, according to the API version. From the archival documentation we collected data regarding the motive behind the functionality in API calls. Data gathered from the documentation was also stored in tables and spreadsheets and was organised together with its corresponding method.
+From the APIs we collected method names, parameters and return types. (Additional data will collected. This is just an initial ``estimation" for the proposal). The data were collected from both versions of the APIs, with the changes between the two versions being of particular interest. The collected data were input into tables and spreadsheets, according to the API version. From the archival documentation we collected data regarding the motive behind the functionality in API calls. Data gathered from the documentation was also stored in tables and spreadsheets and was organised together with its corresponding method.
 
 The data collection was performed independently by both researchers, to reduce the risk of human errors affecting the results. If the data collected by each researcher differed, the cause of the discrepancy was investigated and resolved. 
 
 These collection methods were the most appropriate given that the data were readily available from the company. This brought concerns that the data were not produced for the purpose of our research \cite{runeson2009guidelines}, meaning there was a risk of data being irrelevant or erroneous. 
 
-First degree interviews were also conducted after the initial source code inspections had taken place. The main purpose of these was to validate our findings with the architects of the APIs. Furthermore, the interviews were conducted to provide additional insight into decisions and motives behind changes that might have been overlooked during the code inspection. The final reason for interviewing the architects of the APIs was to provide further insight of the users of the API. 
+Interviews were also conducted after the initial source code inspections had taken place. The main purpose of these was to validate our findings with the architects of the APIs. Furthermore, the interviews were conducted to provide additional insight into decisions and motives behind changes that might have been overlooked during the code inspection. The final reason for interviewing the architects of the APIs was to provide further insight of the users of the API. 
 
 
 
@@ -122,6 +138,7 @@ The same approach taken to reduce risks of research bias and human error in the 
 
 \subsection{Validity Threats}
 % This section highlights how we have either diminished or overcome the most concerning validity threats facing our study.
+This section has been structured around a well-known schema used for classifying validity threats \cite{runeson2009guidelines}.
 
 %Internal Validity
 \textit{Internal validity} threats for our study have been greatly reduced by the methodologies we have employed. By performing an individual inspection of  the API source code, documentation and individual results analysis, internal validity is significantly reduced. Triangulation of the results with the use of interviewing the architects is a key step in reducing potential validity threats in our study.
