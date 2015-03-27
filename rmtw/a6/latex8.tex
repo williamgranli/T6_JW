@@ -37,7 +37,6 @@
 
 
 
-%Furthermore, a study on the impact of reliable APIs was undertaken in the Android ecosystem \cite{mcdonnell2013empirical}. The study aimed to discover if APIs with high rates of faults affected the success of an application. The study found that the 50 least popular applications had APIs which were 500\% more error prone, ultimately concluding that there is indeed a correlation between API stability and application success \cite{mcdonnell2013empirical}. 
 
 
 \section{Introduction}
@@ -55,6 +54,8 @@ Due to the negative implications that modifications to APIs cause for its users,
 %Didn't change:
 %* 'the motive behind...' behind what? I get the grammar, but drop 'behind', methinks
 
+%%Integrate this with Introduction:
+%Furthermore, a study on the impact of reliable APIs was undertaken in the Android ecosystem \cite{mcdonnell2013empirical}. The study aimed to discover if APIs with high rates of faults affected the success of an application. The study found that the 50 least popular applications had APIs which were 500\% more error prone, ultimately concluding that there is indeed a correlation between API stability and application success \cite{mcdonnell2013empirical}. 
 
 \subsection{Research Questions}
 \begin{itemize}
@@ -72,6 +73,9 @@ Our work is mainly related to the research area of API design. This discipline i
 \subsection{Background}
 
 \subsubsection{API}
+API design is notoriously difficult, as a myriad of design and performance decisions must be taken into consideration when creating APIs \cite{bloch2008effective} \cite{afonso2012evaluating} \cite{stylos2006comparing}. In previous research, generalisable usability studies have been created, with the aim of analysing the design decisions taken when creating an API \cite{stylos2006comparing}. Another empirical study, which involved working with 25 programmers, highlighted API design problems such as assigning names to API features and difficulty in naming types \cite{shi2011empirical}. The study also introduced four factors which are important to consider when creating an API: a) The API  must be understandable through good documentation, b) the API must not be overly abstract, c) the API must be reusable and d) the API must be easy to learn \cite{shi2011empirical}. Both studies also highlighted that the intent of the API must be clear to the user when using design patters, such as the concrete factory pattern \cite{shi2011empirical} \cite{stylos2006comparing}.
+
+An additional study involved combining semiotic and cognitive methods to evaluate APIs as a means of facilitating communication, between programmers and designers. \cite{afonso2012evaluating}. However, these studies do not highlight the motives behind changes to APIs.
 
 
 \subsubsection{Software Evolution}
@@ -83,17 +87,13 @@ The concept of software evolution has existed since the 1960s, often being inter
 
 
 \subsection{Related Work}
-
-
-\subsection{API Design}
-API design is notoriously difficult, as a myriad of design and performance decisions must be taken into consideration when creating APIs \cite{bloch2008effective} \cite{afonso2012evaluating} \cite{stylos2006comparing}. In previous research, generalisable usability studies have been created, with the aim of analysing the design decisions taken when creating an API \cite{stylos2006comparing}. Another empirical study, which involved working with 25 programmers, highlighted API design problems such as assigning names to API features and difficulty in naming types \cite{shi2011empirical}. The study also introduced four factors which are important to consider when creating an API: a) The API  must be understandable through good documentation, b) the API must not be overly abstract, c) the API must be reusable and d) the API must be easy to learn \cite{shi2011empirical}. Both studies also highlighted that the intent of the API must be clear to the user when using design patters, such as the concrete factory pattern \cite{shi2011empirical} \cite{stylos2006comparing}.
-
-An additional study involved combining semiotic and cognitive methods to evaluate APIs as a means of facilitating communication, between programmers and designers. \cite{afonso2012evaluating}. However, these studies do not highlight the motives behind changes to APIs.
-
-\subsection{API Change}
 Previous studies that have attempted analyse APIs in the context of software evolution have primarily focused on APIs that are a part of large programming languages, such as Java \cite{shi2011empirical} \cite{hou2011exploring} and Smalltalk \cite{robbes2012developers}. One study attempted to uncover the intents behind the changes made in the AWT and Swing Java libraries. This particular study found that the use of a strong architecture was vital in ensuring a successful evolution of the API \cite{hou2011exploring}.
 
 However, when APIs are changed, problems tend to occur. One study \cite{dig2005role} investigated three frameworks and one library in which the study found that 80\% of refactoring changes to APIs negatively affected existing applications. Refactorings are not the only changes to APIs that can impact existing projects negatively. Another study was conducted regarding the changes, which the researchers refer to as ripple effects \cite{robbes2012developers}. They found that changes in APIs have an effect upon the entire ecosystem. This particular empirical study found that 14\% of non-trivial API deprecations caused errors in at least one project, with the worst case of 79 projects being affected \cite{robbes2012developers}.
+
+
+\subsection{API Design}
+
 
 
 \section{Case Company Description}
