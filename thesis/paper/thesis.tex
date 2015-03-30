@@ -1,35 +1,28 @@
-%
-%  $Description: Author guidelines and sample document in LaTeX 2.09$ 
-%
-%  $Author: John Burchell & William Granli $
-%  $Date: 2015/01/21 15:20:59 $
-%  $Revision: 1.0
-%
 
-\documentclass[10pt,twocolumn]{article} 
-\usepackage{latex8}
-\usepackage{authblk}
-
-\title{Exploring the Motives and Driving Forces Behind Modifications to APIs From a Software Evolution Perspective}
+\documentclass[conference]{IEEEtran}
+\usepackage{blindtext}
 
 \begin{document}
+\title{Exploring the Motives and Driving Forces Behind Modifications to APIs From a Software Evolution Perspective}
 
-
-\author{John Burchell \qquad William Granli  \qquad Imed Hammouda \\
-		john.a.burchell@gmail.com \qquad william.granli@gmail.com \qquad hammouda@chalmers.se \\
-		Computer Science and Engineering  \\
-		University of Gothenburg }
-
+\author{\IEEEauthorblockN{John Burchell}
+\IEEEauthorblockA{Computer Science and Engineering\\University of Gothenburg\\Gothenburg, Sweden\\
+Email: john.a.burchell@gmail.com} \and
+\IEEEauthorblockN{William Granli}
+\IEEEauthorblockA{Computer Science and Engineering\\University of Gothenburg\\Gothenburg, Sweden\\
+Email: william.granli@gmail.com}}
 
 \maketitle
 
 
+\begin{abstract}
+\blindtext
+\end{abstract}
 
 
-
-\section{Main Idea of Study}
+\section{Introduction}
 %API Design (and a little bit of ecosystems, and a bit of problem statement)
-As the software industry and the open source movement steadily grow, the number of public APIs is increasing. APIs can improve the development speed \cite{stylos2006comparing}, contribute to higher quality software \cite{stylos2006comparing} and increase the reusability of software \cite{afonso2012evaluating}. There is a consensus in that modifications to APIs could negatively impact the users of the API \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api}. The main reason is that it will require the users to update the code, which is using the API, thus causing a disruption in the application's software ecosystem \cite{messerschmitt2005software}. The most common changes to APIs occur from refactoring \cite{dig2005role} \cite{xing2006refactoring}. 
+As the software industry and the open-source movement steadily grow, the number of public APIs is increasing. APIs can improve the development speed \cite{stylos2006comparing}, contribute to higher quality software \cite{stylos2006comparing} and increase the reusability of software \cite{afonso2012evaluating}. There is a consensus in that modifications to APIs could negatively impact the users of the API \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api}. The main reason is that it will require the users to update the code, which is using the API, thus causing a disruption in the application's software ecosystem \cite{messerschmitt2005software}. The most common changes to APIs occur from refactoring \cite{dig2005role} \cite{xing2006refactoring}. 
 %Software Evolution 
 In the discipline of software evolution, such updates to software are studied from an evolutionary standpoint. Software can be updated for different reasons and these motives can be grouped into corrective, adaptive, perfective and preventive changes \cite{lientz1980software}. 
 
@@ -37,17 +30,19 @@ In the discipline of software evolution, such updates to software are studied fr
 Studies that explore the intent behind API modifications exist \cite{hou2011exploring}. There are, however, no studies that attempt to map the motives behind changes to existing software evolution theories, such as the four categories of maintenance \cite{lientz1980software}. The area of programming language APIs is well-explored \cite{hou2011exploring} \cite{shi2011empirical}, but few studies that explore platform APIs exist \cite{robbes2012developers}. To the best of our knowledge, no studies that explore the motives behind or the effects of API evolution have previously been performed on embedded platform APIs. 
 
 %Purpose (and a bit of problem statement)
-Due to the negative implications that modifications to APIs cause for its users, it is important to understand why changes to them occur. If most common pitfalls are known before the development of new APIs begin, these mistakes could be mitigated. Before the industry can make use of this information, we must also critically assess to what degree we can trace such motives. To achieve this, we will perform a case study which aims to investigate the underlying factors behind API changes. This will be achieved by empirically analysing the changes between two versions of an API. Subsequently, the architects of the API will be interviewed and asked to verify the accuracy of our findings. 
-
-%Didn't change:
-%* 'the motive behind...' behind what? I get the grammar, but drop 'behind', methinks
-
-%%Integrate this with Introduction:
-%Furthermore, a study on the impact of reliable APIs was undertaken in the Android ecosystem \cite{linares2013api}. The study aimed to discover if APIs with high rates of faults affected the success of an application. The study found that the 50 least popular applications had APIs which were 500\% more error prone, ultimately concluding that there is indeed a correlation between API stability and application success \cite{linares2013api}. 
+Due to the negative implications that modifications to APIs cause for its users, it is important to understand why changes to them occur. If most common pitfalls are known before the development of new APIs begin, these mistakes can be mitigated. Before the industry can make use of this information, we must also critically assess to what degree we can trace such motives. To achieve this, we will perform a case study which aims to investigate the underlying factors behind API changes. This will be achieved by empirically analysing the changes between two versions of an API. Subsequently, the architects of the API will be interviewed and asked to verify the accuracy of our findings. 
 
 
+\subsection{Research Questions}
+\begin{itemize}
+\item RQ1: What drives API evolution? 
+\item RQ2: To what extent can we reverse engineer API change decisions?
+\end{itemize}
 
-\section{Literature Review}
+%Structure of the paper
+The sections following the Introduction are structured as follows: In Section 2, we present the existing literature related to our study. Section 3 describes the case company and how it was selected. A description of our methodology is introduced in Section 4. In Section 5, the results of our study are presented, and in Section 6, we discuss the findings of our study.
+
+\section{Existing Literature}
 This section will introduce the topics of API design and software evolution, and provide a review of literature which is directly related to our study. 
 
 
@@ -70,11 +65,6 @@ Previous studies that have attempted analyse APIs in the context of software evo
 
 One study \cite{dig2005role} investigated three frameworks and one library in which the study found that 80\% of refactoring changes to APIs negatively affected existing applications. Refactorings are not the only changes to APIs that can impact existing projects negatively. Another study was conducted regarding the changes, which the researchers refer to as ripple effects \cite{robbes2012developers}. They found that changes in APIs have an effect upon the entire ecosystem. This particular empirical study found that 14\% of non-trivial API deprecations caused errors in at least one project, with the worst case of 79 projects being affected \cite{robbes2012developers}.
 
-\section{Research Questions}
-\begin{itemize}
-\item RQ1: What drives API evolution? 
-\item RQ2: To what extent can we reverse engineer API change decisions?
-\end{itemize}
 
 
 \section{Case Company Description}
@@ -87,7 +77,7 @@ The case was selected using convenience sampling \cite{flyvbjerg2006five}, and a
 %Try to motivate why other sampling methods weren't used.
 
 
-\section{Research Strategy}
+\section{Methodology}
 This study has been conducted using the case study methodology \cite{runeson2009guidelines}. The goal of the study was twofold. Firstly, the aim was to empirically \textit{explore} the motives behind changes to APIs, and secondly, our ambition was to \textit{validate} the results' level of correctness by comparing our findings with the case company's explanation of their motives. Our research can be classified as an embedded case study \cite{yin2013case}, since both the API code and API documentation have been used as units of analysis. 
 
 The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing studies \cite{runeson2009guidelines} \cite{benbasat1987case} \cite{yin2013case} \cite{robson2002real}. An alternative approach that was considered was design research, but if a prototype API was to be used instead of one which is tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines}. An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change, and that input from the industry is vital to the success of the research; especially to be able to answer RQ2. 
@@ -122,8 +112,9 @@ The software evolution categories \cite{chapin2001types} and Lehman's laws \cite
 
 
 \subsection{Validity Threats}
-% This section highlights how we have either diminished or overcome the most concerning validity threats facing our study.
-This section has been structured around a well-known schema used for classifying validity threats \cite{runeson2009guidelines}.
+In this section we discuss possible threats to construct validity, internal validity, external validity and reliability \cite{runeson2009guidelines}.
+
+%We must add construct validity. 
 
 %Internal Validity
 \textit{Internal validity} threats for our study have been greatly reduced by the methodologies we have employed. By performing an individual inspection of  the API source code, documentation and individual results analysis, internal validity is significantly reduced. Triangulation of the results with the use of interviewing the architects is a key step in reducing potential validity threats in our study.
@@ -135,34 +126,20 @@ Regarding \textit{external validity}, generalisability and the appropriateness o
 The largest \textit{reliability} threat facing our study was the reproducibility. To counter this threat, we have followed a well-proven method for analysing the collected data. Furthermore, as mentioned previously, we have attempted to limit bias and ambiguity in our interview questions where possible. To ensure clarity of the questions, we have field tested the interview with some of our peers, improving the questions based on their feedback.
 
 
-\section{Timeplan}
-Table 1 is an initial timeline of milestones in our study. The dates are approximate and we aim to finish ahead of schedule. 
-
-\begin{table}
-	\centering
-	\begin{tabular}[!HT]{| l | l | l |}
-	\hline
-	\textbf{\#} & \textbf{Description} & \textbf{Deadline} \\
-	\hline
-	1 & Literature Review & 5 April \\
-	\hline
-	2 & Data Collection (Archival) & 12 April \\
-	\hline
-	3 & Data Analysis (Archival) & 19 April \\
-	\hline
-	4 & Data Collection (Interview) & 26 April \\
-	\hline
-	5 & Data Analysis (Everything) & 11 May \\
-	\hline
-	6 & Report Results & 25 May \\
-	\hline
-\end{tabular}
-	\caption{Timeplan}
-\end{table}
+\section{Results}
 
 
-\bibliographystyle{latex8}
-\bibliography{latex8}
+\blindtext
+
+\section{Conclusion}
+
+\blindtext
+
+\section*{Acknowledgment}
+
+
+\bibliographystyle{bibstyle}
+\bibliography{bib}
 
 \end{document}
 
