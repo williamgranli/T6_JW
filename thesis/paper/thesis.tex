@@ -402,26 +402,24 @@ Architects decided to use glib, part of an internal decision.
 This section will present results related to \textbf{RQ2}. The information introduced was collected during the interview with the case company. 
 
 
-\subsection{1 Continuing Change — a system must be continually adapted or it becomes progressively less satisfactory}
+\subsection{Law 1: Continuing Change}
 The case company described that including new functional content was one of the top priorities for the 2.0 release. This is supported by the characteristic of the changes identified in this study. 4 of the 13 changes were additions of new modules, and in the re-implemented modules a lot of functional content was added, too. It was also mentioned that the API users had previously reqeusted more frequent updates to the API, despite the drawbacks this could have. One of the main reasons for continuously adapting the API is also to force (!!!wording) the API users to use the API in the way that it is intended. Previously, many applications which worked around the lacking (!!!negative wording) functionality had been developed. These applications were fully functional, but were developed very differently from user to user (!!!wording). We therefore conclude that Law \#1 holds for APIs. 
 
-\subsection{2 Increasing Complexity — as system evolves, its complexity increases unless work is done to maintain or reduce it}
+\subsection{Law 2: Increasing Complexity}
 A large part of the changes made to the API were made to improve the structure and the way that the API is used. Many of these changes were related to the same design choices, which enforced a certain implementation style on the whole API. One example of this is the change to the interfaces which set a standard for the whole API. During the interview it was also concluded that consistency and following certain standards is an important factor to consider when designing APIs. It was also made clear a contributing factor for changing certain parts of the API was to bring it in line with the new interfaces. The interviewee mentioned that one way of achieving this was to follow guidelines or design best practices, but that the company currently did not make use of these. Even though the importance of maintaining the API to reduce complexity was stated, arguments which support that it is of lesser importance than releasing functional content was also presented. One example of where this is evident in the evolution of the API, is in the module that handles the video capturing and video stream. It was decided that this module would not be re-written to conform with the new interface standard, as there was not much functional content that would change in this module, anyways (!!!reword). Thus, Law \#2 holds for APIs, but there is evidence that suggests that decreasing the complexity is not of the highest priority. 
 
-\subsection{3 Self Regulation — E-type system evolution processes are self-regulating with the distribution of product and process measures close to normal}
+\subsection{Law 3: Self Regulation} \label{law3}
 When version 1.4 was introduced, no new functionality or re-structuring was introduced. Version 1.4 only added support for additional build platforms. When comparing the changes introduced in 2.0 to the ones previously introduced, it is clear that the growth of the API has increased gradually. During the interview it was also mentioned that the future plans for the API did not include any major changes, and that only a few minor changes were planned in the near future. The future updates to the API will also be made incrementally, and there will not be a big bang update similar to the one of 2.0. This supports that Law \#3 can be applied to APIs, assuming that the current stage of the life-cycle of the API can be considered as the center of the normal distribution curve of the APIs growth. 
 
 
-\subsection{4 Conservation of Organisational Stability - global work rate is invariant over the product's lifetime}
-Before 1.4
-No major changes have been made. 
-The only change was that you could build it for more platforms
-
-Version 1.0 was created, with incremental increases due to making other platforms available. There was only one major update which was to 2.0. In total there has only been two major updates (1.0 and 2.0).
-Impression was that there was not even many official incremental builds internally. She did express earlier on in the interview that features were being created internally that ended up becoming part of the 2.0 API.
+\subsection{Law 4: Conservation of Organisational Stability}
+The changes to the ACAP API has been made very sporadically, where only two new versions have been released since the deployment of version 1.0. As mentioned in Section \ref{law3} the changes introduced in version 1.4 did not involve any changes to the existing API functions. Consequently, the only significant update to the API was made in the transition to version 2.0. The internal development of the API has also been made sporadically, and there have been periods where the API has not been actively developed. This suggests that Law \#4 does not apply to APIs. 
 
 
-\subsection{5 Conservation of Familiarity — developers, sales personnel and users, for example, must maintain mastery of content and behaviour to achieve satisfactory evolution}
+\subsection{Law 5: Conservation of Familiarity}
+The SDK that is included with the API. 
+
+
 There are no current restrictions on ACAP so it’s essentially a Linux system, meaning that they can do whatever they want with it. 
 
 Primarily the SDK is what was communicated to the partners / users of the API.
