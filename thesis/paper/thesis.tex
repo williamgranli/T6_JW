@@ -210,28 +210,21 @@ Our interviewee described scenarios whereby a camera could be used with external
 Given this information, we concluded that we were correct in deciding that this change was also enhancive. Again, we were also correct in the assumption that there were no suitable subcategories for this change.
 
 \subsection{Modified}
+These changes were deemed to be modifications or re-implementations of existing functionality of the API. 
 
+In regards to re-implementations, during the interview it was mentioned that one intent behind the re-implementations was to bring them inline with the newly created functionality which take advantage of Glib, a new kind of error handling and extensive use of callbacks.
 
 \subsubsection{axevent}
 
 %%Describe the change 
-
-Used to create and handle events such as detecting movement 
-Split up into more files, added functionality, certain structs have been made into their own header files
-
-
+Version 2.0 of the API has been designed around an event driven system, as such, it's not surprising that the old event system had to be re-implemented. The new event system is used by all features of the new API, for example events are sent when movement is detected by the camera. This event system is combined with the use of callbacks to create a robust event driven API.
 
 %%Relate it to Categories
-Re-written because of the other changes to the API (to conform with the new standards)
-They were hard to use
-They were marked as deprecated so that it would not break existing applications using them. 
-They were however not included in the new SDK, so that it would encourage users to use the new, rewritten code
+Given that this feature was a re-implementation, we concluded that it should be classified mainly as an enhancive change with the subcategory of change being classified as groomative. Groomative was chosen as a subcategory due to the alternate intention of bringing the new feature in line with the new interface.
 
+The interviewee mentioned that the previous version of axevent, event, was being deprecated in favour of this new implementation. The primary reason was to bring the implementation into line with the new way that the API handles events and interfaces as a whole. The interviewee mentioned that they realised that the API was hard to use previously and that improving it this way, through the use of re-implementations, could allow them to create an easier to use API.
 
-
-
-
-
+Groomative is therefore the obvious choice for the main category for this change with enhancive being the subcategory. This is the opposite of what we concluded and as such means that we incorrectly determined the intent for this change.
 
 \subsubsection{axhttp}
 
@@ -361,6 +354,11 @@ Wanted an event driven system
 Driven by internal struggles with using the API to create applications
 
 The need for change was identified through discussions with API users which asked why “it isn’t possible to do it this way instead etc”
+
+Re-written because of the other changes to the API (to conform with the new standards)
+They were hard to use
+They were marked as deprecated so that it would not break existing applications using them. 
+They were however not included in the new SDK, so that it would encourage users to use the new, rewritten code
 
 
 
