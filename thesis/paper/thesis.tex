@@ -408,29 +408,16 @@ All modules use glib
 Architects decided to use glib, part of an internal decision. 
 
 
-
+\newpage
 \section{RQ2 Lehman}
 This section will present results related to \textbf{RQ2}. The information introduced was collected during the interview with the case company. 
 
 
 \subsection{1 Continuing Change — a system must be continually adapted or it becomes progressively less satisfactory}
-From the information that was gathered in the interviews, we can conclude that Law \# 1 is holds for APIs. The case company described that including new functional content was one of the top priorities for the 2.0 release. It was also mentioned that the API users had previously reqeusted more frequent updates to the API, despite the drawbacks this could have. One of the main reasons for continuously adapting the API is also to force (!!!wording) the API users to use the API in the way that it is intended. Previously, many applications which worked around the lacking (!!!negative wording) functionality had been developed. These applications were fully functional, but were developed very differently from user to user (!!!wording). 
-
-
-
+The case company described that including new functional content was one of the top priorities for the 2.0 release. This is supported by the characteristic of the changes identified in this study. 4 of the 13 changes were additions of new modules, and in the re-implemented modules a lot of functional content was added, too. It was also mentioned that the API users had previously reqeusted more frequent updates to the API, despite the drawbacks this could have. One of the main reasons for continuously adapting the API is also to force (!!!wording) the API users to use the API in the way that it is intended. Previously, many applications which worked around the lacking (!!!negative wording) functionality had been developed. These applications were fully functional, but were developed very differently from user to user (!!!wording). We therefore conclude that Law \#1 holds for APIs. 
 
 \subsection{2 Increasing Complexity — as system evolves, its complexity increases unless work is done to maintain or reduce it}
-
-
-Previously she had mentioned that it’s important to have consistency and to follow standards, especially when creating an API. 
-
-She did mention that one, albeit minor reason for re-implementation of certain parts of the API was to bring into line with the rest of the new interfaces. 
-
-It’s often easier to make a good API if you follow a guideline which tells you how to make a good API. Following these tends to lead to good APIs.
-
-She feels it’s more important to have more features than to have a strong emphasis on the cosmetic side. However, they should work well together and be simple to use. 
-
-One counter example of this however is that they did not re-implement the capture.h interface, despite the fact it had some redacted features and that it retains the previous implementation style.
+A large part of the changes made to the API were made to improve the structure and the way that the API is used. Many of these changes were related to the same design choices, which enforced a certain implementation style on the whole API. One example of this is the change to the interfaces which set a standard for the whole API. During the interview it was also concluded that consistency and following certain standards is an important factor to consider when designing APIs. It was also made clear a contributing factor for changing certain parts of the API was to bring it in line with the new interfaces. The interviewee mentioned that one way of achieving this was to follow guidelines or design best practices, but that the company currently did not make use of these. Even though the importance of maintaining the API to reduce complexity was stated, arguments which support that it is of lesser importance than releasing functional content was also presented. One example of where this is evident in the evolution of the API, is in the module that handles the video capturing and video stream. It was decided that this module would not be re-written to conform with the new interface standard, as there was not much functional content that would change in this module, anyways (!!!reword). Thus, Law \#2 holds for APIs, but there is evidence that suggests that decreasing the complexity is not of the highest priority. 
 
 \subsection{3 Self Regulation — E-type system evolution processes are self-regulating with the distribution of product and process measures close to normal}
 If we look at the system growth as a normal distribution curve, it grew slowly in the beginning (1.0-1.4) and right now (2.0) we're in the peak of the curve and she said about hte future that it was going to be slow with few changes. 
