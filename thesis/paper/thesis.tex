@@ -39,8 +39,11 @@ Due to the negative implications that modifications to APIs cause for its users,
 
 \subsection{Research Questions} \label{rqs}
 \begin{description}
-\item[\textbf{RQ1:}] What drives API evolution?
-\item[\textbf{RQ2:}] To what extent can we reverse engineer API change decisions?
+\item[\textbf{RQ1:}] How do companies actively drive API evolution?
+\item[\textbf{RQ2:}] How do APIs evolve?
+\item[\textbf{RQ3:}] To what extent can we reverse engineer API change decisions?
+
+
 \end{description}
 
 %Structure of the paper
@@ -79,6 +82,12 @@ The case was selected using convenience sampling \cite{flyvbjerg2006five}, and a
 %Info from the interview, add to this section
 Has been released, in the form we looked at (supports that we’re doing a ‘real’ case study)
 They have “partners” which develop applications using their API. These applications are then used by the end-users of the camera. 
+
+%%
+Hardware
+The API platform is developed for many different types of cameras. 
+Some have audio, some don’t, for example.
+
 
 
 \section{Methodology} \label{methodology}
@@ -156,8 +165,6 @@ Request ultimately came down from project management
 
 
 
-%%Relate it to Lehman
-
 
 
 
@@ -172,12 +179,6 @@ Added functionality related to audio streams
 
 %%Relate it to Categories
 The most common usage of their API is to analyze video data - but some partners required audio analysis. (At least one partner did already do it, without there being an API for it).
-
-
-
-
-%%Relate it to Lehman
-
 
 
 
@@ -200,11 +201,6 @@ Requested from partners
 
 
 
-%%Relate it to Lehman
-
-
-
-
 
 
 \subsubsection{axserialport}
@@ -216,11 +212,6 @@ Allows the possibility to integrate other systems with the camera (such as a tic
 %%Relate it to Categories
 Requested by partners 
 
-
-
-
-
-%%Relate it to Lehman
 
 
 
@@ -248,10 +239,6 @@ They were however not included in the new SDK, so that it would encourage users 
 
 
 
-%%Relate it to Lehman
-
-
-
 
 
 
@@ -270,10 +257,6 @@ They were hard to use
 They were marked as deprecated so that it would not break existing applications using them. 
 They were however not included in the new SDK, so that it would encourage users to use the new, rewritten code
 
-
-
-
-%%Relate it to Lehman
 
 
 
@@ -298,11 +281,6 @@ They were however not included in the new SDK, so that it would encourage users 
 
 
 
-%%Relate it to Lehman
-
-
-
-
 
 
 \subsection{Removed}
@@ -323,8 +301,6 @@ This would be costly and because of this it was investigated whether or not it w
 
 
 
-
-%%Relate it to Lehman
 
 
 
@@ -356,10 +332,6 @@ to show how the features can be used together
 
 
 
-%%Relate it to Lehman
-
-
-
 
 
 \subsubsection{Documentation}
@@ -377,9 +349,6 @@ One of the main “requests” was to increase functionality (such as ptz) - and
 
 
 
-%%Relate it to Lehman
-
-
 
 
 
@@ -388,6 +357,9 @@ One of the main “requests” was to increase functionality (such as ptz) - and
 
 %%Describe the change 
 They have gone from having direct access to the headers, to having a facade to access each module
+
+The new interfaces are all based on callbacks. 
+One interface that was not touched was capture.h (Except for the deprecated burst method). She thinks that it probably should have been re-implemented to bring it in line and to be consistent they should bring it into line at some point. It wasn’t required as the implementation didn’t actually change.
 
 
 
@@ -398,10 +370,6 @@ Wanted an event driven system
 Driven by internal struggles with using the API to create applications
 
 The need for change was identified through discussions with API users which asked why “it isn’t possible to do it this way instead etc”
-
-
-%%Relate it to Lehman
-
 
 
 
@@ -424,12 +392,6 @@ The change would have happened even if glib wasn’t added (but with glib made i
 
 
 
-%%Relate it to Lehman
-
-
-
-
-
 
 \subsubsection{3\textsuperscript{rd} Party}
 
@@ -447,48 +409,111 @@ Architects decided to use glib, part of an internal decision.
 
 
 
-
-%%Relate it to Lehman
-
+\section{RQ2 Lehman}
 
 
+\subsection{1 Continuing Change — a system must be continually adapted or it becomes progressively less satisfactory}
+
+Their partners are good at solving problems, so anything lacking from the API was solved, but in a way that they didn’t not think was a good way. 
+
+
+Overall the impression given suggested that it is important to improve the APIs. She even told us that some partners had requested more frequent updates to include or add new features to the API.
+
+\subsection{2 Increasing Complexity — as system evolves, its complexity increases unless work is done to maintain or reduce it}
+
+
+Previously she had mentioned that it’s important to have consistency and to follow standards, especially when creating an API. 
+
+She did mention that one, albeit minor reason for re-implementation of certain parts of the API was to bring into line with the rest of the new interfaces. 
+
+It’s often easier to make a good API if you follow a guideline which tells you how to make a good API. Following these tends to lead to good APIs.
+
+She feels it’s more important to have more features than to have a strong emphasis on the cosmetic side. However, they should work well together and be simple to use. 
+
+One counter example of this however is that they did not re-implement the capture.h interface, despite the fact it had some redacted features and that it retains the previous implementation style.
+
+\subsection{3 Self Regulation — E-type system evolution processes are self-regulating with the distribution of product and process measures close to normal}
+If we look at the system growth as a normal distribution curve, it grew slowly in the beginning (1.0-1.4) and right now (2.0) we're in the peak of the curve and she said about hte future that it was going to be slow with few changes. 
+
+Post 2.0 - The API will continue to improve, but in they are far away in the future. If there is a new API coming, there will not be a big bang this time but instead incremental steps. For example adding new suitable features for partners. It won’t be a 2.0->3.0 big bang again. 
+
+\subsection{4 Conservation of Organisational Stability - global work rate is invariant over the product's lifetime}
+Before 1.4
+No major changes have been made. 
+The only change was that you could build it for more platforms
+
+Version 1.0 was created, with incremental increases due to making other platforms available. There was only one major update which was to 2.0. In total there has only been two major updates (1.0 and 2.0).
+Impression was that there was not even many official incremental builds internally. She did express earlier on in the interview that features were being created internally that ended up becoming part of the 2.0 API.
+
+
+\subsection{5 Conservation of Familiarity — developers, sales personnel and users, for example, must maintain mastery of content and behaviour to achieve satisfactory evolution}
+There are no current restrictions on ACAP so it’s essentially a Linux system, meaning that they can do whatever they want with it. 
+
+Primarily the SDK is what was communicated to the partners / users of the API.
+
+Little to no influence over the APIs. There are things that could be better than they are, for example they have to query the camera to see what it supports. She feels that they need to improve on this aspect. It’s hard to know this / do this when you’re not using the API. (This seems to suggest that they don’t use it as often internally, or that there is something missing in the documentation?)
+
+\subsection{6 Continuing Growth — the functional content must be continually increased to maintain user satisfaction}
+
+
+She reiterated that they want to add new features and modules. They want to encourage applications to be written by their partners, so if they don’t add new modules they will not have new applications created for them. When partners write applications for their cameras, the value of the cameras are enhanced so they would like to encourage partners creating new applications for their cameras.
+
+It’s better to provide good solutions so that they don’t need to create their own custom solutions and enable good applications to be made. (Assuming that she's talking about add more functionality so that people won't have to do stuff in their own weird ways)
+
+She was surprised that the view was that the API is more stable than they thought it was. i.e. the partners would like more changes. Firmware upgrades always worked with the API, there were very few issues.
+
+\subsection{7 Declining Quality — the quality will appear to decline unless it is rigorously maintained and adapted}
+Updates to documentation
+Updates to interfaces and error handling
+
+It's not 100\% true for APIs, because updating it too often will cause other problems --> ``rigorously''
+
+\subsection{8 Feedback System — multi-level, multi-loop, multi-agent feedback systems}
+She would like to get more feedback from the API users and the end-users - to better include this in the feedback loop and in turn use it to form change decisions
+
+No “scientific” theories have been used when creating the APIs - most decisions have been based on experience (expertise) and previous experience
+
+There hasn’t been anything created by the users which has then been implemented into the API. However, there are partners who have created features which were then later included. i.e. Audio (This is not to say that they used the API that the partners had developed!)
+
+
+
+She is unaware of any metrics that they have. She would have to ask the ADP engineers for anything like this. She doesn’t personally know if there have been any issues or problems with the current API. She would like to have more feedback and input when things are working correctly, normally they only have feedback when things don’t work. Other than the feedback she mentioned previously, i.e. partners requesting features.
+
+
+
+They had some kind of validation testing whereby they had someone internally attempt to create an application using all parts of the API. It was during the development process and was successful but it also provided them with some key feedback. She suggested that this kind of testing should be increased and that they do need more of it. (This was only one application, as it differs a lot)
+
+Communication with users currently only really gives them bug reports, FAQs (Educational Issues) or queries about how to do something could indicate that there are missing features in the API. This is something that the product management deal with, rather than her. She focuses more on the how rather than the what. What it comes to decide what interface to do, PM decide and she then comes along and decides how it would look / be done. 
+
+\section{RQ3 Reverse Engineer}
+Table of hers and ours
+
+And one section discussing why her answers correspond to the categories we chose.
 
 
 
 
 
-
-
-
-
-\section{RQ2}
-Have a table with ours and hers
-
-
-\subsection{Continuing Change — a system must be continually adapted or it becomes progressively less satisfactory}
-
-
-\subsection{Increasing Complexity — as system evolves, its complexity increases unless work is done to maintain or reduce it}
-
-
-\subsection{Self Regulation — E-type system evolution processes are self-regulating with the distribution of product and process measures close to normal}
-
-\subsection{Conservation of Organisational Stability - global work rate is invariant over the product's lifetime}
-
-\subsection{Conservation of Familiarity — developers, sales personnel and users, for example, must maintain mastery of content and behaviour to achieve satisfactory evolution}
-
-\subsection{Continuing Growth — the functional content must be continually increased to maintain user satisfaction}
-
-\subsection{Declining Quality — the quality will appear to decline unless it is rigorously maintained and adapted}
-
-\subsection{Feedback System — multi-level, multi-loop, multi-agent feedback systems}
+\section{Conclusion RQ2} \label{conclusion}
 
 
 
 
 
-\section{Conclusion} \label{conclusion}
+%%John add conclusion ideas here
 
+
+Considering the Ecosystem and considering it as a whole when designing the API. She does not think that they did take it into consideration at all. They had not thought about them when designing the APIs. She does think about who is going to use it and how but nothing in regards to how it affects an ecosystem as a whole. Things like allowing embedded webpages for the ACAP allows users to get more information from their system meaning they don’t need to ask for as much help and assistance. They usually integrate this with the VMS. Overall there was not much thought about ecosystem when the API was designed. She’s unsure if it’s one ecosystem or two. The network APIs and their API. Perhaps it is one ecosystem. (this is something Imed is looking at).
+It seems that a focus on ecosystems might be starting to come through but that they already thought about them without calling them ecosystems. For example, her mentioning that they already did think about the users of the API and how they would be using it gives a slight clue that they do already think about the wider audience of their API.
+
+
+
+%%William add conclusion ideas here
+
+
+\subsection{Law 1}
+
+Problem: Leads to potentially unsafe implementations to get around shortcomings of the API
 
 \section*{Acknowledgement} \label{acknowledgement}
 
