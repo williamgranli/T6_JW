@@ -402,31 +402,24 @@ Architects decided to use glib, part of an internal decision.
 This section will present results related to \textbf{RQ2}. The information introduced was collected during the interview with the case company. 
 
 
-\subsection{Law 1: Continuing Change}
+\subsection{Law \#1: Continuing Change}
 The case company described that including new functional content was one of the top priorities for the 2.0 release. This is supported by the characteristic of the changes identified in this study. 4 of the 13 changes were additions of new modules, and in the re-implemented modules a lot of functional content was added, too. It was also mentioned that the API users had previously reqeusted more frequent updates to the API, despite the drawbacks this could have. One of the main reasons for continuously adapting the API is also to force (!!!wording) the API users to use the API in the way that it is intended. Previously, many applications which worked around the lacking (!!!negative wording) functionality had been developed. These applications were fully functional, but were developed very differently from user to user (!!!wording). We therefore conclude that Law \#1 holds for APIs. 
 
-\subsection{Law 2: Increasing Complexity}
+\subsection{Law \#2: Increasing Complexity}
 A large part of the changes made to the API were made to improve the structure and the way that the API is used. Many of these changes were related to the same design choices, which enforced a certain implementation style on the whole API. One example of this is the change to the interfaces which set a standard for the whole API. During the interview it was also concluded that consistency and following certain standards is an important factor to consider when designing APIs. It was also made clear a contributing factor for changing certain parts of the API was to bring it in line with the new interfaces. The interviewee mentioned that one way of achieving this was to follow guidelines or design best practices, but that the company currently did not make use of these. Even though the importance of maintaining the API to reduce complexity was stated, arguments which support that it is of lesser importance than releasing functional content was also presented. One example of where this is evident in the evolution of the API, is in the module that handles the video capturing and video stream. It was decided that this module would not be re-written to conform with the new interface standard, as there was not much functional content that would change in this module, anyways (!!!reword). Thus, Law \#2 holds for APIs, but there is evidence that suggests that decreasing the complexity is not of the highest priority. 
 
-\subsection{Law 3: Self Regulation} \label{law3}
+\subsection{Law \#3: Self Regulation} \label{law3}
 When version 1.4 was introduced, no new functionality or re-structuring was introduced. Version 1.4 only added support for additional build platforms. When comparing the changes introduced in 2.0 to the ones previously introduced, it is clear that the growth of the API has increased gradually. During the interview it was also mentioned that the future plans for the API did not include any major changes, and that only a few minor changes were planned in the near future. The future updates to the API will also be made incrementally, and there will not be a big bang update similar to the one of 2.0. This supports that Law \#3 can be applied to APIs, assuming that the current stage of the life-cycle of the API can be considered as the center of the normal distribution curve of the APIs growth. 
 
 
-\subsection{Law 4: Conservation of Organisational Stability}
+\subsection{Law \#4: Conservation of Organisational Stability}
 The changes to the ACAP API has been made very sporadically, where only two new versions have been released since the deployment of version 1.0. As mentioned in Section \ref{law3} the changes introduced in version 1.4 did not involve any changes to the existing API functions. Consequently, the only significant update to the API was made in the transition to version 2.0. The internal development of the API has also been made sporadically, and there have been periods where the API has not been actively developed. This suggests that Law \#4 does not apply to APIs. 
 
 
-\subsection{Law 5: Conservation of Familiarity}
-The SDK that is included with the API. 
+\subsection{Law \#5: Conservation of Familiarity}
+The SDK that is included with the API was rigorously updated with the introduction of version 2.0. All functionality which was added or modified in version 2.0 was updated accordlingly in the SDK. The same pattern can be seen for the example code, which went through major changes as a result of the changes to the API code. The case company's intent to control the way that their API is used also suggests that the knowledge of how to use the API is of importance, since if the API is used in too many different ways, it will be more difficult for the case company to have relevant documentation and example code. It was also expressed during the interview that further transparency in how the API should be used could be achieved. One example of this is to improve the information to the user regarding which API functions are supported on which hardware types. These facts support that the conservation of familiarity is an important factor to consider when maintaining APIs. 
 
-
-There are no current restrictions on ACAP so it’s essentially a Linux system, meaning that they can do whatever they want with it. 
-
-Primarily the SDK is what was communicated to the partners / users of the API.
-
-Little to no influence over the APIs. There are things that could be better than they are, for example they have to query the camera to see what it supports. She feels that they need to improve on this aspect. It’s hard to know this / do this when you’re not using the API. (This seems to suggest that they don’t use it as often internally, or that there is something missing in the documentation?)
-
-\subsection{6 Continuing Growth — the functional content must be continually increased to maintain user satisfaction}
+\subsection{Law \#6: Continuing Growth — the functional content must be continually increased to maintain user satisfaction}
 
 
 She reiterated that they want to add new features and modules. They want to encourage applications to be written by their partners, so if they don’t add new modules they will not have new applications created for them. When partners write applications for their cameras, the value of the cameras are enhanced so they would like to encourage partners creating new applications for their cameras.
