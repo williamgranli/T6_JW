@@ -35,12 +35,12 @@ Due to the negative implications that modifications to APIs cause for its users,
 
 \subsection{Research Questions} \label{rqs}
 \begin{description}
-\item[\textbf{RQ1:}] What drives API evolution?
+\item[\textbf{RQ1:}] What drives API evolution?x
 \item[\textbf{RQ2:}] To what extent can we reverse engineer API change decisions?
 \end{description}
 
 %Structure of the paper
-The sections following the Introduction are structured as follows: In Section \ref{existing_literature}, we present the existing literature related to our study. Section \ref{case_company_description} describes the case company and how it was selected. A description of our methodology is introduced in Section \ref{methodology}. In Section \ref{results}, the results of our study are presented, and in Section \ref{conclusion}, we discuss the findings of our study.
+The sections following the Introduction are structured as follows: In Section \ref{existing_literature}, we present the background and previously published work that is related to our study. Section \ref{case_company_description} describes the case company and how it was selected. A description of our methodology is introduced in Section \ref{methodology}. In Section \ref{results}, the results of our study are presented, and in Section \ref{conclusion}, we discuss the findings of our study.
 
 \section{Existing Literature} \label{existing_literature}
 This section will introduce the topics of API design and software evolution, and provide a review of studies that are directly related to our study. 
@@ -55,7 +55,7 @@ API design is notoriously difficult, as a myriad of design and performance decis
 Software evolution is a field which studies the application of software maintenance activities and processes on software, and the resulting, evolved versions of the software. The concept of software maintenance has existed since the 1960s. Well-known studies from this era established the importance of software maintenance \cite{lientz1980software}. One study would go on to have a particularly profound effect on software maintenance by establishing a set of four categories which describe the intents behind change to software \cite{lientz1980software}. These categories were refined in a further study, in which the number of categories were increased from four to twelve \cite{chapin2001types}. The categories proposed were: Enhancive, corrective, reductive, adaptive, performance, preventive, groomative, updative, reformative, evaluative, consultive and training \cite{chapin2001types}. Each category describes a type of software maintenance activity which relate to one of three particular areas; the code, the software and the customer-experienced functionality \cite{chapin2001types}. This study also helped to further the distinction between software maintenance and software evolution. The study suggested that software maintenance is a part of software evolution and that the two are not interchangeable \cite{chapin2001types}. 
 
 %%Lehman's laws (!!!improve later)
-An early study made in the area of software evolution suggests that changes to software must obey one of eight laws of software evolution \cite{lehman1980programs}. The laws presented in the study are 1) Continuing Change, 2) Increasing Complexity, 3) Self Regulation, 4) Conservation of Organisational Stability, 5) Conversation of Familiarities, 6) Continuing Growth, 7) Declining Quality and 8) Feedback System \cite{lehman1980programs}. The study also outlines that these laws only apply to E-programs, which are programs that are ``change prone" and that ``mechanise a human or societal activity". 
+An early study made in the area of software evolution suggests that changes to software must obey one of eight laws of software evolution \cite{lehman1980programs}. The laws presented in the study are 1) Continuing Change, 2) Increasing Complexity, 3) Self Regulation, 4) Conservation of Organisational Stability, 5) Conversation of Familiarities, 6) Continuing Growth, 7) Declining Quality and 8) Feedback System \cite{lehman1980programs}. The study also outlines that these laws only apply to E-programs, which are programs that are ``change prone" and that ``mechanise a human or societal activity" \cite{lehman1980programs}.o
 
 \subsection{Related Work} \label{related_work}
 Previous studies that have attempted analyse APIs in the context of software evolution have primarily focused on APIs that are a part of large programming languages, such as Java \cite{hou2011exploring} \cite{shi2011empirical} and Smalltalk \cite{robbes2012developers}. One study \cite{hou2011exploring} attempted to uncover the intents behind the changes made in the AWT and Swing Java libraries. They found that the use of a strong architecture was vital in ensuring a successful evolution of the API \cite{hou2011exploring}. In their study, the intents were categorised around programming related factors such as reducing coupling or conformance to naming conventions.
@@ -78,7 +78,7 @@ The case was selected using convenience sampling \cite{flyvbjerg2006five}, and a
 This study has been conducted using the case study methodology \cite{runeson2009guidelines}. The goal of the study was twofold. Firstly, the aim was to empirically \textit{explore} the motives behind changes to APIs, and secondly, our ambition was to \textit{validate} the results' level of correctness by comparing our findings with the case company's explanation of their motives. Our research can be classified as an embedded case study \cite{yin2013case}, since both the API code and API documentation have been used as units of analysis. 
 
 %Reasons for choosing case study
-The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing studies \cite{benbasat1987case} \cite{runeson2009guidelines} \cite{yin2013case} \cite{robson2002real}. An alternative approach that was considered was design research, but if a prototype API was to be used instead of one which is tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines}. An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change, and that input from the industry is vital to the success of the research; especially to be able to answer \textbf{RQ2}. 
+The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing literature \cite{benbasat1987case} \cite{runeson2009guidelines} \cite{yin2013case} \cite{robson2002real}. An alternative approach that was considered was design research, but if a prototype API was to be used instead of one which is tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines}. An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change, and that input from the industry is vital to the success of the research; especially to be able to answer \textbf{RQ2}. 
 
 %Consider adding subsub for code+doc and interviews later
 \subsection{Data Collection} \label{data_collection}
@@ -133,7 +133,6 @@ The largest \textit{reliability} threat facing our study was the reproducibility
 
 
 \section*{Acknowledgement} \label{acknowledgement}
-We would like to thank Jani for being a PRICK. 
 
 
 \bibliographystyle{bibstyle}
