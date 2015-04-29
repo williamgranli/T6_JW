@@ -76,6 +76,10 @@ The case was selected using convenience sampling \cite{flyvbjerg2006five}, and a
 
 %Try to motivate why other sampling methods weren't used.
 
+%Info from the interview, add to this section
+Has been released, in the form we looked at (supports that we’re doing a ‘real’ case study)
+They have “partners” which develop applications using their API. These applications are then used by the end-users of the camera. 
+
 
 \section{Methodology} \label{methodology}
 %Intro and summary
@@ -137,40 +141,44 @@ This section will cover the results.
 \subsection{New}
 Intro...
 
-\subsubsection{axaudio}
-
-%%Describe the change 
-
-
-
-
-%%Relate it to Categories
-
-
-
-
-
-%%Relate it to Lehman
-
-
-
-
-
-
 \subsubsection{axptz}
 
 %%Describe the change 
-
+Added functionality related movement of the physical camera
 
 
 
 %%Relate it to Categories
-
+Enable users to write applications that mechanically (or digitally) moves the camera
+Requested from partners
+Request ultimately came down from project management
 
 
 
 
 %%Relate it to Lehman
+
+
+
+
+
+
+\subsubsection{axaudio}
+
+%%Describe the change 
+Added functionality related to audio streams
+
+
+
+%%Relate it to Categories
+The most common usage of their API is to analyze video data - but some partners required audio analysis. (At least one partner did already do it, without there being an API for it).
+
+
+
+
+%%Relate it to Lehman
+
+
 
 
 
@@ -180,11 +188,13 @@ Intro...
 \subsubsection{axstorage}
 
 %%Describe the change 
-
+Added functionality which allows connection to external storage devices
+Before they just put the files in “the normal file system”
 
 
 
 %%Relate it to Categories
+Requested from partners
 
 
 
@@ -200,11 +210,11 @@ Intro...
 \subsubsection{axserialport}
 
 %%Describe the change 
-
-
-
+Adds functionality which allows to connect with other hardware through serial communication
+Allows the possibility to integrate other systems with the camera (such as a ticket dispenser (i guess))
 
 %%Relate it to Categories
+Requested by partners 
 
 
 
@@ -224,11 +234,16 @@ Intro...
 
 %%Describe the change 
 
+Used to create and handle events such as detecting movement 
+Split up into more files, added functionality, certain structs have been made into their own header files
 
 
 
 %%Relate it to Categories
-
+Re-written because of the other changes to the API (to conform with the new standards)
+They were hard to use
+They were marked as deprecated so that it would not break existing applications using them. 
+They were however not included in the new SDK, so that it would encourage users to use the new, rewritten code
 
 
 
@@ -243,12 +258,17 @@ Intro...
 \subsubsection{axhttp}
 
 %%Describe the change 
+Converts the data so that it can be displayed on web pages
+Split up into more files, added functionality (concurrency)
 
 
 
 
 %%Relate it to Categories
-
+Re-written because of the other changes to the API (to conform with the new standards)
+They were hard to use
+They were marked as deprecated so that it would not break existing applications using them. 
+They were however not included in the new SDK, so that it would encourage users to use the new, rewritten code
 
 
 
@@ -263,12 +283,17 @@ Intro...
 \subsubsection{axparameter}
 
 %%Describe the change 
+Used to change parameters (settings) such as framerate
+Not many changes, but changed so it corresponds with the new design of the API
 
 
 
 
 %%Relate it to Categories
-
+Re-written because of the other changes to the API (to conform with the new standards)
+They were hard to use
+They were marked as deprecated so that it would not break existing applications using them. 
+They were however not included in the new SDK, so that it would encourage users to use the new, rewritten code
 
 
 
@@ -286,12 +311,15 @@ Intro...
 \subsubsection{Burst Mode}
 
 %%Describe the change 
+Burst mode was deprecated
+In Version 2.0 the methods only return null
 
 
 
 
 %%Relate it to Categories
-
+The feature would have to be re-implemented because of changes to the camera (hardware)
+This would be costly and because of this it was investigated whether or not it would be safe to remove the feature. The investigation showed that the impact of the removal would not be significant enough and thus it was removed.
 
 
 
@@ -309,12 +337,22 @@ Intro...
 
 %%Describe the change 
 
+Increased commenting and explanations
+Improved examples that cover more functionality
 
 
 
 %%Relate it to Categories
+The partners used the examples a lot
+The old examples varied a lot in how they were implemented
+The old ones weren’t good enough
 
-
+From what she is saying, the intent was mainly:
+to have a unified standard
+which helps the partners to write ‘good’ code
+to cover the new functionality
+to cover specific features
+to show how the features can be used together
 
 
 
@@ -328,11 +366,13 @@ Intro...
 
 %%Describe the change 
 
+The documentation has mainly been changed to correspond with the changes to the API itself
+LaTeX support has been removed
 
 
 
 %%Relate it to Categories
-
+One of the main “requests” was to increase functionality (such as ptz) - and the documentation had to be updated accordingly.
 
 
 
@@ -347,14 +387,17 @@ Intro...
 \subsubsection{Interfaces}
 
 %%Describe the change 
-
+They have gone from having direct access to the headers, to having a facade to access each module
 
 
 
 %%Relate it to Categories
+Improvements related to coding standard. (cosmetic)
+These decisions were based on internal discussion.
+Wanted an event driven system
+Driven by internal struggles with using the API to create applications
 
-
-
+The need for change was identified through discussions with API users which asked why “it isn’t possible to do it this way instead etc”
 
 
 %%Relate it to Lehman
@@ -367,12 +410,16 @@ Intro...
 \subsubsection{Error Handling}
 
 %%Describe the change 
+They now store errors in enums in separate header files
+This suggests that changed their error handling to use exceptions
 
 
 
 
 %%Relate it to Categories
-
+The error handling was changed to correspond with how glib handles errors. 
+The error handling should be more informative + increase usability
+The change would have happened even if glib wasn’t added (but with glib made it “more obvious”)
 
 
 
@@ -387,12 +434,16 @@ Intro...
 \subsubsection{3\textsuperscript{rd} Party}
 
 %%Describe the change 
+2.0 utilizes more 3rd party libraries
+axsound, for example, uses alsa
+All modules use glib
 
 
 
 
 %%Relate it to Categories
 
+Architects decided to use glib, part of an internal decision. 
 
 
 
@@ -409,8 +460,33 @@ Intro...
 
 
 
+
 \section{RQ2}
 Have a table with ours and hers
+
+
+
+\subsection{Continuing Change — an E-type system must be continually adapted or it becomes progressively less satisfactory}
+
+
+\subsection{Increasing Complexity — as an E-type system evolves, its complexity increases unless work is done to maintain or reduce it}
+
+
+\subsection{Self Regulation — E-type system evolution processes are self-regulating with the distribution of product and process measures close to normal}
+
+\subsection{Conservation of Organisational Stability (invariant work rate) - the average effective global activity rate in an evolving E-type system is invariant over the product's lifetime}
+
+\subsection{Conservation of Familiarity — as an E-type system evolves, all associated with it, developers, sales personnel and users, for example, must maintain mastery of its content and behaviour to achieve satisfactory evolution. Excessive growth diminishes that mastery. Hence the average incremental growth remains invariant as the system evolves.}
+
+\subsection{Continuing Growth — the functional content of an E-type system must be continually increased to maintain user satisfaction over its lifetime}
+
+\subsection{Declining Quality — the quality of an E-type system will appear to be declining unless it is rigorously maintained and adapted to operational environment changes}
+
+\subsection{Feedback System — E-type evolution processes constitute multi-level, multi-loop, multi-agent feedback systems and must be treated as such to achieve significant improvement over any reasonable base}
+
+
+
+
 
 \section{Conclusion} \label{conclusion}
 
