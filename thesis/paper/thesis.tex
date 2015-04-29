@@ -144,64 +144,54 @@ The largest \textit{reliability} threat facing our study was the reproducibility
 
  \newpage
 \section{RQ1} \label{results}
-This section will cover the results.
 
+Each change is categorised by a type, such as new, reimplementation etc
+
+Each section introduces the change and then discusses what the changes entailed, how we perceived them in relation to the twelve maintenance types, what our interviewee said about the changes and finally how the interviewees views of the changes relate to the maintenance categories.
 
 \subsection{New}
-Intro...
+
+%%TODO Finish this off
+New additions to the API were the most frequent change that we observed. Each addition added new functionality to the API, ranging from controlling the camera, enabling audio analysis, allowing external storage connections and providing a serial port to interface with other devices.
 
 \subsubsection{axptz}
 
-%%Describe the change 
-Added functionality related movement of the physical camera
+This change introduced the ability to perform Pan, Tilt and Zoom (ptz) manoeuvres both mechanically and digitally on the camera. For example, zooming in on a particular section of a large image, panning the camera to the left to view a certain area. 
 
+When categorising this change, we concluded that this was enhancive, simply  because it was a brand-new feature of the API. No sub categories were found to be suitable for this change.
 
+%%Explain what she said
+The interviewee described how this change and the 3 following changes were all included in the new API at the request of both API users and product management. The feature was sought after by API users frequently, while they were able to control the camera, there was no official application for doing so and as such, it was a good candidate for inclusion in the new API.
 
-%%Relate it to Categories
-Enable users to write applications that mechanically (or digitally) moves the camera
-Requested from partners
-Request ultimately came down from project management
-
-
-
-
-
-
-
-
+%%Explain how this relates to the category
+Based on the interviewees comments, we concluded that we had correctly identified the change as being enhancive. Furthermore, we were also correct in our assumption that there were no suitable subcategories as there was no additional insight into other motivations for the inclusion of this feature. 
 
 \subsubsection{axaudio}
 
 %%Describe the change 
-Added functionality related to audio streams
-
-
+By and large the most common usage of the camera is to analyse video data, however some of the API users require audio data. The inclusion of axaudio allows these users to perform audio analysis upon audio streams captured by Axis devices. 
 
 %%Relate it to Categories
-The most common usage of their API is to analyze video data - but some partners required audio analysis. (At least one partner did already do it, without there being an API for it).
+This change was also determined to be enhancive as it was an inclusion of a brand-new feature to the API. Similarly to the axptz, there were no suitable sub categories that could be found to apply to this change.
 
+%%What she said
+Audio analysis had not previously been possible on Axis devices. However, the interviewer informed us that an API user had managed to create their own audio analysis using the current (1.4) API. Given the demand for audio analysis, it was a logical choice to include it as a new feature in the new version of the API.
 
-
-
-
-
+%%Category based on her information
+Based on the information available, we concluded that we had successfully determined that the change was enhancive. Once more, there was no supporting evidence to suggest any suitable subcategories for this change.
 
 \subsubsection{axstorage}
 
 %%Describe the change 
-Added functionality which allows connection to external storage devices
-Before they just put the files in “the normal file system”
+Prior to the newest version of the API, storage for the devices existed solely on the cameras or the Video Management System (VMS) itself. The release of version 2.0 saw the inclusion of alternative storage solutions. axstorage now allows Axis devices to interface with external storage devices, such as 	
 
+Ehancive was once again chosen to be the most applicable category of change given that axstorage was a brand-new inclusion in the newest version of the API. Similarly, there were no appropriate subcategories for this change.
 
+%%Her information
+The limited storage options for the Axis devices meant that this feature was strongly requested by API users and as such was included in this new version of the API.
 
 %%Relate it to Categories
-Requested from partners
-
-
-
-
-
-
+The information gathered from the interview suggests (!!!Better word than this?) that were correct in our choice of enhancive for this change. Once more there was no inclusion of an appropriate subcategory.
 
 \subsubsection{axserialport}
 
@@ -209,17 +199,18 @@ Requested from partners
 Adds functionality which allows to connect with other hardware through serial communication
 Allows the possibility to integrate other systems with the camera (such as a ticket dispenser (i guess))
 
+The final new feature of the API was the inclusion of axserial. This part of the API allows API users to connect various devices to their cameras through the use of a serial port. This effectively allows users to integrate multiple kinds of devices to create their own unique solutions. In the previous version of the API there was no ability to connect to devices outside of the VMS.
+
 %%Relate it to Categories
-Requested by partners 
+The inclusion of this new feature was once again determined to be an ehancive change as it involved the addition of a brand new feature. No relevant subcategories were found.
 
+Our interviewee described scenarios whereby a camera could be used with external devices to create, for example, a ticketing system which reacts to users interacting with it in close proximity. This was just one scenario in which users might wish to use the camera with other devices. As such it was included in the new API to meet the demand of the API users.
 
-
-
-
-
+%%Real category
+Given this information, we concluded that we were correct in deciding that this change was also enhancive. Again, we were also correct in the assumption that there were no suitable subcategories for this change.
 
 \subsection{Modified}
-Intro...
+
 
 \subsubsection{axevent}
 
