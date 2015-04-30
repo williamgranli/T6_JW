@@ -348,7 +348,7 @@ Following the discussions in the interview, it became clear that the error handl
 
 We therefore concluded that our categorisation for this change was correct. Indeed, the primary reason for the change was to improve the existing error handling while improving the overall maintainability of the API as a whole. 
 
-\subsubsection{3\textsuperscript{rd} Party}
+\subsubsection{3\textsuperscript{rd} Party}y e
 ATTN: (!!!We are waiting for more information from Johanna to confirm / add to this section!!!)
 
 %%Describe the change 
@@ -375,7 +375,7 @@ This section will present results related to \textbf{RQ2}. The information intro
 \subsection{Continuing Change}
 The case company described that including new functional content was one of the top priorities for the 2.0 release. This is supported by the characteristic of the changes identified in this study. 4 of the 13 changes were additions of new modules, and in the re-implemented modules a lot of functional content was added, too. It was also mentioned that the API users had previously reqeusted more frequent updates to the API, despite the drawbacks this could have. One of the main reasons for continuously adapting the API is also to force (!!!wording) the API users to use the API in the way that it is intended. Previously, many applications which worked around the lacking (!!!negative wording) functionality had been developed. These applications were fully functional, but were developed very differently from user to user (!!!wording). We therefore conclude that the law of continuing change holds for APIs. 
 
-\subsection{Increasing Complexity}
+\subsection{Increasing Complexity} \label{law2}
 A large part of the changes made to the API were made to improve the structure and the way that the API is used. Many of these changes were related to the same design choices, which enforced a certain implementation style on the whole API. One example of this is the change to the interfaces which set a standard for the whole API. During the interview it was also concluded that consistency and following certain standards is an important factor to consider when designing APIs. It was also made clear a contributing factor for changing certain parts of the API was to bring it in line with the new interfaces. The interviewee mentioned that one way of achieving this was to follow guidelines or design best practices, but that the company currently did not make use of these. Even though the importance of maintaining the API to reduce complexity was stated, arguments which support that it is of lesser importance than releasing functional content was also presented. One example of where this is evident in the evolution of the API, is in the module that handles the video capturing and video stream. It was decided that this module would not be re-written to conform with the new interface standard, as there was not much functional content that would change in this module, anyways (!!!reword). Thus, the law of increasing complexity holds for APIs, but there is evidence that suggests that decreasing the complexity is not of the highest priority. 
 
 \subsection{Self Regulation} \label{law3}
@@ -392,13 +392,11 @@ The SDK that is included with the API was rigorously updated with the introducti
 \subsection{Continuing Growth}
 Large parts of the changes between the versions were strictly additions of new functional content. 4 new modules were added, and significant additions of new functionality were added to the modules which were re-structured from version 1.4. The interviewee also made it clear that increasing the functionality was one of the major goals with the 2.0 update. This also ties in with the ambition of controlling the way the API users use the API, as mentioned previously. It was also mentioned that the case company had recieved feedback from the API users that more frequent updates to the functional content was desirable, even though this may require them to update their application code. Because of this, we conclude that the law of continuing growth applies to APIs. 
 
-\subsection{Declining Quality — the quality will appear to decline unless it is rigorously maintained and adapted}
-Updates to documentation
-Updates to interfaces and error handling
-
-It's not 100\% true for APIs, because updating it too often will cause other problems --> ``rigorously''
+\subsection{Declining Quality}
+The interviews established that a groomative motive was not the most major reason for implementing any change. The changes to the example code and the SDK, as well as the re-structured modules are examples of these, where the main motive behind the change was to either prevent unwanted usage or to increase the functional content. These changes did, however, increase the quality and was a substantial part of the changes, which could have been left out. A counterargument to this reasoning can be seen in the module which handles the video data and capturing, which was not changed between the versions, as mentioned in Section \ref{law2}. We therefore settle that the law of declining quality can be applied to APIs. 
 
 \subsection{Feedback System — multi-level, multi-loop, multi-agent feedback systems}
+One of the 
 She would like to get more feedback from the API users and the end-users - to better include this in the feedback loop and in turn use it to form change decisions
 
 No “scientific” theories have been used when creating the APIs - most decisions have been based on experience (expertise) and previous experience
