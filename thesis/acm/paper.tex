@@ -21,24 +21,24 @@ SIG-ALTERNATE.CLS. Supported by ACM.}}
 \author{
 % 1st. author
 \alignauthor
-John Burchell\titlenote{I am da main author}\\
-       \affaddr{Institute for Clarity in Documentation}\\
-       \affaddr{1932 Wallamaloo Lane}\\
-       \affaddr{Wallamaloo, New Zealand}\\
-       \email{trovato@corporation.com}
+John Burchell\titlenote{Main author}\\
+       \affaddr{Computer Science and Engineering}\\
+       \affaddr{University of Gothenburg}\\
+       \affaddr{Gothenburg, Sweden}\\
+       \email{john.a.burchell@gmail.com}
 % 2nd. author
 \alignauthor
-William Granli\titlenote{I am da main author}\\
-       \affaddr{Institute for Clarity in Documentation}\\
-       \affaddr{P.O. Box 1212}\\
-       \affaddr{Dublin, Ohio 43017-6221}\\
-       \email{webmaster@marysville-ohio.com}
+William Granli\titlenote{Main author}\\
+       \affaddr{Computer Science and Engineering}\\
+       \affaddr{University of Gothenburg}\\
+       \affaddr{Gothenburg, Sweden}\\
+       \email{william.granli@gmail.com}
 % 3rd. author
-\alignauthor Imed Hammouda\titlenote{I am da co-author}\\
-       \affaddr{The Th{\o}rv{\"a}ld Group}\\
-       \affaddr{1 Th{\o}rv{\"a}ld Circle}\\
-       \affaddr{Hekla, Iceland}\\
-       \email{larst@affiliation.org}
+\alignauthor Imed Hammouda\titlenote{Co-author}\\
+       \affaddr{Computer Science and Engineering}\\
+       \affaddr{University of Gothenburg}\\
+       \affaddr{Gothenburg, Sweden}\\
+       \email{imed.hammouda@gu.se}
 }
 
 \maketitle
@@ -78,8 +78,8 @@ Due to the negative implications that modifications to APIs cause for its users,
 \subsection{Research Questions} \label{rqs}
 \begin{description}
 \item[\textbf{RQ1:}] How do companies actively drive API evolution?
-\item[\textbf{RQ2:}] How do APIs evolve?
-\item[\textbf{RQ3:}] To what extent can we reverse engineer API change decisions?
+\item[\textbf{RQ1.1:}] To what extent can we reverse engineer API change decisions?
+\item[\textbf{RQ2:}] How do APIs ``passively'' evolve?
 
 
 \end{description}
@@ -180,7 +180,6 @@ Regarding \textit{external validity}, generalisability and the appropriateness o
 The largest \textit{reliability} threat facing our study was the reproducibility. To counter this threat, we have followed a well-proven method for analysing the collected data. Furthermore, as mentioned previously, we have attempted to limit bias and ambiguity in our interview questions where possible. To ensure clarity of the questions, we have field tested the interview with some of our peers, improving the questions based on their feedback.
 
 
- \newpage
 \section{RQ1} \label{results}
 
 Each change between versions has been identified and grouped into three particular categories reflecting what kind of change they were; New, Modified, Removed and General Trends. Each section introduces the change and then discusses what the changes entailed, how we perceived them in relation to the twelve maintenance types, what our interviewee said about the changes and finally how the interviewees views of the changes relate to the maintenance categories. Each change was given a main category of maintenance and a subcategory if appropriate.
@@ -367,7 +366,6 @@ The architects creating the API decided they wished to use Glib which came about
 Architects decided to use glib, part of an internal decision. 
 
 
-\newpage
 \section{RQ2 Lehman}
 This section will present results related to \textbf{RQ2}. The information introduced was collected during the interview with the case company. 
 
@@ -395,23 +393,11 @@ Large parts of the changes between the versions were strictly additions of new f
 \subsection{Declining Quality}
 The interviews established that a groomative motive was not the most major reason for implementing any change. The changes to the example code and the SDK, as well as the re-structured modules are examples of these, where the main motive behind the change was to either prevent unwanted usage or to increase the functional content. These changes did, however, increase the quality and was a substantial part of the changes, which could have been left out. A counterargument to this reasoning can be seen in the module which handles the video data and capturing, which was not changed between the versions, as mentioned in Section \ref{law2}. We therefore settle that the law of declining quality can be applied to APIs. 
 
-\subsection{Feedback System — multi-level, multi-loop, multi-agent feedback systems}
-One of the 
-She would like to get more feedback from the API users and the end-users - to better include this in the feedback loop and in turn use it to form change decisions
-
-No “scientific” theories have been used when creating the APIs - most decisions have been based on experience (expertise) and previous experience
-
-There hasn’t been anything created by the users which has then been implemented into the API. However, there are partners who have created features which were then later included. i.e. Audio (This is not to say that they used the API that the partners had developed!)
+\subsection{Feedback System}
+One of the future goals of improvement of the case company is to better include the API users and end-users of the applications in their feedback loop. Currently, the only the API users are included in this feedback loop, and the API architect expressed the desire to also include the end-users in this loop. The reasoning for this was to increase the quality, and to be able to deliver content which is useful for the users, and which leads to good applications being developed. One example of how the API users have been included in the feedback loop, was prior to version 2.0 being released, when API users implemented functionality related to sound, even though there was no interface for this in the API. The experiences of this API user, were later considered when developing the axsound module. One benefit of having a more structured feedback loop, would be that the API developers would be more and faster aware of potential errors in the implementation of the API. Another ambition which was mentioned, was to bring scientific theories and best practices from academia into consideration when developing the API. This would aim to complement the current strategy which is largely based around the expertise and experiences of the API architects. Because of these factors and clearly expressed ambitions, we conclude that the law of feedback system is true for APIs. 
 
 
 
-She is unaware of any metrics that they have. She would have to ask the ADP engineers for anything like this. She doesn’t personally know if there have been any issues or problems with the current API. She would like to have more feedback and input when things are working correctly, normally they only have feedback when things don’t work. Other than the feedback she mentioned previously, i.e. partners requesting features.
-
-
-
-They had some kind of validation testing whereby they had someone internally attempt to create an application using all parts of the API. It was during the development process and was successful but it also provided them with some key feedback. She suggested that this kind of testing should be increased and that they do need more of it. (This was only one application, as it differs a lot)
-
-Communication with users currently only really gives them bug reports, FAQs (Educational Issues) or queries about how to do something could indicate that there are missing features in the API. This is something that the product management deal with, rather than her. She focuses more on the how rather than the what. What it comes to decide what interface to do, PM decide and she then comes along and decides how it would look / be done. 
 
 
 
