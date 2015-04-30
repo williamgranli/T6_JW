@@ -1,0 +1,534 @@
+
+
+\documentclass{sig-alternate}
+\usepackage{blindtext}
+
+
+\begin{document}
+
+\conferenceinfo{WOODSTOCK}{'97 El Paso, Texas USA}
+
+\title{Exploring the Motives and Driving Forces Behind Modifications to APIs From a Software Evolution Perspective
+\titlenote{(Produces the permission block, and
+copyright information). For use with
+SIG-ALTERNATE.CLS. Supported by ACM.}}
+\subtitle{[Extended Abstract]
+\titlenote{A full version of this paper is available as \textit{Author's Guide to Preparing ACM SIG Proceedings Using \LaTeX$2_\epsilon$\ and BibTeX} at \texttt{www.acm.org/eaddress.htm}}}
+
+
+\numberofauthors{3} 
+
+\author{
+% 1st. author
+\alignauthor
+John Burhcell\titlenote{I am da main author}\\
+       \affaddr{Institute for Clarity in Documentation}\\
+       \affaddr{1932 Wallamaloo Lane}\\
+       \affaddr{Wallamaloo, New Zealand}\\
+       \email{trovato@corporation.com}
+% 2nd. author
+\alignauthor
+William Granli\titlenote{I am da main author}\\
+       \affaddr{Institute for Clarity in Documentation}\\
+       \affaddr{P.O. Box 1212}\\
+       \affaddr{Dublin, Ohio 43017-6221}\\
+       \email{webmaster@marysville-ohio.com}
+% 3rd. author
+\alignauthor Imed Hammouda\titlenote{I am da co-author}\\
+       \affaddr{The Th{\o}rv{\"a}ld Group}\\
+       \affaddr{1 Th{\o}rv{\"a}ld Circle}\\
+       \affaddr{Hekla, Iceland}\\
+       \email{larst@affiliation.org}
+}
+
+\maketitle
+\begin{abstract}
+\blindtext
+\end{abstract}
+
+% A category with the (minimum) three required fields
+\category{H.4}{Information Systems Applications}{Miscellaneous}
+%A category including the fourth, optional field follows...
+\category{D.2.8}{Software Engineering}{Metrics}[complexity measures, performance measures]
+
+\terms{Theory}
+
+\keywords{ACM proceedings, \LaTeX, text tagging}
+
+
+
+\section{Introduction} \label{introduction}
+%API Design (and a little bit of ecosystems, and a bit of problem statement)
+As the software industry and the open-source movement steadily grow, the number of public APIs is increasing. APIs can improve the development speed \cite{stylos2006comparing}, contribute to higher quality software \cite{stylos2006comparing} and increase the reusability of software \cite{afonso2012evaluating}. There is a consensus in that modifications to APIs could negatively impact the users of the API \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api}. The main reason is that it will require the users to update the code, which is using the API, thus causing a disruption in the application's software ecosystem \cite{messerschmitt2005software}. The most common changes to APIs occur from refactoring \cite{dig2005role} \cite{xing2006refactoring}. 
+%Software Evolution 
+In the discipline of software evolution, such updates to software are studied from an evolutionary standpoint. Software can be updated for different reasons and these motives can be grouped into corrective, adaptive, perfective and preventive changes \cite{lientz1980software}. 
+
+%Gap in Literature
+Studies that explore the intent behind API modifications exist \cite{hou2011exploring}. There are, however, no studies that attempt to map the motives behind changes to existing software evolution theories, such as the four categories of maintenance \cite{lientz1980software}. The area of programming language APIs is well-explored \cite{hou2011exploring} \cite{shi2011empirical}, but few studies that explore platform APIs exist \cite{robbes2012developers}. To the best of our knowledge, no studies that explore the motives behind or the effects of API evolution have previously been performed on embedded platform APIs. 
+
+%Purpose (and a bit of problem statement)
+%%****NEW*****
+Making changes to existing APIs can have a negative impact upon the users of those APIs. It is therefore important to understand why these changes occur. Understanding the motives behind the changes could help API designers prevent or avoid potential changes to their APIs. In order to achieve this and to provide immediate benefit to industry, an exploratory case study will be undertaken to investigate the underlying motives behind API changes of an existing API. Empirical analysis of changes between two major versions of an API will be undertaken, following which an interview with the architects will be used to verify the findings of our study. 
+%%****^NEW^****
+
+Due to the negative implications that modifications to APIs cause for its users, it is important to understand why changes to them occur. If most common pitfalls are known before the development of new APIs begin, these mistakes can be mitigated. Before the industry can make use of this information, we must also critically assess to what degree we can trace such motives. To achieve this, we will perform a case study which aims to investigate the underlying factors behind API changes. This will be achieved by empirically analysing the changes between two versions of an API. Subsequently, the designers of the API will be interviewed and asked to verify the accuracy of our findings. 
+
+
+\subsection{Research Questions} \label{rqs}
+\begin{description}
+\item[\textbf{RQ1:}] How do companies actively drive API evolution?
+\item[\textbf{RQ2:}] How do APIs evolve?
+\item[\textbf{RQ3:}] To what extent can we reverse engineer API change decisions?
+
+
+\end{description}
+
+%Structure of the paper
+The sections following the Introduction are structured as follows: In Section \ref{existing_literature}, we present the background and previously published work that is related to our study. Section \ref{case_company_description} describes the case company and how it was selected. A description of our methodology is introduced in Section \ref{methodology}. In Section \ref{results}, the results of our study are presented, and in Section \ref{conclusion}, we discuss the findings of our study.
+
+\section{Existing Literature} \label{existing_literature}
+This section will introduce the topics of API design and software evolution, and provide a review of studies that are directly related to our study. 
+
+
+\subsection{API Design} \label{api_design}
+API design is notoriously difficult, as a myriad of design and performance decisions must be taken into consideration when creating APIs \cite{stylos2006comparing} \cite{afonso2012evaluating} \cite{bloch2008effective}. Examples of such decisions are whether to use the factory pattern or constructors to create objects, or if the API should display errors during compilation or runtime \cite{stylos2006comparing}. More trivial design problems, such as, assigning names to API features and difficulty in naming types also have a large impact on the usability of the API \cite{shi2011empirical}. When facing such design decisions, the following four factors are important to consider: a) The API  must be understandable through good documentation, b) the API must not be overly abstract, c) the API must be reusable and d) the API must be easy to learn \cite{shi2011empirical}. One of the most important qualities in an API is that the intent of the API is clear to the user when, for example, using design patterns, such as the concrete factory pattern \cite{stylos2006comparing} \cite{shi2011empirical}. The sum of all design decisions taken during the development of an API will decide the usability of the API. Measuring such a factor can be done by measuring the twelve cognitive dimensions which are factors that are impacted by the interaction between the API and the user of it \cite{clarke2004measuring}. 
+
+
+\subsection{Software Evolution} \label{software_evolution}
+%%Categories of maintenance and types of maintenance
+Software evolution is a field which studies the application of software maintenance activities and processes on software, and the resulting, evolved versions of the software. The concept of software maintenance has existed since the 1960s. Well-known studies from this era established the importance of software maintenance \cite{lientz1980software}. One study would go on to have a particularly profound effect on software maintenance by establishing a set of four categories which describe the intents behind change to software \cite{lientz1980software}. These categories were refined in a further study, in which the number of categories were increased from four to twelve \cite{chapin2001types}. The categories proposed were: Enhancive, corrective, reductive, adaptive, performance, preventive, groomative, updative, reformative, evaluative, consultive and training \cite{chapin2001types}. Each category describes a type of software maintenance activity which relate to one of three particular areas; the code, the software and the customer-experienced functionality \cite{chapin2001types}. This study also helped to further the distinction between software maintenance and software evolution. The study suggested that software maintenance is a part of software evolution and that the two are not interchangeable \cite{chapin2001types}. 
+
+%%Lehman's laws (!!!improve later)
+An early study made in the area of software evolution suggests that changes to software must obey one of eight laws of software evolution \cite{lehman1980programs}. The laws presented in the study are 1) Continuing Change, 2) Increasing Complexity, 3) Self Regulation, 4) Conservation of Organisational Stability, 5) Conversation of Familiarities, 6) Continuing Growth, 7) Declining Quality and 8) Feedback System \cite{lehman1980programs}. The study also outlines that these laws only apply to E-programs, which are programs that are ``change prone" and that ``mechanise a human or societal activity" \cite{lehman1980programs}.
+
+\subsection{Related Work} \label{related_work}
+Previous studies that have attempted analyse APIs in the context of software evolution have primarily focused on APIs that are a part of large programming languages, such as Java \cite{hou2011exploring} \cite{shi2011empirical} and Smalltalk \cite{robbes2012developers}. One study \cite{hou2011exploring} attempted to uncover the intents behind the changes made in the AWT and Swing Java libraries. They found that the use of a strong architecture was vital in ensuring a successful evolution of the API \cite{hou2011exploring}. In their study, the intents were categorised around programming related factors such as reducing coupling or conformance to naming conventions.
+
+One study \cite{dig2005role} investigated three frameworks and one library in which the study found that 80\% of refactoring changes to APIs negatively affected existing applications. Refactorings are not the only changes to APIs that can impact existing projects negatively. Another study was conducted regarding the changes, which the researchers refer to as ripple effects \cite{robbes2012developers}. They found that changes in APIs have an effect upon the entire ecosystem. This particular empirical study found that 14\% of non-trivial API deprecations caused errors in at least one project, with the worst case of 79 projects being affected \cite{robbes2012developers}.
+
+
+\section{Case Company Description} \label{case_company_description}
+The case company is a medium-sized company in the domain of security cameras. The company has its headquarters in Lund, Sweden, but it operates worldwide. The company is the global market leader in the markets of network cameras and video encoders. The company develops embedded software for the security cameras, and some of their products are designed to be accessible through APIs that are also developed by the company. 
+
+%Try to get information about the users of the API. Either through Imed, or through the interviews. 
+
+The case was selected using convenience sampling \cite{flyvbjerg2006five}, and a maximum variation strategy was used \cite{benbasat1987case}. As such, the goal was to include as many companies as possible in this study.
+
+%Try to motivate why other sampling methods weren't used.
+
+%Info from the interview, add to this section
+Has been released, in the form we looked at (supports that we’re doing a ‘real’ case study)
+They have “partners” which develop applications using their API. These applications are then used by the end-users of the camera. 
+
+%%
+Hardware
+The API platform is developed for many different types of cameras. 
+Some have audio, some don’t, for example.
+
+
+
+\section{Methodology} \label{methodology}
+%Intro and summary
+This study has been conducted using the case study methodology \cite{runeson2009guidelines}. The goal of the study was twofold. Firstly, the aim was to empirically \textit{explore} the motives behind changes to APIs, and secondly, our ambition was to \textit{validate} the results' level of correctness by comparing our findings with the case company's explanation of their motives. Our research can be classified as an embedded case study \cite{yin2013case}, since both the API code and API documentation have been used as units of analysis. 
+
+%Reasons for choosing case study
+The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing literature \cite{benbasat1987case} \cite{runeson2009guidelines} \cite{yin2013case} \cite{robson2002real}. An alternative approach that was considered was design research, but if a prototype API was to be used instead of one which is tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines}. An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change, and that input from the industry is vital to the success of the research; especially to be able to answer \textbf{RQ2}. 
+
+%Consider adding subsub for code+doc and interviews later
+\subsection{Data Collection} \label{data_collection}
+%Intro to code inspection
+The data were collected primarily through inspections of the source code and the archival analysis of accompanying  documentation. The source code was comprised of two versions of the same API which the company had developed. An older version which is currently released and a newer version which is soon to be deployed. Each version of the API had its own respective documentation. The documentation was inspected and organised to find explanations of the features offered by the API. 
+
+%Description of inspection
+From the APIs we collected method names, parameters and return types. (!!!Add more here. Maybe put it in a table?) The data were collected from both versions of the APIs, with the changes between the two versions being of particular interest. The collected data were input into tables and spreadsheets, according to the API version. From the documentation we collected data regarding the motive behind the functionality in API calls. Data gathered from the documentation was also stored in tables and spreadsheets and was organised together with its corresponding method.
+
+%Reduce human error
+The data collection from code and documentation was performed independently by both researchers, to reduce the risk of human errors affecting the results. If the data collected by each researcher differed, the cause of the discrepancy was investigated and resolved. 
+
+%Interviews !!!improve later
+After the initial source code inspection had been performed, interviews were conducted. The main purpose of these was to validate our findings during the code inspection with the designers of the APIs. Furthermore, the interviews were conducted to provide additional insight into decisions and motives behind changes that might have been overlooked during the code inspection. The final reason for interviewing the designers of the APIs was to provide further insight of the users of the API. 
+
+
+
+\subsection{Data Analysis} \label{data_analysis}
+%Intro and summary
+The data analysis was conducted in two major phases \cite{andersson2007spiral}. During the first phase, a hypothesis generating approach \cite{seaman1999qualitative} was used to be able to fulfil the exploratory goal of the study. It was during this phase that the analysis of the API code and documentation was carried out. The second phase included analysis of the interviews, the goal of which was to confirm the hypotheses \cite{seaman1999qualitative} that were formulated in the first phase. Both phases were performed iteratively, together with the data collection. The reason for this created the opportunity to improve the process of analysis as the study progressed, as well as to be able to adapt to possible changes in direction, due to the hypothesis generating approach of the first phase \cite{andersson2007spiral}. The analysis of the code and documentation was performed using grounded theory analysis \cite{seaman1999qualitative}, as it is recommended for hypothesis generating studies \cite{runeson2009guidelines} \cite{seaman1999qualitative}.
+
+%Description of code analysis
+More specifically, the approach undertaken was divided into three steps where the data was first coded based on which category of maintenance \cite{chapin2001types} the motive of the change corresponded to. The data were then mapped and coded to the laws presented by \cite{lehman1980programs}. The codes were then analysed from a high-level point of view, the main goal of which was to identify trends in the codes. The final step involved analysis of these trends, and it was during this stage the hypotheses were generated and formulated. The same approach taken to reduce risks of research bias and human error in the data collection was performed during results analysis. 
+
+%Description of interview analysis
+Following the analysis of the archival data, the results of the interviews were analysed. The interviews were analysed using the same approach taken for the archival data. The results of this analysis was then compared and correlated with the results of the code analysis, with the goal of confirming the hypotheses that had been formulated. This support also supported triangulation of our results. 
+
+%Relate to RQs
+The software evolution categories \cite{chapin2001types} and Lehman's laws \cite{lehman1980programs} were analysed to allow us to be able to answer \textbf{RQ1}. The software evolution categories were used to map and explore motives behind changes and Lehman's laws were used to see what drives the natural evolution of APIs. Our ability to correctly predict the motives compared to the actual motives of the designers which were made clear during the interviews, will serve as the basis for answering \textbf{RQ2}.
+
+
+\subsection{Validity Threats} \label{validity_threats}
+In this section we discuss possible threats to construct validity, internal validity, external validity and reliability \cite{runeson2009guidelines}.
+
+%We must add construct validity. 
+
+%Internal Validity
+\textit{Internal validity} threats for our study have been greatly reduced by the methodologies we have employed. By performing an individual inspection of  the API source code, documentation and individual results analysis, internal validity is significantly reduced. Triangulation of the results with the use of interviewing the designers is a key step in reducing potential validity threats in our study.
+
+%External Validity
+Regarding \textit{external validity}, generalisability and the appropriateness of our results are at risk. In our study we have striven to ensure that our findings will be as useful as possible to others. Given that there are some similar studies to ours and that ours is an exploratory study, our results will be useful to others who perform similar studies in the future. Our results come from both APIs either in production or soon to be in production. As such, the results of this study will hopefully be of use to the company at which they were studied, be it now for their current API or in the future when they inevitably develop others. Likewise, other companies in similar positions could use the results of our study when creating their own APIs.
+
+%Reliability
+The largest \textit{reliability} threat facing our study was the reproducibility. To counter this threat, we have followed a well-proven method for analysing the collected data. Furthermore, as mentioned previously, we have attempted to limit bias and ambiguity in our interview questions where possible. To ensure clarity of the questions, we have field tested the interview with some of our peers, improving the questions based on their feedback.
+
+
+ \newpage
+\section{RQ1} \label{results}
+
+Each change is categorised by a type, such as new, reimplementation etc
+
+Each section introduces the change and then discusses what the changes entailed, how we perceived them in relation to the twelve maintenance types, what our interviewee said about the changes and finally how the interviewees views of the changes relate to the maintenance categories.
+
+\subsection{New}
+
+%%TODO Finish this off
+New additions to the API were the most frequent change that we observed. Each addition added new functionality to the API, ranging from controlling the camera, enabling audio analysis, allowing external storage connections and providing a serial port to interface with other devices.
+
+\subsubsection{axptz}
+
+This change introduced the ability to perform Pan, Tilt and Zoom (ptz) manoeuvres both mechanically and digitally on the camera. For example, zooming in on a particular section of a large image, panning the camera to the left to view a certain area. 
+
+When categorising this change, we concluded that this was enhancive, simply  because it was a brand-new feature of the API. No sub categories were found to be suitable for this change.
+
+%%Explain what she said
+The interviewee described how this change and the 3 following changes were all included in the new API at the request of both API users and product management. The feature was sought after by API users frequently, while they were able to control the camera, there was no official application for doing so and as such, it was a good candidate for inclusion in the new API.
+
+%%Explain how this relates to the category
+Based on the interviewees comments, we concluded that we had correctly identified the change as being enhancive. Furthermore, we were also correct in our assumption that there were no suitable subcategories as there was no additional insight into other motivations for the inclusion of this feature. 
+
+\subsubsection{axaudio}
+
+%%Describe the change 
+By and large the most common usage of the camera is to analyse video data, however some of the API users require audio data. The inclusion of axaudio allows these users to perform audio analysis upon audio streams captured by Axis devices. 
+
+%%Relate it to Categories
+This change was also determined to be enhancive as it was an inclusion of a brand-new feature to the API. Similarly to the axptz, there were no suitable sub categories that could be found to apply to this change.
+
+%%What she said
+Audio analysis had not previously been possible on Axis devices. However, the interviewer informed us that an API user had managed to create their own audio analysis using the current (1.4) API. Given the demand for audio analysis, it was a logical choice to include it as a new feature in the new version of the API.
+
+%%Category based on her information
+Based on the information available, we concluded that we had successfully determined that the change was enhancive. Once more, there was no supporting evidence to suggest any suitable subcategories for this change.
+
+\subsubsection{axstorage}
+
+%%Describe the change 
+Prior to the newest version of the API, storage for the devices existed solely on the cameras or the Video Management System (VMS) itself. The release of version 2.0 saw the inclusion of alternative storage solutions. axstorage now allows Axis devices to interface with external storage devices, such as     
+
+Ehancive was once again chosen to be the most applicable category of change given that axstorage was a brand-new inclusion in the newest version of the API. Similarly, there were no appropriate subcategories for this change.
+
+%%Her information
+The limited storage options for the Axis devices meant that this feature was strongly requested by API users and as such was included in this new version of the API.
+
+%%Relate it to Categories
+The information gathered from the interview suggests (!!!Better word than this?) that were correct in our choice of enhancive for this change. Once more there was no inclusion of an appropriate subcategory.
+
+\subsubsection{axserialport}
+
+%%Describe the change 
+Adds functionality which allows to connect with other hardware through serial communication
+Allows the possibility to integrate other systems with the camera (such as a ticket dispenser (i guess))
+
+The final new feature of the API was the inclusion of axserial. This part of the API allows API users to connect various devices to their cameras through the use of a serial port. This effectively allows users to integrate multiple kinds of devices to create their own unique solutions. In the previous version of the API there was no ability to connect to devices outside of the VMS.
+
+%%Relate it to Categories
+The inclusion of this new feature was once again determined to be an ehancive change as it involved the addition of a brand new feature. No relevant subcategories were found.
+
+Our interviewee described scenarios whereby a camera could be used with external devices to create, for example, a ticketing system which reacts to users interacting with it in close proximity. This was just one scenario in which users might wish to use the camera with other devices. As such it was included in the new API to meet the demand of the API users.
+
+%%Real category
+Given this information, we concluded that we were correct in deciding that this change was also enhancive. Again, we were also correct in the assumption that there were no suitable subcategories for this change.
+
+\subsection{Modified}
+These changes were deemed to be modifications or re-implementations of existing functionality of the API. 
+
+In regards to re-implementations, during the interview it was mentioned that one intent behind the re-implementations was to bring them inline with the newly created functionality which take advantage of Glib, a new kind of error handling and extensive use of callbacks.
+
+\subsubsection{axevent}
+
+%%Describe the change 
+Version 2.0 of the API has been designed around an event driven system, as such, it's not surprising that the old event system had to be re-implemented. The new event system is used by all features of the new API, for example events are sent when movement is detected by the camera. This event system is combined with the use of callbacks to create a robust event driven API.
+
+%%Relate it to Categories
+Given that this feature was a re-implementation, we concluded that it should be classified mainly as an enhancive change with the subcategory of change being classified as groomative. Groomative was chosen as a subcategory due to the alternate intention of bringing the new feature in line with the new interface.
+
+The interviewee mentioned that the previous version of axevent, event, was being deprecated in favour of this new implementation. The primary reason was to bring the implementation into line with the new way that the API handles events and interfaces as a whole. The interviewee mentioned that they realised that the API was hard to use previously and that improving it this way, through the use of re-implementations, could allow them to create an easier to use API.
+
+Groomative is therefore the obvious choice for the main category for this change with enhancive being the subcategory. This is the opposite of what we concluded and as such means that we incorrectly determined the intent for this change.
+
+\subsubsection{axhttp}
+
+%%Describe the change 
+Converts the data so that it can be displayed on web pages
+Split up into more files, added functionality (concurrency)
+
+
+
+
+%%Relate it to Categories
+Re-written because of the other changes to the API (to conform with the new standards)
+They were hard to use
+They were marked as deprecated so that it would not break existing applications using them. 
+They were however not included in the new SDK, so that it would encourage users to use the new, rewritten code
+
+
+
+
+
+
+
+\subsubsection{axparameter}
+
+%%Describe the change 
+Used to change parameters (settings) such as framerate
+Not many changes, but changed so it corresponds with the new design of the API
+
+
+
+
+%%Relate it to Categories
+Re-written because of the other changes to the API (to conform with the new standards)
+They were hard to use
+They were marked as deprecated so that it would not break existing applications using them. 
+They were however not included in the new SDK, so that it would encourage users to use the new, rewritten code
+
+
+
+
+
+
+\subsection{Removed}
+Intro...
+
+\subsubsection{Burst Mode}
+
+%%Describe the change 
+Burst mode was deprecated
+In Version 2.0 the methods only return null
+
+
+
+
+%%Relate it to Categories
+The feature would have to be re-implemented because of changes to the camera (hardware)
+This would be costly and because of this it was investigated whether or not it would be safe to remove the feature. The investigation showed that the impact of the removal would not be significant enough and thus it was removed.
+
+
+
+
+
+
+\subsection{General Trends} 
+
+Intro...
+
+
+\subsubsection{Example Code}
+
+%%Describe the change 
+
+Increased commenting and explanations
+Improved examples that cover more functionality
+
+
+
+%%Relate it to Categories
+The partners used the examples a lot
+The old examples varied a lot in how they were implemented
+The old ones weren’t good enough
+
+From what she is saying, the intent was mainly:
+to have a unified standard
+which helps the partners to write ‘good’ code
+to cover the new functionality
+to cover specific features
+to show how the features can be used together
+
+
+
+
+
+\subsubsection{Documentation}
+
+%%Describe the change 
+
+The documentation has mainly been changed to correspond with the changes to the API itself
+LaTeX support has been removed
+
+
+
+%%Relate it to Categories
+One of the main “requests” was to increase functionality (such as ptz) - and the documentation had to be updated accordingly.
+
+
+
+
+
+
+
+
+\subsubsection{Interfaces}
+
+%%Describe the change 
+They have gone from having direct access to the headers, to having a facade to access each module
+
+The new interfaces are all based on callbacks. 
+One interface that was not touched was capture.h (Except for the deprecated burst method). She thinks that it probably should have been re-implemented to bring it in line and to be consistent they should bring it into line at some point. It wasn’t required as the implementation didn’t actually change.
+
+
+
+%%Relate it to Categories
+Improvements related to coding standard. (cosmetic)
+These decisions were based on internal discussion.
+Wanted an event driven system
+Driven by internal struggles with using the API to create applications
+
+The need for change was identified through discussions with API users which asked why “it isn’t possible to do it this way instead etc”
+
+Re-written because of the other changes to the API (to conform with the new standards)
+They were hard to use
+They were marked as deprecated so that it would not break existing applications using them. 
+They were however not included in the new SDK, so that it would encourage users to use the new, rewritten code
+
+
+
+
+
+\subsubsection{Error Handling}
+
+%%Describe the change 
+They now store errors in enums in separate header files
+This suggests that changed their error handling to use exceptions
+
+
+
+
+%%Relate it to Categories
+The error handling was changed to correspond with how glib handles errors. 
+The error handling should be more informative + increase usability
+The change would have happened even if glib wasn’t added (but with glib made it “more obvious”)
+
+
+
+
+
+\subsubsection{3\textsuperscript{rd} Party}
+
+%%Describe the change 
+2.0 utilizes more 3rd party libraries
+axsound, for example, uses alsa
+All modules use glib
+
+
+
+
+%%Relate it to Categories
+
+Architects decided to use glib, part of an internal decision. 
+
+
+\newpage
+\section{RQ2 Lehman}
+This section will present results related to \textbf{RQ2}. The information introduced was collected during the interview with the case company. 
+
+
+\subsection{Law \#1: Continuing Change}
+The case company described that including new functional content was one of the top priorities for the 2.0 release. This is supported by the characteristic of the changes identified in this study. 4 of the 13 changes were additions of new modules, and in the re-implemented modules a lot of functional content was added, too. It was also mentioned that the API users had previously reqeusted more frequent updates to the API, despite the drawbacks this could have. One of the main reasons for continuously adapting the API is also to force (!!!wording) the API users to use the API in the way that it is intended. Previously, many applications which worked around the lacking (!!!negative wording) functionality had been developed. These applications were fully functional, but were developed very differently from user to user (!!!wording). We therefore conclude that Law \#1 holds for APIs. 
+
+\subsection{Law \#2: Increasing Complexity}
+A large part of the changes made to the API were made to improve the structure and the way that the API is used. Many of these changes were related to the same design choices, which enforced a certain implementation style on the whole API. One example of this is the change to the interfaces which set a standard for the whole API. During the interview it was also concluded that consistency and following certain standards is an important factor to consider when designing APIs. It was also made clear a contributing factor for changing certain parts of the API was to bring it in line with the new interfaces. The interviewee mentioned that one way of achieving this was to follow guidelines or design best practices, but that the company currently did not make use of these. Even though the importance of maintaining the API to reduce complexity was stated, arguments which support that it is of lesser importance than releasing functional content was also presented. One example of where this is evident in the evolution of the API, is in the module that handles the video capturing and video stream. It was decided that this module would not be re-written to conform with the new interface standard, as there was not much functional content that would change in this module, anyways (!!!reword). Thus, Law \#2 holds for APIs, but there is evidence that suggests that decreasing the complexity is not of the highest priority. 
+
+\subsection{Law \#3: Self Regulation} \label{law3}
+When version 1.4 was introduced, no new functionality or re-structuring was introduced. Version 1.4 only added support for additional build platforms. When comparing the changes introduced in 2.0 to the ones previously introduced, it is clear that the growth of the API has increased gradually. During the interview it was also mentioned that the future plans for the API did not include any major changes, and that only a few minor changes were planned in the near future. The future updates to the API will also be made incrementally, and there will not be a big bang update similar to the one of 2.0. This supports that Law \#3 can be applied to APIs, assuming that the current stage of the life-cycle of the API can be considered as the center of the normal distribution curve of the APIs growth. 
+
+
+\subsection{Law \#4: Conservation of Organisational Stability}
+The changes to the ACAP API has been made very sporadically, where only two new versions have been released since the deployment of version 1.0. As mentioned in Section \ref{law3} the changes introduced in version 1.4 did not involve any changes to the existing API functions. Consequently, the only significant update to the API was made in the transition to version 2.0. The internal development of the API has also been made sporadically, and there have been periods where the API has not been actively developed. This suggests that Law \#4 does not apply to APIs. 
+
+
+\subsection{Law \#5: Conservation of Familiarity}
+The SDK that is included with the API was rigorously updated with the introduction of version 2.0. All functionality which was added or modified in version 2.0 was updated accordlingly in the SDK. The same pattern can be seen for the example code, which went through major changes as a result of the changes to the API code. The case company's intent to control the way that their API is used also suggests that the knowledge of how to use the API is of importance, since if the API is used in too many different ways, it will be more difficult for the case company to have relevant documentation and example code. It was also expressed during the interview that further transparency in how the API should be used could be achieved. One example of this is to improve the information to the user regarding which API functions are supported on which hardware types. These facts support that the conservation of familiarity is an important factor to consider when maintaining APIs. 
+
+\subsection{Law \#6: Continuing Growth — the functional content must be continually increased to maintain user satisfaction}
+
+
+She reiterated that they want to add new features and modules. They want to encourage applications to be written by their partners, so if they don’t add new modules they will not have new applications created for them. When partners write applications for their cameras, the value of the cameras are enhanced so they would like to encourage partners creating new applications for their cameras.
+
+It’s better to provide good solutions so that they don’t need to create their own custom solutions and enable good applications to be made. (Assuming that she's talking about add more functionality so that people won't have to do stuff in their own weird ways)
+
+She was surprised that the view was that the API is more stable than they thought it was. i.e. the partners would like more changes. Firmware upgrades always worked with the API, there were very few issues.
+
+\subsection{7 Declining Quality — the quality will appear to decline unless it is rigorously maintained and adapted}
+Updates to documentation
+Updates to interfaces and error handling
+
+It's not 100\% true for APIs, because updating it too often will cause other problems --> ``rigorously''
+
+\subsection{8 Feedback System — multi-level, multi-loop, multi-agent feedback systems}
+She would like to get more feedback from the API users and the end-users - to better include this in the feedback loop and in turn use it to form change decisions
+
+No “scientific” theories have been used when creating the APIs - most decisions have been based on experience (expertise) and previous experience
+
+There hasn’t been anything created by the users which has then been implemented into the API. However, there are partners who have created features which were then later included. i.e. Audio (This is not to say that they used the API that the partners had developed!)
+
+
+
+She is unaware of any metrics that they have. She would have to ask the ADP engineers for anything like this. She doesn’t personally know if there have been any issues or problems with the current API. She would like to have more feedback and input when things are working correctly, normally they only have feedback when things don’t work. Other than the feedback she mentioned previously, i.e. partners requesting features.
+
+
+
+They had some kind of validation testing whereby they had someone internally attempt to create an application using all parts of the API. It was during the development process and was successful but it also provided them with some key feedback. She suggested that this kind of testing should be increased and that they do need more of it. (This was only one application, as it differs a lot)
+
+Communication with users currently only really gives them bug reports, FAQs (Educational Issues) or queries about how to do something could indicate that there are missing features in the API. This is something that the product management deal with, rather than her. She focuses more on the how rather than the what. What it comes to decide what interface to do, PM decide and she then comes along and decides how it would look / be done. 
+
+\section{RQ3 Reverse Engineer}
+Table of hers and ours
+
+And one section discussing why her answers correspond to the categories we chose.
+
+
+
+
+
+\section{Conclusion RQ2} \label{conclusion}
+
+
+
+
+
+%%John add conclusion ideas here
+
+
+Considering the Ecosystem and considering it as a whole when designing the API. She does not think that they did take it into consideration at all. They had not thought about them when designing the APIs. She does think about who is going to use it and how but nothing in regards to how it affects an ecosystem as a whole. Things like allowing embedded webpages for the ACAP allows users to get more information from their system meaning they don’t need to ask for as much help and assistance. They usually integrate this with the VMS. Overall there was not much thought about ecosystem when the API was designed. She’s unsure if it’s one ecosystem or two. The network APIs and their API. Perhaps it is one ecosystem. (this is something Imed is looking at).
+It seems that a focus on ecosystems might be starting to come through but that they already thought about them without calling them ecosystems. For example, her mentioning that they already did think about the users of the API and how they would be using it gives a slight clue that they do already think about the wider audience of their API.
+
+
+
+%%William add conclusion ideas here
+It's interesting that the partners have mentioned that they want more frequent updates... maybe API developers should be less afraid of updating them? 
+
+
+\subsection{Law 1}
+
+Problem: Leads to potentially unsafe implementations to get around shortcomings of the API
+
+
+\section{Acknowledgments}
+
+
+\bibliographystyle{abbrv}
+\bibliography{bib} 
+
+
+
+
+
+
+\end{document}
