@@ -71,8 +71,9 @@ Studies that explore the intent behind API modifications exist \cite{hou2011expl
 Making changes to existing APIs can have a negative impact upon the users of those APIs. It is therefore important to understand why these changes occur. Understanding the motives behind the changes could help API designers prevent or avoid potential changes to their APIs. In order to achieve this and to provide immediate benefit to industry, an exploratory case study will be undertaken to investigate the underlying motives behind API changes of an existing API. Empirical analysis of changes between two major versions of an API will be undertaken, following which an interview with the architects will be used to verify the findings of our study. 
 %%****^NEW^****
 
+%Old
 Due to the negative implications that modifications to APIs cause for its users, it is important to understand why changes to them occur. If most common pitfalls are known before the development of new APIs begin, these mistakes can be mitigated. Before the industry can make use of this information, we must also critically assess to what degree we can trace such motives. To achieve this, we will perform a case study which aims to investigate the underlying factors behind API changes. This will be achieved by empirically analysing the changes between two versions of an API. Subsequently, the designers of the API will be interviewed and asked to verify the accuracy of our findings. 
-
+%Old
 
 \subsection{Research Questions} \label{rqs}
 \begin{description}
@@ -439,39 +440,33 @@ Architects decided to use glib, part of an internal decision.
 This section will present results related to \textbf{RQ2}. The information introduced was collected during the interview with the case company. 
 
 
-\subsection{Law \#1: Continuing Change}
-The case company described that including new functional content was one of the top priorities for the 2.0 release. This is supported by the characteristic of the changes identified in this study. 4 of the 13 changes were additions of new modules, and in the re-implemented modules a lot of functional content was added, too. It was also mentioned that the API users had previously reqeusted more frequent updates to the API, despite the drawbacks this could have. One of the main reasons for continuously adapting the API is also to force (!!!wording) the API users to use the API in the way that it is intended. Previously, many applications which worked around the lacking (!!!negative wording) functionality had been developed. These applications were fully functional, but were developed very differently from user to user (!!!wording). We therefore conclude that Law \#1 holds for APIs. 
+\subsection{Continuing Change}
+The case company described that including new functional content was one of the top priorities for the 2.0 release. This is supported by the characteristic of the changes identified in this study. 4 of the 13 changes were additions of new modules, and in the re-implemented modules a lot of functional content was added, too. It was also mentioned that the API users had previously reqeusted more frequent updates to the API, despite the drawbacks this could have. One of the main reasons for continuously adapting the API is also to force (!!!wording) the API users to use the API in the way that it is intended. Previously, many applications which worked around the lacking (!!!negative wording) functionality had been developed. These applications were fully functional, but were developed very differently from user to user (!!!wording). We therefore conclude that the law of continuing change holds for APIs. 
 
-\subsection{Law \#2: Increasing Complexity}
-A large part of the changes made to the API were made to improve the structure and the way that the API is used. Many of these changes were related to the same design choices, which enforced a certain implementation style on the whole API. One example of this is the change to the interfaces which set a standard for the whole API. During the interview it was also concluded that consistency and following certain standards is an important factor to consider when designing APIs. It was also made clear a contributing factor for changing certain parts of the API was to bring it in line with the new interfaces. The interviewee mentioned that one way of achieving this was to follow guidelines or design best practices, but that the company currently did not make use of these. Even though the importance of maintaining the API to reduce complexity was stated, arguments which support that it is of lesser importance than releasing functional content was also presented. One example of where this is evident in the evolution of the API, is in the module that handles the video capturing and video stream. It was decided that this module would not be re-written to conform with the new interface standard, as there was not much functional content that would change in this module, anyways (!!!reword). Thus, Law \#2 holds for APIs, but there is evidence that suggests that decreasing the complexity is not of the highest priority. 
+\subsection{Increasing Complexity}
+A large part of the changes made to the API were made to improve the structure and the way that the API is used. Many of these changes were related to the same design choices, which enforced a certain implementation style on the whole API. One example of this is the change to the interfaces which set a standard for the whole API. During the interview it was also concluded that consistency and following certain standards is an important factor to consider when designing APIs. It was also made clear a contributing factor for changing certain parts of the API was to bring it in line with the new interfaces. The interviewee mentioned that one way of achieving this was to follow guidelines or design best practices, but that the company currently did not make use of these. Even though the importance of maintaining the API to reduce complexity was stated, arguments which support that it is of lesser importance than releasing functional content was also presented. One example of where this is evident in the evolution of the API, is in the module that handles the video capturing and video stream. It was decided that this module would not be re-written to conform with the new interface standard, as there was not much functional content that would change in this module, anyways (!!!reword). Thus, the law of increasing complexity holds for APIs, but there is evidence that suggests that decreasing the complexity is not of the highest priority. 
 
-\subsection{Law \#3: Self Regulation} \label{law3}
-When version 1.4 was introduced, no new functionality or re-structuring was introduced. Version 1.4 only added support for additional build platforms. When comparing the changes introduced in 2.0 to the ones previously introduced, it is clear that the growth of the API has increased gradually. During the interview it was also mentioned that the future plans for the API did not include any major changes, and that only a few minor changes were planned in the near future. The future updates to the API will also be made incrementally, and there will not be a big bang update similar to the one of 2.0. This supports that Law \#3 can be applied to APIs, assuming that the current stage of the life-cycle of the API can be considered as the center of the normal distribution curve of the APIs growth. 
-
-
-\subsection{Law \#4: Conservation of Organisational Stability}
-The changes to the ACAP API has been made very sporadically, where only two new versions have been released since the deployment of version 1.0. As mentioned in Section \ref{law3} the changes introduced in version 1.4 did not involve any changes to the existing API functions. Consequently, the only significant update to the API was made in the transition to version 2.0. The internal development of the API has also been made sporadically, and there have been periods where the API has not been actively developed. This suggests that Law \#4 does not apply to APIs. 
+\subsection{Self Regulation} \label{law3}
+When version 1.4 was introduced, no new functionality or re-structuring was introduced. Version 1.4 only added support for additional build platforms. When comparing the changes introduced in 2.0 to the ones previously introduced, it is clear that the growth of the API has increased gradually. During the interview it was also mentioned that the future plans for the API did not include any major changes, and that only a few minor changes were planned in the near future. The future updates to the API will also be made incrementally, and there will not be a big bang update similar to the one of 2.0. This supports that the law of self regulation applies to APIs, assuming that the current stage of the life-cycle of the API can be considered as the center of the normal distribution curve of the APIs growth. 
 
 
-\subsection{Law \#5: Conservation of Familiarity}
-The SDK that is included with the API was rigorously updated with the introduction of version 2.0. All functionality which was added or modified in version 2.0 was updated accordlingly in the SDK. The same pattern can be seen for the example code, which went through major changes as a result of the changes to the API code. The case company's intent to control the way that their API is used also suggests that the knowledge of how to use the API is of importance, since if the API is used in too many different ways, it will be more difficult for the case company to have relevant documentation and example code. It was also expressed during the interview that further transparency in how the API should be used could be achieved. One example of this is to improve the information to the user regarding which API functions are supported on which hardware types. These facts support that the conservation of familiarity is an important factor to consider when maintaining APIs. 
-
-\subsection{Law \#6: Continuing Growth — the functional content must be continually increased to maintain user satisfaction}
+\subsection{Conservation of Organisational Stability}
+The changes to the ACAP API has been made very sporadically, where only two new versions have been released since the deployment of version 1.0. As mentioned in Section \ref{law3} the changes introduced in version 1.4 did not involve any changes to the existing API functions. Consequently, the only significant update to the API was made in the transition to version 2.0. The internal development of the API has also been made sporadically, and there have been periods where the API has not been actively developed. This suggests that the law of conservation of organisational stability does not apply to APIs. 
 
 
-She reiterated that they want to add new features and modules. They want to encourage applications to be written by their partners, so if they don’t add new modules they will not have new applications created for them. When partners write applications for their cameras, the value of the cameras are enhanced so they would like to encourage partners creating new applications for their cameras.
+\subsection{Conservation of Familiarity}
+The SDK that is included with the API was rigorously updated with the introduction of version 2.0. All functionality which was added or modified in version 2.0 was updated accordlingly in the SDK. The same pattern can be seen for the example code, which went through major changes as a result of the changes to the API code. The case company's intent to control the way that their API is used also suggests that the knowledge of how to use the API is of importance, since if the API is used in too many different ways, it will be more difficult for the case company to have relevant documentation and example code. It was also expressed during the interview that further transparency in how the API should be used could be achieved. One example of this is to improve the information to the user regarding which API functions are supported on which hardware types. These facts support that the law of conservation of familiarity is true for APIs. 
 
-It’s better to provide good solutions so that they don’t need to create their own custom solutions and enable good applications to be made. (Assuming that she's talking about add more functionality so that people won't have to do stuff in their own weird ways)
+\subsection{Continuing Growth}
+Large parts of the changes between the versions were strictly additions of new functional content. 4 new modules were added, and significant additions of new functionality were added to the modules which were re-structured from version 1.4. The interviewee also made it clear that increasing the functionality was one of the major goals with the 2.0 update. This also ties in with the ambition of controlling the way the API users use the API, as mentioned previously. It was also mentioned that the case company had recieved feedback from the API users that more frequent updates to the functional content was desirable, even though this may require them to update their application code. Because of this, we conclude that the law of continuing growth applies to APIs. 
 
-She was surprised that the view was that the API is more stable than they thought it was. i.e. the partners would like more changes. Firmware upgrades always worked with the API, there were very few issues.
-
-\subsection{7 Declining Quality — the quality will appear to decline unless it is rigorously maintained and adapted}
+\subsection{Declining Quality — the quality will appear to decline unless it is rigorously maintained and adapted}
 Updates to documentation
 Updates to interfaces and error handling
 
 It's not 100\% true for APIs, because updating it too often will cause other problems --> ``rigorously''
 
-\subsection{8 Feedback System — multi-level, multi-loop, multi-agent feedback systems}
+\subsection{Feedback System — multi-level, multi-loop, multi-agent feedback systems}
 She would like to get more feedback from the API users and the end-users - to better include this in the feedback loop and in turn use it to form change decisions
 
 No “scientific” theories have been used when creating the APIs - most decisions have been based on experience (expertise) and previous experience
@@ -488,10 +483,6 @@ They had some kind of validation testing whereby they had someone internally att
 
 Communication with users currently only really gives them bug reports, FAQs (Educational Issues) or queries about how to do something could indicate that there are missing features in the API. This is something that the product management deal with, rather than her. She focuses more on the how rather than the what. What it comes to decide what interface to do, PM decide and she then comes along and decides how it would look / be done. 
 
-\section{RQ3 Reverse Engineer}
-Table of hers and ours
-
-And one section discussing why her answers correspond to the categories we chose.
 
 
 
