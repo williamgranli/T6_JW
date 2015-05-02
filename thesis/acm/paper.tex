@@ -42,10 +42,27 @@ William Granli\titlenote{Main author}\\
 
 \maketitle
 \begin{abstract}
-\blindtext
+
+Previous research and/or rationale for performing the study.
+Background: Exploration of the motives and drivers behind changes to APIs has 
+
+
+
+Aims: Hypotheses/propositions to be tested, or goal of the study.
+
+
+Method: Description of the type of study, treatments, number and nature of experimental units (people, teams, algorithms, programs, tasks etc.), experimental design, outcome being measured.
+
+
+Results: Treatment outcome values, level of significance.
+
+
+Conclusions: Limitations of the study, implications of the results, and further work.
+
+
 \end{abstract}
 
-\category{D.2.7}{Software Engineering}{Distribution, Maintenance, Enhancement}[Restructuring, reverse engineering and reengineering]
+\category{D.2.7}{Software Engineering}{Distribution, Maintenance, Enhancement}[Restructuring, reverse engineering, and reengineering]
 \category{K.6.3}{Computing Milieux}{Software Management}[Software Maintenance]
 
 \terms{Theory, Design or Verification/Documentation maybe?}
@@ -395,13 +412,15 @@ Large parts of the changes between the versions were strictly additions of new f
 The interviews established that a groomative motive was not the most major reason for implementing any change. The changes to the example code and the SDK, as well as the re-structured modules are examples of these, where the main motive behind the change was to either prevent unwanted usage or to increase the functional content. These changes did, however, increase the quality and was a substantial part of the changes, which could have been left out. A counterargument to this reasoning can be seen in the module which handles the video data and capturing, which was not changed between the versions, as mentioned in Section \ref{law2}. We therefore settle that the law of declining quality can be applied to APIs. 
 
 \subsection{Feedback System}
-One of the future goals of improvement of the case company is to better include the API users and end-users of the applications in their feedback loop. Currently, the only the API users are included in this feedback loop and the API architect expressed the desire to also include the end-users in this loop. The reasoning for this was to increase the quality and to be able to deliver content which is useful for the users and which leads to good applications being developed. One example of how the API users have been included in the feedback loop, was prior to version 2.0 being released, when API users implemented functionality related to sound, even though there was no interface for this in the API. The experiences of this API user, were later considered when developing the axsound module. One benefit of having a more structured feedback loop, would be that the API developers would be more and faster aware of potential errors in the implementation of the API. Another ambition which was mentioned, was to bring scientific theories and best practices from academia into consideration when developing the API. This would aim to complement the current strategy which is largely based around the expertise and experiences of the API architects. Because of these factors and clearly expressed ambitions, we conclude that the law of feedback system is true for APIs. 
+One of the future goals of improvement of the case company is to better include the API users and end-users of the applications in their feedback loop. Currently, only the API users are included in this feedback loop and the API architect expressed the desire to also include the end-users in this loop. The reasoning for this was to increase the quality, and to be able to deliver content which is useful for the users and which leads to good applications being developed. One example of how the API users have been included in the feedback loop, was prior to version 2.0 being released, when API users implemented functionality related to sound, even though there was no interface for this in the API. The experiences of this API user, were later considered when developing the axsound module. One benefit of having a more structured feedback loop, would be that the API developers would be more and faster aware of potential errors in the implementation of the API. Another ambition which was mentioned, was to bring scientific theories and best practices from academia into consideration when developing the API. This would aim to complement the current strategy which is largely based around the expertise and experiences of the API architects. Because of these factors and clearly expressed ambitions, we conclude that the law of feedback system is true for APIs. 
 
 
 
 \section{Discussion}
 
+\subsection{RQ1}
 Potential ordering:
+
 
 RQ1 - How do companies actively drive API evolution?
 %%Intro to this particular quesiton
@@ -421,6 +440,7 @@ Business rules and motives are not taken into consideration apparently when crea
 
 %See if our numbers match up with previous studies who said roughly 70\% of changes to an API were refactorings. That number is a little high in our case, but it's close!
 
+\subsection{RQ1.1}
 
 RQ1.1 - To what extent can we reverse engineer API change decisions?
 
@@ -428,14 +448,24 @@ After cross examining our results with the interviewee and their responses, we f
 
 For future studies, this technique could be improved by performing more actions along side the code review. For example, having access to and analysing commit logs, design meetings and other such documentation would allow a much more thorough determination of intents to be collected and analysed. 
 
-RQ2
-What this means for industry:
-	Greater emphasis should be placed upon communicating with the end users / application developers. APIs should be made with maintainability and extendibility in mind as they seem to be what changes the most between versions. They should probably improve their feedback system to get more feedback from the API users.
 
-	Obvious benefit for Axis is that the more features == more applications == higher value for their camera. If they have many applications being developed by partners (In part due to the fact they have added more features to the camera API) then the value of their hardware and software will increase. This is probably the case for many other APIs but would need to be studied in some detail to determine the truth behind the statement.
+This should probably be in conclusion, right? /Willy
+       What this means for industry:
+       	Greater emphasis should be placed upon communicating with the end users / application developers. APIs should be made with maintainability and extendibility in mind as they seem to be what changes the most between versions. They should probably improve their feedback system to get more feedback from the API users.
 
-What this means for academia:
-	Academia could benefit from the results as a means for further research - We have found that it's possible to reverse engineer these design decisions from a simple study, so perhaps more advanced studies should be conduct at a larger scale? -- Why though?
+       	Obvious benefit for Axis is that the more features == more applications == higher value for their camera. If they have many applications being developed by partners (In part due to the fact they have added more features to the camera API) then the value of their hardware and software will increase. This is probably the case for many other APIs but would need to be studied in some detail to determine the truth behind the statement.
+
+       What this means for academia:
+       	Academia could benefit from the results as a means for further research - We have found that it's possible to reverse engineer these design decisions from a simple study, so perhaps more advanced studies should be conduct at a larger scale? -- Why though?
+
+\subsection{RQ2}
+The general conclusion: 
+5 laws clearly apply
+2 laws probably apply (not significant)
+1 law clearly doesn't apply
+
+Have a table which relates each theory to each change (after we have re-analysed the one on docs. )
+
 
 
 \section{Conclusion} \label{conclusion}
@@ -466,6 +496,8 @@ It seems that a focus on ecosystems might be starting to come through but that t
 
 %%William add conclusion ideas here
 It's interesting that the partners have mentioned that they want more frequent updates... maybe API developers should be less afraid of updating them? 
+That the part about controlling how the API users use the API was such an important thing is interesting. (Not something we expected). 
+
 
 
 \subsection{Law 1}
