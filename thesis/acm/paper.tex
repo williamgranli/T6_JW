@@ -2,6 +2,9 @@
 
 \documentclass{sig-alternate}
 \usepackage{blindtext}
+\usepackage[english]{babel}
+
+
 
 
 \begin{document}
@@ -20,14 +23,14 @@
 \author{
 % 1st. author
 \alignauthor
-John Burchell\titlenote{Main author}\\
+John Burchell\\
        \affaddr{Computer Science and Engineering}\\
        \affaddr{University of Gothenburg}\\
        \affaddr{Gothenburg, Sweden}\\
        \email{john.a.burchell@gmail.com}
 % 2nd. author
 \alignauthor
-William Granli\titlenote{Main author}\\
+William Granli\\
        \affaddr{Computer Science and Engineering}\\
        \affaddr{University of Gothenburg}\\
        \affaddr{Gothenburg, Sweden}\\
@@ -40,24 +43,32 @@ William Granli\titlenote{Main author}\\
        \email{imed.hammouda@gu.se}
 }
 
+
 \maketitle
+
 \begin{abstract}
 
-Previous research and/or rationale for performing the study.
-Background: Exploration of the motives and drivers behind changes to APIs has 
+
+\textbf{Background } 
+Studies of the motives and drivers behind modifications to APIs have been done before, but platform APIs are, so far, unexplored. Previous work has also not studied APIs from the perspective of widely recognised software evolution theories, such as the Categories of Software Maintenance and Lehman's laws of software evolution. 
+
+\smallskip \noindent
+\textbf{Objective } This study explored how companies actively drive changes to APIs and how APIs evolve from a passive point of view. The aim was also to test how well we could reverse engineer these change decisions. The goal was to study these factors by relating them to existing software evolution theories. 
 
 
+\smallskip \noindent
+\textbf{Method }
+This case study was conducted by investigating the changes between two versions in a platform API and its documentation, and by interview the architects of the API. The changes were analysed from a qualitative and investigative point of view. 
 
-Aims: Hypotheses/propositions to be tested, or goal of the study.
+\smallskip \noindent
+\textbf{Results  }
+This study identified 13 majors changes to the API. The study concluded that the most major driving force for the evolution of APIs is the drive for new functionality and that change decisions to a large extent can be reverse engineered. It was also found that 7 out of 8 of Lehman's laws were applicable to APIs. 
 
 
-Method: Description of the type of study, treatments, number and nature of experimental units (people, teams, algorithms, programs, tasks etc.), experimental design, outcome being measured.
+\smallskip \noindent
+\textbf{Conclusion  }
+This study has provided valuable insight into the evolution of platform APIs. The qualitative analysis can help other companies to improve their API maintenance process. The successful attempt to reverse engineer the change decisions should encourage similar studies to be conducted. The investigation of Lehman's laws show that APIs cannot be generalised and be compared to any type of system. 
 
-
-Results: Treatment outcome values, level of significance.
-
-
-Conclusions: Limitations of the study, implications of the results, and further work.
 
 
 \end{abstract}
