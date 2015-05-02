@@ -209,8 +209,12 @@ The largest \textit{reliability} threat facing our study was the reproducibility
 %Another threat was we were reliant upon being given documentation and code. I.e. they might not give us everything, leave stuff out, ignore things etc.
 
 
-\section{Results RQ1} \label{results}
+\section{Results} \label{results}
+Introduction.
        
+
+
+\subsection{RQ1 Results}
 %This should probably go in Methodology... parts of it at least /W
 Each change between versions has been identified and grouped into four particular categories reflecting what kind of change they were; New, Modified, Removed and General Trends. Each section introduces the change and then discusses what the changes entailed, how we perceived them in relation to the twelve maintenance types, what our interviewee said about the changes and finally how the interviewees views of the changes relate to the maintenance categories. Each change was given a main category of maintenance and a subcategory if appropriate. This information will be used to answer \textbf{RQ1} and \textbf{RQ1.1}.
 
@@ -218,10 +222,11 @@ Each change between versions has been identified and grouped into four particula
 %%Does this paragraph below belong here or somewhere else? Feels a bit odd!    W: Case Company Description I think
 The API itself consisted of two major versions; 1.4 and 2.0. There were no intermediate versions between 1.4 and 2.0. Version 1.4 was actually the same version as 1.0, just with added build options for other hardware platforms. The changes therefore come from the changes between the two major versions. Given that there was an apparent ``big bang'' implementation of the new API, we have tried to determine what existed in the previous version, what was re-implemented and what is brand new.
 
-\subsection{New}
 
-%%TODO Finish this off
-New additions to the API were the most frequent change that we observed. Each addition added new functionality to the API, ranging from controlling the camera, enabling audio analysis, allowing external storage connections and providing a serial port to interface with other devices.
+
+
+%%TODO Finish this off XXX
+%New additions to the API were the most frequent change that we observed. Each addition added new functionality to the API, ranging from controlling the camera, enabling audio analysis, allowing external storage connections and providing a serial port to interface with other devices.
 
 \subsubsection{axptz}
 
@@ -275,10 +280,8 @@ Our interviewee described scenarios whereby a camera could be used with external
 %%Real category
 Given this information, we concluded that we were correct in deciding that this change was also enhancive. Again, we were also correct in the assumption that there were no suitable subcategories for this change.
 
-\subsection{Modified}
-These changes were deemed to be modifications or re-implementations of existing functionality of the API. 
-
-During the interview it was mentioned that one intent behind the re-implementations was to bring them in line with the newly created functionality which takes advantage of Glib, a new kind of error handling and extensive use of callbacks.
+%XXX
+%These changes were deemed to be modifications or re-implementations of existing functionality of the API. During the interview it was mentioned that one intent behind the re-implementations was to bring them in line with the newly created functionality which takes advantage of Glib, a new kind of error handling and extensive use of callbacks.
 
 \subsubsection{axevent}
 
@@ -314,9 +317,9 @@ The interviewee once again clarified how this change was indeed primarily concer
 
 Once again our conclusion was incorrect for the categorisation of this change. Given the information from the interview, we deemed that this change was also primarily groomative with a subcategory of enhancive.
 
-\subsection{Removed}
+%XXX
+%While the changes between versions 1.4 and 2.0 included many deprecations, only one of them was not re-implemented in a new part of the API. 
 
-While the changes between versions 1.4 and 2.0 included many deprecations, only one of them was not re-implemented in a new part of the API. 
 \subsubsection{Burst Mode}
 
 The burst mode feature of the API allowed users to buffer a series of images for closer analysis. This feature was deprecated during the transition between 1.4 and 2.0 and was not re-implemented.
@@ -327,9 +330,8 @@ The interviewee did shed some light onto why this change occurred. We were infor
 
 Given this information we can safely say that we correctly concluded that this was a reductive maintenance task and that there are indeed no other subcategories which are applicable to describe this change.
 
-\subsection{General Trends} 
-
-While the main focus of our investigation of the source code and documentation was to identify changes between the versions, it was also to discover differences larger trends of the API. The trends were also analysed and given an appropriate maintenance category.
+%XXX
+%While the main focus of our investigation of the source code and documentation was to identify changes between the versions, it was also to discover differences larger trends of the API. The trends were also analysed and given an appropriate maintenance category.
 
 \subsubsection{Example Code}
 
@@ -395,7 +397,7 @@ The architects creating the API decided they wished to use Glib which came about
 Architects decided to use glib, part of an internal decision. 
 
 
-\section{RQ2 Lehman}
+\subsection{RQ2 Results}
 The results related to \textbf{RQ2} are structured around each of Lehman's laws and to what extent our findings show that the laws apply to platform APIs. The summary of our findings can be seen in Table \ref{table:lehman}. 
 
 
@@ -428,28 +430,28 @@ The results related to \textbf{RQ2} are structured around each of Lehman's laws 
 
 
 
-\subsection{Continuing Change}
+\subsubsection{Continuing Change}
 The case company described that including new functional content was one of the top priorities for the 2.0 release. This is supported by the characteristic of the changes identified in this study. 4 of the 13 changes were additions of new modules and in the re-implemented modules a lot of functional content was added, too. It was also mentioned that the API users had previously requested more frequent updates to the API, despite the drawbacks this could have. One of the main reasons for continuously adapting the API is also to force (!!!wording) the API users to use the API in the way that it is intended. Previously, many applications which worked around the lacking (!!!negative wording) functionality had been developed. These applications were fully functional, but were developed very differently from user to user (!!!wording). We therefore conclude that the law of continuing change holds for APIs. 
 
-\subsection{Increasing Complexity} \label{sec:law2}
+\subsubsection{Increasing Complexity} \label{sec:law2}
 A large part of the changes made to the API were made to improve the structure and the way that the API is used. Many of these changes were related to the same design choices, which enforced a certain implementation style on the whole API. One example of this is the change to the interfaces which set a standard for the whole API. During the interview it was also concluded that consistency and following certain standards is an important factor to consider when designing APIs. It was also made clear a contributing factor for changing certain parts of the API was to bring it in line with the new interfaces. The interviewee mentioned that one way of achieving this was to follow guidelines or design best practices, but that the company currently did not make use of these. Even though the importance of maintaining the API to reduce complexity was stated, arguments which support that it is of lesser importance than releasing functional content was also presented. One example of where this is evident in the evolution of the API, is in the module that handles the video capturing and video stream. It was decided that this module would not be re-written to conform with the new interface standard, as there was not much functional content that would change in this module, anyway (!!!reword). Thus, the law of increasing complexity holds for APIs, but there is evidence that suggests that decreasing the complexity is not of the highest priority. 
 
-\subsection{Self Regulation} \label{sec:law3}
+\subsubsection{Self Regulation} \label{sec:law3}
 When version 1.4 was introduced, no new functionality or re-structuring was introduced. Version 1.4 only added support for additional build platforms. When comparing the changes introduced in 2.0 to the ones previously introduced, it is clear that the growth of the API has increased gradually. During the interview it was also mentioned that the future plans for the API did not include any major changes and that only a few minor changes were planned in the near future. The future updates to the API will also be made incrementally and there will not be a big bang update similar to the one of 2.0. This supports that the law of self regulation applies to APIs, assuming that the current stage of the life-cycle of the API can be considered as the centre of the normal distribution curve of the APIs growth. 
 
-\subsection{Conservation of Organisational Stability}
+\subsubsection{Conservation of Organisational Stability}
 The changes to the ACAP API has been made very sporadically, where only two new versions have been released since the deployment of version 1.0. As mentioned in Section \ref{law3}, the changes introduced in version 1.4 did not involve any changes to the existing API functions. Consequently, the only significant update to the API was made in the transition to version 2.0. The internal development of the API has also been made sporadically and there have been periods where the API has not been actively developed. This suggests that the law of conservation of organisational stability does not apply to APIs. 
 
-\subsection{Conservation of Familiarity}
+\subsubsection{Conservation of Familiarity}
 The SDK that is included with the API was rigorously updated with the introduction of version 2.0. All functionality which was added or modified in version 2.0 was updated accordingly in the SDK. The same pattern can be seen for the example code, which went through major changes as a result of the changes to the API code. The case company's intent to control the way that their API is used also suggests that the knowledge of how to use the API is of importance, since if the API is used in too many different ways, it will be more difficult for the case company to have relevant documentation and example code. It was also expressed during the interview that further transparency in how the API should be used could be achieved. One example of this is to improve the information to the user regarding which API functions are supported on which hardware types. These facts support that the law of conservation of familiarity is true for APIs. 
 
-\subsection{Continuing Growth}
+\subsubsection{Continuing Growth}
 Large parts of the changes between the versions were strictly additions of new functional content. 4 new modules were added and significant additions of new functionality were added to the modules which were re-structured from version 1.4. The interviewee also made it clear that increasing the functionality was one of the major goals with the 2.0 update. This also ties in with the ambition of controlling the way the API users use the API, as mentioned previously. It was also mentioned that the case company had received feedback from the API users that more frequent updates to the functional content was desirable, even though this may require them to update their application code. Because of this, we conclude that the law of continuing growth applies to APIs. 
 
-\subsection{Declining Quality}
+\subsubsection{Declining Quality}
 The interviews established that a groomative motive was not the most major reason for implementing any change. The changes to the example code and the SDK, as well as the re-structured modules are examples of these, where the main motive behind the change was to either prevent unwanted usage or to increase the functional content. These changes did, however, increase the quality and was a substantial part of the changes, which could have been left out. A counterargument to this reasoning can be seen in the module which handles the video data and capturing, which was not changed between the versions, as mentioned in Section \ref{law2}. We therefore settle that the law of declining quality can be applied to APIs, but that there is data that implies that reducing quality is not of high importance. 
 
-\subsection{Feedback System}
+\subsubsection{Feedback System}
 One of the future goals of improvement of the case company is to better include the API users and end-users of the applications in their feedback loop. Currently, only the API users are included in this feedback loop and the API architect expressed the desire to also include the end-users in this loop. The reasoning for this was to increase the quality, and to be able to deliver content which is useful for the users and which leads to good applications being developed. One example of how the API users have been included in the feedback loop, was prior to version 2.0 being released, when API users implemented functionality related to sound, even though there was no interface for this in the API. The experiences of this API user, were later considered when developing the axsound module. One benefit of having a more structured feedback loop, would be that the API developers would be more and faster aware of potential errors in the implementation of the API. Another ambition which was mentioned, was to bring scientific theories and best practices from academia into consideration when developing the API. This would aim to complement the current strategy which is largely based around the expertise and experiences of the API architects. Because of these factors and clearly expressed ambitions, we conclude that the law of feedback system is true for APIs. 
 
 
@@ -535,9 +537,6 @@ That the part about controlling how the API users use the API was such an import
 
 
 
-\subsection{Law 1}
-
-Problem: Leads to potentially unsafe implementations to get around shortcomings of the API
 
 
 \section{Acknowledgments}
