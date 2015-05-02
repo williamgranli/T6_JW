@@ -73,7 +73,7 @@ This study has provided valuable insight into the evolution of platform APIs. Th
 
 \end{abstract}
 
-\category{D.2.7}{Software Engineering}{Distribution, Maintenance, Enhancement}[Restructuring, reverse engineering, and reengineering]
+\category{D.2.7}{Software Engineering}{Distribution, Maintenance, Enhancement}[Restructuring, reverse engineering, and re-engineering]
 \category{K.6.3}{Computing Milieux}{Software Management}[Software Maintenance]
 
 \terms{Theory, Design or Verification/Documentation maybe?}
@@ -103,9 +103,9 @@ Due to the negative implications that modifications to APIs cause for its users,
 
 \subsection{Research Questions} \label{rqs}
 \begin{description}
-\item[\textbf{RQ1:}] How do companies actively drive API evolution?
-\item[\textbf{RQ1.1:}] To what extent can we reverse engineer API change decisions?
-\item[\textbf{RQ2:}] How do APIs ``passively'' evolve?
+\item[\textbf{RQ1}] How do companies actively drive API evolution?
+\item[\textbf{RQ1.1}] To what extent can we reverse engineer API change decisions?
+\item[\textbf{RQ2}] How do APIs ``passively'' evolve?
 
 
 \end{description}
@@ -144,8 +144,8 @@ The case was selected using convenience sampling \cite{flyvbjerg2006five} and a 
 %Try to motivate why other sampling methods weren't used.
 
 %Info from the interview, add to this section
-Has been released, in the form we looked at (supports that we’re doing a ‘real’ case study)
-They have “partners” which develop applications using their API. These applications are then used by the end-users of the camera. 
+Has been released, in the form we looked at (supports that we’re doing a ``real'' case study)
+They have partners which develop applications using their API. These applications are then used by the end-users of the camera. 
 
 %%
 Hardware
@@ -156,7 +156,7 @@ Some have audio, some don’t, for example.
 
 \section{Methodology} \label{methodology}
 %Intro and summary
-This study has been conducted using the case study methodology \cite{runeson2009guidelines}. The goal of the study was twofold. Firstly, the aim was to empirically \textit{explore} the motives behind changes to APIs and secondly, our ambition was to \textit{validate} the results' level of correctness by comparing our findings with the case company's explanation of their motives. Our research can be classified as an embedded case study \cite{yin2013case}, since both the API code and API documentation have been used as units of analysis. 
+This study has been conducted using the case study meth-odology \cite{runeson2009guidelines}. The goal of the study was twofold. Firstly, the aim was to empirically \textit{explore} the motives behind changes to APIs and secondly, our ambition was to \textit{validate} the results' level of correctness by comparing our findings with the case company's explanation of their motives. Our research can be classified as an embedded case study \cite{yin2013case}, since both the API code and API documentation have been used as units of analysis. 
 
 %Reasons for choosing case study
 The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing literature \cite{benbasat1987case} \cite{runeson2009guidelines} \cite{yin2013case} \cite{robson2002real}. An alternative approach that was considered was design research, but if a prototype API was to be used instead of one which is tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines}. An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change and that input from the industry is vital to the success of the research; especially to be able to answer \textbf{RQ2}. 
@@ -209,14 +209,14 @@ The largest \textit{reliability} threat facing our study was the reproducibility
 %Another threat was we were reliant upon being given documentation and code. I.e. they might not give us everything, leave stuff out, ignore things etc.
 
 
-\section{RQ1} \label{results}
+\section{Results RQ1} \label{results}
        
 %This should probably go in Methodology... parts of it at least /W
 Each change between versions has been identified and grouped into four particular categories reflecting what kind of change they were; New, Modified, Removed and General Trends. Each section introduces the change and then discusses what the changes entailed, how we perceived them in relation to the twelve maintenance types, what our interviewee said about the changes and finally how the interviewees views of the changes relate to the maintenance categories. Each change was given a main category of maintenance and a subcategory if appropriate. This information will be used to answer \textbf{RQ1} and \textbf{RQ1.1}.
 
 
 %%Does this paragraph below belong here or somewhere else? Feels a bit odd!    W: Case Company Description I think
-The API itself consisted of two major versions; 1.4 and 2.0. There were no intermediate versions between 1.4 and 2.0. Version 1.4 was actually the same version as 1.0, just with added build options for other hardware platforms. The changes therefore come from the changes between the two major versions. Given that there was an apparent "big bang" implementation of the new API, we have tried to determine what existed in the previous version, what was re-implemented and what is brand new.
+The API itself consisted of two major versions; 1.4 and 2.0. There were no intermediate versions between 1.4 and 2.0. Version 1.4 was actually the same version as 1.0, just with added build options for other hardware platforms. The changes therefore come from the changes between the two major versions. Given that there was an apparent ``big bang'' implementation of the new API, we have tried to determine what existed in the previous version, what was re-implemented and what is brand new.
 
 \subsection{New}
 
@@ -260,7 +260,7 @@ Enhancive was once again chosen to be the most applicable category of change giv
 The limited storage options for the Axis devices meant that this feature was strongly requested by API users and as such was included in this new version of the API.
 
 %%Relate it to Categories
-The information gathered from the interview suggests (!!!Better word than this?) that were correct in our choice of enhancive for this change. Once more there was no inclusion of an appropriate subcategory.
+The information gathered from the interview supported that were correct in our choice of enhancive for this change. Once more there was no inclusion of an appropriate subcategory.
 
 \subsubsection{axserialport}
 
@@ -278,7 +278,7 @@ Given this information, we concluded that we were correct in deciding that this 
 \subsection{Modified}
 These changes were deemed to be modifications or re-implementations of existing functionality of the API. 
 
-In regards to re-implementations, during the interview it was mentioned that one intent behind the re-implementations was to bring them in-line with the newly created functionality which take advantage of Glib, a new kind of error handling and extensive use of callbacks.
+During the interview it was mentioned that one intent behind the re-implementations was to bring them in line with the newly created functionality which takes advantage of Glib, a new kind of error handling and extensive use of callbacks.
 
 \subsubsection{axevent}
 
@@ -396,7 +396,7 @@ Architects decided to use glib, part of an internal decision.
 
 
 \section{RQ2 Lehman}
-This section will present results related to \textbf{RQ2}. The information introduced was collected during the interview with the case company. 
+This section will present results related to \textbf{RQ2}. The results are structured around how much our results indicate that each of Lehman's laws apply to platform APIs. 
 
 
 \subsection{Continuing Change}
@@ -426,6 +426,7 @@ One of the future goals of improvement of the case company is to better include 
 
 
 \section{Discussion}
+In this section we will discuss the results of our study. 
 
 \subsection{RQ1}
 Potential ordering:
@@ -468,6 +469,7 @@ For future studies, this technique could be improved by performing more actions 
        	Academia could benefit from the results as a means for further research - We have found that it's possible to reverse engineer these design decisions from a simple study, so perhaps more advanced studies should be conduct at a larger scale? -- Why though?
 
 \subsection{RQ2}
+The 
 The general conclusion: 
 5 laws clearly apply
 2 laws probably apply (not significant)
