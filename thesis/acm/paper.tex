@@ -144,8 +144,7 @@ From the APIs we collected method names, parameters and return types. (!!!Add mo
 The data collection from code and documentation was performed independently by both researchers, to reduce the risk of human errors affecting the results. If the data collected by each researcher differed, the cause of the discrepancy was investigated and resolved. 
 
 %Interviews !!!improve later
-After the initial source code inspection had been performed, interviews were conducted. The main purpose of these was to validate our findings during the code inspection with the designers of the APIs. Furthermore, the interviews were conducted to provide additional insight into decisions and motives behind changes that might have been overlooked during the code inspection. The final reason for interviewing the designers of the APIs was to provide further insight of the users of the API. 
-
+After the initial source code inspection had been performed, interviews were conducted. The main purpose of these was to validate our findings during the code inspection with the designers of the APIs. Furthermore, the interviews were conducted to provide additional insight into decisions and motives behind changes that might have been overlooked during the code inspection. The final reason for interviewing the designers of the APIs was to provide further insight of the users of the API and how their decisions, needs and requirements have affected the development of the API.
 
 
 \subsection{Data Analysis} \label{data_analysis}
@@ -176,10 +175,12 @@ Regarding \textit{external validity}, generalisability and the appropriateness o
 %Reliability
 The largest \textit{reliability} threat facing our study was the reproducibility. To counter this threat, we have followed a well-proven method for analysing the collected data. Furthermore, as mentioned previously, we have attempted to limit bias and ambiguity in our interview questions where possible. To ensure clarity of the questions, we have field tested the interview with some of our peers, improving the questions based on their feedback.
 
+%Another threat was we were reliant upon being given documentation and code. I.e. they might not give us everything, leave stuff out, ignore things etc.
+
 
 \section{RQ1} \label{results}
 
-Each change between versions has been identified and grouped into three particular categories reflecting what kind of change they were; New, Modified, Removed and General Trends. Each section introduces the change and then discusses what the changes entailed, how we perceived them in relation to the twelve maintenance types, what our interviewee said about the changes and finally how the interviewees views of the changes relate to the maintenance categories. Each change was given a main category of maintenance and a subcategory if appropriate. This information will be used to answer \textbf{RQ1} and \textbf{RQ1.1}.
+Each change between versions has been identified and grouped into four particular categories reflecting what kind of change they were; New, Modified, Removed and General Trends. Each section introduces the change and then discusses what the changes entailed, how we perceived them in relation to the twelve maintenance types, what our interviewee said about the changes and finally how the interviewees views of the changes relate to the maintenance categories. Each change was given a main category of maintenance and a subcategory if appropriate. This information will be used to answer \textbf{RQ1} and \textbf{RQ1.1}.
 
 
 %%Does this paragraph below belong here or somewhere else? Feels a bit odd!
@@ -414,17 +415,21 @@ Desire from some partners to have more have even more additional features etc
 
 Business rules and motives are not taken into consideration apparently when creating these APIs. They probably should be!
 
-See if our numbers match up with previous studies who said roughly 70\% of changes to an API were refactorings. That number is a little high in our case, but it's close!
+%See if our numbers match up with previous studies who said roughly 70\% of changes to an API were refactorings. That number is a little high in our case, but it's close!
 
 
-RQ1.1
+RQ1.1 - To what extent can we reverse engineer API change decisions?
+Roughly 78\% of our categorisation matched the actual categorisation of the changes. While it is true that we did not manage to successfully categorise every single change, we did categorise a high enough percentage to form a solid conclusion; it is possible to reverse engineer the majority of change decisions using this categorisation technique.
+
+For future studies, this technique could be improved by performing more actions along side the code review. For example, having access to commit logs, design meetings and other such documentation would allow a much more thorough determination of intents to be performed. 
+
 RQ2
 What this means for industry:
 	Greater emphasis should be placed upon communicating with the end users / application developers. APIs should be made with maintainability and extendibility in mind as they seem to be what changes the most between versions.
 
-	Obvious benefit for Axis is that the more features == higher value for their camera. If they have many applications being developed by parters (In part due to the fact they have added more features to the camera API) then the value of their hardware and software will increase. This is probably the case for many other APIs but would need to be studied in some detail to determine the truth behind the statement.
+	Obvious benefit for Axis is that the more features == more applications == higher value for their camera. If they have many applications being developed by partners (In part due to the fact they have added more features to the camera API) then the value of their hardware and software will increase. This is probably the case for many other APIs but would need to be studied in some detail to determine the truth behind the statement.
 
-What this means for academia
+What this means for academia:
 
 
 \section{Conclusion} \label{conclusion}
