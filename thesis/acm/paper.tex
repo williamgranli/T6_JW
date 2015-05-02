@@ -50,7 +50,7 @@ William Granli\\
 
 
 \textbf{Background } 
-Studies of the motives and drivers behind modifications to APIs have been done before, but platform APIs are, so far, unexplored. Previous work has also not studied APIs from the perspective of widely recognised software evolution theories, such as the Categories of Software Maintenance and Lehman's laws of software evolution. 
+Studies of the motives and drivers behind modifications to APIs have been done before, but platform APIs are, so far, unexplored. Previous work has also not studied APIs from the perspective of widely recognised software evolution theories, such as the Types of Software Evolution and Software Maintenance and Lehman's laws of software evolution. 
 
 \smallskip \noindent
 \textbf{Objective } This study explored how companies actively drive changes to APIs and how APIs evolve from a passive point of view. The aim was also to test how well we could reverse engineer these change decisions. The goal was to study these factors by relating them to existing software evolution theories. 
@@ -210,11 +210,12 @@ The largest \textit{reliability} threat facing our study was the reproducibility
 
 
 \section{RQ1} \label{results}
-
+       
+%This should probably go in Methodology... parts of it at least /W
 Each change between versions has been identified and grouped into four particular categories reflecting what kind of change they were; New, Modified, Removed and General Trends. Each section introduces the change and then discusses what the changes entailed, how we perceived them in relation to the twelve maintenance types, what our interviewee said about the changes and finally how the interviewees views of the changes relate to the maintenance categories. Each change was given a main category of maintenance and a subcategory if appropriate. This information will be used to answer \textbf{RQ1} and \textbf{RQ1.1}.
 
 
-%%Does this paragraph below belong here or somewhere else? Feels a bit odd!
+%%Does this paragraph below belong here or somewhere else? Feels a bit odd!    W: Case Company Description I think
 The API itself consisted of two major versions; 1.4 and 2.0. There were no intermediate versions between 1.4 and 2.0. Version 1.4 was actually the same version as 1.0, just with added build options for other hardware platforms. The changes therefore come from the changes between the two major versions. Given that there was an apparent "big bang" implementation of the new API, we have tried to determine what existed in the previous version, what was re-implemented and what is brand new.
 
 \subsection{New}
@@ -407,11 +408,8 @@ A large part of the changes made to the API were made to improve the structure a
 \subsection{Self Regulation} \label{law3}
 When version 1.4 was introduced, no new functionality or re-structuring was introduced. Version 1.4 only added support for additional build platforms. When comparing the changes introduced in 2.0 to the ones previously introduced, it is clear that the growth of the API has increased gradually. During the interview it was also mentioned that the future plans for the API did not include any major changes and that only a few minor changes were planned in the near future. The future updates to the API will also be made incrementally and there will not be a big bang update similar to the one of 2.0. This supports that the law of self regulation applies to APIs, assuming that the current stage of the life-cycle of the API can be considered as the centre of the normal distribution curve of the APIs growth. 
 
-
 \subsection{Conservation of Organisational Stability}
 The changes to the ACAP API has been made very sporadically, where only two new versions have been released since the deployment of version 1.0. As mentioned in Section \ref{law3} the changes introduced in version 1.4 did not involve any changes to the existing API functions. Consequently, the only significant update to the API was made in the transition to version 2.0. The internal development of the API has also been made sporadically and there have been periods where the API has not been actively developed. This suggests that the law of conservation of organisational stability does not apply to APIs. 
-
-
 
 \subsection{Conservation of Familiarity}
 The SDK that is included with the API was rigorously updated with the introduction of version 2.0. All functionality which was added or modified in version 2.0 was updated accordingly in the SDK. The same pattern can be seen for the example code, which went through major changes as a result of the changes to the API code. The case company's intent to control the way that their API is used also suggests that the knowledge of how to use the API is of importance, since if the API is used in too many different ways, it will be more difficult for the case company to have relevant documentation and example code. It was also expressed during the interview that further transparency in how the API should be used could be achieved. One example of this is to improve the information to the user regarding which API functions are supported on which hardware types. These facts support that the law of conservation of familiarity is true for APIs. 
@@ -457,10 +455,10 @@ RQ1.1 - To what extent can we reverse engineer API change decisions?
 
 After cross examining our results with the interviewee and their responses, we found that roughly 78\% of our categorisation matched the actual categorisation of the changes. While it is obvious that we did not manage to successfully categorise every single change, we did categorise a high enough percentage to form a solid conclusion; it is possible to reverse engineer the majority of change decisions using this categorisation technique.
 
-For future studies, this technique could be improved by performing more actions along side the code review. For example, having access to and analysing commit logs, design meetings and other such documentation would allow a much more thorough determination of intents to be collected and analysed. 
+For future studies, this technique could be improved by performing more actions along side the code review. For example, having access to and analysing commit logs, design meetings and other such documentation would allow a much more thorough determination of intents to be collected and analysed. %%Conclusion stuff /Willy
 
 
-This should probably be in conclusion, right? /Willy
+%%The following should probably be in conclusion, right? /Willy
        What this means for industry:
        	Greater emphasis should be placed upon communicating with the end users / application developers. APIs should be made with maintainability and extendibility in mind as they seem to be what changes the most between versions. They should probably improve their feedback system to get more feedback from the API users.
 
