@@ -55,15 +55,16 @@ William Granli\\
 \begin{abstract}
 
 
-\textbf{Background } 
+\textbf{Background  } 
 Studies of the motives and drivers behind modifications to APIs have been done before, but platform APIs are, so far, unexplored. Previous work has also not studied APIs from the perspective of widely recognised software evolution theories, such as the Types of Software Evolution and Software Maintenance and Lehman's laws of software evolution. 
 
 \smallskip \noindent
-\textbf{Objective } This study explored how companies actively drive changes to APIs and how APIs evolve from a passive point of view. The aim was also to test how well we could reverse engineer these change decisions. The goal was to study these factors by relating them to existing software evolution theories. 
+\textbf{Objective  } 
+This study explored how companies actively drive changes to APIs and how APIs evolve from a passive point of view. The aim was also to test how well we could reverse engineer these change decisions. The goal was to study these factors by relating them to existing software evolution theories. 
 
 
 \smallskip \noindent
-\textbf{Method }
+\textbf{Method  }
 This case study was conducted by investigating the changes between two versions in a platform API and its documentation, and by interview the architects of the API. The changes were analysed from a qualitative and investigative point of view. 
 
 \smallskip \noindent
@@ -496,7 +497,10 @@ One of the future goals of improvement of the case company is to better include 
 
 
 \section{Discussion}
-In this section we will discuss the results of our study. 
+Intro with a generic motivation for the study e.g. ``the results and insight into the API development suggest the following things'':
+
+``The results of our study allow us to formulate the following implications of our study:''
+
 
 \subsection{RQ1}
 
@@ -542,35 +546,36 @@ Hardware hasn't direclty cotnributed to driving the evolution
 \subsection{RQ1.1}
 
 
-1. Added functionality or similar is easy to reverse engineer
 
+\noindent
+\textbf{Functionality is reverse engineerable  } 
+All changes which main motivation were to either add or remove functionality were accurately predicted. These changes were the most major ones, and it was expressed during the interview that these changes were the main motive behind the introduction of the new version. In summary, 11 out of a total 13 changes were correctly predicted. It is also interesting to note that all changes which were not assigned any sub-category were correctly predicted. This supports that such changes have a clearer intent and are perhaps more well-defined. 
 
-2. It's hard to distinguish between maintainability/quality-related changes and refactoring/groomative-related changes
-
-Bottom line: It is possible to reverse engineer to some extent
--While it is obvious that we did not manage to successfully categorise every single change, we did categorise a high enough percentage to form a solid conclusion; it is possible to reverse engineer the majority of change decisions using this categorisation technique.
-
-
+\smallskip \noindent
+\textbf{``Structural'' changes are not reverse engineerable  }
+3 out of 5 changes which did not add functionality, but rather were introduced to redcue complexity and increase quality were correctly predicted. The two changes which were not predicted correctly were wrong because the main-motivation was mixed up with the sub-intention (!!!re-phrase). This shows that although the prediction was incorrect, the general reasoning was correct. Our predictions were accurate enough to allow us to form a reliable conlusion which created a good means for discussion with the company (!!!re-phrase). 
 
 
 
 
 
 \subsection{RQ2}
-1.
-Feedback system: 
+
+\noindent
+\textbf{Feedback system  }
 Something that is very important and might be overlooked in API development/evolution
 
-
-2. 
-Why don't all theories apply? 
+\smallskip \noindent
+\textbf{Why don't all theories apply?  }
 Try explain what the reason might be, by comparing APIs to normal systems. 
 (Complexity and quality) These apply, but it seems that they are not very important compared to for exmaple functionality. Maybe they are true to a lesser extent compared to normal systems. 
 This is interesting becaues it means one cannot assume that APIs are e-type systems and it cannot be compared to ``normal'' systems in some cases. 
 
 
-3.
-The true ones 
+
+\smallskip \noindent
+\textbf{The true ones  }
+
 List the ones that we found a lot of evidence  (the most true: 6,7) (1, 3, 5) and explain why they are true by linking it to RQ1 results
 
 
