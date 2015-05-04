@@ -234,6 +234,29 @@ Introduction.
 
 Specifically we found that 53.8\% of the changes were enhancive changes, 7.7\% were adaptive and the remaining 38.5\% were changes specifically aimed at improving the maintainability of the API.
 
+\begin{table}
+       \centering
+       \begin{tabular}[Ht]{|l|c|c|}
+       \hline
+       \textbf{Category} & \textbf{Prediction} & \textbf{Actual} \\
+       \hline
+       Updative & 15.4\% & 7.7\% \\
+       \hline
+       Groomative & 7.7\% & 0.0\% \\
+       \hline
+       Preventive & 7.7\% & 15.4\% \\
+       \hline
+       Enhancive & 53.8\% & 53.8\% \\
+       \hline
+       Reductive & 7.7\% & 7.7\% \\
+       \hline
+       Adaptive & 15.4\% & 7.7\% \\
+       \hline
+       \end{tabular}
+       \caption{Category Distribution}
+       \label{table:Categories}
+\end{table}
+
 
 
 %%TODO Finish this off XXX
@@ -326,7 +349,7 @@ The interviewee again described how the main intent to changing this part of the
 
 Our conclusion of enhancive and groomative was also backwards for this change. As per the previous change, the primary intent was to bring these parts of the API into line with the new standard; improving functionality was an added bonus. 
 
-\subsubsection{axparameter}
+\subsubsection{ax\_parameter}
 
 %%Describe the change 
 The final re-implementation updated the parameter setting features of the API. This particular module had very few changes to it's functionality except for bringing into line, once again, with the new standard.
@@ -481,17 +504,16 @@ In this section we will discuss the results of our study.
 
 Overwhelmingly, the primary driving factor behind API evolution appears to have been the desire for new API functionality. We found strong evidence to suggest that most, if not all of the additions, re-implementations and functional changes were undertaken to include functionality that the partners desired.
 
-These data seem to align with the comments made during the interview. For example, the interviewee expressed a desire to have features be added to the API more rapidly and more quickly than they have previously. This sentiment was also expressed to the interviewee by certain partners who suggested that the API was too stable and citing their wish for more features and more frequent updates to the API. 
+These data seem to align with the comments made during the interview. For example, the interviewee expressed a desire to have features be added to the API more rapidly and more quickly than they have previously. This sentiment was also expressed to the interviewee by certain partners who suggested that the API was too stable, citing their wish for additional features and more frequent updates to the API. 
 
 %The most interesting parts (and reflections + more information about these "trends")
 This leads to the conclusion (!!probably avoid that word in discussion) that the inclusion of new features and the maintainability of an API are two very strong drivers of API evolution.
 
-% 1 - Desire for new functionality
+% 1 - Desire for new functionality 
 % 2 - Push for new functionality from partners
 % 3 - Desire for a well designed API, interface improvements
-% 4 - Desire to have a more maintainable API
-%
-
+% 4 - Desire to have a maintainable API
+% 5 - The majority of changes added to the API, rather than removed - Seems to support the paper which said most changes are refactorings?
 %
 
 %%% Notes and thoughts
