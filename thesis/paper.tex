@@ -500,31 +500,48 @@ In this section we will discuss the results of our study.
 
 \subsection{RQ1}
 
-%Summary of the results (overview)
+1. 
+Added functionality is a major factor
+-Requests from partners
+-Business motive related to more functionality = more sold cameras
+
 
 Overwhelmingly, the primary driving factor behind API evolution appears to have been the desire for new API functionality. We found strong evidence to suggest that most, if not all of the additions, re-implementations and functional changes were undertaken to include functionality that the partners desired.
 
-These data seem to align with the comments made during the interview. For example, the interviewee expressed a desire to have features be added to the API more rapidly and more quickly than they have previously. This sentiment was also expressed to the interviewee by certain partners who suggested that the API was too stable, citing their wish for additional features and more frequent updates to the API. 
 
-%The most interesting parts (and reflections + more information about these "trends")
-This leads to the conclusion (!!probably avoid that word in discussion) that the inclusion of new features and the maintainability of an API are two very strong drivers of API evolution.
+2. 
+Maintainablity is important, but where that was changed; funcitoanlity changes were alos made
+While are important and while it was mentioend during the interview that the groomative changes would hav ehappend in any case, there is not clear evidence for that allows us to make this concrete/bold claim. 
+*Maintianabikltuy/groomative changes usually affect many places (i.e. standardization is very important) (relate it to ripple effects paper)
 
-% 1 - Desire for new functionality 
-% 2 - Push for new functionality from partners
-% 3 - Desire for a well designed API, interface improvements
-% 4 - Desire to have a maintainable API
-% 5 - The majority of changes added to the API, rather than removed - Seems to support the paper which said most changes are refactorings?
-%
 
-%%% Notes and thoughts
-%Consistent with Lehmans Laws - Continuing growth, feedback systems seem to be very important.
-%Desire from some partners to have more have even more additional features etc
-%Business rules and motives are not taken into consideration apparently when creating these APIs. They probably should be!
+3. 
+Controlling the way the users use the applicaitons is very important (error handling, example code, interfaces)
+
+
+4. 
+Relate back to other literature and say that deprecations are preferred before removing, but that removing is recommended in certain cases (i.e when they really dont want ppl to use the function)
+*Dont do it without investigating the possible effects of removing something
+*Dont remove too much at once
+
+
+5. 
+Changes to documentation/example code are not important enough to drive changes to API, but they make up a large part of the change (although it's strictly updative (change cuz something else was changed))
+
+6. Hardware was not a driving factor (is this mentioned enough in the prev secitons?)
+Hardware hasn't direclty cotnributed to driving the evolution
+
+
+
+
+
+
+
 
 
 \subsection{RQ1.1}
 
-%Summary of the results (overview)
+
 
 
 RQ1.1 - To what extent can we reverse engineer API change decisions?
@@ -579,10 +596,12 @@ It seems that a focus on ecosystems might be starting to come through but that t
 %%William add conclusion ideas here
 It's interesting that the partners have mentioned that they want more frequent updates... maybe API developers should be less afraid of updating them? 
 That the part about controlling how the API users use the API was such an important thing is interesting. (Not something we expected). 
+-Relate to 80% refactorings paper and say that we found different results
+*This is an intersting note if we want to compare platform apis and library apis to say that functionality changes more often in platform apis for example
 
 
 
-
+%Business rules and motives are not taken into consideration apparently when creating these APIs. They probably should be!
 
 \section{Acknowledgments}
 We would like to thank Axis and that project at GU. 
