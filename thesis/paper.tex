@@ -158,6 +158,9 @@ Hardware
 The API platform is developed for many different types of cameras. 
 Some have audio, some don’t, for example.
 
+%%Does this paragraph below belong here or somewhere else? Feels a bit odd!    W: Case Company Description I think
+The API itself consisted of two major versions; 1.4 and 2.0. There were no intermediate versions between 1.4 and 2.0. Version 1.4 was actually the same version as 1.0, just with added build options for other hardware platforms. The changes therefore come from the changes between the two major versions. Given that there was an apparent ``big bang'' implementation of the new API, we have tried to determine what existed in the previous version, what was re-implemented and what is brand new.
+
 
 
 \section{Methodology} \label{methodology}
@@ -197,6 +200,9 @@ Following the analysis of the archival data, the results of the interviews were 
 %Relate to RQs
 The software evolution categories \cite{chapin2001types} and Lehman's laws \cite{lehman1980programs} were analysed to allow us to be able to answer \textbf{RQ1}. The software evolution categories were used to map and explore motives behind changes and Lehman's laws were used to see what drives the natural evolution of APIs. Our ability to correctly predict the motives compared to the actual motives of the designers which were made clear during the interviews, will serve as the basis for answering \textbf{RQ2}.
 
+%This should probably go in Methodology... parts of it at least /W
+Each change between versions has been identified and grouped into four particular categories reflecting what kind of change they were; New, Modified, Removed and General Trends. Each section introduces the change and then discusses what the changes entailed, how we perceived them in relation to the twelve maintenance types, what our interviewee said about the changes and finally how the interviewees views of the changes relate to the maintenance categories. Each change was given a main category of maintenance and a subcategory if appropriate. This information will be used to answer \textbf{RQ1} and \textbf{RQ1.1}.
+
 
 \subsection{Validity Threats} \label{validity_threats}
 In this section we discuss possible threats to construct validity, internal validity, external validity and reliability \cite{runeson2009guidelines}.
@@ -217,34 +223,45 @@ The largest \textit{reliability} threat facing our study was the reproducibility
 
 \section{Results} \label{results}
 Introduction.
-       
 
+%%Intoduce the four sections added, removed, modified & general trends.
 
 \subsection{RQ1 Results}
-%This should probably go in Methodology... parts of it at least /W
-Each change between versions has been identified and grouped into four particular categories reflecting what kind of change they were; New, Modified, Removed and General Trends. Each section introduces the change and then discusses what the changes entailed, how we perceived them in relation to the twelve maintenance types, what our interviewee said about the changes and finally how the interviewees views of the changes relate to the maintenance categories. Each change was given a main category of maintenance and a subcategory if appropriate. This information will be used to answer \textbf{RQ1} and \textbf{RQ1.1}.
+
+%% Check what willy wrote.
+%%Explain structure of this section around the RQ and a summary of it. Table with the percentages from both us and her.
 
 
-%%Does this paragraph below belong here or somewhere else? Feels a bit odd!    W: Case Company Description I think
-The API itself consisted of two major versions; 1.4 and 2.0. There were no intermediate versions between 1.4 and 2.0. Version 1.4 was actually the same version as 1.0, just with added build options for other hardware platforms. The changes therefore come from the changes between the two major versions. Given that there was an apparent ``big bang'' implementation of the new API, we have tried to determine what existed in the previous version, what was re-implemented and what is brand new.
-
+Specifically we found that 53.8\% of the changes were enhancive changes, 7.7\% were adaptive and the remaining 38.5\% were changes specifically aimed at improving the maintainability of the API.
 
 
 
 %%TODO Finish this off XXX
 %New additions to the API were the most frequent change that we observed. Each addition added new functionality to the API, ranging from controlling the camera, enabling audio analysis, allowing external storage connections and providing a serial port to interface with other devices.
 
+
+%XXX
+%These changes were deemed to be modifications or re-implementations of existing functionality of the API. During the interview it was mentioned that one intent behind the re-implementations was to bring them in line with the newly created functionality which takes advantage of Glib, a new kind of error handling and extensive use of callbacks.
+
+%XXX
+%While the main focus of our investigation of the source code and documentation was to identify changes between the versions, it was also to discover differences larger trends of the API. The trends were also analysed and given an appropriate maintenance category.
+
+%XXX
+%While the changes between versions 1.4 and 2.0 included many deprecations, only one of them was not re-implemented in a new part of the API. 
+
+%Discuss how there were many modifications but we've classified them as re-implementations. Includes a deprecation and a replacement of that deprecation. Alternative was to analyse modify them as both an addition and a deprecation.
+
 \subsubsection{axptz}
 
 This change introduced the ability to perform Pan, Tilt and Zoom (ptz) manoeuvres both mechanically and digitally on the camera. For example, zooming in on a particular section of a large image, panning the camera to the left to view a certain area. 
 
-We concluded that this change was enhancive as it is a brand-new feature of the API. No sub categories were found to be suitable.
+We concluded that this change was enhancive as it is a brand-new feature of the API. No sub-categories were found to be suitable.
 
 %%Explain what she said
 The interviewee described how this change and the 3 following changes were all included in the new API at the request of both API users and product management. The feature was sought after by API users frequently, while they were able to control the camera, there was no official application for doing so and as such, it was a good candidate for inclusion in the new API.
 
 %%Explain how this relates to the category
-Based on the interviewees comments, we concluded that we had correctly identified the change as being enhancive. Furthermore, we were also correct in our assumption that there were no suitable subcategories as there was no additional insight into other motivations for the inclusion of this feature. 
+Based on the interviewees comments, we concluded that we had correctly identified the change as being enhancive. Furthermore, we were also correct in our assumption that there were no suitable sub-categories as there was no additional insight into other motivations for the inclusion of this feature. 
 
 \subsubsection{axaudio}
 
@@ -252,20 +269,20 @@ Based on the interviewees comments, we concluded that we had correctly identifie
 By and large the most common usage of the camera is to analyse video data, however some of the API users require audio data. The inclusion of axaudio allows these users to perform audio analysis upon audio streams captured by Axis devices. 
 
 %%Relate it to Categories
-This change was also determined to be enhancive as it was an inclusion of a brand-new feature to the API. Similarly to the axptz, there were no suitable sub categories that could be found to apply to this change.
+This change was also determined to be enhancive as it was an inclusion of a brand-new feature to the API. Similarly to the axptz, there were no suitable sub-categories that could be found to apply to this change.
 
 %%What she said
 Audio analysis had not previously been possible on Axis devices. However, the interviewer informed us that an API user had managed to create their own audio analysis using the current (1.4) API. Given the demand for audio analysis, it was a logical choice to include it as a new feature in the new version of the API.
 
 %%Category based on her information
-Based on the information available, we concluded that we had successfully determined that the change was enhancive. Once more, there was no supporting evidence to suggest any suitable subcategories for this change.
+Based on the information available, we concluded that we had successfully determined that the change was enhancive. Once more, there was no supporting evidence to suggest any suitable sub-categories for this change.
 
 \subsubsection{axstorage}
 
 %%Describe the change 
 Prior to the newest version of the API, storage for the devices existed solely on the cameras or the Video Management System (VMS) itself. The release of version 2.0 saw the inclusion of alternative storage solutions. axstorage now allows Axis devices to interface with external storage devices, such as     
 
-Enhancive was once again chosen to be the most applicable category of change given that axstorage was a brand-new inclusion in the newest version of the API. Similarly, there were no appropriate subcategories for this change.
+Enhancive was once again chosen to be the most applicable category of change given that axstorage was a brand-new inclusion in the newest version of the API. Similarly, there were no appropriate sub-categories for this change.
 
 %%Her information
 The limited storage options for the Axis devices meant that this feature was strongly requested by API users and as such was included in this new version of the API.
@@ -279,15 +296,12 @@ The information gathered from the interview supported that were correct in our c
 The final new feature of the API was the inclusion of axserialport. This part of the API allows API users to connect various devices to their cameras through the use of a serial port. This effectively allows users to integrate multiple kinds of devices to create their own unique solutions. In the previous version of the API there was no ability to connect to devices outside of the VMS.
 
 %%Relate it to Categories
-The inclusion of this new feature was once again determined to be an enhancive change as it involved the addition of a brand new feature. No relevant subcategories were found.
+The inclusion of this new feature was once again determined to be an enhancive change as it involved the addition of a brand new feature. No relevant sub-categories were found.
 
 Our interviewee described scenarios whereby a camera could be used with external devices to create, for example, a ticketing system which reacts to users interacting with it in close proximity. This was just one scenario in which users might wish to use the camera with other devices. As such it was included in the new API to meet the demand of the API users.
 
 %%Real category
-Given this information, we concluded that we were correct in deciding that this change was also enhancive. Again, we were also correct in the assumption that there were no suitable subcategories for this change.
-
-%XXX
-%These changes were deemed to be modifications or re-implementations of existing functionality of the API. During the interview it was mentioned that one intent behind the re-implementations was to bring them in line with the newly created functionality which takes advantage of Glib, a new kind of error handling and extensive use of callbacks.
+Given this information, we concluded that we were correct in deciding that this change was also enhancive. Again, we were also correct in the assumption that there were no suitable sub-categories for this change.
 
 \subsubsection{axevent}
 
@@ -323,8 +337,6 @@ The interviewee once again clarified how this change was indeed primarily concer
 
 Once again our conclusion was incorrect for the categorisation of this change. Given the information from the interview, we deemed that this change was also primarily groomative with a subcategory of enhancive.
 
-%XXX
-%While the changes between versions 1.4 and 2.0 included many deprecations, only one of them was not re-implemented in a new part of the API. 
 
 \subsubsection{Burst Mode}
 
@@ -334,10 +346,8 @@ This change presented itself as a clear example of a reductive category of maint
 
 The interviewee did shed some light onto why this change occurred. We were informed that in order to continue using this feature in 2.0 and in newer versions of the camera hardware, it would have to be re-implemented from scratch. A cost analysis was performed on taking this action and it was deemed that the impact would be minimal resulting in it's removal from the API.
 
-Given this information we can safely say that we correctly concluded that this was a reductive maintenance task and that there are indeed no other subcategories which are applicable to describe this change.
+Given this information we can safely say that we correctly concluded that this was a reductive maintenance task and that there are indeed no other sub-categories which are applicable to describe this change.
 
-%XXX
-%While the main focus of our investigation of the source code and documentation was to identify changes between the versions, it was also to discover differences larger trends of the API. The trends were also analysed and given an appropriate maintenance category.
 
 \subsubsection{Example Code}
 
@@ -394,7 +404,7 @@ All modules use glib
 
 The advent of the new API saw the inclusion of new 3\textsuperscript{rd} party libraries. For example, axsound utilises a library called Alsa, all interfaces use Glib and daemons have been provided for using D-Bus. These changes potentially make the library much more flexible both for the API designers in terms of features they can provide and for the application developers in terms of applications they can develop.
 
-We therefore gave this change the main categorisation of adaptive with no suitable subcategories being found.
+We therefore gave this change the main categorisation of adaptive with no suitable sub-categories being found.
 
 
 The architects creating the API decided they wished to use Glib which came about primarily from internal discussions at the company.
@@ -469,13 +479,18 @@ In this section we will discuss the results of our study.
 
 %Summary of the results (overview)
 
-Overwhelmingly, the primary driving factor behind API evolution appears to have been the desire for new API functionality. We found strong evidence to suggest that most, if not all of the additions, re-implementations and functional changes were undertaken to include functionality that the partners desired. Specifically we found that 53.8\% of the changes were enhancive changes, 7.7\% were adaptive and the remaining 38.5\% were changes specifically aimed at improving the maintainability of the API.
+Overwhelmingly, the primary driving factor behind API evolution appears to have been the desire for new API functionality. We found strong evidence to suggest that most, if not all of the additions, re-implementations and functional changes were undertaken to include functionality that the partners desired.
 
 These data seem to align with the comments made during the interview. For example, the interviewee expressed a desire to have features be added to the API more rapidly and more quickly than they have previously. This sentiment was also expressed to the interviewee by certain partners who suggested that the API was too stable and citing their wish for more features and more frequent updates to the API. 
 
 %The most interesting parts (and reflections + more information about these "trends")
 This leads to the conclusion (!!probably avoid that word in discussion) that the inclusion of new features and the maintainability of an API are two very strong drivers of API evolution.
 
+% 1 - Desire for new functionality
+% 2 - Push for new functionality from partners
+% 3 - Desire for a well designed API, interface improvements
+% 4 - Desire to have a more maintainable API
+%
 
 %
 
@@ -532,8 +547,6 @@ For future studies, this technique could be improved by performing more actions 
 
 %%John add conclusion ideas here
 We were correct with the majority of our categorisations. The ones we did get wrong were because we did not think of it from specific points of view. This probably means that it's possible to reverse engineer to some extent, but not completely (Which is probably the answer most people would expect).
-
-Interesting that the majority of the changes seem to be driven either by management (Suggested that it comes from partners) or the partners directly. There was also internal pressure to improve the API which came about from Axis developers trying to create their own applications.
 
 Considering the Ecosystem and considering it as a whole when designing the API. She does not think that they did take it into consideration at all. They had not thought about them when designing the APIs. She does think about who is going to use it and how but nothing in regards to how it affects an ecosystem as a whole. Things like allowing embedded webpages for the ACAP allows users to get more information from their system meaning they don’t need to ask for as much help and assistance. They usually integrate this with the VMS. Overall there was not much thought about ecosystem when the API was designed. She’s unsure if it’s one ecosystem or two. The network APIs and their API. Perhaps it is one ecosystem. (this is something Imed is looking at).
 It seems that a focus on ecosystems might be starting to come through but that they already thought about them without calling them ecosystems. For example, her mentioning that they already did think about the users of the API and how they would be using it gives a slight clue that they do already think about the wider audience of their API.
