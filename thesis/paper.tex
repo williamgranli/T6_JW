@@ -4,10 +4,19 @@
 \usepackage{blindtext}
 \usepackage[english]{babel}
 
+%Used to create Macro 1
+\usepackage{array}
+
+%Used for \textsubscript
+\usepackage{fixltx2e}
 
 
 
 \begin{document}
+
+%Macro 1, used to create thick vertical line in Table 1: Category 
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
 
 \conferenceinfo{14th IWPSE} {'15 Bergamo, Italy}
 \CopyrightYear{2015}
@@ -233,24 +242,40 @@ The changes have been divided up into four specific categories, namely: new, mod
 
 \begin{table}
        \centering
-       \begin{tabular}[Ht]{|l|c|c|}
+       \begin{tabular}[Ht]{|l"c|c|c|c|}
        \hline
-       \textbf{Category} & \textbf{Prediction} & \textbf{Actual} \\
+       \textbf{Change} & \textbf{Main P} & \textbf{Main A} & \textbf{Sub P} & \textbf{Sub A} \\
        \hline
-       Updative & 15.4\% & 7.7\% \\
+       Example Code & U &      R\textsubscript{ef} &   R\textsubscript{ef} &   U \\
        \hline
-       Groomative & 7.7\% & 0.0\% \\
+       Documentation & U &      U &      Ref &   Ref \\
        \hline
-       Preventive & 7.7\% & 15.4\% \\
+       Interfaces & G &    P &    P &    G \\
        \hline
-       Enhancive & 53.8\% & 53.8\% \\
+       Error Handling & P &    P &    G &    G \\
        \hline
-       Reductive & 7.7\% & 7.7\% \\
+       3rd Party & A &      A &      N/A &           N/A \\
        \hline
-       Adaptive & 15.4\% & 7.7\% \\
+       axaudio & E &     E &     N/A &           N/A \\
        \hline
+       axptz & E &     E &     N/A &           N/A \\
+       \hline
+       axstorage & E &     E &     N/A &           N/A \\
+       \hline
+       axserialport & E &     E &     N/A &           N/A \\
+       \hline
+       axevent & E &     E &     G &    G \\
+       \hline
+       axhttp & E &     E &     G &    G \\
+       \hline
+       ax\_parameter & E &     E &     G &    G \\
+       \hline
+       Burst Mode & R\textsubscript{ed} &     R\textsubscript{ed} &     N/A &           N/A \\
+       \hline
+
+
        \end{tabular}
-       \caption{Category Distribution}
+       \caption{Category }
        \label{table:Categories}
 \end{table}
 
