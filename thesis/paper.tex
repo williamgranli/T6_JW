@@ -7,6 +7,9 @@
 %Used to create Macro 1
 \usepackage{array}
 
+%
+\usepackage{multirow}
+
 %Used for \textsubscript
 \usepackage{fixltx2e}
 
@@ -243,15 +246,15 @@ The changes have been divided up into four specific categories, namely: new, mod
 
 \begin{table}
        \centering
-       \begin{tabular}[Ht]{|c"c|c|c|c|}
+       \begin{tabular}[ht]{|c"c|c|c|c|}
        \hline
 
-       
-       Mode                        & \multicolumn{2}{c}{Main}                              & \multicolumn{2}{c}{Sub}                 \\ \hline
 
-       \textbf{Change}      & \textbf{Prediction}       & \textbf{Actual}           & \textbf{Prediction}       & \textbf{Actual}    \\ \hline    
+       \multirow{2}{*}{\textbf{Change}}          & \multicolumn{2}{c}{\textbf{Main}}       & \multicolumn{2}{c}{\textbf{Sub}}        \\ \cline{2-5}
+
+                            & \textbf{P}                & \textbf{A}                & \textbf{P}                & \textbf{A}         \\ \hline    
        Example Code         & U                         & R\textsubscript{ef}       & R\textsubscript{ef}       & U                  \\ \hline
-       Documentation        & U                         & U                         & Ref                       & Ref                \\ \hline
+       Documentation        & U                         & U                         & R\textsubscript{ef}       & R\textsubscript{ef} \\ \hline
        Interfaces           & G                         & P                         & P                         & G                  \\ \hline
        Error Handling       & P                         & P                         & G                         & G                  \\ \hline
        3rd Party            & A                         & A                         & N/A                       & N/A                \\ \hline
@@ -471,7 +474,7 @@ The results related to \textbf{RQ2} are structured around each of Lehman's laws 
 
 \begin{table}
        \centering
-       \begin{tabular}[Ht]{|l|c|}
+       \begin{tabular}[ht]{|l|c|}
        \hline
        \textbf{Law} & \textbf{Applicability} \\
        \hline
