@@ -423,7 +423,9 @@ As there was no information to contradict our categorisations we have concluded 
 \subsubsection{Interfaces}
 
 %%Describe the change 
-The API interfaces experienced the most change between the two versions. Three of the older interfaces were deprecated in favour of the new API architecture and the rest of the API is now comprised of brand new interfaces. The exception to this appears to be the image capture interface which only experienced a deprecation of a single feature. Each new feature is either accessed directly or via an interface which acts as a facade. 
+The API interfaces experienced the most change between the two versions. (<-what do you mean by this?) Three of the older interfaces were deprecated in favour of the API architecture (<-what do you mean?) and the rest of the API is now comprised of new interfaces. 
+
+The exception to this appears to be the image capture interface which only experienced a deprecation of a single feature. Each new feature is either accessed directly or via an interface which acts as a facade. 
 
 %%Relate it to Categories
 We therefore concluded that this change would be best described as being mainly groomative as the changes affected the overall design and not the implementation of the API. A subcategory of preventive was also chosen as this could be seen as a method for preventing future maintenance. 
@@ -441,10 +443,10 @@ Taking this information into account, we concluded that our categorisation was i
 A substantial change included in version 2.0 was the addition of specific error header files, containing enums of error codes. While we were not aware of what error handling was utilised prior to this version, we assumed it had changed given the inclusion of these new files. For example, one might assume that they have perhaps switched to using C++ exceptions. (!!!This is way too assume-y)
 
 %%Relate it to Categories
-Based on this, we categorise this change as being primarily preventive. The reasoning for this was that error handling is preventive in nature. Groomative was decided as the secondary category of maintenance as improvement of error handling could be regarded as a means to make the code more maintainable. 
+Based on this, we categorised this change as being primarily preventive. The reasoning for this was that error handling is preventive in nature. Groomative was decided as the secondary category of maintenance as improvement of error handling could be regarded as a means to make the code more maintainable. 
 
 %%What she said
-During the interview, it was made clear that the previous error handling implementations lacked information and usability. Glib, a common C library was also introduced to the new API. The new API utilises Glib in the majority of its interfaces and considering the fact that Glib has its own type of error handling, it seemed sensible to implement the same technique into the new API. However, it was expressed to us that the error handling would have changed between versions regardless of whether or not Glib was included.
+During the interview, it was made clear that the previous error handling was not expressive and usable enough. Glib (!!!ref to website) was also introduced to the new API. The new API utilises Glib in the majority of its interfaces and considering the fact that Glib has its own type of error handling, it seemed sensible to implement the same technique into the new API. However, it was expressed to us that the error handling would have changed between versions regardless of whether or not Glib was included. (!!!This is also too assume-y)
 
 %%Category based on her information
 We therefore concluded that our categorisation for this change was correct. Indeed, the primary reason for the change was to improve the existing error handling while improving the overall maintainability of the API as a whole. 
