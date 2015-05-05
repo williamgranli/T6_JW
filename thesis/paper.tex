@@ -351,7 +351,7 @@ The addition of axserialport allows API users to connect various devices to thei
 %%Relate it to Categories
 The addition of this module was determined to be an enhancive change, as it involved the addition of a new feature. No relevant secondary category were identified.
 
-
+%%Relate it to Categories
 %%What she said
 The addition of axserialport was requested by API users. A possible use case, which was given during the interiew involved a ticketing system which allows for joint analysis of data from both devices. As such it was included in version 2.0, to meet the demand of the API users.
 
@@ -436,22 +436,28 @@ As there was no information to contradict our categorisations we have concluded 
 %%Describe the change 
 The API interfaces experienced the most change between the two versions. Three of the older interfaces were deprecated in favour of the new API architecture and the rest of the API is now comprised of brand new interfaces. The exception to this appears to be the image capture interface which only experienced a deprecation of a single feature. Each new feature is either accessed directly or via an interface which acts as a facade. 
 
+%%Relate it to Categories
 We therefore concluded that this change would be best described as being mainly groomative as the changes affected the overall design and not the implementation of the API. A subcategory of preventive was also chosen as this could be seen as a method for preventing future maintenance. 
 
+%%What she said
 The interview provided further insight into the reasoning behind this change. Improvements to the coding standards, the desire for an event driven system and difficulty in using the existing APIs were all reasons for changing the interfaces of the API. Internal and external discussions about the use of the API also lead to the change in architecture of the API. For example, the interviewee mentioned how internal struggles with using the API highlighted the issue that the APIs were not simple to use and that they needed to be revised.
 
-Taking this information into account, we concluded that our categorisation was incorrect. The primary change seemed to be preventive given the strong emphasis on ease of use and could be seen as a way of avoiding future maintenance. We further concluded that the subcategory should be groomative to still reflect the intent to make the API more maintainable overall.
+%%Category based on her information
+Taking this information into account, we concluded that our categorisation was incorrect. The primary change seemed to be preventive given the strong emphasis on ease of use and could be regarded as a way of avoiding future maintenance. We further concluded that the subcategory should be groomative to still reflect the intent to make the API more maintainable overall.
 
 
 \subsubsection{Error Handling}
 
 %%Describe the change 
-One interesting addition to version 2.0 of the API was many specific error header files, containing enums of error codes. While we were not aware of what error handling was utilised prior to this version, we assumed it had changed given the inclusion of these new files. For example, one might assume that they have perhaps switched to using C++ exceptions.
+A substantial change included in version 2.0 was the addition of specific error header files, containing enums of error codes. While we were not aware of what error handling was utilised prior to this version, we assumed it had changed given the inclusion of these new files. For example, one might assume that they have perhaps switched to using C++ exceptions. (!!!This is way too assume-y)
 
-We therefore decided to categorise this change primarily as preventive. This was on the basis that error handling is preventive in nature. Groomative was decided as an appropriate subcategory of change as the changing, or introduction of error handling could be seen as a means to make code more maintainable. 
+%%Relate it to Categories
+Based on this, we categorise this change as being primarily preventive. The reasoning for this was that error handling is preventive in nature. Groomative was decided as the secondary category of maintenance as improvement of error handling could be regarded as a means to make the code more maintainable. 
 
+%%What she said
 Following the discussions in the interview, it became clear that the error handling was indeed changed but not for the reasons we assumed. A reason given was that the previous error handling implementations lacked information and usability. Glib, a common C library was also introduced to the new API. The new API utilises Glib in the majority of its interfaces and considering the fact that Glib has its own type of error handling, it seemed sensible to implement the same technique into the new API. However, it was expressed to us that the error handling would have changed between versions regardless of whether or not Glib was included.
 
+%%Category based on her information
 We therefore concluded that our categorisation for this change was correct. Indeed, the primary reason for the change was to improve the existing error handling while improving the overall maintainability of the API as a whole. 
 
 \subsubsection{3\textsuperscript{rd} Party}
