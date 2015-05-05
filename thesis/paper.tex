@@ -133,7 +133,7 @@ This section will introduce the topics of API design and software evolution and 
 
 
 \subsection{API Design} \label{api_design}
-API design is notoriously difficult, as a myriad of design and performance decisions must be taken into consideration when creating APIs \cite{stylos2006comparing} \cite{afonso2012evaluating} \cite{bloch2008effective}. Examples of such decisions are whether to use the factory pattern or constructors to create objects, or if the API should display errors during compilation or runtime \cite{stylos2006comparing}. More trivial design problems, such as, assigning names to API features and difficulty in naming types also have a large impact on the usability of the API \cite{shi2011empirical}. When facing such design decisions, the following four factors are important to consider: a) The API  must be understandable through good documentation, b) the API must not be overly abstract, c) the API must be reusable and d) the API must be easy to learn \cite{shi2011empirical}. One of the most important qualities in an API is that the intent of the API is clear to the user when, for example, using design patterns, such as the concrete factory pattern \cite{stylos2006comparing} \cite{shi2011empirical}. The sum of all design decisions taken during the development of an API will decide the usability of the API. Measuring such a factor can be done by measuring the twelve cognitive dimensions which are factors that are impacted by the interaction between the API and the user of it \cite{clarke2004measuring}. 
+API design is notoriously difficult, as a myriad of design and performance decisions must be taken into consideration when creating APIs \cite{afonso2012evaluating} \cite{bloch2008effective} \cite{stylos2006comparing}. Examples of such decisions are whether to use the factory pattern or constructors to create objects, or if the API should display errors during compilation or runtime \cite{stylos2006comparing}. More trivial design problems, such as, assigning names to API features and difficulty in naming types also have a large impact on the usability of the API \cite{shi2011empirical}. When facing such design decisions, the following four factors are important to consider: a) The API  must be understandable through good documentation, b) the API must not be overly abstract, c) the API must be reusable and d) the API must be easy to learn \cite{shi2011empirical}. One of the most important qualities in an API is that the intent of the API is clear to the user when, for example, using design patterns, such as the concrete factory pattern \cite{stylos2006comparing} \cite{shi2011empirical}. The sum of all design decisions taken during the development of an API will decide the usability of the API. Measuring such a factor can be done by measuring the twelve cognitive dimensions which are factors that are impacted by the interaction between the API and the user of it \cite{clarke2004measuring}. 
 
 
 \subsection{Software Evolution} \label{software_evolution}
@@ -247,25 +247,25 @@ The changes have been divided up into four specific categories, namely: new, mod
 \begin{table}
        \centering
        \begin{tabular}[ht]{|c"c|c|c|c|}
-       \hline
 
+              \hline
 
-       \multirow{2}{*}{\textbf{Change}}          & \multicolumn{2}{c}{\textbf{Main}}       & \multicolumn{2}{c}{\textbf{Sub}}        \\ \cline{2-5}
+              \multirow{2}{*}{\textbf{Change}}          & \multicolumn{2}{c}{\textbf{Main}}       & \multicolumn{2}{c}{\textbf{Sub}}        \\ \cline{2-5}
 
-                            & \textbf{P}                & \textbf{A}                & \textbf{P}                & \textbf{A}         \\ \hline    
-       Example Code         & U                         & R\textsubscript{ef}       & R\textsubscript{ef}       & U                  \\ \hline
-       Documentation        & U                         & U                         & R\textsubscript{ef}       & R\textsubscript{ef} \\ \hline
-       Interfaces           & G                         & P                         & P                         & G                  \\ \hline
-       Error Handling       & P                         & P                         & G                         & G                  \\ \hline
-       3rd Party            & A                         & A                         & N/A                       & N/A                \\ \hline
-       axaudio              & E                         & E                         & N/A                       & N/A                \\ \hline
-       axptz                & E                         & E                         & N/A                       & N/A                \\ \hline
-       axstorage            & E                         & E                         & N/A                       & N/A                \\ \hline
-       axserialport         & E                         & E                         & N/A                       & N/A                \\ \hline
-       axevent              & E                         & E                         & G                         & G                  \\ \hline
-       axhttp               & E                         & E                         & G                         & G                  \\ \hline
-       ax\_parameter        & E                         & E                         & G                         & G                  \\ \hline
-       Burst Mode           & R\textsubscript{ed}       & R\textsubscript{ed} &     N/A                         & N/A                \\ \hline
+                                   & \textbf{P}                & \textbf{A}                & \textbf{P}                & \textbf{A}         \\ \hline    
+              Example Code         & U                         & R\textsubscript{ef}       & R\textsubscript{ef}       & U                  \\ \hline
+              Documentation        & U                         & U                         & R\textsubscript{ef}       & R\textsubscript{ef} \\ \hline
+              Interfaces           & G                         & P                         & P                         & G                  \\ \hline
+              Error Handling       & P                         & P                         & G                         & G                  \\ \hline
+              3rd Party            & A                         & A                         & N/A                       & N/A                \\ \hline
+              axaudio              & E                         & E                         & N/A                       & N/A                \\ \hline
+              axptz                & E                         & E                         & N/A                       & N/A                \\ \hline
+              axstorage            & E                         & E                         & N/A                       & N/A                \\ \hline
+              axserialport         & E                         & E                         & N/A                       & N/A                \\ \hline
+              axevent              & E                         & E                         & G                         & G                  \\ \hline
+              axhttp               & E                         & E                         & G                         & G                  \\ \hline
+              ax\_parameter        & E                         & E                         & G                         & G                  \\ \hline
+              Burst Mode           & R\textsubscript{ed}       & R\textsubscript{ed} &     N/A                         & N/A                \\ \hline
 
 
        \end{tabular}
@@ -489,25 +489,18 @@ The results related to \textbf{RQ2} are structured around each of Lehman's laws 
 \begin{table}
        \centering
        \begin{tabular}[ht]{|l|c|}
-       \hline
-       \textbf{Law} & \textbf{Applicability} \\
-       \hline
-       Continuing Change & True \\
-       \hline
-       Increasing Complexity & Kinda \\
-       \hline
-       Self Regulation & True \\
-       \hline
-       Conservation of Organisational Stability & False \\
-       \hline
-       Conservation of Familiarity & True \\
-       \hline
-       Continuing Growth & True \\
-       \hline
-       Declining Quality & Kinda \\
-       \hline
-       Feedback System & True \\
-       \hline
+              \hline
+
+              \textbf{Law}                              & \textbf{Applicability}    \\ \hline
+              Continuing Change                         & True                      \\ \hline
+              Increasing Complexity                     & Kinda                     \\ \hline
+              Self Regulation                           & True                      \\ \hline
+              Conservation of Organisational Stability  & False                     \\ \hline
+              Conservation of Familiarity               & True                      \\ \hline
+              Continuing Growth                         & True                      \\ \hline
+              Declining Quality                         & Kinda                     \\ \hline
+              Feedback System                           & True                      \\ \hline
+
        \end{tabular}
        \caption{The applicability of Lehman's laws}
        \label{table:lehman}
