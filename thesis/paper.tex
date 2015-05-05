@@ -70,7 +70,7 @@ This study explored how companies actively drive changes to APIs and how APIs ev
 
 \smallskip \noindent
 \textbf{Method  }
-This case study was conducted by investigating the changes between two versions in a platform API and its documentation, and by interview the architects of the API. The changes were analysed from a qualitative and investigative point of view. 
+This case study was conducted by investigating the changes between two versions in a platform API and its documentation, and by interviewing the architects of the API. The changes were analysed from a qualitative and investigative point of view. 
 
 \smallskip \noindent
 \textbf{Results  }
@@ -96,7 +96,7 @@ This study has provided valuable insight into the evolution of platform APIs. Th
 
 \section{Introduction} \label{introduction}
 %API Design (and a little bit of ecosystems and a bit of problem statement)
-As the software industry and the open-source movement steadily grow, the number of public APIs is increasing. APIs can improve the development speed \cite{stylos2006comparing}, contribute to higher quality software \cite{stylos2006comparing} and increase the reusability of software \cite{afonso2012evaluating}. There is a consensus in that modifications to APIs could negatively impact the users of the API \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api}. The main reason is that it will require the users to update the code, which is using the API, thus causing a disruption in the application's software ecosystem \cite{messerschmitt2005software}. The most common changes to APIs occur from refactoring \cite{dig2005role} \cite{xing2006refactoring}. 
+As the software industry and the open-source movement steadily grow, the number of public APIs is increasing. APIs can improve the development speed \cite{stylos2006comparing}, contribute to higher quality software \cite{stylos2006comparing} and increase the reusability of software \cite{afonso2012evaluating}. There is a consensus in that modifications to APIs could negatively impact the users of the API \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api}. The main reason for this is that it requires the API users to update the application code, thus causing a disruption in the application's software ecosystem \cite{messerschmitt2005software}. The most common changes to APIs occur from refactoring \cite{dig2005role} \cite{xing2006refactoring}. 
 %Software Evolution 
 In the discipline of software evolution, such updates to software are studied from an evolutionary standpoint. Software can be updated for different reasons and these motives can be grouped into corrective, adaptive, perfective and preventive changes \cite{lientz1980software}. 
 
@@ -234,11 +234,12 @@ This section will present the results of our study. The results related to \text
 
 \subsection{RQ1 Results} \label{results_rq1}
 
-%% Check what willy wrote.
-%%Explain structure of this section around the RQ and a summary of it. Table with the percentages from both us and her.
-In order to answer \textbf{RQ1}, we categorised the changes based on the 12 maintenance categories \cite{chapin2001types}. Initially, we created predictions of the changes from inspecting the source code and accompanying documentation. Following the interview, we compared our predictions with the actual motive which was deduced from the interviewee's reasoning. Table \ref{table:Categories} shows the predicted and actual maintenance categories.
 
-The changes have been divided up into four specific categories, namely: new, modified, removed and general trends. New and modified changes concern additions of or modifications to modules and removed changes is functionality which have been removed entirely without being deprecating or replaced by new implementations. General trends are broad changes which do not directly affect functionality. 
+%This paragraph should be moved to Methodology
+In order to answer \textbf{RQ1}, we categorised the changes based on the 12 maintenance categories \cite{chapin2001types}, by inspecting the source code and the accompanying documentation. Following the interview, we compared our categorisations to the actual motive which was gathered from the interview. 
+
+%Add a small introductory sentence to this paragraph and have it as the first paragraph of this section (Don't forget to ref the table)
+The changes have been divided up into four specific categories, namely: new, modified, removed and general trends. The category new concerns additions of modules, modified concerns modifications to modules that existed in version 1.4 and removed are changes where functionality was removed being deprecated or replaced by functionality. General trends are broad changes that do not directly affect functionality. 
 
 \begin{table}
        \centering
@@ -248,7 +249,7 @@ The changes have been divided up into four specific categories, namely: new, mod
 
        \hline
        \textbf{Change} & \textbf{Prediction} & \textbf{Actual} & \textbf{Prediction} & \textbf{Actual} \\
-       \hline
+       \hline    
        Example Code & U &      R\textsubscript{ef} &   R\textsubscript{ef} &   U \\
        \hline
        Documentation & U &      U &      Ref &   Ref \\
@@ -300,16 +301,17 @@ After cross-examining our results with the interviewee and their responses, we f
 %Discuss how there were many modifications but we've classified them as re-implementations. Includes a deprecation and a replacement of that deprecation. Alternative was to analyse modify them as both an addition and a deprecation.
 
 \subsubsection{axptz}
+%Add info about this is one of the added changes
+The Pan, Tilt and Zoom (ptz) module concerns functionality related to manoeuvring the camera, both mechanically and digitally. 
 
-This change introduced the ability to perform Pan, Tilt and Zoom (ptz) manoeuvres both mechanically and digitally on the camera. For example, zooming in on a particular section of a large image, panning the camera to the left to view a certain area. 
+We concluded that this change was enhancive as it is a brand-new feature of the API. There was no secondary motive behind this change, as the change was purely enhancive. 
 
-We concluded that this change was enhancive as it is a brand-new feature of the API. No sub-categories were found to be suitable.
 
 %%Explain what she said
-The interviewee described how this change and the 3 following changes were all included in the new API at the request of both API users and product management. The feature was sought after by API users frequently, while they were able to control the camera, there was no official application for doing so and as such, it was a good candidate for inclusion in the new API.
+The interviewee described how this change and the other changes classified as additions were all included in the new API at the request of API users. Prior to the change being introduced, there was no API functionality for controlling the camera and as such, it was a high priority addition to the new API. 
 
 %%Explain how this relates to the category
-Based on the interviewees comments, we concluded that we had correctly identified the change as being enhancive. Furthermore, we were also correct in our assumption that there were no suitable sub-categories as there was no additional insight into other motivations for the inclusion of this feature. 
+Based on the interviewees' comments, we concluded that we had correctly identified the change as being enhancive. Furthermore, we were also correct in our prediction that there was no secondary category. 
 
 \subsubsection{axaudio}
 
