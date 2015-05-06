@@ -394,14 +394,15 @@ One of the future goals of improvement of the case company is to better include 
 
 
 
-\section{Discussion}  have been provided valuable insight into the motives behind the evolution of an API. The results show that APIs definitely can be studied from the point of view of long-established software evolution theories. Based on the results, we have formulated the subsequent outcomes. 
+\section{Discussion}
+Our results have provided valuable insight into the motives behind the evolution of an API. The results show that APIs definitely can be studied from the point of view of long-established software evolution theories. Based on the results, we have formulated the subsequent outcomes. 
 
 
 
 \subsection{Discussion RQ1}
 
 \noindent
-\textbf{Adding functionality is a prime driver of API evolution  } 
+\textbf{Functionality is a prime driver of API evolution  } 
 Overwhelmingly, the primary driving factor behind API evolution was the desire for new API functionality. We found that a vast majority of the changes either added functionality or were direct a direct consequence of functionality being added. The main driver for these changes was the pressure from API users, but pressure from the case company developers who utilise the API also contributed. This focus upon functionality was also emphasised partially due to a business goal. The more features the API can provide, the more applications developers can create for the cameras. This has a domino effect of increasing the appeal and therefore value of the products.
 
 %API users should be included in the design process? 
@@ -410,7 +411,7 @@ Overwhelmingly, the primary driving factor behind API evolution was the desire f
 While maintainability is important, it is not a primary driving factor for change. We found that where maintainability changed, functionality had also been added or modified. Of the changes identified, none were considered to be primarily groomative. Groomative motives were only found to be secondary, and were never the main motive for a change. Changes to the example code are an instance of this. The example code was updated purely to reflect the changes in functionality and not as a groomative effort. 
 
 \smallskip \noindent
-\textbf{Aiding development of applications  } 
+\textbf{Standardising application development  } 
 Supporting users of the API in creating correct and robust applications is a very important evolution factor for the case company. Changes between the versions introduced improvements to error handling, the example code and the way in which the API utilises interfaces. This, coupled with removal of unwanted functionality and unsafe operations, has allowed the API to grow and become much more user-friendly. As mentioned previously, this could increase the amount of applications being created for the camera and as a consequence, could potentially increase the value of them.
 
 \smallskip \noindent
@@ -418,11 +419,11 @@ Supporting users of the API in creating correct and robust applications is a ver
 Previous literature has stated that deprecations are the most common technique to used remove support for specific functionality. Removals are only suggested in specific circumstances. The successful removal of the burst function seems to indicate that under the correct circumstances, removing small unwanted functionality is a good alternative to deprecation. The case company only removed this function from the API after an internal review found that the cost of removing it would outweigh potential drawbacks of keeping it in the API. We therefore recommended to only remove parts of an API if the effect of the removal has been thoroughly investigated and that the removals happen incrementally and slowly.
 
 \smallskip \noindent
-\textbf{ "Updative" changes do not drive change  } 
+\textbf{Documentation does not drive change  } 
 The intent to update example code and documentation was described by the interviewee to be an important change between version 1.4 and 2.0. While important for the APIs usability, it was not a driving factor of change itself. The changes to the APIs design and functionality caused the need to update the documentation and example code.
 
 \smallskip \noindent
-\textbf{Hardware was not a driving factor  } 
+\textbf{Hardware is not a driving factor  } 
 Our initial expectations included the view that changes to hardware would be one of the strongest driving factors of API evolution. For example, new cameras are created or new hardware is added to an existing camera, requiring updates to the API to allow use of the new features. However, after analysing the changes and from the information gathered in the interview, we discovered that hardware has played a minimal role in the evolution of the API. 
 
 
@@ -435,7 +436,7 @@ Our initial expectations included the view that changes to hardware would be one
 All changes whose main motive was to either add or remove functionality were accurately predicted. These changes were the most major ones, and it was expressed during the interview that these types of changes main driving factor behind the development of the new version. In summary, eleven out of a total thirteen changes were correctly predicted. It is also interesting to note that all changes which were not assigned any sub-category were correctly predicted. This supports the fact that such changes have a clearer intent and are perhaps more well-defined. 
 
 \smallskip \noindent
-\textbf{``Structural'' reverse engineerable to a lesser extent} 
+\textbf{Design changes are reverse engineerable to some extent} 
 Three out of five changes which did not add functionality, but rather were introduced to reduce complexity and increase quality were correctly predicted. The two changes which were incorrectly predicted were wrong because the main motivation was confused with the secondary intent. This shows that, although the prediction was incorrect, the general reasoning was correct. Our predictions were accurate enough to allow us to form a reliable conclusion which provided valuable discussion with the case company. 
 
 
@@ -449,13 +450,13 @@ Three out of five changes which did not add functionality, but rather were intro
 Sufficient evidence was found for the laws of Continuing Change, Self Regulation, Conservation of Familiarity, Continuing Growth and Feedback System to establish that they apply to APIs. The most prominent explanation for this is that a large part of the introduced changes were related to functionality. It is especially interesting to note that the laws of Self Regulation and Conservation of Familiarity accurately match the API explored in this paper. 
 
 \smallskip \noindent
-\textbf{Two laws kinda apply  }
-The laws of Increasing Complexity and Declining Quality were found to apply to APIs, but that the extent to which they apply might not be as significant for APIs compared to other types of systems. The reason that this doubt exists is because these motives were only secondary to the motives of increased functionality. An alternative explanation for these laws being of lesser significance in APIs could be that the general inertia to modify APIs which exists \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api} might dominate the need to improve simplicity and quality. 
+\textbf{Two laws apply to a certain extent  }
+The laws of Increasing Complexity and Declining Quality were found to apply to APIs, but that the extent to which they apply might not be as significant for APIs compared to other types of systems. The reason that this doubt exists is because these motives were only secondary to the motives of increased functionality. An alternative explanation for these laws being of lesser significance in APIs could be that the general inertia to modify APIs which exists \cite{google_talk} \cite{henning2007api} \cite{mcdonnell2013empirical} \cite{robbes2012developers} might dominate the need to improve simplicity and quality. 
 
 
 \smallskip \noindent
-\textbf{One law does not apply  }
-Strong evidence was found to suggest that the law of Conservation of Organisational Stability does not apply to APIs. Our results not only show that the law is not true for APIs, but that the opposite of what the law states is true for APIs. This is supported by the consensus in literature of the negative effects caused by modifications to APIs \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api}. The results from our study also revealed that reluctance to change APIs causes the releases of new versions to be few and sporadic. 
+\textbf{One law is not applicable  }
+Strong evidence was found to suggest that the law of Conservation of Organisational Stability does not apply to APIs. Our results not only show that the law is not true for APIs, but that the opposite of what the law states is true for APIs. This is supported by the consensus in literature of the negative effects caused by modifications to APIs \cite{google_talk} \cite{henning2007api} \cite{mcdonnell2013empirical} \cite{robbes2012developers}. The results from our study also revealed that reluctance to change APIs causes the releases of new versions to be few and sporadic. 
 
 
 \smallskip \noindent
