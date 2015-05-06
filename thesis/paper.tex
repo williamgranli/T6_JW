@@ -396,38 +396,40 @@ One of the future goals of improvement of the case company is to better include 
 
 
 
-\section{Discussion} %Reviewed by W
-Our results have been provided valuable insight to the motives behind the evolution of an API. The results show that APIs definitely can be studied from the point of view of long-established software evolution theories. Based on the result, we have formulated the subsequent outcomes. 
+\section{Discussion} %Reviewed by WJ
+Our results have been provided valuable insight into the motives behind the evolution of an API. The results show that APIs definitely can be studied from the point of view of long-established software evolution theories. Based on the results, we have formulated the subsequent outcomes. 
 
 
 
 \subsection{Discussion RQ1}
 
 \noindent
-\textbf{Adding functionality is a prime driver of API evolution  } %Reviewed by W
-Overwhelmingly, the primary driving factor behind API evolution was the desire for new API functionality. We found that a vast majority of the changes either added functionality or were direct effects of functionality being added. The main driver for these changes was the pressure from the API users, but pressure from the case company developers which utilised the API also contributed. This focus upon functionality was also emphasised in part due to a business goal ( "in part due to, sounds weird to me") . The more features the API can provide, the more applications developers can create for the cameras. This has a domino effect of increasing the appeal and therefore value of the products.
+\textbf{Adding functionality is a prime driver of API evolution  } %Reviewed by WJ
+Overwhelmingly, the primary driving factor behind API evolution was the desire for new API functionality. We found that a vast majority of the changes either added functionality or were direct a direct consequence of functionality being added. The main driver for these changes was the pressure from API users, but pressure from the case company developers who utilise the API also contributed. This focus upon functionality was also emphasised partially due to a business goal. The more features the API can provide, the more applications developers can create for the cameras. This has a domino effect of increasing the appeal and therefore value of the products.
 
 %API users should be included in the design process? 
 \smallskip \noindent 
 \textbf{Maintainability does not drive change  } %Reviewed by W 
-While maintainability is important, it is not a primary driving factor for change. We found that where maintainability changed, functionality was also altered. For example, we predicted that the main intents to be enhancive which was correct. ( " Need to explain what was enhancive") Furthermore, of the changes identified, none were considered to be primarily groomative. Groomative motives were only found to be secondary, and never drove the change. Changes to the example code is further evidence of this. The example code was updated purely to reflect the changes in functionality and not as a groomative effort. 
+While maintainability is important, it is not a primary driving factor for change. We found that where maintainability changed, functionality had also been added or modified. Of the changes identified, none were considered to be primarily groomative. Groomative motives were only found to be secondary, and were never the main motive for a change. Changes to the example code are an instance of this. The example code was updated purely to reflect the changes in functionality and not as a groomative effort. 
 
 \smallskip \noindent
-\textbf{Aiding development of applications  } %Reviewed by W
-Aiding ( "minor detail: is supporting better here?") users of the API to create correct and robust applications is a very important evolution factor for the case company. Changes between the versions brought about ( 're-word'?) improvements to error handling, the example code and the way in which the API utilises interfaces. This, coupled with removal of unwanted functionality and unsafe operations, has allowed the API to grow and become much more user-friendly. As mentioned previously, this could increase the amount of applications being created for the camera and in turn could increase its value ( "change to' : increase the value of them ?").
+\textbf{Aiding development of applications  } %Reviewed by WJ
+Supporting users of the API in creating correct and robust applications is a very important evolution factor for the case company. Changes between the versions introduced improvements to error handling, the example code and the way in which the API utilises interfaces. This, coupled with removal of unwanted functionality and unsafe operations, has allowed the API to grow and become much more user-friendly. As mentioned previously, this could increase the amount of applications being created for the camera and as a consequence, could potentially increase the value of them.
 
 \smallskip \noindent
-\textbf{Removing functionality  } %Reviewed by W
-Previous literature has stated that deprecations should be favoured over removals from API for many reasons, except in specific circumstances. The successful removal of the burst function seems to indicate that this advice is well worth following ( "well worth following reads weirdly") ( 'this sentence also contradicts the previous one'). Indeed, Axis only removed this function from the API after an internal review found that the cost of removing it would outweigh potential drawbacks to ( 'of???') keeping it in the API. ( 'this sentence is weird', "and remove the indeed") It is ( 'change to We therefore recommend') therefore recommended to only remove something if the effects of removing it have been well investigated and that the removal is rather small in scale. ( "instead of saying  small in scale i think we should explain that they should be made in increments and only a few at once") 
+\textbf{Removing functionality  } %Reviewed by WJ
+Previous literature has stated that deprecations are the most common technique to used remove support for specific functionality. Removals are only suggested in specific circumstances. The successful removal of the burst function seems to indicate that under the correct circumstances, removing small unwanted functionality is a good alternative to deprecation. The case company only removed this function from the API after an internal review found that the cost of removing it would outweigh potential drawbacks of keeping it in the API. We therefore recommended to only remove parts of an API if the effect of the removal has been thoroughly investigated and that the removals happen incrementally and slowly.
 
 \smallskip \noindent
-\textbf{Updative changes do not drive change  } %Reviewed by W
-Changes to documentation and example code are important, especially if the API is drastically changing between versions. However, these updative changes are drivers themselves, rather, they make up part of a larger change as a whole. ( "this whole section has to be re-written. We can't refer to them as updative changes since the nature of updative changes are reactive. instead refer to them as changes to !code e.g. documentation, example code etc.")
-%^Probably needs more to it?
+\textbf{Updative changes do not drive change  } %Reviewed by WJ
+The intent to update example code and documentation was described by the interviewee to be an important change between version 1.4 and 2.0. While important for the APIs usability, it was not a driving factor of change itself. The changes to the APIs design and functionality caused the need to update the documentation and example code.
 
 \smallskip \noindent
-\textbf{Hardware was not a driving factor  } %Reviewed by W
-Interestingly ( "remove interestingly") , we found that hardware ( "have to explain in what regard we 'expected' hardware to be a driver e.g. updates to hardware, the release of new cameras")) was not a direct driver of change. Initially, we had thought ( "rephrase had thought... anticipated? thought sounds like we guessed" (or maybe say "Our initial expectaitions were")) that it would be one of the strongest drivers of change ( "new sentence here"), for example, new versions of hardware become available or new hardware is added to the camera requiring something in the API to access it. This does seem to suggest that the hardware for the camera is sufficiently stable such that it does not require changes and that those changes do not need to be ( "change 'not need to be' to 'are not'?") reflected in new API versions.
+\textbf{Hardware was not a driving factor  } %Reviewed by WJ
+Our initial expectations included the view that changes to hardware would be one of the strongest driving factors of API evolution. For example, new cameras are created or new hardware is added to an existing camera, requiring updates to the API to allow use of the new features. However, after analysing the changes and from the information gathered in the interview, we discovered that hardware has played a minimal role in the evolution of the API. 
+
+%Save this for conclusion? Or leave it here?
+%While out of the scope of our research, it might be interesting to investigate if this trend occurs in other platform specific APIs.
 
 
 \subsection{Discussion RQ1.1}
@@ -435,12 +437,12 @@ Interestingly ( "remove interestingly") , we found that hardware ( "have to expl
 
 
 \noindent
-\textbf{Functionality is reverse engineerable  } %Reviewed by W
-All changes which main motive were to either add or remove functionality were accurately predicted. These changes were the most major ones, and it was expressed during the interview that these types of changes main driving factor behind the development of the new version. In summary, 11 out of a total 13 changes were correctly predicted. It is also interesting to note that all changes which were not assigned any sub-category were correctly predicted. This supports that such changes have a clearer intent and are perhaps more well-defined. 
+\textbf{Functionality is reverse engineerable  } %Reviewed by WJ
+All changes which main motive were to either (``all changes whose main motive was to - Or something similar'') add or remove functionality were accurately predicted. These changes were the most major ones, and it was expressed during the interview that these types of changes main driving factor behind the development of the new version. In summary, 11 out of a total 13 (``Write out eleven and thirteen?'') changes were correctly predicted. It is also interesting to note that all changes which were not assigned any sub-category were correctly predicted. This supports (``Meant to add something here?'') that such changes have a clearer intent and are perhaps more well-defined. 
 
 \smallskip \noindent
 \textbf{``Structural'' reverse engineerable to a lesser extent} %Reviewed by W
-3 out of 5 changes which did not add functionality, but rather were introduced to redcue complexity and increase quality were correctly predicted. The two changes which were incorrectly predicted were wrong because the main motivation was mixed up with the secondary intent ( "re-phrase"). This shows that although the prediction was incorrect, the general reasoning was correct. Our predictions were accurate enough to allow us to form a reliable conlusion which created a good means for discussion with the company ( "re-phrase"). 
+3 out of 5 (``Three out of five'') changes which did not add functionality, but rather were introduced to reduce complexity and increase quality were correctly predicted. The two changes which were incorrectly predicted were wrong because the main motivation was mixed up (``confused'') with the secondary intent ( "re-phrase"). This shows that although the prediction was incorrect, the general reasoning was correct. Our predictions were accurate enough to allow us to form a reliable conclusion which created a good means for discussion with the company (``which provided valuable discussion with the company ''( "re-phrase"). 
 
 
 
@@ -450,21 +452,21 @@ All changes which main motive were to either add or remove functionality were ac
 
 \noindent
 \textbf{A majority of the laws apply  }
-Sufficient evidence was found for the laws of Continuing Change, Self Regulation, Conservation of Familiarity, Continuing Growth and Feedback System to establish that they apply to APIs. The most major explanation for this that a large part of the introduced changes were related to functionality. It is especially interesting to note that the laws of Self Regulation and Conservation of Familiarity perfectly match the API explored in this paper. 
+Sufficient evidence was found for the laws of Continuing Change, Self Regulation, Conservation of Familiarity, Continuing Growth and Feedback System to establish that they apply to APIs. The most major (``the most prominent? the most important'') explanation for this (``is'') that a large part of the introduced changes were related to functionality. It is especially interesting to note that the laws of Self Regulation and Conservation of Familiarity perfectly match the API explored in this paper. (``in what way do they match? Maybe explain this a little'')
 
 \smallskip \noindent
 \textbf{Two laws kinda apply  }
-The laws of Increasing Complexity and Declining Quality were found to apply to APIs, but that the extent to which they apply might not be as significant for APIs compared to other types of systems. The reason that this doubt exists is that these motivations were only secondary to the motivations of increased functionality. An alternative explanation for these laws being of lesser significance in APIs could be that the general inertia to modify APIs which exists \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api} might overshadow (!!!wording) the need to increase simplicity and quality. 
+The laws of Increasing Complexity and Declining Quality were found to apply to APIs, but that the extent to which they apply might not be as significant for APIs compared to other types of systems. The reason that this doubt exists is (``because'')that these motivations were only secondary to the motivations of increased functionality. An alternative explanation for these laws being of lesser significance in APIs could be that the general inertia to modify APIs which exists \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api} might overshadow (``outweigh, dwarfs, rules out'') (!!!wording) the need to increase(``Improve'') simplicity and quality. 
 
 
 \smallskip \noindent
 \textbf{One law does not apply  }
-Strong evidence was found which suggests that the law of Conservation of Organisational Stability does not apply to APIs. Our results not only show that the law is not true for APIs, but that the opposite of what the law states is true for APIs. This is supported by the consensus in literature of the negative effects caused by modifications to APIs \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api}. The results from our study also showed that the reluctancy to change APIs causes the releases of new versions to be few and sporadic. 
+Strong evidence was found which suggests (``to suggest'') that the law of Conservation of Organisational Stability does not apply to APIs. Our results not only show that the law is not true for APIs, but that the opposite of what the law states is true for APIs. This is supported by the consensus in literature of the negative effects caused by modifications to APIs \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api}. The results from our study also showed that the reluctancy (``that reluctance'') to change APIs causes the releases of new versions to be few and sporadic. 
 
 
 \smallskip \noindent
 \textbf{The importance of a Feedback System  }
-Especially interesting results were found in regards to the law of Feedback System. The importance of having a structured and developed feedback loop was stressed during the interview, and it was also expressed as one of the main points of improvement. This suggests that including feedback from more sources and making use of this feedback should be done more when developing an API. 
+Especially interesting results were found in regards to the law of Feedback System. The importance of having a structured and developed feedback loop was stressed during the interview and it was also expressed as one of the main points of improvement. This suggests that including feedback from more sources and making use of this feedback (``when / where? if we want to be specific'') should be done (``performed or something other than done'') more when developing an API. 
 
 
 
