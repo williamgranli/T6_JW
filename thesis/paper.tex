@@ -4,9 +4,6 @@
 \usepackage{blindtext}
 \usepackage[english]{babel}
 
-%Used to create Macro 1
-\usepackage{array}
-
 %
 \usepackage{multirow}
 
@@ -17,9 +14,6 @@
 
 \begin{document}
 
-%Macro 1, used to create thick vertical line in Table 1: Category 
-\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
-\makeatother
 
 \conferenceinfo{14th IWPSE} {'15 Bergamo, Italy}
 \CopyrightYear{2015}
@@ -256,11 +250,11 @@ After cross-examining our results with the interviewee and their responses, we f
 
 \begin{table}
        \centering
-       \begin{tabular}[ht]{|c"c|c|c|c|}
+       \begin{tabular}[ht]{|c|c|c|c|c|}
 
               \hline
 
-              \multirow{2}{*}{\textbf{Change}}          & \multicolumn{2}{c}{\textbf{Main}}       & \multicolumn{2}{c}{\textbf{Sub}}        \\ \cline{2-5}
+              \multirow{2}{*}{\textbf{Change}}          & \multicolumn{2}{c|}{\textbf{Main}}       & \multicolumn{2}{c|}{\textbf{Sub}}        \\ \cline{2-5}
 
                                    & \textbf{P}                & \textbf{A}                & \textbf{P}                & \textbf{A}         \\ \hline    
               Example Code         & U                         & R\textsubscript{ef}       & R\textsubscript{ef}       & U                  \\ \hline
