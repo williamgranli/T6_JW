@@ -5,7 +5,10 @@
 \usepackage[english]{babel}
 
 %
+\usepackage{array}
 \usepackage{multirow}
+\usepackage{makecell}
+
 
 %Used for \textsubscript
 \usepackage{fixltx2e}
@@ -248,15 +251,17 @@ The changes have been divided up into four specific categories, namely: \textit{
 
 After cross-examining our results with the interviewee and their responses, we found that 78\% of our main category predictions matched the actual motive of the changes and that 78\% of our secondary categorisations matched the actual motives. 
 
+  %\begin{tabular}{!{\vrule width 2pt}c|c|c!{\vrule width 2pt}c|c|c%
+
+
 \begin{table}
        \centering
-       \begin{tabular}[ht]{|c|c|c|c|c|}
-
+       \begin{tabular}[ht]{|c !{\vrule width 1.5pt} c|c|c|c|} 
               \hline
 
               \multirow{2}{*}{\textbf{Change}}          & \multicolumn{2}{c|}{\textbf{Main}}       & \multicolumn{2}{c|}{\textbf{Sub}}        \\ \cline{2-5}
 
-                                   & \textbf{P}                & \textbf{A}                & \textbf{P}                & \textbf{A}         \\ \hline    
+                                   & \textbf{P}                & \textbf{A}                & \textbf{P}                & \textbf{A}         \\ \Xhline{2\arrayrulewidth}
               Example Code         & U                         & R\textsubscript{ef}       & R\textsubscript{ef}       & U                  \\ \hline
               Documentation        & U                         & U                         & R\textsubscript{ef}       & R\textsubscript{ef} \\ \hline
               Interfaces           & G                         & P                         & P                         & G                  \\ \hline
