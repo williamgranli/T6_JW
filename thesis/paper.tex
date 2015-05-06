@@ -416,15 +416,16 @@ Supporting users of the API in creating correct and robust applications is a ver
 
 \smallskip \noindent
 \textbf{Removing functionality  } 
-Previous literature has stated that deprecations are the most common technique to used remove support for specific functionality. Removals are only suggested in specific circumstances. The successful removal of the burst function seems to indicate that under the correct circumstances, removing small unwanted functionality is a good alternative to deprecation. The case company only removed this function from the API after an internal review found that the cost of removing it would outweigh potential drawbacks of keeping it in the API. We therefore recommended to only remove parts of an API if the effect of the removal has been thoroughly investigated and that the removals happen incrementally and slowly.
+Previous literature has suggested that deprecating functionality is the most common technique used to remove support for specific functionality. Removals are only suggested in specific circumstances. The successful removal of the burst function seems to indicate that under the correct circumstances, removing specific functionality is an alternative that should be considered.
+The case company removed this function from the API, after an internal review found that the potential negative effect the removal could have, would be less impactful than further maintenance of the function. We therefore recommend to remove functionality of an API if the effect of the removal has been thoroughly investigated and that the removals happen incrementally.
 
 \smallskip \noindent
 \textbf{Documentation does not drive change  } 
-The intent to update example code and documentation was described by the interviewee to be an important change between version 1.4 and 2.0. While important for the APIs usability, it was not a driving factor of change itself. The changes to the APIs design and functionality caused the need to update the documentation and example code.
+The intent to update example code and documentation was described by the interviewee to be an important change between version 1.4 and 2.0. While important for the APIs usability, it was not a driving factor of change itself. The changes to the APIs' design and functionality caused the need to update the documentation and example code.
 
 \smallskip \noindent
 \textbf{Hardware is not a driving factor  } 
-Our initial expectations included the view that changes to hardware would be one of the strongest driving factors of API evolution. For example, new cameras are created or new hardware is added to an existing camera, requiring updates to the API to allow use of the new features. However, after analysing the changes and from the information gathered in the interview, we discovered that hardware has played a minimal role in the evolution of the API. 
+Our initial expectations included the view that changes to hardware would be one of the strongest driving factors of API evolution. One example could be if new cameras are created or new hardware is added to an existing camera, which would require updates to the API to allow use of the new features. However, after analysing the changes and from the information gathered in the interview, we discovered that hardware has played a minimal role in the evolution of the API. 
 
 
 \subsection{Discussion RQ1.1}
@@ -433,11 +434,11 @@ Our initial expectations included the view that changes to hardware would be one
 
 \noindent
 \textbf{Functionality is reverse engineerable  } 
-All changes whose main motive was to either add or remove functionality were accurately predicted. These changes were the most major ones, and it was expressed during the interview that these types of changes main driving factor behind the development of the new version. In summary, eleven out of a total thirteen changes were correctly predicted. It is also interesting to note that all changes which were not assigned any sub-category were correctly predicted. This supports the fact that such changes have a clearer intent and are perhaps more well-defined. 
+All changes whose main motive was to either add or remove functionality were accurately predicted. These changes were the most significant and it was expressed during the interview that these types of changes (``were the?'') main driving factor(``s'') behind the development of the new version. In summary, eleven out of a total (``of'') thirteen changes were correctly predicted. It is also interesting to note that all changes which were not assigned any sub-category were correctly predicted. This supports the fact that such changes have a clearer intent and are perhaps more well-defined.
 
 \smallskip \noindent
 \textbf{Design changes are reverse engineerable to some extent} 
-Three out of five changes which did not add functionality, but rather were introduced to reduce complexity and increase quality were correctly predicted. The two changes which were incorrectly predicted were wrong because the main motivation was confused with the secondary intent. This shows that, although the prediction was incorrect, the general reasoning was correct. Our predictions were accurate enough to allow us to form a reliable conclusion which provided valuable discussion with the case company. 
+Three out of five changes which did not add functionality, but rather were introduced to reduce complexity and increase quality, were correctly predicted. The two changes which were incorrectly predicted were wrong (``inaccurate?'') because the main motivation was confused with the secondary intent. This shows that, although the prediction was incorrect, the general reasoning was correct. Our predictions were accurate enough to allow us to form a reliable conclusion which provided valuable discussion with the case company. 
 
 
 
@@ -451,7 +452,7 @@ Sufficient evidence was found for the laws of Continuing Change, Self Regulation
 
 \smallskip \noindent
 \textbf{Two laws apply to a certain extent  }
-The laws of Increasing Complexity and Declining Quality were found to apply to APIs, but that the extent to which they apply might not be as significant for APIs compared to other types of systems. The reason that this doubt exists is because these motives were only secondary to the motives of increased functionality. An alternative explanation for these laws being of lesser significance in APIs could be that the general inertia to modify APIs which exists \cite{google_talk} \cite{henning2007api} \cite{mcdonnell2013empirical} \cite{robbes2012developers} might dominate the need to improve simplicity and quality. 
+The laws of Increasing Complexity and Declining Quality were found to apply to APIs, but that (``don't need that'') the extent to which they apply might not be as significant for APIs compared to other types of systems. The reason that this doubt exists is because these motives were only (``do you need only?'') secondary to the motives of increased functionality. An alternative explanation for these laws being of lesser significance in APIs could be that the general inertia to modify APIs which exists \cite{google_talk} \cite{henning2007api} \cite{mcdonnell2013empirical} \cite{robbes2012developers} might dominate the need to improve simplicity and quality. 
 
 
 \smallskip \noindent
