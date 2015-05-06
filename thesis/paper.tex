@@ -465,65 +465,65 @@ The results related to \textbf{RQ2} are structured around each of Lehman's laws 
 
 
 
-\subsubsection{Continuing Change} %Reviewed by W
+\subsubsection{Continuing Change} %Reviewed by WJ
 The case company described that including new functional content was one of the top priorities for the release of vesrion 2.0. This is supported by the characteristic of the changes identified in this study. 4 of the 13 changes were additions of new modules, and additional functionality was also added to re-implemented modules. It was also mentioned that the API users had previously requested more frequent updates to the API, despite the drawbacks this could cause. One of the main reasons for continuously adapting the API is also to control the way API users use the API. Prior to version 2.0 being released, a number of API users used workarounds to implement applications which contained functionality which was not yet offered from the API. These applications were fully functional, but there existed no standard method of implementation. We therefore conclude that the law of continuing change holds for APIs. 
 
-\subsubsection{Increasing Complexity} \label{sec:law2} %Reviewed by W
+\subsubsection{Increasing Complexity} \label{sec:law2} %Reviewed by WJ
 A majority of the changes introduced in version 2.0 aimed to improve the structure and the way that the API was used. Many of these changes were related to the same design choices, which enforced a certain implementation style on the whole API. One example of this is the change to the interfaces which set a standard for the whole API. During the interview it was also concluded that consistency and following certain standards is an important factor to consider when designing APIs. It was also made clear that a contributing factor for changing certain parts of the API was to bring it into line with the new interface design. The interviewee mentioned that one way of achieving this was to follow guidelines or design best practices, but that the company currently did not make use of these. Even though the importance of maintaining the API in order to reduce complexity was stated, arguments which support that it is of lesser importance than releasing functional content was also presented. One example of where this is evident in the evolution of the API, is in the module that handles the video capturing and video stream. It was decided that this module would not be re-designed to conform with the new interface standard, as the changes to functionality in this module were very minor. Thus, the law of increasing complexity holds for APIs, but there is evidence that suggests that decreasing the complexity is not of the highest priority. 
 
-\subsubsection{Self Regulation} \label{sec:law3} %Reviewed by W
+\subsubsection{Self Regulation} \label{sec:law3} %Reviewed by WJ
 The release of version 1.4 did not include any changes related to the API interface. Version 1.0 through to 1.4 strictly added support for additional build target platforms. When comparing the changes introduced in version 2.0 to the ones in previous versions, it is clear that the growth of the API has gradually increased. During the interview it was also mentioned that the future plans for the API did not include any major changes and that only a few minor changes were planned in the near future. The future updates to the API will also be made incrementally and there will not be a big bang update similar to that of version 2.0. This supports that the law of self regulation applies to APIs, assuming that version 2.0 can be considered to be the peak of the normal distribution curve of the APIs growth. 
 
-\subsubsection{Conservation of Organisational Stability} %Reviewed by W
+\subsubsection{Conservation of Organisational Stability} %Reviewed by WJ
 The changes to the API have been made very sporadically, where only two new versions have been released since the deployment of version 1.0. As mentioned in Section \ref{sec:law3}, the changes introduced in version 1.4 did not involve any changes to the existing API functions. Consequently, the only significant update to the API was made in the transition to version 2.0. The internal development of the API has also been made sporadically and there have been periods where the API has not been actively developed. This suggests that the law of conservation of organisational stability does not apply to APIs. 
 
-\subsubsection{Conservation of Familiarity} %Reviewed by W
+\subsubsection{Conservation of Familiarity} %Reviewed by WJ
 The documentation that is included with the API was rigorously updated with the introduction of version 2.0. All functionality which was added or modified in version 2.0 was updated accordingly in the documentation. The same pattern can be seen for the example code, which went through major changes as a result of the changes to the API code. The case company's intent to control the way that their API is used also suggests that the knowledge of how to use the API is of importance, since if the API is used in too many different ways, it will be more difficult for the case company to have relevant documentation and example code. It was also expressed during the interview that further transparency in how the API should be used could be achieved. One example mentioned of how this could be achieved is by improving the expressiveness regarding which API functions are supported on which hardware types. These facts support that the law of conservation of familiarity is true for APIs. 
 
-\subsubsection{Continuing Growth} %Reviewed by W
+\subsubsection{Continuing Growth} %Reviewed by WJ
 Large parts of the changes between the versions were strictly additions of new functional content. 4 new modules were added and significant additions of new functionality were added to the modules which were re-designed from version 1.4. The interviewee also made it clear that increasing the functionality was one of the main goals with the 2.0 update. This also ties in with the ambition of controlling the way that the API is used, as mentioned previously. It was also mentioned that the case company had received feedback from the API users that more frequent updates to the functional content was desirable, even though this may require them to update their application code. We therefore conclude that the law of continuing growth applies to APIs. 
 
-\subsubsection{Declining Quality} %Reviewed by W
+\subsubsection{Declining Quality} %Reviewed by WJ
 The interviews established that a groomative motive was not the primary reason for implementing any change. The changes to the example code and the documentation, as well as the re-designed modules are examples of these, where the main motive behind the change was to either prevent unwanted usage or to increase the functional content. These changes did, however, also increase the quality and were a substantial part of the update. A counterargument to this reasoning can be seen in the module which handles the video data and capturing, which was not changed between the versions, as mentioned in Section \ref{sec:law2}. We therefore settle that the law of declining quality can be applied to APIs, but that there is data that implies that reducing quality is not of high importance. 
 
-\subsubsection{Feedback System} %Reviewed by W
+\subsubsection{Feedback System} %Reviewed by WJ
 One of the future goals of improvement of the case company is to better include the API users and end-users of the applications in their feedback loop. Currently, only the API users are included in this feedback loop and the API architect expressed the desire to also include the end-users. The reasoning for this was to increase the quality, and to be able to deliver content which is useful for the users and which leads to good applications being developed. Prior to version 2.0 being released, an example of how the API users were included in the feedback loop was when they implemented functionality related to sound, despite the fact there was no interface for this.  The experiences of this API user, were later considered when developing the axsound module. One benefit of having a more structured feedback loop, would be that the API developers would have greater awareness of potential errors in the implementation of the API. Another ambition which was mentioned, was to bring scientific theories and best practices from academia into consideration when developing the API. This would aim to complement the current strategy which is largely based around the expertise and experiences of the API architects. Based on these factors and clearly expressed ambitions, we conclude that the law of feedback system is true for APIs. 
 
 
 
 
-\section{Discussion}
-Our results have been provided valuable insight to the motives behind the evolution of an API. The results show that APIs definitely can be studied from the point of view of old evolution theories. Based on the result, we have formulated the subsequent outcomes. 
+\section{Discussion} %Reviewed by W
+Our results have been provided valuable insight to the motives behind the evolution of an API. The results show that APIs definitely can be studied from the point of view of long-established software evolution theories. Based on the result, we have formulated the subsequent outcomes. 
 
 
 
 \subsection{Discussion RQ1}
 
 \noindent
-\textbf{Adding functionality is a prime driver of API evolution  }
-Overwhelmingly, the primary driving factor behind API evolution was the desire for new API functionality. We found strong evidence to suggest that most, if not all of the additions, re-implementations and functional changes were undertaken to include additional functionality requested both internally and by the API users. This focus upon functionality was also emphasised in part due to a business goal. The more features the API can provide, the more applications developers can create for the cameras. This has a knock-on effect of increasing the appeal and therefore value of the products.
+\textbf{Adding functionality is a prime driver of API evolution  } %Reviewed by W
+Overwhelmingly, the primary driving factor behind API evolution was the desire for new API functionality. We found that a vast majority of the changes either added functionality or were direct effects of functionality being added. The main driver for these changes was the pressure from the API users, but pressure from the case company developers which utilised the API also contributed. This focus upon functionality was also emphasised in part due to a business goal ( "in part due to, sounds weird to me") . The more features the API can provide, the more applications developers can create for the cameras. This has a domino effect of increasing the appeal and therefore value of the products.
 
-%API users should be included in the design process?
-\smallskip \noindent
-\textbf{Maintainability does not drive change  } 
-While maintainability is important, it is not a primary driving factor for change. We found that where maintainability changed, functionality was also altered. For example, we predicted that the main intents to be enhancive which was correct. Furthermore, of the changes identified, none were considered to be primarily groomative, groomative changes were only identified as sub-category changes. Changes to the example code is further evidence of this. The example code was updated purely to reflect the changes in functionality and not as a groomative effort. 
-
-\smallskip \noindent
-\textbf{Aiding development of applications  } 
-Aiding users of the API to create correct and robust applications is a very important evolution factor for Axis. Changes between the versions brought about improvements to error handling, the example code and the way in which the API utilises interfaces. This, coupled with removal of unwanted functionality and unsafe operations, has allowed the API to grow and become much more user friendly. As mentioned previously, this could increase the amount of applications being created for the camera and thus could increase its value.
+%API users should be included in the design process? 
+\smallskip \noindent 
+\textbf{Maintainability does not drive change  } %Reviewed by W 
+While maintainability is important, it is not a primary driving factor for change. We found that where maintainability changed, functionality was also altered. For example, we predicted that the main intents to be enhancive which was correct. ( " Need to explain what was enhancive") Furthermore, of the changes identified, none were considered to be primarily groomative. Groomative motives were only found to be secondary, and never drove the change. Changes to the example code is further evidence of this. The example code was updated purely to reflect the changes in functionality and not as a groomative effort. 
 
 \smallskip \noindent
-\textbf{Removing functionality  }
-Previous literature has stated that deprecations should be favoured over removals from API for many reasons except in specific circumstances. The successful removal of the burst function seems to indicate that this advice is well worth following. Indeed, axis only removed this function from the API after an internal review found that the cost of removing it would outweigh potential drawbacks to keeping it in the API. It is therefore recommended to only remove something if the effects of removing it have been well investigated and that the removal is rather small in scale.  
+\textbf{Aiding development of applications  } %Reviewed by W
+Aiding ( "minor detail: is supporting better here?") users of the API to create correct and robust applications is a very important evolution factor for the case company. Changes between the versions brought about ( 're-word'?) improvements to error handling, the example code and the way in which the API utilises interfaces. This, coupled with removal of unwanted functionality and unsafe operations, has allowed the API to grow and become much more user-friendly. As mentioned previously, this could increase the amount of applications being created for the camera and in turn could increase its value ( "change to' : increase the value of them ?").
 
 \smallskip \noindent
-\textbf{Updative changes do not drive change  }
-Changes to documentation and example code are important, especially if the API is drastically changing between versions. However, these updative changes are drivers themselves, rather, they make up part of a larger change as a whole. 
+\textbf{Removing functionality  } %Reviewed by W
+Previous literature has stated that deprecations should be favoured over removals from API for many reasons, except in specific circumstances. The successful removal of the burst function seems to indicate that this advice is well worth following ( "well worth following reads weirdly") ( 'this sentence also contradicts the previous one'). Indeed, Axis only removed this function from the API after an internal review found that the cost of removing it would outweigh potential drawbacks to ( 'of???') keeping it in the API. ( 'this sentence is weird', "and remove the indeed") It is ( 'change to We therefore recommend') therefore recommended to only remove something if the effects of removing it have been well investigated and that the removal is rather small in scale. ( "instead of saying  small in scale i think we should explain that they should be made in increments and only a few at once") 
+
+\smallskip \noindent
+\textbf{Updative changes do not drive change  } %Reviewed by W
+Changes to documentation and example code are important, especially if the API is drastically changing between versions. However, these updative changes are drivers themselves, rather, they make up part of a larger change as a whole. ( "this whole section has to be re-written. We can't refer to them as updative changes since the nature of updative changes are reactive. instead refer to them as changes to !code e.g. documentation, example code etc.")
 %^Probably needs more to it?
 
 \smallskip \noindent
-\textbf{Hardware was not a driving factor  }
-Interestingly, we found that hardware was not a direct driver of change. Initially we had thought that it would be one of the strongest drivers of change, for example, new versions of hardware become available or new hardware is added to the camera requiring something in the API to access it. This does seem to suggest that the hardware for the camera is sufficiently stable such that it does not require changes and that those changes do not need to be reflected in new API versions.
+\textbf{Hardware was not a driving factor  } %Reviewed by W
+Interestingly ( "remove interestingly") , we found that hardware ( "have to explain in what regard we 'expected' hardware to be a driver e.g. updates to hardware, the release of new cameras")) was not a direct driver of change. Initially, we had thought ( "rephrase had thought... anticipated? thought sounds like we guessed" (or maybe say "Our initial expectaitions were")) that it would be one of the strongest drivers of change ( "new sentence here"), for example, new versions of hardware become available or new hardware is added to the camera requiring something in the API to access it. This does seem to suggest that the hardware for the camera is sufficiently stable such that it does not require changes and that those changes do not need to be ( "change 'not need to be' to 'are not'?") reflected in new API versions.
 
 
 \subsection{Discussion RQ1.1}
