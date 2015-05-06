@@ -210,7 +210,12 @@ Following the analysis of the archival data, the results of the interviews were 
 The software evolution categories \cite{chapin2001types} and Lehman's laws \cite{lehman1980programs} were analysed to allow us to be able to answer \textbf{RQ1}. The software evolution categories were used to map and explore motives behind changes and Lehman's laws were used to see what drives the natural evolution of APIs. Our ability to correctly predict the motives compared to the actual motives of the designers which were made clear during the interviews, will serve as the basis for answering \textbf{RQ2}.
 
 %This should probably go in Methodology... parts of it at least /W
-Each change between versions has been identified and grouped into four particular categories reflecting what kind of change they were; New, Modified, Removed and General Trends. Each section introduces the change and then discusses what the changes entailed, how we perceived them in relation to the twelve maintenance types, what our interviewee said about the changes and finally how the interviewees views of the changes relate to the maintenance categories. Each change was given a main category of maintenance and a subcategory if appropriate. This information will be used to answer \textbf{RQ1} and \textbf{RQ1.1}.
+In order to answer \textbf{RQ1}, we categorised the changes based on the 12 maintenance categories \cite{chapin2001types}, by inspecting the source code and the accompanying documentation. Following the interview, we compared our categorisations to the actual motive which was gathered from the interview. 
+
+Each change between versions has been identified and grouped into four particular categories reflecting what kind of change they were; New, Modified, Removed and General Trends. 
+
+Each section introduces the change and then discusses what the changes entailed, how we perceived them in relation to the twelve maintenance types, what our interviewee said about the changes and finally how the interviewees views of the changes relate to the maintenance categories. Each change was given a main category of maintenance and a subcategory if appropriate. This information will be used to answer \textbf{RQ1} and \textbf{RQ1.1}.
+%This paragraph should be moved to Methodology
 
 
 \subsection{Validity Threats} \label{validity_threats}
@@ -236,19 +241,12 @@ This section will present the results of our study. The results related to \text
 
 
 \subsection{RQ1 Results} \label{results_rq1}
-
-
-%This paragraph should be moved to Methodology
-In order to answer \textbf{RQ1}, we categorised the changes based on the 12 maintenance categories \cite{chapin2001types}, by inspecting the source code and the accompanying documentation. Following the interview, we compared our categorisations to the actual motive which was gathered from the interview. 
-
 %Add a small introductory sentence to this paragraph and have it as the first paragraph of this section (Don't forget to ref the table)
+Many changes were found between version 1.4 and version 2.0. Initial inspection revealed there to be many deprecations which were later re-implemented as new modules. We have considered these changes as a single change instead of a deprecation and a re-implementation. In total, thirteen unique changes were found. These changes are show in table \ref{table:Categories}.
+%
 The changes have been divided up into four specific categories, namely: new, modified, removed and general trends. The category new concerns additions of modules, modified concerns modifications to modules that existed in version 1.4 and removed are changes where functionality was removed being deprecated or replaced by functionality. General trends are broad changes that do not directly affect functionality. 
-
 %%Add percentages for both main and sub and specify which is for which
-After cross-examining our results with the interviewee and their responses, we found that roughly 78\% of our categorisation matched the actual categorisation of the changes.
-
-
-%Discuss how there were many modifications but we've classified them as re-implementations. Includes a deprecation and a replacement of that deprecation. Alternative was to analyse modify them as both an addition and a deprecation.
+After cross-examining our results with the interviewee and their responses, we found that 78\% of our main categorisation predictions matched the actual intent of the changes and that 78\% of our sub categorisations predictions matched the actual intents. 
 
 \begin{table}
        \centering
@@ -285,59 +283,59 @@ After cross-examining our results with the interviewee and their responses, we f
 %Add info about this is one of the added changes XXX (do that for all)
 The Pan, Tilt and Zoom (ptz) module concerns functionality related to manoeuvring the camera, both mechanically and digitally. 
 %%Relate it to Categories
-We concluded that this change was enhancive as it is a brand-new feature of the API. There was no secondary motive behind this change, as the change was purely enhancive. 
+We concluded that this change was enhancive, because it is a new feature of the API. There was no secondary motive behind this change, as the change was purely enhancive. 
 %%What she said
-The interviewee described how this change and the other changes classified as additions were all included in the new API at the request of API users. Prior to the change being introduced, there was no API functionality for controlling the camera and as such, it was a high priority addition to the new API. 
+The interviewee described how this change, as well as the other changes classified as additions, were all included in the new API at the request of API users. Prior to the change being introduced, there was no API functionality for controlling the camera and as such, it was a high priority addition to the new API. 
 %%Category based on her information
-Based on the interviewees' comments, we concluded that we had correctly identified the change as being enhancive. Furthermore, we were also correct in our prediction that there was no secondary category. 
+The interviewees' comments allowed us to concluded that we had correctly identified the change as being enhancive. Furthermore, we were also correct in our prediction that there was no secondary change category. 
 
 \subsubsection{axaudio}
 %%Describe the change 
-The most important functionality of the camera is to capture and analyse video data, however, some the API users require the possibility to perform analysis upon audio data. The addition of axaudio allows API users to perform audio analysis upon audio streams captured by cameras. 
+The most important functionality of the camera is to capture and analyse video data, however, some API users require the ability to analyse audio data. The addition of axaudio allows API users to perform audio analysis upon audio streams captured by cameras. 
 %%Relate it to Categories
-This change was determined to be enhancive, as it was an addition of a new feature to the API. We found no secondary motive of the change. 
+This change was determined to be enhancive, as it was an addition of a new feature to the API. We found no secondary motive for the change. 
 %%What she said
-Audio analysis had not previously been possible on Axis devices. During the interview, it was revealed that an API user had managed to implement their own audio analysis using version 1.4 of the API. Given the demand for audio analysis, it was included in version 2.0 of the API.
+Audio analysis had previously not been supported in version 1.4 of the API. However, during the interview, it was revealed that an API user had managed to implement their own audio analysis application using version 1.4 of the API. Given the apparent demand for audio analysis, it was included in version 2.0 of the API.
 %%Category based on her information
-Based on the the interviewee's reasoning, we concluded that we had successfully determined that the change was enhancive. The addition of axaudio had no secondary motive. 
+Taking into account the interviewee's reasoning, we concluded that we had successfully determined that the change was enhancive. The addition of axaudio had no secondary motive. 
 
 \subsubsection{axstorage}
 
 %%Describe the change 
-Prior to the newest version of the API being released, the sole alternative for storage was to use the Video Management System. Version 2.0 included the possibility of alternative storage solutions, by allowing to the camera to interface with external storage devices, such as SD cards. 
+Prior to the newest version of the API being released, the sole alternative for storing data was to use the Video Management System. Version 2.0 added the possibility of alternative storage solutions, by allowing to the camera to interface with external storage devices, such as SD cards. 
 %Relate it to categories
-Enhancive was chosen to be the most applicable category of change, given that axstorage was a new addition in version 2.0. No secondary motive was identified. 
+Enhancive was chosen to be the primary category of change, given that axstorage was a new addition in version 2.0. No secondary motive was identified. 
 %%What she said
-The limited storage options for the cameras was the reason that increased functionality was strongly requested by API users and as such axstorage was included in version 2.0 of the API.
+The interviewee described how limited storage options for the cameras, in version 1.4, was the reason that increased functionality was strongly requested by API users. As such, axstorage was included in version 2.0 of the API.
 %%Category based on her information
-The information gathered from the interview supported that we were correct in our categorisation of this change. No secondary category was established. 
+The information gathered from the interview therefore supported our original categorisation; it was an enhancive change. No secondary category was established. 
 
 \subsubsection{axserialport}
 
 %%Describe the change 
-The addition of axserialport allows API users to connect various devices to their cameras by through the serial port. This allows users to integrate multiple devices to create their own unique solutions. In version 1.4 of the API, there was no possibility to connect external devices to the camera.
+The addition of axserialport allows API users to connect various devices to their cameras through the use of a serial port. This allows users to integrate multiple devices to create their own unique solutions. This was not possible in version 1.4 of the API.
 %%Relate it to Categories
-The addition of this module was determined to be an enhancive change, as it involved the addition of a new feature. No relevant secondary category were identified.
+The addition of this module was determined to be an enhancive change, as it involved the addition of a new feature. No relevant secondary category was identified.
 %%What she said
-The addition of axserialport was requested by API users. A possible use case, which was given during the interview involved a ticketing system which allows for joint analysis of data from both devices. As such it was included in version 2.0, to meet the demand of the API users.
+The addition of axserialport was requested by API users to allow them to connect their cameras with other devices. A possible use case, that was given during the interview, involved a ticketing system which allows for joint analysis of data from multiple devices. As such it was included in version 2.0, to meet the demand of the API users.
 %%Category based on her information
-Given this information, we concluded that we were correct in predicting that this change was enhancive. The prediction of the secondary category was also correct. 
+Given this information, we concluded that we were correct categorising this change as enhancive. The categorisation of the secondary category was also correct. 
 
 \subsubsection{axevent}
 
 %%Describe the change 
-Version 2.0 of the API was designed to be an event-driven system which makes use of callbacks. To achieve this, the old event system had to be re-designed. The new design is used by all features of API version 2.0. An example of when an event is generated is when movement is detected by the camera. 
+Version 2.0 of the API was designed to be an event-driven system that makes use of callbacks. To achieve this, the old event system had to be re-designed. The new design is used by all features of version 2.0 of the API. An example of when an event is generated, would be when movement is detected by the camera. 
 %%Relate it to Categories
-Given that this module was a re-implementation of the previous event system, we concluded that it should be classified mainly as an enhancive change with the secondary category being classified as groomative. Groomative was chosen as the secondary category due to the additional motive of bringing the new functionality into line with the new design.
+Given that this module was a re-implementation of the previous event system, we concluded that it should be categorised mainly as an enhancive change with the secondary change as groomative. Groomative was chosen as the secondary category due to the additional motive of bringing the new functionality into line with the new design.
 %%What she said 
-The interviewee outlined that the previous version of axevent, event, was deprecated in favour of a re-implemention of the new event system. One reason being that the case company were dissatisfied with certain usability aspects of the API. The module was then completely re-implemented and according to the new system design of version 2.0.
+The interviewee outlined that the previous version of axevent, event, was deprecated in favour of a re-implemention of the new event system. One reason being, that the case company was dissatisfied with certain usability aspects of API version 1.4. The module was then completely re-implemented and re-designed according to the new system design of version 2.0.
 %%Category based on her information
 From the discussion in the interview, it was clear that both of our categorisations were correct. The change was primarily enhancive and secondarily groomative.
 
 \subsubsection{axhttp}
 
 %%Describe the change 
-The module axhttp serves to provide a Common Gateway Interface which allows the camera to dynamically load data to web pages. The previous version of axhttp was re-implemented in version 2.0, to correspond with the new design standards. Additional functionality was also added to the module.
+The module axhttp serves to provide a Common Gateway Interface which allows the camera to dynamically send data to web pages. The previous version of axhttp was re-implemented in version 2.0, to correspond with the new design standards. Additional functionality was also added to the module.
 %%Relate it to Categories
 This change re-implemented an existing module while adhering to the new design of API version 2.0. The main categorisation was chosen to be enhancive with groomative as the secondary change.
 %%What she said 
