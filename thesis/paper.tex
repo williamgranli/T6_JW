@@ -280,127 +280,39 @@ After cross-examining our results with the interviewee and their responses, we f
 
 
 \subsubsection{axptz}
-%Add info about this is one of the added changes XXX (do that for all)
-The Pan, Tilt and Zoom (ptz) module concerns functionality related to manoeuvring the camera, both mechanically and digitally. 
-%%Relate it to Categories
-We concluded that this change was enhancive, because it is a new feature of the API. There was no secondary motive behind this change, as the change was purely enhancive. 
-%%What she said
-The interviewee described how this change, as well as the other changes classified as additions, were all included in the new API at the request of API users. Prior to the change being introduced, there was no API functionality for controlling the camera and as such, it was a high priority addition to the new API. 
-%%Category based on her information
-The interviewees' comments allowed us to conclude that we had correctly identified the change as being enhancive. Furthermore, we were also correct in our prediction that there was no secondary change category. 
+The Pan, Tilt and Zoom (ptz) module concerns functionality related to manoeuvring the camera, both mechanically and digitally. We concluded that this change was enhancive, because it is a new feature of the API. There was no secondary motive behind this change, as the change was purely enhancive. The interviewee described how this change, as well as the other changes classified as additions, were all included in the new API at the request of API users. Prior to the change being introduced, there was no API functionality for controlling the camera and as such, it was a high priority addition to the new API. The interviewees' comments allowed us to conclude that we had correctly identified the change as being enhancive. Furthermore, we were also correct in our prediction that there was no secondary change category. 
 
 \subsubsection{axaudio}
-%%Describe the change 
-The most important functionality of the camera is to capture and analyse video data, however, some API users require the ability to analyse audio data. The addition of axaudio allows API users to perform audio analysis of audio streams captured by cameras. 
-%%Relate it to Categories
-This change was determined to be enhancive, as it was an addition of a new feature to the API. We found no secondary motive for the change. 
-%%What she said
-Audio analysis had previously not been supported in version 1.4 of the API. However, during the interview, it was revealed that an API user had managed to implement their own audio analysis application using version 1.4 of the API. Given the apparent demand for audio analysis, it was included in version 2.0 of the API.
-%%Category based on her information
-Taking into account the interviewee's reasoning, we concluded that we had successfully determined that the change was enhancive. The addition of axaudio had no secondary motive. 
+The most important functionality of the camera is to capture and analyse video data, however, some API users require the ability to analyse audio data. The addition of axaudio allows API users to perform audio analysis of audio streams captured by cameras. This change was determined to be enhancive, as it was an addition of a new feature to the API. We found no secondary motive for the change. Audio analysis had previously not been supported in version 1.4 of the API. However, during the interview, it was revealed that an API user had managed to implement their own audio analysis application using version 1.4 of the API. Given the apparent demand for audio analysis, it was included in version 2.0 of the API.Taking into account the interviewee's reasoning, we concluded that we had successfully determined that the change was enhancive. The addition of axaudio had no secondary motive. 
 
 \subsubsection{axstorage}
-
-%%Describe the change 
-Prior to the newest version of the API being released, the sole alternative for storing data was to use the Video Management System. Version 2.0 added the possibility of alternative storage solutions, by allowing the camera to interface with external storage devices, such as SD cards. 
-%Relate it to categories
-Enhancive was chosen to be the primary category of change, given that axstorage was a new addition to version 2.0. No secondary motive was identified. 
-%%What she said
-The interviewee described how limited storage options for the cameras, in version 1.4, was the reason that increased functionality was strongly requested by API users. As such, axstorage was included in version 2.0 of the API.
-%%Category based on her information
-The information gathered from the interview therefore supported our original categorisation; it was an enhancive change. No secondary category was established. 
+Prior to the newest version of the API being released, the sole alternative for storing data was to use the Video Management System. Version 2.0 added the possibility of alternative storage solutions, by allowing the camera to interface with external storage devices, such as SD cards. Enhancive was chosen to be the primary category of change, given that axstorage was a new addition to version 2.0. No secondary motive was identified. The interviewee described how limited storage options for the cameras, in version 1.4, was the reason that increased functionality was strongly requested by API users. As such, axstorage was included in version 2.0 of the API.The information gathered from the interview therefore supported our original categorisation; it was an enhancive change. No secondary category was established. 
 
 \subsubsection{axserialport}
-
-%%Describe the change 
-The addition of axserialport allows API users to connect various devices to the cameras through the use of a serial port. This allows users to integrate multiple devices to create their own unique solutions. This was not possible in version 1.4 of the API.
-%%Relate it to Categories
-The addition of this module was determined to be an enhancive change, as it involved the addition of a new feature. No relevant secondary category was identified.
-%%What she said
-The addition of axserialport was requested by API users to allow them to connect the cameras to other devices. A possible use case, that was given during the interview, involved a ticketing system which allows for joint analysis of data from multiple devices. As such, it was included in version 2.0, to meet the demand of the API users.
-%%Category based on her information
-Given this information, we concluded that we were correct in categorising this change as enhancive. The categorisation of the secondary category was also correct. 
+The addition of axserialport allows API users to connect various devices to the cameras through the use of a serial port. This allows users to integrate multiple devices to create their own unique solutions. This was not possible in version 1.4 of the API. The addition of this module was determined to be an enhancive change, as it involved the addition of a new feature. No relevant secondary category was identified. The addition of axserialport was requested by API users to allow them to connect the cameras to other devices. A possible use case, that was given during the interview, involved a ticketing system which allows for joint analysis of data from multiple devices. As such, it was included in version 2.0, to meet the demand of the API users. Given this information, we concluded that we were correct in categorising this change as enhancive. The categorisation of the secondary category was also correct. 
 
 \subsubsection{axevent}
-
-%%Describe the change 
-Version 2.0 of the API was designed to be an event-driven system that makes use of callbacks. To achieve this, the old event system had to be re-designed. The new design is used by all features of version 2.0 of the API. An example of when an event would be generated, is when the camera detects movement. 
-%%Relate it to Categories
-Given that this module was a re-implementation of the previous event system, we concluded that it should be categorised mainly as an enhancive change with the secondary change as groomative. Groomative was chosen as the secondary category due to the additional motive of bringing the new functionality into line with the new design.
-%%What she said 
-The interviewee outlined that the previous version of axevent, event, was deprecated in favour of a re-implemention of the new event system. One reason was that the case company was dissatisfied with certain usability aspects of API version 1.4. The module was then completely re-implemented and re-designed according to the new system design of version 2.0.
-%%Category based on her information
-From the discussion in the interview, it was clear that both of our categorisations were correct. The change was primarily enhancive and secondarily groomative.
+Version 2.0 of the API was designed to be an event-driven system that makes use of callbacks. To achieve this, the old event system had to be re-designed. The new design is used by all features of version 2.0 of the API. An example of when an event would be generated, is when the camera detects movement.  Given that this module was a re-implementation of the previous event system, we concluded that it should be categorised mainly as an enhancive change with the secondary change as groomative. Groomative was chosen as the secondary category due to the additional motive of bringing the new functionality into line with the new design. The interviewee outlined that the previous version of axevent, event, was deprecated in favour of a re-implemention of the new event system. One reason was that the case company was dissatisfied with certain usability aspects of API version 1.4. The module was then completely re-implemented and re-designed according to the new system design of version 2.0. From the discussion in the interview, it was clear that both of our categorisations were correct. The change was primarily enhancive and secondarily groomative.
 
 \subsubsection{axhttp}
-
-%%Describe the change 
-The module axhttp serves to provide a Common Gateway Interface which allows the camera to dynamically send data to web pages. The previous version of axhttp was re-implemented in version 2.0, to correspond with the new design standards, and at the same time, additional functionality was added to the module.
-%%Relate it to Categories
-This change re-implemented an existing module while adhering to the new design of API version 2.0. The main categorisation therefore was chosen to be enhancive with groomative as the secondary category.
-%%What she said 
-The interviewee described that the main driving force behind this change was to re-implement and add new functionality to the axhttp module, within the standards of the new design. 
-%%Category based on her information
-Our categorisation of enhancive and groomative was therefore correct for this change. The primary intent was to add functionality while also allowing the re-implementation to make use of the new API design. 
+The module axhttp serves to provide a Common Gateway Interface which allows the camera to dynamically send data to web pages. The previous version of axhttp was re-implemented in version 2.0, to correspond with the new design standards, and at the same time, additional functionality was added to the module. This change re-implemented an existing module while adhering to the new design of API version 2.0. The main categorisation therefore was chosen to be enhancive with groomative as the secondary category. The interviewee described that the main driving force behind this change was to re-implement and add new functionality to the axhttp module, within the standards of the new design.  Our categorisation of enhancive and groomative was therefore correct for this change. The primary intent was to add functionality while also allowing the re-implementation to make use of the new API design. 
 
 \subsubsection{ax\_parameter}
-
-%%Describe the change 
-The parameter setting module of the API allowed data and application settings to be saved so that they are not lost if the device is not running. This module was re-implemented as ax\_parameter with added functionality and conformance to the new design standards of API version 2.0.
-%2
-Given that this change re-implemented an existing module while also incorporating the new design standards, it has been categorised as being primarily enhancive with a secondary category of groomative.
-%3
-The interviewee clarified that this change was mainly concerned with re-implementing existing functionality, while simultaneously adopting the new standards of version 2.0. 
-%4
-Given the information from the interview, we concluded that this change was correctly categorised; the primary intent was enhancive and the secondary intent was groomative.
+The parameter setting module of the API allowed data and application settings to be saved so that they are not lost if the device is not running. This module was re-implemented as ax\_parameter with added functionality and conformance to the new design standards of API version 2.0. Given that this change re-implemented an existing module while also incorporating the new design standards, it has been categorised as being primarily enhancive with a secondary category of groomative. The interviewee clarified that this change was mainly concerned with re-implementing existing functionality, while simultaneously adopting the new standards of version 2.0.  Given the information from the interview, we concluded that this change was correctly categorised; the primary intent was enhancive and the secondary intent was groomative.
 
 
 \subsubsection{Burst Mode}
-
-%%Describe the change 
-The burst mode feature of the API allowed users to buffer a series of images for greater analysis. This feature was deprecated during the transition between version 1.4 and 2.0 and was not re-implemented.
-%%Relate it to Categories
-This change presented itself as a clear example of reductive maintenance, as it was simply removed and without being replaced. We therefore gave no secondary categorisation for this change.
-%%What she said
-The interviewee described, that in order to continue using this feature, it would have to be re-implemented. An impact assessment was undertaken to determine if the removal of the function would be costly. Ultimately, the negative effects were not deemed significant enough and thus the function was removed of the API.
-%%Category based on her information
-We can therefore conclude that we correctly categorised this change as reductive and that there are indeed, no secondary categories to describe this change.
+The burst mode feature of the API allowed users to buffer a series of images for greater analysis. This feature was deprecated during the transition between version 1.4 and 2.0 and was not re-implemented. This change presented itself as a clear example of reductive maintenance, as it was simply removed and without being replaced. We therefore gave no secondary categorisation for this change. The interviewee described, that in order to continue using this feature, it would have to be re-implemented. An impact assessment was undertaken to determine if the removal of the function would be costly. Ultimately, the negative effects were not deemed significant enough and thus the function was removed of the API. We can therefore conclude that we correctly categorised this change as reductive and that there are indeed, no secondary categories to describe this change.
 
 
 \subsubsection{Example Code}
-
-%%Describe the change 
-The case company included a selection of example programs to assist developers with creating applications. This trend continued in version 2.0, but there were some significant improvements. The number of example programs and the amount of comments accompanying the code increased, thus improving quality of the examples.
-%%Relate it to Categories
-We therefore concluded that this change was updative, as the example code was updated according to the new API and the new techniques that it utilises. We further decided that this change also had a secondary category of reformative.
-%%What she said
-During the interview, it became clear that the improvement of the example code was an important change between the two versions. The interviewee described how the examples were used frequently by their customers, however, the old examples had many varied implementation techniques, even for similar tasks. This ultimately meant that the old examples were not satisfactory and that new examples would have to be written, preferably conforming to the same standards. The new example code explicitly covered the new functionality, focusing on new features and showing how they can be combined to create applications.
-%%Category based on her information
-With this information, we concluded that our categorisation was incorrect. It became clear that this change was, in actual fact, primarily reformative. It was also clear that the subcategory should therefore have been updative. 
+The case company included a selection of example programs to assist developers with creating applications. This trend continued in version 2.0, but there were some significant improvements. The number of example programs and the amount of comments accompanying the code increased, thus improving quality of the examples. We therefore concluded that this change was updative, as the example code was updated according to the new API and the new techniques that it utilises. We further decided that this change also had a secondary category of reformative. During the interview, it became clear that the improvement of the example code was an important change between the two versions. The interviewee described how the examples were used frequently by their customers, however, the old examples had many varied implementation techniques, even for similar tasks. This ultimately meant that the old examples were not satisfactory and that new examples would have to be written, preferably conforming to the same standards. The new example code explicitly covered the new functionality, focusing on new features and showing how they can be combined to create applications. With this information, we concluded that our categorisation was incorrect. It became clear that this change was, in actual fact, primarily reformative. It was also clear that the subcategory should therefore have been updative. 
 
 \subsubsection{Documentation}
-
-%%Describe the change 
-As the API code was updated in version 2.0, the API documentation was updated to correspond with the new code. While there were no substantial changes, we found that the documentation is no longer offered as a PDF but is instead only offered as HTML. 
-%%Relate it to Categories
-We categorised this change as being updative with a reformative secondary category for the reasons that the change only updated the documentation to reflect the recent changes in version 2.0.
-%%What she said
-This sentiment was shared by the interviewee; the documentation was only changed according to the current workings of the API and how the new modules interact with each other.
-%%Category based on her information
-We can therefore say that our categorisations were correct, the change was updative and reformative.
-
-%!!!Re-write this, don't say no information etc
+As the API code was updated in version 2.0, the API documentation was updated to correspond with the new code. While there were no substantial changes, we found that the documentation is no longer offered as a PDF but is instead only offered as HTML.  We categorised this change as being updative with a reformative secondary category for the reasons that the change only updated the documentation to reflect the recent changes in version 2.0. This sentiment was shared by the interviewee; the documentation was only changed according to the current workings of the API and how the new modules interact with each other. We can therefore say that our categorisations were correct, the change was updative and reformative.
 
 \subsubsection{Interfaces}
-
-%%Describe the change 
-Version 1.4 of the API allowed direct access to the headers of each module available in the API. Version 2.0 changed this by including interfaces through which functionality is accessed. This design change has had an effect on the whole API, as it has changed the structure of modules, but not the functionality of them.
-%%Relate it to Categories
-We therefore concluded that this change would be best categorised as  groomative. The secondary category was categorised as preventive, as the change could be seen as an attempt to reduce future maintenance. 
-%%What she said
-The interview provided further insight into the reasoning behind this design change. Improvements to coding standards, the desire for an event driven system and difficulty in using the existing APIs were all contributors to the decision to use interfaces in versions 2.0 of the API. Furthermore, the re-design would hopefully avoid future maintenance, while also allowing the system to be easily extended. 
-%%Category based on her information
-Taking this information into account, we concluded that our categorisation was incorrect. The interview showed that the primary categorisation should have been preventive, given the strong emphasis on avoiding future maintenance and improving usability. We further concluded that the secondary change should have been groomative, to better reflect the intent of improving the APIs maintainability.
+Version 1.4 of the API allowed direct access to the headers of each module available in the API. Version 2.0 changed this by including interfaces through which functionality is accessed. This design change has had an effect on the whole API, as it has changed the structure of modules, but not the functionality of them.We therefore concluded that this change would be best categorised as  groomative. The secondary category was categorised as preventive, as the change could be seen as an attempt to reduce future maintenance. The interview provided further insight into the reasoning behind this design change. Improvements to coding standards, the desire for an event driven system and difficulty in using the existing APIs were all contributors to the decision to use interfaces in versions 2.0 of the API. Furthermore, the re-design would hopefully avoid future maintenance, while also allowing the system to be easily extended. Taking this information into account, we concluded that our categorisation was incorrect. The interview showed that the primary categorisation should have been preventive, given the strong emphasis on avoiding future maintenance and improving usability. We further concluded that the secondary change should have been groomative, to better reflect the intent of improving the APIs maintainability.
 
 \subsubsection{3\textsuperscript{rd} Party}
 ATTN: (!!!We are waiting for more information from Johanna to confirm / add to this section!!!)
@@ -425,15 +337,7 @@ Glib (!!!ref to website) was therefore introduced to the new API to help allevia
 The new API utilises Glib in the majority of its interfaces and considering the fact that Glib has its own type of error handling, it seemed sensible to implement the same technique into the new API. However, it was expressed to us that the error handling would have changed between versions regardless of whether or not Glib was included. (!!!This is also too assume-y)
 
 \subsubsection{Error Handling}
-
-%%Describe the change 
-A substantial change included in version 2.0 was the addition of header files, containing enums of error codes. While it was not evident how the error handling was implemented prior to version 2.0, we concluded that it had changed, given the addition of the new header files.
-%%Relate it to Categories
-We therefore categorised this change as being primarily preventive, as error handling is preventive by nature. Groomative was decided as the secondary category of maintenance, as improvement of error handling could be regarded as an attempt to improve maintainability. 
-%%What she said
-During the interview, it was made clear that the previous error handling was lacking in expressiveness and usability. Glib was added to version 2.0 and the error handling functionality that Glib provides was incorporated into the new API design.
-%%Category based on her information
-We therefore concluded that our categorisation for this change was correct. The primary reason for the change was to improve the existing error handling while conforming to the new API standard. 
+A substantial change included in version 2.0 was the addition of header files, containing enums of error codes. While it was not evident how the error handling was implemented prior to version 2.0, we concluded that it had changed, given the addition of the new header files. We therefore categorised this change as being primarily preventive, as error handling is preventive by nature. Groomative was decided as the secondary category of maintenance, as improvement of error handling could be regarded as an attempt to improve maintainability.  During the interview, it was made clear that the previous error handling was lacking in expressiveness and usability. Glib was added to version 2.0 and the error handling functionality that Glib provides was incorporated into the new API design. We therefore concluded that our categorisation for this change was correct. The primary reason for the change was to improve the existing error handling while conforming to the new API standard. 
 
 
 
