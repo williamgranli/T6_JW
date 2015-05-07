@@ -97,22 +97,22 @@ This study has provided valuable insight into the evolution of platform APIs. Th
 
 \section{Introduction} \label{introduction}
 %API Design (and a little bit of ecosystems and a bit of problem statement)
-As the software industry and the open-source movement steadily grow, the number of public APIs is increasing. APIs can improve the development speed \cite{stylos2006comparing}, contribute to higher quality software \cite{stylos2006comparing} and increase the reusability of software \cite{afonso2012evaluating}. There is a consensus in that modifications to APIs could negatively impact the users of the API \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api}. The main reason for this is that it requires the API users to update the application code, thus causing a disruption in the application's software ecosystem \cite{messerschmitt2005software}. The most common changes to APIs occur from refactoring \cite{dig2005role} \cite{xing2006refactoring}. 
+As the software industry and the open-source movement steadily grow, the number of public APIs is increasing. APIs can improve the development speed \cite{stylos2006comparing}, contribute to higher quality software \cite{stylos2006comparing} and increase the reusability of software \cite{afonso2012evaluating}. There is a consensus in that modifications to APIs could negatively impact the users of the API \cite{google_talk} \cite{mcdonnell2013empirical} \cite{robbes2012developers} \cite{henning2007api}. The main reason for this is that it requires the API users to update the application code, thus causing a disruption in the application's software ecosystem \cite{messerschmitt2005software}. Refactoring is the most common change that APIs undergo \cite{dig2005role} \cite{xing2006refactoring}. 
 %Software Evolution 
 In the discipline of software evolution, such updates to software are studied from an evolutionary standpoint. Software can be updated for different reasons and these motives can be grouped into corrective, adaptive, perfective and preventive changes \cite{lientz1980software}. 
 
 %Gap in Literature
-Studies that explore the intent behind API modifications exist \cite{hou2011exploring}. There are, however, no studies that attempt to map the motives behind changes to existing software evolution theories, such as the four categories of maintenance \cite{lientz1980software}. The area of programming language APIs is well-explored \cite{hou2011exploring} \cite{shi2011empirical}, but few studies that explore platform APIs exist \cite{robbes2012developers}. To the best of our knowledge, no studies that explore the motives behind or the effects of API evolution have previously been performed on embedded platform APIs. Reverse engineering design decisions is a challenging yet interesting problem. The better we can understand why changes occur and what problems they are trying to solve, the better we can design around these problems to avoid them cropping up in the future.
+Studies that explore the intent behind API modifications exist \cite{hou2011exploring}. There are, however, no studies that attempt to map the motives behind changes to existing software evolution theories, such as the types of software evolution and software maintenance activities \cite{chapin2001types}. The area of programming language APIs is well-explored \cite{hou2011exploring} \cite{shi2011empirical}, but few studies that explore platform APIs exist \cite{robbes2012developers}. To the best of our knowledge, no studies that explore API evolution have until now been performed on embedded platform APIs. 
 
+%Purpose
+Modifications to deployed APIs may negatively impact its users. It is therefore important to investigate why these changes occur. Understanding the motives behind the changes could help API designers to  prevent potential future changes to their APIs. Before the industry can safely include such information in their feedback loop, we must critically assess to what degree we can reverse engineer such motives. 
 
-%Purpose (and a bit of problem statement)
-%%****NEW*****
-Making changes to existing APIs can have a negative impact upon the users of those APIs. It is therefore important to understand why these changes occur. Understanding the motives behind the changes could help API designers prevent or avoid potential changes to their APIs. In order to achieve this and to provide immediate benefit to industry, an exploratory case study will be undertaken to investigate the underlying motives behind API changes of an existing API. Empirical analysis of changes between two major versions of an API will be undertaken, following which an interview with the architects will be used to verify the findings of our study. 
-%%****^NEW^****
+%Method
+In order to achieve this, an exploratory case study will be undertaken to investigate the underlying motives behind changes to APIs. Empirical analysis of the changes between two major versions of an API will be undertaken, following which, an interview with the architects will be used to validate the findings of our analysis. 
 
-%Old
-Due to the negative implications that modifications to APIs cause for its users, it is important to understand why changes to them occur. If most common pitfalls are known before the development of new APIs begin, these mistakes can be mitigated. Before the industry can make use of this information, we must also critically assess to what degree we can trace such motives. To achieve this, we will perform a case study which aims to investigate the underlying factors behind API changes. This will be achieved by empirically analysing the changes between two versions of an API. Subsequently, the designers of the API will be interviewed and asked to verify the accuracy of our findings. 
-%Old
+%Can't find a place for this - it's repeated in the Purpose
+%Reverse engineering design decisions is a challenging yet interesting problem. The better we can understand why changes occur and what problems they are trying to solve, the better we can design around these problems to avoid them cropping up in the future.
+
 
 \subsection{Research Questions} \label{rqs}
 \begin{description}
