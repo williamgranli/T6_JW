@@ -131,7 +131,7 @@ This section will introduce the fields of API design and software evolution, and
 
 
 \subsection{API Design} \label{api_design}
-API design is notoriously difficult, as a myriad of design and performance decisions must be taken into consideration when creating APIs \cite{afonso2012evaluating} \cite{bloch2008effective} \cite{stylos2006comparing}. Examples of such decisions include whether or not to make use of the factory pattern or if an API should display errors only at compilation or only at runtime \cite{stylos2006comparing}. More trivial design problems, such as assigning names to API features or correctly naming user defined types, can have a significant impact on the usability of an API \cite{shi2011empirical}. When facing such design challanges, the following four factors are important to consider: a) The API must be understandable through good documentation, b) the API must not be overly abstract, c) the API must be reusable and d) the API must be easy to learn \cite{shi2011empirical}. One of the most important qualities in an API is that the intent of the API must be clear to the user \cite{stylos2006comparing} \cite{shi2011empirical}. The design decisions reached during development of an API will affect the overall usability of the API. Measuring such an effect can be done by investigating the twelve cognitive dimensions that are impacted by interactions between the API and its users \cite{clarke2004measuring}. 
+API design is notoriously difficult, as a myriad of design and performance decisions must be taken into consideration when creating APIs \cite{afonso2012evaluating} \cite{bloch2008effective} \cite{stylos2006comparing}. Examples of such decisions include whether or not to make use of the factory pattern or if an API should display errors only at compilation or only at runtime \cite{stylos2006comparing}. More trivial design problems, such as assigning names to API features or correctly naming user defined types, can have a significant impact on the usability of an API \cite{shi2011empirical}. When facing such design challenges, the following four factors are important to consider: a) The API must be understandable through good documentation, b) the API must not be overly abstract, c) the API must be reusable and d) the API must be easy to learn \cite{shi2011empirical}. One of the most important qualities in an API is that the intent of the API must be clear to the user \cite{stylos2006comparing} \cite{shi2011empirical}. The design decisions reached during development of an API will affect the overall usability of the API. Measuring such an effect can be done by investigating the twelve cognitive dimensions that are impacted by interactions between the API and its users \cite{clarke2004measuring}. 
 
 
 \subsection{Software Evolution} \label{software_evolution}
@@ -207,11 +207,14 @@ Each section introduces the change and then discusses what the changes entailed,
 In this section we discuss possible threats to construct validity, internal validity, external validity and reliability \cite{runeson2009guidelines}.
 
 \noindent
-\textbf{Construct validity  } Threats to construct validity have largely been mitigated by structuring the results of the research questions around already established and accepted theories \cite{chapin2001types} \cite{lehman1980programs}. Due to restricted access to the company's source code, we were not able to include versions previous to version 1.4 in our analysis. This means that the evolution of the API was studied during a rather short part of its lifetime ( "rephrase"). It was also not possible to analyse the implementation of the API, something which might have contributed to more accurate predictions of the motives behind the changes. We consider this to be remaining threats to construct validity. 
+\textbf{Construct validity  } Threats to construct validity have largely been mitigated by structuring the results the study around already established and accepted theories \cite{chapin2001types} \cite{lehman1980programs}. Due to restricted access to the company's source code, we were not able to include versions previous to version 1.4 in our analysis. This means that the evolution of the API was studied during a rather short part of its lifetime ( "rephrase"). It was also not possible to analyse the implementation of the API, something which might have contributed to more accurate predictions of the motives behind the changes. We consider this to be remaining threats to construct validity. 
 
 
 \smallskip \noindent
-\textbf{Internal validity  } 
+\textbf{Internal validity  } Internal validity has been acknowledged by analysing the the code and documentation jointly. This has contributed to triangulating the results and discovering possible inconsistencies. Further triangulation of the results was performed by interviewing the API architect. Business-related factors might have had an impact on the evolution of the API, and these were not closely investigated. This was not in the scope of the study and would best be investigated in a study complementary to ours. The study revealed that the API users were significant to the evolution of the API. Since API users were not interviewed, it might be a affecting factor which was left unexplored. 
+
+
+
 
 \smallskip \noindent
 \textbf{External validity  } 
@@ -220,10 +223,7 @@ In this section we discuss possible threats to construct validity, internal vali
 \textbf{Reliability  } 
 
 
-1
-Theories not applying
-Only analysing changes between two version
-Not investigating the implementation of the code (i.e. only headers were analysed)
+
 
 2
 Counteracted: 
@@ -238,9 +238,9 @@ The results should be generalisable to a large extent to any API designers
 Should be especially useful for platform/embedded APIs
 
 4
-This threat has bene counteracted by following a well-reputed guide to case studies \cite{runeson}, and by using analysis methods \cite{grounded} which are conventional. 
-The analysis of the data is based around existing theories which should also help reproducability.
-The inteview was semi-structured and largely based around the categories of software maintenance and Lehman's laws, which should help reproducability. 
+This threat has been counteracted by following a well-reputed guide to case studies \cite{runeson}, and by using analysis methods \cite{grounded} which are conventional. 
+The analysis of the data is based around existing theories which should also help reproducibility.
+The interview was semi-structured and largely based around the categories of software maintenance and Lehman's laws, which should help reproducibility. 
 
 %Internal Validity
 \textit{Internal validity} threats for our study have been greatly reduced by the methodologies we have employed. By performing an individual inspection of the API source code, documentation and individual results analysis, internal validity is significantly reduced. Triangulation of the results with the use of interviewing the designers is a key step in reducing potential validity threats in our study.
