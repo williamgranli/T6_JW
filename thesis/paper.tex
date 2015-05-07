@@ -169,20 +169,16 @@ The reason the selected methodology was used is that it is essential to study th
 %Intro to code inspection
 The data were collected primarily through inspections of the source code and the archival analysis of the accompanying documentation. The source code was comprised of two versions of an API which the company had developed. An older version, 1.4, which is currently released and a newer version, 2.0, which has recently been deployed. Each version of the API had its own respective documentation. The documentation was inspected and organised to find explanations of the features offered by the API. 
 
-%Diffs / Excel documents - This was data collection
-
-%Description of inspection
-%Description of code analysis - Needs more emphasis on the qualitative grouping
 
 %Identify the changes
 The analysis of the code and documentation was performed using grounded theory analysis \cite{seaman1999qualitative}, as it is recommended for hypothesis generating studies \cite{runeson2009guidelines} \cite{seaman1999qualitative}.
-
+%How the initial inspection was performed
 The API code was inspected sequentially, starting with version 1.4. Both versions of the API underwent the same inspection. This involved extracting methods names, enums, data structures which were then subsequently stored in excel spreadsheets. Crosscase analysis was then performed on both sets of data retrieved from different versions of the API \cite{seaman1999qualitative}. Changes were grouped into categories that best represented what the change achieved and were added to the data tables (``Use excel? Is it ok?''). For example, additions, modifications and removals. After a change was found in the code, we found related documentation changes, or explanations that were relevant to that change and added them along side their corresponding changes in the excel sheets.
 
 %Reduce human error
 The data collection from code and documentation was performed independently by both researchers, to reduce the risk of human errors affecting the results. If the data collected by each researcher differed, the cause of the discrepancy was investigated and resolved. 
 
-%Interviews !!!improve later
+%Interviews
 After the initial source code inspection and preliminary analysis had been performed, interviews were conducted. The main purpose of the interviews was to validate our findings during the code inspection with the designers of the APIs. Ideally, the interviews would provide additional insight into decisions and motives behind changes that were not evident from the code inspection. The final reason for interviewing the designers of the APIs was to provide further insight of the users of the API and how their decisions, needs and requirements have affected the development of the API.
 
 
@@ -214,12 +210,12 @@ The final step involved analysis of both the trends and the changes, combined wi
 %Relate to RQs
 The software evolution categories \cite{chapin2001types} and Lehman's laws \cite{lehman1980programs} were analysed to allow us to be able to answer \textbf{RQ1}. The software evolution categories were used to map and explore motives behind changes and Lehman's laws were used to see what drives the natural evolution of APIs. Our ability to correctly predict the motives compared to the actual motives of the designers which were made clear during the interviews, will serve as the basis for answering \textbf{RQ2}.
 
+%%%%****** This stuff is not part of the section, but we might want to use it somewhere, if we don't, remove it! ********
 %This should probably go in Methodology... parts of it at least /W
 In order to answer \textbf{RQ1}, we categorised the changes based on the 12 maintenance categories \cite{chapin2001types}, by inspecting the source code and the accompanying documentation. Following the interview, we compared our categorisations to the actual motive which was gathered from the interview. 
 
-%Where does this go?
+%Where does this go -- Do we want to put this in anywhere?
 Each section introduces the change and then discusses what the changes entailed, how we perceived them in relation to the twelve maintenance types, what our interviewee said about the changes and finally how the interviewees views of the changes relate to the maintenance categories. 
-%This paragraph should be moved to Methodology
 
 
 \subsection{Validity Threats} \label{validity_threats}
