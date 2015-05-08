@@ -187,50 +187,33 @@ goal of the study.
 %Intro and summary
 The data analysis was conducted in two major phases \cite{andersson2007spiral}. During the first phase, a hypothesis generating approach \cite{seaman1999qualitative} was used to be able to fulfil the exploratory goal of the study. It was during this phase that the analysis of the API code and documentation was carried out. The second phase included analysis of the interviews, the goal of which was to confirm the hypotheses \cite{seaman1999qualitative} that were formulated in the first phase. Both phases were performed iteratively, together with the data collection. This created the opportunity to improve the process of analysis as the study progressed, as well as allowing the study to adapt to possible changes in direction, due to the hypothesis generating approach of the first phase \cite{andersson2007spiral}. 
 
-1. Grounded theory
 
-%Identify the changes
+%Grounded Theory
 The analysis of the code and documentation was performed using grounded theory analysis \cite{seaman1999qualitative}, as it is recommended for hypothesis generating studies \cite{runeson2009guidelines} \cite{seaman1999qualitative}.
 
-2. RQ1
+%Codes
+Each change identified in the spreadsheet was coded based on what module the change occurred in and two other characteristics: a) if the change added, removed or modified functionality, or b) if the change was a cosmetic change.
+%Concepts
+Grouping the codes by module allowed us to form general concepts of change. However, changes that affected the whole API were categorised on their own.
+%Categories
+These concepts were then grouped into categories based on common patterns between the concepts.
+%Theory
+These categories were then used to identify the most interesting trends in the evolution of the API. These trends were later used as a discussion point during the interview.
 
-3. RQ2
-
-4. Interviews
-
-5. RQ1.1
-
-
-%Initial state with the data - It's in tables as raw changes here
-Once the preliminary groups of changes were identified, we had to identify what was different between the two versions. %%Preliminary groups=?, "had to", what was different"=not descriptive enough
-
-%Grouped into the broader changes by now, new, added, modified and removed.
-Each change between versions has been identified and grouped into four particular categories reflecting what kind of change they were; New, Modified, Removed and General Trends.
-
-%Determining what kind of change it was
-To determine if a change was new, we checked if it had existed in version 1.4 and then existed in version 2.0. For those files that did exist, we inspected using the Git Diff tool. This allowed us to find differences between files to determine if anything was changed. If we found a difference between two files where a function was removed, then it would be categorised as accordingly. Finally, for finding removals, we check if any files existed in version 1.4 and were no longer present in version 2.0.
-
-%Documentation's role & trends
-During the data collection stage, appropriate documentation was collected along side each change and was used to also determine what kind of change had occurred. Specifically, the documentation included a list of deprecated functions and files which allowed us to identify many changes easily. A high level analysis of the changes allowed us to identify general trends of the evolution.
-
+%RQ1
 %We have all the changes and our suggested theories. Categorise them now
-Changes identified at this point were further categorised by following the decision tree for types \cite{chapin2001types}. Each change was given a main category of maintenance and a subcategory if appropriate. This information will be used to answer \textbf{RQ1} and \textbf{RQ1.1}.
+The categories identified previously were then coded according to the software maintenance categories \cite{chapin2001types}. The process used followed the decision tree for types \cite{chapin2001types}. Each of the previously identified categories was given a main category of maintenance and a subcategory if appropriate. This was then used to answer \textbf{RQ1}.
+
+Our ability to correctly predict the motives compared to the actual motives of the designers which were made clear during the interviews, will serve as the basis for answering \textbf{RQ1.1}.
 
 %Description of interview analysis
-The results of the interviews were analysed and categorised in the same way that our identified changes had been. The actual categorisations of the were tabulated and compared with our initial findings.
+The results of the interview were analysed and categorised in the same way that our identified changes had been. Validation of our findings, by comparing our categorisation against the interviewee's categorisation, was performed at this point. The results of which are used to answer \textbf{RQ1}, \textbf{RQ1.1} and \textbf{RQ2}.
 
-%Lehman's
-The final step involved analysis of both the trends and the changes, combined with information gathered during the interview. These trends, combined with the information gathered in the interviews, allowed us to determine if Lehman's laws are applicable to APIs and therefore the answer to \textbf{RQ1.1} \cite{lehman1980programs}.
+%Lehman's - RQ2
+The analysis of both the trends and the changes, combined with information gathered during the interview allowed us to answer \textbf{RQ2} by determining if Lehman's laws are applicable to APIs \cite{lehman1980programs}.
 
-%Relate to RQs
-The software evolution categories \cite{chapin2001types} and Lehman's laws \cite{lehman1980programs} were analysed to allow us to be able to answer \textbf{RQ1}. The software evolution categories were used to map and explore motives behind changes and Lehman's laws were used to see what drives the natural evolution of APIs. Our ability to correctly predict the motives compared to the actual motives of the designers which were made clear during the interviews, will serve as the basis for answering \textbf{RQ2}.
-
-%%%%****** This stuff is not part of the section, but we might want to use it somewhere, if we don't, remove it! ********
-%This should probably go in Methodology... parts of it at least /W
-In order to answer \textbf{RQ1}, we categorised the changes based on the 12 maintenance categories \cite{chapin2001types}, by inspecting the source code and the accompanying documentation. Following the interview, we compared our categorisations to the actual motive which was gathered from the interview. 
-
-%Where does this go -- Do we want to put this in anywhere?
-Each section introduces the change and then discusses what the changes entailed, how we perceived them in relation to the twelve maintenance types, what our interviewee said about the changes and finally how the interviewees views of the changes relate to the maintenance categories. 
+%RQ1.1
+The final stage of analysis was conducted once all the data had been analysed. To answer \textbf{RQ1.1}, we compared our analysis and interpretation of the change intents against the opinions expressed during the interview. Success was determined based on the amount of correct interpretations made about the intent behind the changes.
 
 
 \subsection{Validity Threats} \label{validity_threats} %Review 1 or 2 more times (John first)
