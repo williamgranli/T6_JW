@@ -117,8 +117,8 @@ In order to achieve this, an exploratory case study will be undertaken to invest
 \subsection{Research Questions} \label{rqs}
 \begin{description}
 \item[\textbf{RQ1}] How do companies actively drive API evolution?
-\item[\textbf{RQ1.1}] To what extent can we reverse engineer API change decisions?
-\item[\textbf{RQ2}] How do APIs ``passively'' evolve?
+\item[\textbf{RQ2}] To what extent can we reverse engineer API change decisions?
+\item[\textbf{RQ3}] How do APIs ``passively'' evolve?
 
 
 \end{description}
@@ -164,7 +164,7 @@ The API analysed in this study is written in the programming language C and has 
 This study has been conducted using the case study methodology \cite{runeson2009guidelines}. The goal of the study was twofold. Firstly, the aim was to empirically explore the motives behind changes to APIs and secondly, to validate the results' level of correctness by comparing our findings with the case company's explanation of their motives. Our research can be classified as an embedded case study \cite{yin2013case}, since both the API code and API documentation have been used as units of analysis. 
 
 %Reasons for choosing case study
-The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing literature \cite{benbasat1987case} \cite{runeson2009guidelines} \cite{yin2013case} \cite{robson2002real}. An alternative approach that was considered was design research, but if a prototype API was to be used instead of one which is tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines}. An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change and that input from the industry is vital to the success of the research, especially to be able to answer \textbf{RQ1.1}. 
+The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing literature \cite{benbasat1987case} \cite{runeson2009guidelines} \cite{yin2013case} \cite{robson2002real}. An alternative approach that was considered was design research, but if a prototype API was to be used instead of one which is tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines}. An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change and that input from the industry is vital to the success of the research, especially to be able to answer \textbf{RQ2}. 
 
 
 \subsection{Data Collection} \label{data_collection}  %Review 1 or 2 more times (John first)
@@ -202,11 +202,11 @@ The categories identified previously were then classified according to the softw
 %Description of interview analysis
 The results of the interview were analysed and categorised in the same way that our identified changes had been. Validation of our findings, by comparing our categorisation against the interviewee's categorisation, was performed at this point. 
 
-%Lehman's - RQ2
-The analysis of the trends and the changes, combined with information gathered during the interview, allowed us to answer \textbf{RQ2} by determining if Lehman's laws are applicable to the changes to the API \cite{lehman1980programs}.
+%Lehman's - RQ3
+The analysis of the trends and the changes, combined with information gathered during the interview, allowed us to answer \textbf{RQ3} by determining if Lehman's laws are applicable to the changes to the API \cite{lehman1980programs}.
 
-%RQ1.1
-The final stage of analysis was conducted once all the data had been analysed, which allowed us to answer \textbf{RQ1.1}. This was accomplished by comparing our analysis and interpretation of the change motives against the opinions expressed during the interview. Success was determined by the amount of correct interpretations made about the motives of the changes. Our ability to correctly predict the motives, compared to the designers' actual motives which were made clear during the interviews, served as the basis for answering \textbf{RQ1.1}.
+%RQ2
+The final stage of analysis was conducted once all the data had been analysed, which allowed us to answer \textbf{RQ2}. This was accomplished by comparing our analysis and interpretation of the change motives against the opinions expressed during the interview. Success was determined by the amount of correct interpretations made about the motives of the changes. Our ability to correctly predict the motives, compared to the designers' actual motives which were made clear during the interviews, served as the basis for answering \textbf{RQ2}.
 
 
 \subsection{Validity Threats} \label{validity_threats} %Review 1 or 2 more times (John first)
@@ -224,9 +224,12 @@ In this section we discuss possible threats to construct validity, internal vali
 \smallskip \noindent
 \textbf{Reliability  } Potential threats to the reliability of our study have, to a great extent, been reduced by conducting the study according to a well-reputed guide to case studies \cite{runeson2009guidelines}. In addition to that, strategies from additional well-established papers \cite{andersson2007spiral} \cite{seaman1999qualitative} \cite{robson2002real} have been used to increase the trustworthiness of the data gathering and data analysis. The analysis was based around well-defined theories that are cemented in academia, to further increase the reproducibility of the study. The semi-structured nature of the interview, might threaten the reproducibility; however, large parts of it were structured around existing theories. 
 
+\newpage
+
+
 
 \section{Results} \label{results} 
-This section will present the findings of our study. The results related to \textbf{RQ1} and \textbf{RQ1.1} are introduced in Section \ref{results_rq1}, and the results of \textbf{RQ2} are presented in Section \ref{results_rq2}
+This section will present the findings of our study. The results related to \textbf{RQ1} and \textbf{RQ2} are introduced in Section \ref{results_rq1}, and the results of \textbf{RQ3} are presented in Section \ref{results_RQ3}
 
 
 \subsection{RQ1 Results} \label{results_rq1}
@@ -237,39 +240,53 @@ This section will present the findings of our study. The results related to \tex
 
 \smallskip \noindent
 \textbf{Enhancive  }
+We have found enhancive changes to be a large part of the API's evolution. Examples are...
+
 
 \smallskip \noindent
 \textbf{Corrective  }
+Corrective changes have been a driving force for the evolution of the API...
 
 \smallskip \noindent
 \textbf{Reductive  }
+Only one reductive change was found...
 
 \smallskip \noindent
 \textbf{Adaptive  }
+No adaptive changes were found
 
 \smallskip \noindent
 \textbf{Performance  }
+No identified changes could be related to performance...
 
 \smallskip \noindent
 \textbf{Preventive  }
+Preventive changes were...
 
 \smallskip \noindent
 \textbf{Groomative  }
+A couple of groomative changes were found...
 
 \smallskip \noindent
 \textbf{Updative  }
+Updative changes only affected documentation and not code...
+
 
 \smallskip \noindent
 \textbf{Reformative  }
+Blabla...
 
 \smallskip \noindent
 \textbf{Evaluative  }
+Blabla...
 
 \smallskip \noindent
 \textbf{Consultive  }
+Blabla...
 
 \smallskip \noindent
 \textbf{Training  }
+Blabla...
 
 \subsubsection{Summary}
 
@@ -298,8 +315,8 @@ The intent to update example code and documentation was described by the intervi
 \textbf{Hardware is not a driving factor  } %Reviewed by JW
 Our initial expectations included the view that changes to hardware would be one of the strongest driving factors of API evolution. One example could be if new cameras are created or new hardware is added to an existing camera, which would require updates to the API to allow use of the new features. However, after analysing the changes and from the information gathered in the interview, we discovered that hardware has played a minimal role in the evolution of the API. 
 
-
-\subsection{Reverse Results}
+\newpage
+\subsection{RQ2 Results}
 
 \noindent
 \textbf{Functionality is reverse engineerable  } %Reviewed by JW
@@ -309,13 +326,14 @@ All changes whose main motive was to either add or remove functionality were acc
 \textbf{Design changes are reverse engineerable to some extent  }  %Reviewed by JW
 Three out of five changes which did not add functionality, but rather were introduced to reduce complexity and increase quality, were correctly predicted. The two changes which were incorrectly predicted were inaccurate because the main motivation was confused with the secondary intent. This shows that, although the prediction was incorrect, the general reasoning was correct. Our predictions were accurate enough to allow us to form a reliable conclusion which provided valuable discussion with the case company. 
 
+\newpage
 
-\subsection{RQ2 Results} \label{results_rq2} 
+\subsection{RQ3 Results} \label{results_RQ3} 
 \noindent
-RQ2: \textbf{How do APIs ``passively'' evolve?}
+RQ3: \textbf{How do APIs ``passively'' evolve?}
 \smallskip
 
-The results related to \textbf{RQ2} are structured around each of Lehman's laws of software evolution \cite{lehman1980programs} and to what extent our findings show that the laws apply to platform APIs. A summary of our findings can be seen in Table \ref{table:lehman}. 
+The results related to \textbf{RQ3} are structured around each of Lehman's laws of software evolution \cite{lehman1980programs} and to what extent our findings show that the laws apply to platform APIs. A summary of our findings can be seen in Table \ref{table:lehman}. 
 
 
 \begin{table}
@@ -393,6 +411,7 @@ Strong evidence was found to suggest that the law of Conservation of Organisatio
 \textbf{The importance of a Feedback System  } %Reviewed by JW
 Especially interesting results were found in regards to the law of Feedback System. The importance of having a structured and developed feedback loop was stressed during the interview and it was also expressed as one of the main points of improvement. This suggests that including feedback from more sources and using this feedback to improve the evolution process should be a consideration for APIs. 
 
+\newpage
 
 \section{Discussion} \label{discussion}
 Our results have provided valuable insight into the motives behind the evolution of APIs. The results show that APIs definitely can be studied from the point of view of long-established software evolution theories. Based on the results, we have formulated the subsequent outcomes. 
@@ -402,11 +421,11 @@ Our results have provided valuable insight into the motives behind the evolution
 
 
 
-\subsection{Discussion RQ1.1}
-
-
-
 \subsection{Discussion RQ2}
+
+
+
+\subsection{Discussion RQ3}
 
 
 
@@ -486,7 +505,7 @@ We would like to thank Axis and that project at GU.
 % RQ1: \textbf{How do companies actively drive API evolution?}
 
 % \noindent
-% RQ1.1: \textbf{To what extent can we reverse engineer API change decisions?}
+% RQ2: \textbf{To what extent can we reverse engineer API change decisions?}
 % \smallskip
 
 % Many changes were found between version 1.4 and version 2.0. The initial inspection revealed there to be many deprecations which were later re-implemented as new modules. We have group these changes into a single change instead of a deprecation and a re-implementation. In total, thirteen unique changes were found. These changes are shown in Table \ref{table:categories}.
