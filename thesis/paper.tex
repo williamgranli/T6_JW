@@ -213,7 +213,7 @@ The API analysed in this study is written in the programming language C and has 
 
 %The case company was selected using convenience sampling \cite{flyvbjerg2006five} and a maximum variation strategy was used \cite{benbasat1987case}. As such, the goal was to include as many companies as possible in this study.
 
-
+\newpage
 
 \section{Methodology} \label{methodology}
 %Intro and summary
@@ -222,8 +222,16 @@ This study has been conducted using the case study methodology \cite{runeson2009
 %Reasons for choosing case study
 The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing literature \cite{benbasat1987case} \cite{runeson2009guidelines} \cite{yin2013case} \cite{robson2002real}. An alternative approach that was considered was design research, but if a prototype API was to be used instead of one which is tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines}. An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change and that input from the industry is vital to the success of the research, especially to be able to answer \textbf{RQ2}. 
 
+The study was conducted in two major phases \cite{andersson2007spiral}. The aim of the first phase was to generate hyptheses and to formulate clear research questions. This was achieved by using a data-driven approach to analysing the code and documentation. The second phase included analysis of the interviews, during which we aimed to confirm the hypotheses that were formulated in the first phsae. Both phases were performed iteratively. This created the opportunity to improve the data analysis as the study progressed, as well as allowing us to adapt to possible changes in direction, due to the hypothesis generating approach of the first phase. 
 
-\subsection{Data Collection} \label{data_collection}  %Review 1 or 2 more times (John first)
+The process used for examining the code and documentation was inspired by grounded theory analysis \cite{seaman1999qualitative}, as it is recommended for hypothesis generating studies \cite{runeson2009guidelines} \cite{seaman1999qualitative}. 
+
+
+
+
+
+
+\subsection{Data Collection} \label{data_collection}  
 %Intro to code inspection
 The data were collected primarily through inspections of the source code and the analysis of accompanying documentation. The source code was comprised of the two API versions previously mentioned. Each version of the API had its own respective documentation, including example code, a library description and a basic development manual. 
 
@@ -237,14 +245,12 @@ After the initial source code inspection and preliminary analysis had been perfo
 The interview was conducted using a semi-structured approach \cite{robson2002real}. Structure to the interview was provided by organising it around the software evolution theories \cite{chapin2001types} \cite{lehman1980programs}. Investigative and open-ended questions related to each category and law were asked to provide a basis for comparison between the answers and our initial analysis. The interviewee was encouraged to speak freely, even if it required a change in direction or topic. This was allowed in order to fulfil our exploratory goal of the study. 
 
 
-\subsection{Data Analysis} \label{data_analysis}
-%Intro and summary
-The data analysis was conducted in two major phases \cite{andersson2007spiral}. The aim of the first phase was to generate hypotheses \cite{seaman1999qualitative} and to formulate clear research questions. It was during this phase that the analysis of the API code and documentation was carried out. The second phase included analysis of the interviews, the goal of which was to confirm the hypotheses \cite{seaman1999qualitative} that were formulated in the first phase. Both phases were performed iteratively, together with the data collection. This created the opportunity to improve the process of analysis as the study progressed, as well as, allowing the study to adapt to possible changes in direction, due to the hypothesis generating approach of the first phase \cite{andersson2007spiral}. 
 
-%Grounded Theory
-The process used for analysing the code and documentation was inspired by grounded theory analysis \cite{seaman1999qualitative}, as it is recommended for hypothesis generating studies \cite{runeson2009guidelines} \cite{seaman1999qualitative}.
+
+\subsection{Data Analysis} \label{data_analysis}
+
 %Codes
-Each change identified in the spreadsheet was coded based on which module the change occurred in and two other characteristics: a) if the change added, removed or modified functionality, and b) if the change was a cosmetic change or not.
+To analyse the data each change identified in the spreadsheet was coded based on which module the change occurred in and two other characteristics: a) if the change added, removed or modified functionality, and b) if the change was a cosmetic change or not.
 %Concepts
 Grouping the codes by module allowed us to form general concepts of change. However, changes that affected the whole API were categorised on their own.
 %Categories
@@ -253,16 +259,15 @@ These concepts were then grouped into categories based on common patterns betwee
 These categories were then used to identify the most notable trends in the evolution of the API. These trends were later used as a basis for discussion during the interview.
 
 %RQ1
-The categories identified previously were then classified according to the software maintenance categories \cite{chapin2001types}. The process followed the decision tree used for classifying the types of software evolution and software maintenance \cite{chapin2001types}. Each of the previously identified categories were given a main category of maintenance and a secondary category, if appropriate. This material was then used as a basis for answering \textbf{RQ1}.
-
-%Description of interview analysis
-The results of the interview were analysed and categorised in the same way that our identified changes had been. Validation of our findings, by comparing our categorisation against the interviewee's categorisation, was performed at this point. 
-
-%Lehman's - RQ3
-The analysis of the trends and the changes, combined with information gathered during the interview, allowed us to answer \textbf{RQ3} by determining if Lehman's laws are applicable to the changes to the API \cite{lehman1980programs}.
+The trends identified previously were then classified according to the software maintenance types \cite{chapin2001types}. The process followed the decision tree used for classifying the types of software evolution and software maintenance \cite{chapin2001types}. Each of the previously identified trends were given a main type of maintenance and, if appropriate, a secondary type. This material, as well as the results of the interview, were then used as the basis for answering \textbf{RQ1}.
 
 %RQ2
-The final stage of analysis was conducted once all the data had been analysed, which allowed us to answer \textbf{RQ2}. This was accomplished by comparing our analysis and interpretation of the change motives against the opinions expressed during the interview. Success was determined by the amount of correct interpretations made about the motives of the changes. Our ability to correctly predict the motives, compared to the designers' actual motives which were made clear during the interviews, served as the basis for answering \textbf{RQ2}.
+To allow us to answer \textbf{RQ2}, we compared our analysis and interpretation of the trends identified prior, against what was expressed by the API architect, during the interview. Success was determined by comparing the inter-rater reliability, by performing calculating Cohen's Kappa gathered data. 
+
+%RQ3
+The analysis of the changes and trends, combined with the information gathered from the interview, allowed us to answer \textbf{RQ3} by determining if Lehman's Laws apply to the changes made to the API. 
+
+
 
 
 \subsection{Validity Threats} \label{validity_threats} %Review 1 or 2 more times (John first)
