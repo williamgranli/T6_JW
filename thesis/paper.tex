@@ -213,7 +213,6 @@ The API analysed in this study is written in the programming language C and has 
 
 %The case company was selected using convenience sampling \cite{flyvbjerg2006five} and a maximum variation strategy was used \cite{benbasat1987case}. As such, the goal was to include as many companies as possible in this study.
 
-\newpage
 
 \section{Methodology} \label{methodology}
 %Intro and summary
@@ -285,7 +284,6 @@ In this section we discuss possible threats to construct validity, internal vali
 \smallskip \noindent
 \textbf{Reliability  } Potential threats to the reliability of our study have, to a great extent, been reduced by conducting the study according to an accredited guide to case studies \cite{runeson2009guidelines}. In addition to that, strategies from additional well-established papers \cite{andersson2007spiral} \cite{seaman1999qualitative} \cite{robson2002real} have been used to increase the trustworthiness of the data gathering and data analysis. The analysis was based around well-defined theories that are cemented in academia, to further increase the reproducibility of the study. The semi-structured nature of the interview, might threaten the reproducibility; however, large parts of it were structured around existing theories. 
 
-\newpage
 
 
 
@@ -295,13 +293,11 @@ This section will present the findings of our study. The results related to \tex
 
 \subsection{RQ1 Results} \label{results_rq1}
 
-\subsubsection{Categories of Maintenance}
+The majority of changes between version 1.4 and version 2.0 have been additions to functionality of the API. Such additions include added functionality to mechanically and digitally control the camera, to utilise additional storage devices, to allow serial connectivity and to allow audio analysis on the cameras. Pure additions to the API did not have any secondary types of change attributed to them.
 
-The majority of changes between version 1.4 and version 2.0 have been additions to functionality of the API. Such additions include added functionality to mechanically and digitally control the camera, to utilise additional storage devices, to allow serial connectivity and to allow audio analysis on the cameras.
+Many of the changes found many deprecations which were later re-implemented as new modules. We have grouped these kinds of changes into a single type instead of two. Such examples include the deprecation and re-implementation of an event system, dynamic web page generation and configuration utilities. These kinds of changes often had a secondary type of change that accompanied the primary type of change.
 
-Many of the changes found many deprecations which were later re-implemented as new modules. We have grouped these kinds of changes into a single type instead of two. Such examples include the deprecation and re-implementation of an event system, dynamic web page generation and configuration utilities.
-
-The remainder of the changes were defined as general trends. These changes were not individual, but were instead larger changes that effected the whole API. Such examples include a shift towards using interfaces to access features, improved maintainability, a different error-handling approach and the inclusion of additional 3\textit{rd} party libraries. 
+The remainder of the changes were defined as general trends. These changes were not individual, but were instead larger changes that effected the whole API. Such examples include a shift towards using interfaces to access features, improved maintainability, a different error-handling approach and the inclusion of additional 3\textit{rd} party libraries. With the exception of 3\textit{rd} party libraries, the general trends have secondary changes which help to categories what effect the changes had on the API.
 
 All of the identified changes have been given a type based the nature of the change according to the Types of Software Evolution and Software Maintenance decision tree \cite{chapin2001types}. In total, thirteen unique changes were found. These changes are shown in Table \ref{table:categories}.
 
@@ -327,7 +323,7 @@ We therefore conclude that the evolution of the API was not driven by corrective
 %Definition
 Reductive changes are defined as changes that remove or reduce functionality. This is distinctive from a deprecation as reductive types of change remove functionality completely.
 %Data & Explanation
-Only a single reductive type of change was identified. This reductive change removed functionality that provided the ability to buffer individual images for closer analysis by a user. Given that it is more common to refactor APIs and not remove functionality \cite{dig2005role} \cite{xing2006refactoring}, this was a surprising result. 
+Only a single reductive type of change was identified. This reductive change removed functionality that provided the ability to buffer individual images for closer analysis by a user. Given that it is more common to refactor APIs and not remove functionality \cite{dig2005role, xing2006refactoring} this was a surprising result. 
 %Don't know if I should discuss the finding in this much depth here?
 %If OK - Talk more about the business side of things, and how we couldn't identify this change ourselves
 It was revealed during the interview that the functionality was removed because the case company no longer wished to support this feature, due to hardware constraints. 
@@ -339,43 +335,50 @@ As this was the only reductive change found, we conclude that the evolution of t
 %Introduction and definition
 Adaptive changes are defined to be changes which involve changes to technology or resources used. 
 %Data and examples
-A single change was identified as being adaptive; the inclusion of new 3\textit{rd} part libraries. Glib existed in version 1.4 of the API its use was increased in version 2.0. Furthermore, other libraries were added for audio and data communication.
-
-This type of change made up 7.7\% of the total changes, however it had a broader impact than other individual changes.
-
+A single change was identified as being adaptive; the inclusion of new 3\textit{rd} part libraries. Glib existed in version 1.4 of the API its use was increased in version 2.0. Furthermore, other libraries were added for audio and data communication. This type of change made up 7.7\% of the total changes, however it had a broader impact than other individual changes.
 %Conclusion 
+The evolution of the API has not been primarily driven by adaptive changes. However, more information, possibly in the form of another study, would be required to fully conclude if these types of changes have a greater impact upon the evolution of an API.
 
 \smallskip \noindent
 \textbf{Performance  }
-No identified changes could be related to performance...
+%Define
+Performance changes are defined to be types of change that intentionally alter system performance.
+%Data and examples
+No performance types of change were identified in the API. Only having access to the public API and not the implementation meant that we were unable search for performance changes in existing code between the versions. There was no indication from the documentation nor the interview that any change had been performed with the intent of increasing system performance. 
+%Conclusion
+As such, we conclude that the evolution of the API was not driven by performance changes. A proper benchmark could be performed on sample programs written with both versions of the API to test overall performance. However, this is outside the scope of our study.
 
 \smallskip \noindent
 \textbf{Preventive  }
-Preventive changes were...
+%Define
+Preventive changes are defined to be changes that attempt to avoid future maintenance. This should not be confused with changes that attempt to make the current state of the system more maintainable.
+%Data and examples
+15.8\% of the changes were given the type of Preventive. A new error handling system was one of these changes. It is unclear from version 1.4 what error handling was in place, however, version 2.0 saw the addition of specific error handling modules and functions. According to the interview, the error handling change coincided with the inclusion of more Glib features, which the new error handling system uses. The redesign of the system to use more interfaces was also deemed as a preventive change. Using interfaces to access modules helps to make them more maintainable and more easily extendable, which is a good example of a preventive change.
+%Concusion
+Preventive types of change appear to drive the evolution of an API more strongly than other types of changes do. This could be due to the fact that as the API grows, the need for higher maintenance also increase, a fact that also seems to be supported by Lehman's laws.
 
 \smallskip \noindent
 \textbf{Groomative  }
-A couple of groomative changes were found...
+%Define
+Groomative changes are defined to be changes that aim to make the code more maintainable immediately. This should not be confused with preventive changes.
+%Data and examples
+While none of the change identified were primarily groomative changes, three of them were secondarily categorised as being groomative. This seems to indicate that the groomative nature of a change is often a bonus of other kinds of changes. The move towards using interfaces can be seen as an example of this. While the primary motive of change was to make the API more maintainable in the future, making the API more maintainable immediately was also a reason for the change.
+%Conclusion
+While not a primary factor for any of the changes, groomative types of change should still be viewed as important for API evolution.
 
 \smallskip \noindent
 \textbf{Updative  }
-Updative changes only affected documentation and not code...
-
+%Define
+Updative changes are defined to be changes to documentation and are not changes that affect functionality in any way.
 
 \smallskip \noindent
 \textbf{Reformative  }
-Blabla...
+%Define
+Reformative changes are defined to be changes that update the documentation to the stakeholders needs.
 
 \smallskip \noindent
-\textbf{Evaluative  }
-Blabla...
-
-\smallskip \noindent
-\textbf{Consultive  }
-Blabla...
-
-\smallskip \noindent
-\textbf{Training  }
+\textbf{Evaluative, Consultive and Training  }
+%Define
 Blabla...
 
 \subsubsection{Summary}
@@ -405,7 +408,6 @@ The intent to update example code and documentation was described by the intervi
 \textbf{Hardware is not a driving factor  } %Reviewed by JW
 Our initial expectations included the view that changes to hardware would be one of the strongest driving factors of API evolution. One example could be if new cameras are created or new hardware is added to an existing camera, which would require updates to the API to allow use of the new features. However, after analysing the changes and from the information gathered in the interview, we discovered that hardware has played a minimal role in the evolution of the API. 
 
-\newpage
 \subsection{RQ2 Results}
 
 % After cross-examining our results with the interviewee and their responses, we found that 78\% of our main category predictions matched the actual motive of the changes and that 78\% of our secondary categorisations matched the actual motives. 
@@ -419,7 +421,6 @@ All changes whose main motive was to either add or remove functionality were acc
 \textbf{Design changes are reverse engineerable to some extent  }  %Reviewed by JW
 Three out of five changes which did not add functionality, but rather were introduced to reduce complexity and increase quality, were correctly predicted. The two changes which were incorrectly predicted were inaccurate because the main motivation was confused with the secondary intent. This shows that, although the prediction was incorrect, the general reasoning was correct. Our predictions were accurate enough to allow us to form a reliable conclusion which provided valuable discussion with the case company. 
 
-\newpage
 
 \subsection{RQ3 Results} \label{results_RQ3} 
 \noindent
@@ -504,7 +505,6 @@ Strong evidence was found to suggest that the law of Conservation of Organisatio
 \textbf{The importance of a Feedback System  } %Reviewed by JW
 Especially interesting results were found in regards to the law of Feedback System. The importance of having a structured and developed feedback loop was stressed during the interview and it was also expressed as one of the main points of improvement. This suggests that including feedback from more sources and using this feedback to improve the evolution process should be a consideration for APIs. 
 
-\newpage
 
 \section{Discussion} \label{discussion}
 Our results have provided valuable insight into the motives behind the evolution of APIs. The results show that APIs definitely can be studied from the point of view of long-established software evolution theories. Based on the results, we have formulated the subsequent outcomes. 
