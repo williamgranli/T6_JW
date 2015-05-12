@@ -100,12 +100,12 @@ As the software industry and the open-source movement continue to grow, the numb
 In the discipline of software evolution, such updates to software are studied from an evolutionary standpoint. Software can be updated for different reasons and these motives can be grouped into corrective, adaptive, perfective and preventive changes \cite{lientz1980software}. 
 
 %Gap in Literature
-Studies that explore the intent behind API modifications exist \cite{hou2011exploring}. There are, however, no studies that attempt to map the motives behind changes to existing software evolution theories, such as the types of software evolution and software maintenance activities \cite{chapin2001types}. The area of programming language APIs is well-explored \cite{hou2011exploring} \cite{shi2011empirical}, but few studies that explore platform APIs exist \cite{robbes2012developers}. To the best of our knowledge, no studies that explore API evolution have until now been performed on embedded platform APIs. 
+Studies that explore the intent behind API modifications exist \cite{hou2011exploring}. The area of programming language APIs is well-explored \cite{hou2011exploring} \cite{shi2011empirical}, but few studies that explore platform APIs exist \cite{robbes2012developers}. To the best of our knowledge, no studies that explore API evolution have until now been performed on embedded platform APIs. 
 
 %switch places between ^ and v
 
 %Purpose
-Modifications to deployed APIs may negatively impact its users. It is therefore important to investigate why these changes occur. Understanding the motives behind the changes could help API designers to  prevent potential future changes to their APIs. Before the industry can safely include such information in their feedback loop, we must critically assess to what degree we can reverse engineer such motives. 
+Modifications to deployed APIs may negatively impact its users. It is therefore important to investigate why these changes occur. Understanding the motives behind the changes could help API designers to  prevent potential future changes to their APIs. Before industry can safely include such information in their feedback loop, we must critically assess to what degree we can reverse engineer such motives. 
 
 %Method %wrong tense %include RQs in here %include clear contribution (to johanna)
 In order to achieve this, an exploratory case study will be undertaken to investigate the underlying motives behind changes to APIs. Empirical analysis of the changes between two major versions of an API will be undertaken, following which, an interview with the architects will be used to validate the findings of our analysis. 
@@ -295,20 +295,42 @@ This section will present the findings of our study. The results related to \tex
 
 \subsubsection{Categories of Maintenance}
 
+The majority of changes between version 1.4 and version 2.0 have been additions to functionality of the API. Such additions include added functionality to mechanically and digitally control the camera, to utilise additional storage devices, to allow serial connectivity and to allow audio analysis on the cameras.
 
+Many of the changes found many deprecations which were later re-implemented as new modules. We have grouped these kinds of changes into a single type instead of two. Such examples include the deprecation and re-implementation of an event system, dynamic web page generation and configuration utilities.
+
+The remainder of the changes were defined as general trends. These changes were not individual, but were instead larger changes that effected the whole API. Such examples include a shift towards using interfaces to access features, improved maintainability, a different error-handling approach and the inclusion of additional 3\textit{rd} party libraries. 
+
+All of the identified changes have been given a type based the nature of the change according to the Types of Software Evolution and Software Maintenance decision tree \cite{chapin2001types}. In total, thirteen unique changes were found. These changes are shown in Table \ref{table:categories}.
 
 \smallskip \noindent
 \textbf{Enhancive  }
-We have found enhancive changes to be a large part of the API's evolution. Examples are...
-
+%Define how we identified the change type
+Additions or re-implementations of functionality are defined to be enhancive changes. In addition to this, we have included deprecations that have then been re-implemented to also be enhancive.
+%Some Data and little explanation
+53.8\% of the identified changes were given the type of enhancive. The majority of which were additions of new functionality to the API. Two examples of added functionality are the addition of camera movement module and an audio analysis module. One example of a deprecation that was re-implemented is the event system.
+%Conclusion
+Given that over half of the changes were identified to be enhancive, we conclude that the APIs evolution primary type of change was enhancive. 
 
 \smallskip \noindent
 \textbf{Corrective  }
-Corrective changes have been a driving force for the evolution of the API...
-
+%Define what kinds of changes these are
+Corrective changes are identified as types of change that fix broken functionality.
+%Data and explanation
+No corrective changes were identified between V1.0 and V2.0. There are two main reasons that we did not find any changes of this type. Firstly, the majority of changes were additions or re-implementations of functionality. This meant that most of the existing code was either removed, replaced or deprecated resulting in little to no obvious fixes. Secondly, we only had access to the public facing API and not the implementation itself. We therefore could not inspect the inner workings of the functionality that has remained between versions to determine if any corrective change took place.
+%Conclusion
+We therefore conclude that the evolution of the API was not driven by corrective changes.
 \smallskip \noindent
 \textbf{Reductive  }
-Only one reductive change was found...
+%Definition
+Reductive changes are defined as changes that remove or reduce functionality. This is distinctive from a deprecation as reductive types of change remove functionality completely.
+%Data & Explanation
+Only a single reductive type of change was identified. This reductive change removed functionality that provided the ability to buffer individual images for closer analysis by a user. Given that it is more common to refactor APIs and not remove functionality \cite{dig2005role} \cite{xing2006refactoring}, this was a surprising result. 
+%Don't know if I should discuss the finding in this much depth here?
+%If OK - Talk more about the business side of things, and how we couldn't identify this change ourselves
+It was revealed during the interview that the functionality was removed because the case company no longer wished to support this feature, due to hardware constraints. 
+%Conclusion
+As this was the only reductive change found, we conclude that the evolution of the API was not primarily driven by reductive changes.
 
 \smallskip \noindent
 \textbf{Adaptive  }
@@ -376,6 +398,9 @@ Our initial expectations included the view that changes to hardware would be one
 
 \newpage
 \subsection{RQ2 Results}
+
+% After cross-examining our results with the interviewee and their responses, we found that 78\% of our main category predictions matched the actual motive of the changes and that 78\% of our secondary categorisations matched the actual motives. 
+
 
 \noindent
 \textbf{Functionality is reverse engineerable  } %Reviewed by JW
