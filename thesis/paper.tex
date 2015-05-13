@@ -296,7 +296,7 @@ Many of the changes found many deprecations which were later re-implemented as n
 
 The remainder of the changes were defined as general trends. These changes were not individual, but were instead larger changes that effected the whole API. Such examples include a shift towards using interfaces to access features, improved maintainability, a different error-handling approach and the inclusion of additional 3\textit{rd} party libraries. With the exception of 3\textit{rd} party libraries, the general trends have secondary changes which help to categories what effect the changes had on the API.
 
-All of the identified changes have been given a type based the nature of the change according to the Types of Software Evolution and Software Maintenance decision tree \cite{chapin2001types}. In total, thirteen unique changes were found. These changes are shown in Table \ref{table:categories}.
+All of the identified changes have been given a type based the nature of the change according to the Types of Software Evolution and Software Maintenance decision tree \cite{chapin2001types}. In total, thirteen unique changes were found.
 
 \smallskip \noindent
 \textbf{Enhancive  }
@@ -312,7 +312,7 @@ Given that over half of the changes were identified to be enhancive, we conclude
 %Define what kinds of changes these are
 Corrective changes are identified as types of change that fix broken functionality.
 %Data and explanation
-No corrective changes were identified between V1.0 and V2.0. There are two main reasons that we did not find any changes of this type. Firstly, the majority of changes were additions or re-implementations of functionality. This meant that most of the existing code was either removed, replaced or deprecated resulting in little to no obvious fixes. Secondly, we only had access to the public facing API and not the implementation itself. We therefore could not inspect the inner workings of the functionality that has remained between versions to determine if any corrective change took place.
+No corrective changes were identified between v1.0 and v2.0. There are two main reasons that we did not find any changes of this type. Firstly, the majority of changes were additions or re-implementations of functionality. This meant that most of the existing code was either removed, replaced or deprecated, resulting in little to no obvious fixes. Secondly, we only had access to the public facing API and not the implementation itself. We therefore could not inspect the inner workings of the functionality that has remained between versions to determine if any corrective change took place.
 %Conclusion
 We therefore conclude that the evolution of the API was not driven by corrective changes.
 \smallskip \noindent
@@ -394,11 +394,11 @@ We can therefore conclude that these change types are not important for API evol
 
 \noindent
 \textbf{Functionality is a prime driver of API evolution  }  %Reviewed by JW
-Overwhelmingly, the primary driving factor behind API evolution was the desire for new API functionality. We found that a vast majority of the changes either added functionality or were a direct consequence of increased functionality. The main driver for these changes was the pressure from API users, but pressure from the case company developers who utilise the API also contributed. This focus upon functionality was also emphasised partially due to a business goal. The more features the API can provide, the more applications developers can create for the cameras. This has a domino effect of increasing the appeal and therefore value of the products.
+Overwhelmingly, the primary driving factor behind API evolution was the desire for new API functionality. We found that a vast majority of the changes either added functionality or were a direct consequence of increased functionality. The main driver for these changes was the pressure from API users, but pressure from the case company developers who utilise the API also contributed. This focus upon functionality was also emphasised partially due to a business goal. The more features the API provides allows for more applications to be created for the cameras. This has a domino effect of increasing the appeal and value of the products the case company produces.
 
 \smallskip \noindent 
 \textbf{Maintainability does not drive change  }  %Reviewed by JW
-While maintainability is important, it is not a primary driving factor for change. We found that where changes that effected maintainability, functionality had also been added or modified. Of the changes identified, none were considered to be primarily groomative. Groomative motives were only found to be secondary, and were never the main motive for a change. Changes to the example code are an instance of this. The example code was updated purely to reflect the changes in functionality and not as a groomative effort. 
+While maintainability is important, it is not a primary driving factor for change. We found that where changes that effected maintainability, functionality had also been added or modified. Of the changes identified, none were considered to be primarily groomative. Groomative motives were only found to be secondary, and were never the main motive for a change. Changes to the example code are an example of this. The example code was updated purely to reflect the changes in functionality and not as a groomative effort. 
 
 \smallskip \noindent
 \textbf{Standardising application development  } %Reviewed by JW%Reviewed by JW
@@ -502,7 +502,7 @@ One of the future goals of improvement of the case company is to better include 
 
 \noindent
 \textbf{A majority of the laws apply  } %Reviewed by JW
-Sufficient evidence was found for the laws of Continuing Change, Self Regulation, Conservation of Familiarity, Continuing Growth and Feedback System to establish that they apply to APIs. The most prominent explanation for this is that a large part of the introduced changes were related to functionality. It is especially interesting to note that the laws of Self Regulation and Conservation of Familiarity accurately match the API explored in this paper. 
+Evidence was found for the laws of Continuing Change, Self Regulation, Conservation of Familiarity, Continuing Growth and Feedback System to establish that they apply to APIs. The most prominent explanation for this is that a large part of the introduced changes were related to functionality. It is especially interesting to note that the laws of Self Regulation and Conservation of Familiarity accurately match the API explored in this paper. 
 
 \smallskip \noindent
 \textbf{Two laws apply to a certain extent  } %Reviewed by JW
