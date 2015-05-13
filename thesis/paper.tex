@@ -151,17 +151,17 @@ Software evolution theory suggests that changes to software must obey one of eig
               \toprule
 
               \textbf{Type}                              & \textbf{Explanation}    \\ \midrule
-              Corrective    & [Explanation]                      \\ \hline
-              Reductive     & [Explanation]                     \\ \hline
-              Adaptive      & [Explanation]                      \\ \hline
-              Performance   & [Explanation]                     \\ \hline
-              Preventive    & [Explanation]                      \\ \hline
-              Groomative    & [Explanation]                      \\ \hline
-              Updative      & [Explanation]                     \\ \hline
-              Reformative   & [Explanation]                     \\ \hline
-              Evaluative    & [Explanation]                     \\ \hline
-              Consultive    & [Explanation]                     \\ \hline
-              Training      & [Explanation]                     \\ 
+              Corrective    & Corrections of functionality                   \\ \hline
+              Reductive     & Reductions of functionality                    \\ \hline
+              Adaptive      & Inclusion of new Technology                    \\ \hline
+              Performance   & Improvements to Performance                    \\ \hline
+              Preventive    & Improvements to future maintainability         \\ \hline
+              Groomative    & Improvements to maintainability                \\ \hline
+              Updative      & Updates to documentation                       \\ \hline
+              Reformative   & Changes to documentation                       \\ \hline
+              Evaluative    & Inspection activities                          \\ \hline
+              Consultive    & Consultations activities                       \\ \hline
+              Training      & Training activities                            \\ 
 
               \bottomrule
 
@@ -298,7 +298,33 @@ Many of the changes found many deprecations which were later re-implemented as n
 
 The remainder of the changes were defined as general trends. These changes were not individual, but were instead larger changes that effected the whole API. Such examples include a shift towards using interfaces to access features, improved maintainability, a different error-handling approach and the inclusion of additional 3\textit{rd} party libraries. With the exception of 3\textit{rd} party libraries, the general trends have secondary changes which help to categories what effect the changes had on the API.
 
-All of the identified changes have been given a type based the nature of the change according to the Types of Software Evolution and Software Maintenance decision tree \cite{chapin2001types}. In total, thirteen unique changes were found.
+All of the identified changes have been given a type based the nature of the change according to the Types of Software Evolution and Software Maintenance decision tree \cite{chapin2001types}. In total, thirteen unique changes were found. The count of change types is shown in table \ref{table:type_counts}.
+
+\begin{table}
+       \centering
+       \begin{tabular}[ht]{l|c|c}
+              \toprule
+
+              \textbf{Type}                              & \textbf{Main Types}   &\textbf{Sub Types} \\ \midrule
+              Enhancive     & 7 & 0                     \\ \hline
+              Corrective    & 0 & 0                     \\ \hline
+              Reductive     & 1 & 0                    \\ \hline
+              Adaptive      & 1 & 0                     \\ \hline
+              Performance   & 0 & 0                    \\ \hline
+              Preventive    & 2 & 0                     \\ \hline
+              Groomative    & 0 & 5                     \\ \hline
+              Updative      & 1 & 1                    \\ \hline
+              Reformative   & 1 & 1                     \\ \hline
+              Evaluative    & 0 & 0                    \\ \hline
+              Consultive    & 0 & 0                    \\ \hline
+              Training      & 0 & 0                    \\ 
+
+              \bottomrule
+
+       \end{tabular}
+       \caption{Identified Change Types}
+       \label{table:type_counts}
+\end{table}
 
 \smallskip \noindent
 \textbf{Enhancive  }
@@ -524,8 +550,9 @@ Our results have provided valuable insight into the motives behind the evolution
 
 \subsection{Discussion RQ1}  
 
-
-
+%Implications for Industry
+%Implications for Academia
+%Future work / suggestions based on this RQ?
 
 \subsection{Discussion RQ2}
 
