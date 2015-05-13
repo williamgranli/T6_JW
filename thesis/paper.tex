@@ -378,7 +378,7 @@ As such, we conclude that the evolution of the API was not driven by performance
 %Define
 Preventive changes are defined to be changes that attempt to avoid future maintenance. This should not be confused with changes that attempt to make the current state of the system more maintainable.
 %Data and examples
-Two changes were identified to be Preventive types of change. A new error handling system was one of these changes. It is unclear from version 1.4 what error handling was in place, however, version 2.0 saw the addition of specific error handling modules and functions. According to the interview, the error handling change coincided with the inclusion of more Glib features, which the new error handling system uses. The redesign of the system to use more interfaces was also deemed as a preventive change. Using interfaces to access modules helps to make them more maintainable and more easily extendable, which is a good example of a preventive change.
+Two changes were identified to be Preventive types of change. A new error handling system was one of these changes. It is unclear from version 1.4 what error handling was in place, however, version 2.0 added specific error handling modules and functions. According to the interview, the error handling change coincided with the inclusion of more Glib features, which the new error handling system uses. The redesign of the system to use more interfaces was also deemed as a preventive change. Using interfaces to access modules helps to make them more maintainable and more easily extendable, which is a good example of a preventive change.
 %Concusion
 Preventive types of change appear to drive the evolution of an API more strongly than other types of changes do. This could be due to the fact that as the API grows, the need for higher maintenance also increase, a fact that also seems to be supported by Lehman's laws.
 
@@ -551,6 +551,7 @@ Our results have provided valuable insight into the motives behind the evolution
 \subsection{Discussion RQ1}  
 
 %Implications for Industry
+%Important to understand the types of changes they are making so that they can better plan for them in the future. Design around them, design for them? Design to minimise them? Spin this into a design problem? **According to Lehman's laws, systems must keep changing otherwise they decline in quality. If they wish to maintain the quality of their system and provide new features, it would be helpful to know what kinds of changes are common for their APIs.
 %Implications for Academia
 %Future work / suggestions based on this RQ?
 
