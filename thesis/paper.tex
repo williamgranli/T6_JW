@@ -331,7 +331,7 @@ All of the identified changes have been given a type based the nature of the cha
 %Define how we identified the change type
 Additions or re-implementations of functionality are defined to be enhancive changes. In addition to this, we have included deprecations that have then been re-implemented to also be enhancive.
 %Some Data and little explanation
-53.8\% of the identified changes were given the type of enhancive. The majority of which were additions of new functionality to the API. Two examples of added functionality are the addition of camera movement module and an audio analysis module. One example of a deprecation that was re-implemented is the event system.
+Seven of the identified changes were given the type of enhancive. The majority of which were additions of new functionality to the API. Two examples of added functionality are the addition of camera movement module and an audio analysis module. One example of a deprecation that was re-implemented is the event system.
 %Conclusion
 Given that over half of the changes were identified to be enhancive, we conclude that the APIs evolution primary type of change was enhancive. 
 
@@ -360,7 +360,7 @@ As this was the only reductive change found, we conclude that the evolution of t
 %Introduction and definition
 Adaptive changes are defined to be changes which involve changes to technology or resources used. 
 %Data and examples
-A single change was identified as being adaptive; the inclusion of new 3\textit{rd} part libraries. Glib existed in version 1.4 of the API its use was increased in version 2.0. Furthermore, other libraries were added for audio and data communication. This type of change made up 7.7\% of the total changes, however it had a broader impact than other individual changes.
+A single change was identified as being adaptive; the inclusion of new 3\textit{rd} part libraries. Glib \cite{Glib} existed in version 1.4 of the API its use was increased in version 2.0. Furthermore, other libraries were added for audio and data communication.
 %Conclusion 
 The evolution of the API has not been primarily driven by adaptive changes. However, more information, possibly in the form of another study, would be required to fully conclude if these types of changes have a greater impact upon the evolution of an API.
 
@@ -378,7 +378,7 @@ As such, we conclude that the evolution of the API was not driven by performance
 %Define
 Preventive changes are defined to be changes that attempt to avoid future maintenance. This should not be confused with changes that attempt to make the current state of the system more maintainable.
 %Data and examples
-15.8\% of the changes were given the type of Preventive. A new error handling system was one of these changes. It is unclear from version 1.4 what error handling was in place, however, version 2.0 saw the addition of specific error handling modules and functions. According to the interview, the error handling change coincided with the inclusion of more Glib features, which the new error handling system uses. The redesign of the system to use more interfaces was also deemed as a preventive change. Using interfaces to access modules helps to make them more maintainable and more easily extendable, which is a good example of a preventive change.
+Two changes were identified to be Preventive types of change. A new error handling system was one of these changes. It is unclear from version 1.4 what error handling was in place, however, version 2.0 saw the addition of specific error handling modules and functions. According to the interview, the error handling change coincided with the inclusion of more Glib features, which the new error handling system uses. The redesign of the system to use more interfaces was also deemed as a preventive change. Using interfaces to access modules helps to make them more maintainable and more easily extendable, which is a good example of a preventive change.
 %Concusion
 Preventive types of change appear to drive the evolution of an API more strongly than other types of changes do. This could be due to the fact that as the API grows, the need for higher maintenance also increase, a fact that also seems to be supported by Lehman's laws.
 
