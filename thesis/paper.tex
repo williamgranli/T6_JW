@@ -119,8 +119,8 @@ In order to achieve this, an exploratory case study will be undertaken to invest
 \subsection{Research Questions} \label{rqs}
 \begin{description}
 \item[\textbf{RQ1}] How do companies actively drive API evolution?
-\item[\textbf{RQ2}] To what extent can we reverse engineer API change decisions?
-\item[\textbf{RQ3}] How do APIs ``passively'' evolve?
+\item[\textbf{RQ2}] How do APIs ``passively'' evolve?
+\item[\textbf{RQ3}] To what extent can we reverse engineer API change decisions?
 
 
 \end{description}
@@ -218,7 +218,7 @@ The API analysed in this study is written in the programming language C and has 
 This study has been conducted using the case study methodology \cite{runeson2009guidelines}. The goal of the study was twofold. Firstly, the aim was to empirically explore the motives behind changes to APIs and secondly, to validate the results' level of correctness by comparing our findings with the case company's explanation of their motives. Our research can be classified as an embedded case study \cite{yin2013case}, since both the API code and API documentation have been used as units of analysis. 
 
 %Reasons for choosing case study
-The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing literature \cite{benbasat1987case, runeson2009guidelines, yin2013case, robson2002real}. An alternative approach that was considered was design research, but if a prototype API was to be used instead of one which is tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines}. An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change and that input from the industry is vital to the success of the research, especially to be able to answer \textbf{RQ2}. 
+The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing literature \cite{benbasat1987case, runeson2009guidelines, yin2013case, robson2002real}. An alternative approach that was considered was design research, but if a prototype API was to be used instead of one which is tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines}. An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change and that input from the industry is vital to the success of the research, especially to be able to answer \textbf{RQ3}. 
 
 The study was conducted in two major phases \cite{andersson2007spiral}. The aim of the first phase was to generate hyptheses and to formulate clear research questions. This was achieved by using a data-driven approach to analysing the code and documentation. The second phase included analysis of the interviews, during which we aimed to confirm the hypotheses that were formulated in the first phsae. Both phases were performed iteratively. This created the opportunity to improve the data analysis as the study progressed, as well as allowing us to adapt to possible changes in direction, due to the hypothesis generating approach of the first phase. 
 
@@ -260,10 +260,11 @@ These categories were then used to identify the most notable trends in the evolu
 The trends identified previously were then classified according to the software maintenance types \cite{chapin2001types}. The process followed the decision tree used for classifying the types of software evolution and software maintenance \cite{chapin2001types}. Each of the previously identified trends were given a main type of maintenance and, if appropriate, a secondary type. This material, as well as the results of the interview, were then used as the basis for answering \textbf{RQ1}.
 
 %RQ2
-To allow us to answer \textbf{RQ2}, we compared our analysis and interpretation of the trends identified prior, against what was expressed by the API architect, during the interview. Success was determined by comparing the inter-rater reliability, by performing calculating Cohen's Kappa gathered data. 
+The analysis of the changes and trends, combined with the information gathered from the interview, allowed us to answer \textbf{RQ2} by determining if Lehman's Laws apply to the changes made to the API. 
 
 %RQ3
-The analysis of the changes and trends, combined with the information gathered from the interview, allowed us to answer \textbf{RQ3} by determining if Lehman's Laws apply to the changes made to the API. 
+To allow us to answer \textbf{RQ3}, we compared our analysis and interpretation of the trends identified prior, against what was expressed by the API architect, during the interview. Success was determined by comparing the inter-rater reliability, by performing calculating Cohen's Kappa gathered data. 
+
 
 
 
@@ -287,7 +288,7 @@ In this section we discuss possible threats to construct validity, internal vali
 
 
 \section{Results} \label{results} 
-This section will present the findings of our study. The results related to \textbf{RQ1} and \textbf{RQ2} are introduced in Section \ref{results_rq1}, and the results of \textbf{RQ3} are presented in Section \ref{results_RQ3}
+%%Write new
 
 
 \subsection{RQ1 Results} \label{results_rq1}
@@ -444,7 +445,7 @@ The intent to update example code and documentation was described by the intervi
 \textbf{Hardware is not a driving factor  } %Reviewed by JW
 Our initial expectations included the view that changes to hardware would be one of the strongest driving factors of API evolution. One example could be if new cameras are created or new hardware is added to an existing camera, which would require updates to the API to allow use of the new features. However, after analysing the changes and from the information gathered in the interview, we discovered that hardware has played a minimal role in the evolution of the API. 
 
-\subsection{RQ2 Results}
+\subsection{RQ3 Results}
 
 % After cross-examining our results with the interviewee and their responses, we found that 78\% of our main category predictions matched the actual motive of the changes and that 78\% of our secondary categorisations matched the actual motives. 
 
@@ -461,12 +462,12 @@ All changes whose main motive was to either add or remove functionality were acc
 Three out of five changes which did not add functionality, but rather were introduced to reduce complexity and increase quality, were correctly predicted. The two changes which were incorrectly predicted were inaccurate because the main motivation was confused with the secondary intent. This shows that, although the prediction was incorrect, the general reasoning was correct. Our predictions were accurate enough to allow us to form a reliable conclusion which provided valuable discussion with the case company. 
 
 
-\subsection{RQ3 Results} \label{results_RQ3} 
+\subsection{RQ2 Results} \label{results_RQ2} 
 \noindent
-RQ3: \textbf{How do APIs ``passively'' evolve?}
+RQ2: \textbf{How do APIs ``passively'' evolve?}
 \smallskip
 
-The results related to \textbf{RQ3} are structured around each of Lehman's laws of software evolution \cite{lehman90sview} and to what extent our findings show that the laws apply to platform APIs. A summary of our findings can be seen in Table \ref{table:lehman}. 
+The results related to \textbf{RQ2} are structured around each of Lehman's laws of software evolution \cite{lehman90sview} and to what extent our findings show that the laws apply to platform APIs. A summary of our findings can be seen in Table \ref{table:lehman}. 
 
 
 \begin{table}
@@ -557,9 +558,9 @@ Our results have provided valuable insight into the motives behind the evolution
 
 \subsection{Discussion RQ2}
 
-
-
 \subsection{Discussion RQ3}
+
+
 
 
 
