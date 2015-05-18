@@ -306,7 +306,7 @@ All of the identified changes have been given a type based the nature of the cha
        \begin{tabular}[ht]{l|c|c}
               \toprule
 
-              \textbf{Type}                              & \textbf{Main Types}   &\textbf{Sub Types} \\ \midrule
+              \textbf{Type}                              & \textbf{Main Types}   &\textbf{Secondary Types} \\ \midrule
               Enhancive     & 7 & 0                     \\ \hline
               Corrective    & 0 & 0                     \\ \hline
               Reductive     & 1 & 0                    \\ \hline
@@ -445,21 +445,6 @@ The intent to update example code and documentation was described by the intervi
 \textbf{Hardware is not a driving factor  } %Reviewed by JW
 Our initial expectations included the view that changes to hardware would be one of the strongest driving factors of API evolution. One example could be if new cameras are created or new hardware is added to an existing camera, which would require updates to the API to allow use of the new features. However, after analysing the changes and from the information gathered in the interview, we discovered that hardware has played a minimal role in the evolution of the API. 
 
-\subsection{RQ3 Results}
-
-% After cross-examining our results with the interviewee and their responses, we found that 78\% of our main category predictions matched the actual motive of the changes and that 78\% of our secondary categorisations matched the actual motives. 
-
-
-
-
-
-\noindent
-\textbf{Functionality is reverse engineerable  } %Reviewed by JW
-All changes whose main motive was to either add or remove functionality were accurately predicted. These changes were the most significant and it was expressed during the interview that these types of changes were the main driving factors behind the development of the new version. In summary, eleven out of a total of thirteen changes were correctly predicted. It is also interesting to note that all changes which were not assigned any sub-category were correctly predicted. This supports the fact that such changes have a clearer intent and are perhaps more well-defined.
-
-\smallskip \noindent
-\textbf{Design changes are reverse engineerable to some extent  }  %Reviewed by JW
-Three out of five changes which did not add functionality, but rather were introduced to reduce complexity and increase quality, were correctly predicted. The two changes which were incorrectly predicted were inaccurate because the main motivation was confused with the secondary intent. This shows that, although the prediction was incorrect, the general reasoning was correct. Our predictions were accurate enough to allow us to form a reliable conclusion which provided valuable discussion with the case company. 
 
 
 \subsection{RQ2 Results} \label{results_RQ2} 
@@ -544,6 +529,28 @@ Strong evidence was found to suggest that the law of Conservation of Organisatio
 \smallskip \noindent
 \textbf{The importance of a Feedback System  } %Reviewed by JW
 Especially interesting results were found in regards to the law of Feedback System. The importance of having a structured and developed feedback loop was stressed during the interview and it was also expressed as one of the main points of improvement. This suggests that including feedback from more sources and using this feedback to improve the evolution process should be a consideration for APIs. 
+
+\subsection{RQ3 Results}
+RQ3: \textbf{How do APIs ``passively'' evolve?}
+
+The 
+
+
+% After cross-examining our results with the interviewee and their responses, we found that 78\% of our main category predictions matched the actual motive of the changes and that 78\% of our secondary categorisations matched the actual motives. 
+
+
+
+
+
+\noindent
+\textbf{Functionality is reverse engineerable  } 
+All changes whose main motive was to either add or remove functionality were accurately predicted. These changes were the most significant and it was expressed during the interview that these types of changes were the main driving factors behind the development of the new version. In summary, eleven out of a total of thirteen changes were correctly predicted. It is also interesting to note that all changes which were not assigned any secondary type were correctly predicted. This supports the fact that such changes have a clearer intent and are perhaps more well-defined.
+
+\smallskip \noindent
+\textbf{Design changes are reverse engineerable to some extent  }  
+Three out of five changes which did not add functionality, but rather were introduced to reduce complexity and increase quality, were correctly predicted. The two changes which were incorrectly predicted were inaccurate because the main motivation was confused with the secondary intent. This shows that, although the prediction was incorrect, the general reasoning was correct. Our predictions were accurate enough to allow us to form a reliable conclusion which provided valuable discussion with the case company. 
+
+
 
 
 \section{Discussion} \label{discussion}
@@ -630,113 +637,4 @@ We would like to thank Axis and that project at GU.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-% \subsection{RQ1 Results} \label{results_rq1} %Reviewed by JW
-% \noindent
-% RQ1: \textbf{How do companies actively drive API evolution?}
-
-% \noindent
-% RQ2: \textbf{To what extent can we reverse engineer API change decisions?}
-% \smallskip
-
-% Many changes were found between version 1.4 and version 2.0. The initial inspection revealed there to be many deprecations which were later re-implemented as new modules. We have group these changes into a single change instead of a deprecation and a re-implementation. In total, thirteen unique changes were found. These changes are shown in Table \ref{table:categories}.
-
-% The changes have been divided up into four specific categories, namely: \textit{new}, \textit{modified}, \textit{removed} and \textit{general trends}. The category \textit{new} concerns additions of modules, \textit{modified} concerns modifications to modules that existed in version 1.4 and \textit{removed} are changes where functionality was removed being deprecated or replaced by functionality. \textit{General trends} are broad changes that are mainly related to design. 
-
-% After cross-examining our results with the interviewee and their responses, we found that 78\% of our main category predictions matched the actual motive of the changes and that 78\% of our secondary categorisations matched the actual motives. 
-
-
-% \begin{table}
-%        \centering
-%        \begin{tabular}[ht]{c !{\vrule width 1.5pt} c|c !{\vrule width 1.5pt} c|c} 
-%               \toprule
-
-%               \multirow{2}{*}{\textbf{Change}}          & \multicolumn{2}{c !{\vrule width 1.5pt} }{\textbf{Main}}       & \multicolumn{2}{c}{\textbf{Sub}}        \\ \cline{2-5}
-
-%                                    & \textbf{P}                & \textbf{A}                & \textbf{P}                & \textbf{A}         \\ \Xhline{2\arrayrulewidth}
-%               axptz                & E                         & E                         & N/A                       & N/A                \\ \hline
-%               axaudio              & E                         & E                         & N/A                       & N/A                \\ \hline
-%               axstorage            & E                         & E                         & N/A                       & N/A                \\ \hline
-%               axserialport         & E                         & E                         & N/A                       & N/A                \\ \hline
-%               axevent              & E                         & E                         & G                         & G                  \\ \hline
-%               axhttp               & E                         & E                         & G                         & G                  \\ \hline
-%               ax\_parameter        & E                         & E                         & G                         & G                  \\ \hline
-%               Burst Mode           & R\textsubscript{d}        & R\textsubscript{d}        & N/A                       & N/A                \\ \hline
-%               Example Code         & U                         & R\textsubscript{f}        & R\textsubscript{f}        & U                  \\ \hline
-%               Documentation        & U                         & U                         & R\textsubscript{f}        & R\textsubscript{f} \\ \hline
-%               Interfaces           & G                         & P                         & P                         & G                  \\ \hline
-%               3rd Party            & A                         & A                         & N/A                       & N/A                \\ \hline
-%               Error Handling       & P                         & P                         & G                         & G                  \\ 
-
-%               \bottomrule
-%        \end{tabular}
-%        \caption{Categorisation of Changes }
-%        \label{table:categories}
-% \end{table}
-
-
-
-% \subsubsection{axptz} %Reviewed by JW
-% The Pan, Tilt and Zoom (ptz) module concerns functionality related to manoeuvring the camera, both mechanically and digitally. We concluded that this change was enhancive, because it is a new feature of the API. There was no secondary motive behind this change, as the change was purely enhancive. The interviewee described how this change, as well as the other changes classified as additions, were all included in the new API at the request of API users. Prior to the change being introduced, there was no API functionality for controlling the camera and as such, it was a high priority addition to the new API. The interviewees' comments allowed us to conclude that we had correctly identified the change as being enhancive. Furthermore, we were also correct in our prediction that there was no secondary change category. 
-
-% \subsubsection{axaudio} %Reviewed by JW
-% The most important functionality of the camera is to capture and analyse video data, however, some API users require the ability to analyse audio data. The addition of axaudio allows API users to perform audio analysis of audio streams captured by cameras. This change was determined to be enhancive, as it was an addition of a new feature to the API. We found no secondary motive for the change. Audio analysis had previously not been supported in version 1.4 of the API. However, during the interview, it was revealed that an API user had managed to implement their own audio analysis application using version 1.4 of the API. Given the apparent demand for audio analysis, it was included in version 2.0 of the API.Taking into account the interviewee's reasoning, we concluded that we had successfully determined that the change was enhancive. The addition of axaudio had no secondary motive. 
-
-% \subsubsection{axstorage} %Reviewed by JW
-% Prior to the newest version of the API being released, the sole alternative for storing data was to use the Video Management System. Version 2.0 added the possibility of alternative storage solutions, by allowing the camera to interface with external storage devices, such as SD cards. Enhancive was chosen to be the primary category of change, given that axstorage was a new addition to version 2.0. No secondary motive was identified. The interviewee described how limited storage options for the cameras, in version 1.4, was the reason that increased functionality was strongly requested by API users. As such, axstorage was included in version 2.0 of the API.The information gathered from the interview therefore supported our original categorisation; it was an enhancive change. No secondary category was established. 
-
-% \subsubsection{axserialport} %Reviewed by JW
-% The addition of axserialport allows API users to connect various devices to the cameras through the use of a serial port. This allows users to integrate multiple devices to create their own unique solutions. This was not possible in version 1.4 of the API. The addition of this module was determined to be an enhancive change, as it involved the addition of a new feature. No relevant secondary category was identified. The addition of axserialport was requested by API users to allow them to connect the cameras to other devices. A possible use case, that was given during the interview, involved a ticketing system which allows for joint analysis of data from multiple devices. As such, it was included in version 2.0, to meet the demand of the API users. Given this information, we concluded that we were correct in categorising this change as enhancive. The categorisation of the secondary category was also correct. 
-
-% \subsubsection{axevent} %Reviewed by JW
-% Version 2.0 of the API was designed to be an event-driven system that makes use of callbacks. To achieve this, the old event system had to be re-designed. The new design is used by all features of version 2.0 of the API. An example of when an event would be generated, is when the camera detects movement.  Given that this module was a re-implementation of the previous event system, we concluded that it should be categorised mainly as an enhancive change with the secondary change as groomative. Groomative was chosen as the secondary category due to the additional motive of bringing the new functionality into line with the new design. The interviewee outlined that the previous version of axevent, event, was deprecated in favour of a re-implementation of the new event system. One reason was that the case company was dissatisfied with certain usability aspects of API version 1.4. The module was then completely re-implemented and re-designed according to the new system design of version 2.0. From the discussion in the interview, it was clear that both of our categorisations were correct. The change was primarily enhancive and secondarily groomative.
-
-% \subsubsection{axhttp} %Reviewed by JW
-% The module axhttp serves to provide a Common Gateway Interface which allows the camera to dynamically send data to web pages. The previous version of axhttp was re-implemented in version 2.0, to correspond with the new design standards, and at the same time, additional functionality was added to the module. This change re-implemented an existing module while adhering to the new design of API version 2.0. The main categorisation therefore was chosen to be enhancive with groomative as the secondary category. The interviewee described that the main driving force behind this change was to re-implement and add new functionality to the axhttp module, within the standards of the new design.  Our categorisation of enhancive and groomative was therefore correct for this change. The primary intent was to add functionality while also allowing the re-implementation to make use of the new API design. 
-
-% \subsubsection{ax\_parameter} %Reviewed by JW
-% The parameter setting module of the API allowed data and application settings to be saved so that they are not lost if the device is not running. This module was re-implemented as ax\_parameter with added functionality and conformance to the new design standards of API version 2.0. Given that this change re-implemented an existing module while also incorporating the new design standards, it has been categorised as being primarily enhancive with a secondary category of groomative. The interviewee clarified that this change was mainly concerned with re-implementing existing functionality, while simultaneously adopting the new standards of version 2.0.  Given the information from the interview, we concluded that this change was correctly categorised; the primary intent was enhancive and the secondary intent was groomative.
-
-
-% \subsubsection{Burst Mode} %Reviewed by JW
-% The burst mode feature of the API allowed users to buffer a series of images for greater analysis. This feature was deprecated during the transition between version 1.4 and 2.0 and was not re-implemented. This change presented itself as a clear example of reductive maintenance, as it was simply removed and without being replaced. We therefore gave no secondary categorisation for this change. The interviewee described, that in order to continue using this feature, it would have to be re-implemented. An impact assessment was undertaken to determine if the removal of the function would be costly. Ultimately, the negative effects were not deemed significant enough and thus the function was removed of the API. We can therefore conclude that we correctly categorised this change as reductive and that there are indeed, no secondary categories to describe this change.
-
-
-% \subsubsection{Example Code} %Reviewed by JW
-% The case company included a selection of example programs to assist developers with creating applications. This trend continued in version 2.0, but there were some significant improvements. The number of example programs and the amount of comments accompanying the code increased, thus improving quality of the examples. We therefore concluded that this change was updative, as the example code was updated according to the new API and the new techniques that it utilises. We further decided that this change also had a secondary category of reformative. During the interview, it became clear that the improvement of the example code was an important change between the two versions. The interviewee described how the examples were used frequently by their customers, however, the old examples had many varied implementation techniques, even for similar tasks. This ultimately meant that the old examples were not satisfactory and that new examples would have to be written, preferably conforming to the same standards. The new example code explicitly covered the new functionality, focusing on new features and showing how they can be combined to create applications. With this information, we concluded that our categorisation was incorrect. It became clear that this change was, in actual fact, primarily reformative. It was also clear that the subcategory should therefore have been updative. 
-
-% \subsubsection{Documentation} %Reviewed by JW
-% As the API code was updated in version 2.0, the API documentation was updated to correspond with the new code. While there were no substantial changes, we found that the documentation is no longer offered as a PDF but is instead only offered as HTML.  We categorised this change as being updative with a reformative secondary category for the reasons that the change only updated the documentation to reflect the recent changes in version 2.0. This sentiment was shared by the interviewee; the documentation was only changed according to the current workings of the API and how the new modules interact with each other. We can therefore say that our categorisations were correct, the change was updative and reformative.
-
-% \subsubsection{Interfaces} %Reviewed by JW
-% Version 1.4 of the API allowed direct access to the headers of each module available in the API. Version 2.0 changed this by including interfaces through which functionality is accessed. This design change has had an effect on the whole API, as it has changed the structure of modules, but not the functionality of them.We therefore concluded that this change would be best categorised as  groomative. The secondary category was categorised as preventive, as the change could be seen as an attempt to reduce future maintenance. The interview provided further insight into the reasoning behind this design change. Improvements to coding standards, the desire for an event driven system and difficulty in using the existing APIs were all contributors to the decision to use interfaces in versions 2.0 of the API. Furthermore, the re-design would hopefully avoid future maintenance, while also allowing the system to be easily extended. Taking this information into account, we concluded that our categorisation was incorrect. The interview showed that the primary categorisation should have been preventive, given the strong emphasis on avoiding future maintenance and improving usability. We further concluded that the secondary change should have been groomative, to better reflect the intent of improving the APIs maintainability.
-
-% \subsubsection{3\textsuperscript{rd} Party}
-% %% REMEMBER TO PROVIDE LINK TO GLIB:::: - https://developer.gnome.org/glib/
-% ATTN: (!!!We are waiting for more information from Johanna to confirm / add to this section!!!)
-% %%Describe the change 
-% 2.0 utilises more 3rd party libraries
-% axsound, for example, uses alsa
-% All modules use glib
-% The advent of the new API saw the inclusion of new 3\textsuperscript{rd} party libraries. For example, axsound utilises a library called Alsa, all interfaces use Glib and daemons have been provided for using D-Bus. These changes potentially make the library much more flexible both for the API designers in terms of features they can provide and for the application developers in terms of applications they can develop.
-% We therefore gave this change the main categorisation of adaptive with no suitable sub-categories being found.
-% The architects creating the API decided they wished to use Glib which came about primarily from internal discussions at the company.
-% %%Relate it to Categories
-% Architects decided to use glib, part of an internal decision. 
-% Glib (!!!ref to website) was therefore introduced to the new API to help alleviate this 
-% The new API utilises Glib in the majority of its interfaces and considering the fact that Glib has its own type of error handling, it seemed sensible to implement the same technique into the new API. However, it was expressed to us that the error handling would have changed between versions regardless of whether or not Glib was included. (!!!This is also too assume-y)
-
-% \subsubsection{Error Handling} %Reviewed by JW
-% A substantial change included in version 2.0 was the addition of header files, containing enums of error codes. While it was not evident how the error handling was implemented prior to version 2.0, we concluded that it had changed, given the addition of the new header files. We therefore categorised this change as being primarily preventive, as error handling is preventive by nature. Groomative was decided as the secondary category of maintenance, as improvement of error handling could be regarded as an attempt to improve maintainability.  During the interview, it was made clear that the previous error handling was lacking in expressiveness and usability. Glib was added to version 2.0 and the error handling functionality that Glib provides was incorporated into the new API design. We therefore concluded that our categorisation for this change was correct. The primary reason for the change was to improve the existing error handling while conforming to the new API standard. 
 
