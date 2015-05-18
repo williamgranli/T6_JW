@@ -290,17 +290,24 @@ In this section we discuss possible threats to construct validity, internal vali
 \section{Results} \label{results} 
 %%Write new
 
-The majority of changes between version 1.4 and version 2.0 have been additions to functionality of the API. Such additions include added functionality to ( "add 'allow' here?") mechanically and digitally control the camera, to utilise additional storage devices, to allow serial connectivity and to allow audio analysis on the cameras. Pure additions ( "rephrase to 'changes which were pure additions' or something similar?") to the API did not have any secondary types of change attributed to them. ( "rephrase to 'were not attributed with any secondary...' ?... just tense" )
+%%Small intro to this section. Mention that : In total, thirteen unique changes were found.
 
-Many of the changes found many deprecations which were later re-implemented as new modules ( "rephrase"). We have grouped these kinds of changes into a single type instead of two. Such examples include the deprecation and re-implementation of an event system, dynamic web page generation and configuration utilities. These kinds of changes( "repeating these kinds of changes, consider changing it up") often had a secondary type of change that accompanied the primary type of change.
+The majority of changes between version 1.4 and version 2.0 have been additions to functionality of the API. Such additions include added functionality to allow mechanical and digital control of the camera, to utilise additional storage devices, to allow serial connectivity and to allow audio analysis on the cameras. Changes that were pure additions the API were not attributed with any secondary types of change.
 
-The remainder of the changes were defined as general trends. These changes were not individual ( "were not individual sounds weird"), but were instead larger changes that affected the whole API. Such examples include a shift towards using interfaces to access features, improved maintainability ( "improved maintainability is not an example, could remove it"), a different error-handling approach and the inclusion of additional 3\textit{rd} party libraries. With the exception of 3\textit{rd} party libraries, the general trends have secondary changes which help to classify what effect the changes had on the API. ( "This last sentence is a bit weird... is it just fluff? if so remove")
+Many of the changes were deprecations that were later re-implemented as new modules. Changes of these kinds were grouped into a single type instead of two. Such examples include the deprecation and re-implementation of an event system, dynamic web page generation and configuration utilities. Changes of this kind often had an accompanying secondary type of change.
+
+The remainder of the changes were defined as general trends. These changes were not changes to individual parts of the API, but were instead larger changes that affected the whole API. Such examples include a shift towards using interfaces to access features, a different error-handling approach and the inclusion of additional 3\textit{rd} party libraries. Typically, these general trends also have a secondary type of change attributed to them.
 
 
 
 \subsection{RQ1 Results} \label{results_rq1}
 %Re-write this intro a bit (since I moved it)
-All of the identified changes have been given a type based the nature of the change according to the Types of Software Evolution and Software Maintenance decision tree \cite{chapin2001types}. In total, thirteen unique changes were found. ( "This info should be in \ section{Results}, and not here") The count ( "explain the count better, since it is unclear from just the table") of change types is shown in table \ref{table:type_counts}.
+All of the identified changes have been given a type based the nature of the change according to the Types of Software Evolution and Software Maintenance decision tree \cite{chapin2001types}. Table \ref{table:type_counts} shows the total count of each type of change found in the different versions of the API.
+
+Functionality is a prime driver of API evolution // Hardware is not a driving factor
+Maintainability does not drive change // Documentation does not drive change
+Standardising application development
+Removing functionality
 
 \begin{table}
        \centering
@@ -342,7 +349,7 @@ Given that over half of the changes were identified to be enhancive, we conclude
 %Define what kinds of changes these are
 Corrective changes are identified as types of change that fix broken functionality.
 %Data and explanation
-No corrective changes were identified between v1.0 ( "1.4?") and v2.0. There are two main reasons that we did not find any changes of this type. Firstly, the majority of changes were additions or re-implementations of functionality. This meant that most of the existing code was either removed, replaced or deprecated, resulting in little to no obvious fixes. Secondly, we only had access to the public facing API and not the implementation itself. We therefore could not inspect the inner workings of the functionality that has remained between versions to determine if any corrective change took place.
+No corrective changes were identified between v1.4 and v2.0. There are two main reasons that we did not find any changes of this type. Firstly, the majority of changes were additions or re-implementations of functionality. This meant that most of the existing code was either removed, replaced or deprecated, resulting in little to no obvious fixes. Secondly, we only had access to the public facing API and not the implementation itself. We therefore could not inspect the inner workings of the functionality that has remained between versions to determine if any corrective change took place.
 %Conclusion
 We therefore conclude that the evolution of the API was not driven by corrective changes.
 
@@ -351,10 +358,7 @@ We therefore conclude that the evolution of the API was not driven by corrective
 %Definition
 Reductive changes are defined as changes that remove or reduce functionality. This is distinctive from a deprecation as reductive types of change remove functionality completely.
 %Data & Explanation
-Only a single reductive type of change was identified. This reductive change removed functionality that provided the ability to buffer individual images for closer analysis by a user. Given that it is more common to refactor APIs and not remove functionality \cite{dig2005role, xing2006refactoring} this was a surprising ( "no subjectivity in results plz") result. 
-%Don't know if I should discuss the finding in this much depth here?
-%If OK - Talk more about the business side of things, and how we couldn't identify this change ourselves
-It was revealed during the interview that the functionality was removed because the case company no longer wished to support this feature, due to hardware constraints. 
+Only a single reductive type of change was identified. This reductive change removed functionality that provided the ability to buffer individual images for closer analysis by a user. Given that it is more common to refactor APIs and not remove functionality \cite{dig2005role, xing2006refactoring}. It was revealed during the interview that the functionality was removed because the case company no longer wished to support this feature. 
 %Conclusion
 As this was the only reductive change found, we conclude that the evolution of the API was not primarily driven by reductive changes.
 
@@ -363,91 +367,63 @@ As this was the only reductive change found, we conclude that the evolution of t
 %Introduction and definition
 Adaptive changes are defined to be changes which involve changes to technology or resources used. 
 %Data and examples
-A single change was identified as being adaptive; the inclusion of new 3\textit{rd} part libraries. Glib \cite{Glib} ( "any point in mentioning Glib now that we dont talk details about functionality?") existed in version 1.4 of the API its use was increased in version 2.0. Furthermore, other libraries were added for audio and data communication.
+A single change was identified as being adaptive; the inclusion of new 3\textit{rd} party libraries. Libraries were added for audio and data communication. The pre-existing low-level library was further incorporated into whole API. (!!!)
 %Conclusion 
-The evolution of the API has not been primarily driven by adaptive changes. However, more information, possibly in the form of another study, would be required to fully conclude if these types of changes have a greater impact upon the evolution of an API. ( "remove future work stuff and try to form a conclusion based on what we have")
+We therefore conclude that the evolution of the API has not been primarily driven by adaptive changes.
 
 \smallskip \noindent
 \textbf{Performance  }
 %Define
 Performance changes are defined to be types of change that intentionally alter system performance.
 %Data and examples
-No performance types of change were identified in the API. Only having access to the public API and not the implementation meant that we were unable to search ( "we weren't unable to search, sounds like we're making excuses, can just say we didnt identify any") for performance changes in existing code between the versions. There was no indication from the documentation nor the interview that any change had been performed with the intent of increasing system performance. 
+No evidence of performance driven changes were identified in the API.
 %Conclusion
-As such, we conclude that the evolution of the API was not driven by performance changes. ( "remove benchmark stuff imo... it's unrelated") A proper benchmark could be performed on sample programs written with both versions of the API to test overall performance. However, this is outside the scope of our study.
+This therefore leads us to conclude that API evolution is not driven by performance changes.
 
 \smallskip \noindent
 \textbf{Preventive  }
 %Define
 Preventive changes are defined to be changes that attempt to avoid future maintenance. This should not be confused with changes that attempt to make the current state of the system more maintainable.
 %Data and examples
-Two changes were identified to be Preventive ( "no capital P? make sure it's consistent") types of change. A new error handling system was one of these changes. It is unclear ( "too negative, rephrase")from version 1.4 what error handling was in place, however, version 2.0 added specific error handling modules and functions. According to the interview, the error handling change coincided with the inclusion of more Glib features, which the new error handling system uses. The redesign of the system to use more interfaces was also deemed as a preventive change. Using interfaces to access modules helps to make them more maintainable and more easily extendable, which is a good example of a preventive change.
+Two changes were identified to be preventive types of change. A new error handling system was one of these changes. Version 2.0 of the API added specific error handling modules and functions which replaced the pre-existing error-handling in v1.4 of the API. The redesign of the system to make use of interfaces was also classified as a preventive change. Using interfaces to access modules helps to make them more maintainable and more easily extendable.
 %Concusion
-Preventive types of change appear to drive the evolution of an API more strongly than other types of changes do. This could be due to the fact that as the API grows, the need for higher maintenance also increase, a fact that also seems to be supported by Lehman's laws.
+Preventive types of change appear to drive the evolution of an API more strongly than other types of change. This could be due to the fact that as the API grows, the need for higher maintenance also increase, a fact that also seems to be supported by Lehman's laws.
 
 \smallskip \noindent
 \textbf{Groomative  }
 %Define
-Groomative changes are defined to be changes that aim to immediately make the code more maintainable . This should not be confused with preventive changes. ( "remove this sentence, since u already said that in the preventive paragraph, saying it once is enough")
+Groomative changes are defined to be changes that aim to immediately make the code more maintainable.
 %Data and examples
-While none of the change identified were primarily groomative changes, three of them were secondarily classified as being groomative. This seems to indicate ( "too vague for results") that the groomative nature of a change is often a bonus ( "bonus=casual, consider added positive effect or something")of other kinds of changes. The move towards using interfaces can be seen as an example of this. While the primary motive of change was to make the API more maintainable in the future, making the API more maintainable immediately was also a reason for the change.
+While none of the change identified were primarily groomative changes, three of them were secondarily classified as being groomative. This indicates that the groomative nature of a change is often a positive affect of other types of change. The move towards using interfaces can be seen as an example of this. While the primary motive of change was to make the API more maintainable in the future, making the API more maintainable immediately was also a reason for the change.
 %Conclusion
 While not a primary factor for any of the changes, groomative types of change should still be viewed as important for API evolution.
 
 \smallskip \noindent
 \textbf{Updative  }
 %Define
-Updative changes are defined to be changes to documentation and are not changes that affect functionality in any way. ( "this sentence reads weird") We also considered updates to example code and other training material to be Updative ( "capital U") types of change.
+Updative changes are defined to be changes to documentation of a system.
 %Data and example
-A single change was determined to be Updative. ( "capital U")  This change was the updating of the API documentation to match the new API. ( "this senetence reads weird") The updates included a new API specification, deprecation list and the inclusion of the new features and libraries.
+A single change was determined to be updative; updating the API documentation to include the new functionality of v2.0. The updates included a new API specification, deprecation list and the inclusion of the new features and libraries.
 %Conclusion
-Updative changes have very little impact on the functionality of the API yet they are still important changes for the usability of the API \cite{shi2011empirical}. We therefore conclude that the evolution of an API is not driven by updative changes. ( "Think this paragraph is missing some information. It's important to mention that because of the nature of updative changes they dont drive evolution, but they rather are an effect of other types of changes" (if u change in one place it leads to a change somehwere else))
+Updative changes have very little impact on the functionality of the API yet they are still important changes for the usability of the API \cite{shi2011empirical}. Changes to the API cause the need for updative changes to its documentation, without them, the usability of the API could suffer. We therefore conclude that the evolution of an API is not driven by updative changes.
 
 \smallskip \noindent
 \textbf{Reformative  }
 %Define
 Reformative changes are defined to be changes that update the documentation to the stakeholders needs.
 %Data and Example
-One reformative change was identified between version 1.4 and version 2.0 which involved a re-write ( "re-write, a bit informal") of the existing example programs. The aim of the re-write ( "same") was to update the examples to take advantage of the new functionality in the API while simultaneously showing how the modules interact and presenting a standard for how to use the API correctly.
+One reformative change was identified between v1.4 and v2.0; a redesign of the existing example programs. The aim of this change was to update the examples to illustrate the new functionality in the API, showing how the modules interact and at the same time, presenting a standard for how to use the API.
 %Conclusion
-The reformative change that was found indicates therefore that updating documentation and example code is to some extent import for API evolution. ( "weird sentence")
+We therefore conclude that reformative changes, while important for the usability of the API, do not drive the evolution of the API.
 
 \smallskip \noindent
 \textbf{Evaluative, Consultive and Training  }
 %Define
-Evaluative, Consultive and Training are all types of activities, rather than changes that a system can undergo. Evaluative activities are defined as activities such as auditing or evaluating the software. Similarly, consultive activities involve consultations with customers about the software. Finally, Training ( "capital T") activities involve training for customers and users of the software.
+Evaluative, Consultive and Training are all types of activities, rather than changes that a system can undergo. Evaluative activities are defined as activities such as auditing or evaluating the software. Similarly, consultive activities involve consultations with customers about the software. Finally, training activities involve training for customers and users of the software.
 %Data and example
 None of the aforementioned activities occurred as part of the APIs evolution as these activities do not play a role in API evolution. This is supported by the fact none of the activities were identified for the changes.
 %Conclusion
 We can therefore conclude that these change types are not important for API evolution.
-
-\subsubsection{Summary}
-
-\noindent
-\textbf{Functionality is a prime driver of API evolution  }  
-Overwhelmingly, the primary driving factor behind API evolution was the desire for new API functionality. We found that a vast majority of the changes either added functionality or were a direct consequence of increased functionality. The main driver for these changes was the pressure from API users, but pressure from the case company developers who utilise the API also contributed. This focus upon functionality was also emphasised partially due to a business goal. The more features the API provides allows for more applications to be created for the cameras. This has a domino effect of increasing the appeal and value of the products the case company produces.
-
-\smallskip \noindent 
-\textbf{Maintainability does not drive change  }  
-While maintainability is important, it is not a primary driving factor for change. We found that where changes that effected maintainability, functionality had also been added or modified. Of the changes identified, none were considered to be primarily groomative. Groomative motives were only found to be secondary, and were never the main motive for a change. Changes to the example code are an example of this. The example code was updated purely to reflect the changes in functionality and not as a groomative effort. 
-
-\smallskip \noindent
-\textbf{Standardising application development  } 
-Supporting users of the API in creating correct and robust applications is a very important evolution factor for the case company. Changes between the versions introduced improvements to error handling, the example code and the way in which the API utilises interfaces. This, coupled with removal of unwanted functionality and unsafe operations, has allowed the API to grow and become much more user-friendly. As mentioned previously, this could increase the amount of applications being created for the camera and as a consequence, could potentially increase the value of them.
-
-\smallskip \noindent
-\textbf{Removing functionality  } 
-Previous literature has suggested that deprecating functionality is the most common technique used to remove support for specific functionality. Removals are only suggested in specific circumstances. The successful removal of the burst function seems to indicate that under the correct circumstances, removing specific functionality is an alternative that should be considered. The case company removed this function from the API, after an internal review found that the potential negative effect the removal could have, would be less impactful than further maintenance of the function. We therefore recommend to remove functionality of an API if the effect of the removal has been thoroughly investigated and that the removals happen incrementally.
-
-\smallskip \noindent
-\textbf{Documentation does not drive change  } 
-The intent to update example code and documentation was described by the interviewee to be an important change between version 1.4 and 2.0. While important for the APIs usability, it was not a driving factor of change itself. The changes to the APIs' design and functionality caused the need to update the documentation and example code.
-
-\smallskip \noindent
-\textbf{Hardware is not a driving factor  } 
-Our initial expectations included the view that changes to hardware would be one of the strongest driving factors of API evolution. One example could be if new cameras are created or new hardware is added to an existing camera, which would require updates to the API to allow use of the new features. However, after analysing the changes and from the information gathered in the interview, we discovered that hardware has played a minimal role in the evolution of the API. 
-
-
 
 \subsection{RQ2 Results} \label{results_RQ2} 
 \noindent
