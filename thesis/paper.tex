@@ -507,26 +507,32 @@ RQ3: \textbf{To what extent can we reverse engineer API change decisions?}
 
 After cross-examining our initial analysis with the interviewee's responses, we found that 85\% of our main type predictions matched the actual motive of the change and that 85\% of our secondary type predictions were correct. The kappa value \cite{cohen1968weighted} for the predictions was 0.812, which shows that there is a high level of agreement between the predictions and the change decisions. 
 
-The changes related to functionality being added, modified (deprecated) or removed were predicted with a 100\% accuracy. These changes were deemed the most significant by the interviewee, and it was expressed during the interivew that the these types of changes were the main driving factor behind the development of the new version. On the contrary, three out of five changes which were unrelated to functionality were correctly predicted. The two changes which were not predicted correctly were inaccurate because the main type was confused with the secondary type. This shows that, although the prediction was incorrect, the general reasoning was correct. The changes which had no secondary type were all predicted correctly, which further shows that changes with several types can be diffuse. 
+The changes related to functionality being added, modified (deprecated) or removed were predicted with a 100\% accuracy. These changes were deemed the most significant by the interviewee, and it was expressed during the interview that the these types of changes were the main driving factor behind the development of the new version. On the contrary, three out of five changes which were unrelated to functionality were correctly predicted. The two changes which were not predicted correctly were inaccurate because the main type was confused with the secondary type. This shows that, although the prediction was incorrect, the general reasoning was correct. The changes which had no secondary type were all predicted correctly, which further shows that changes with several types can be diffuse. 
 
 
 
 
 
 \section{Discussion} \label{discussion}
-Our results have provided valuable insight into the motives behind the evolution of APIs. The results show that APIs definitely can be studied from the point of view of long-established software evolution theories. Based on the results, we have formulated the subsequent outcomes. 
+In this section, we will, based on the results of our study, answer the research questions and discuss the implications of our work, both for academia and practice. 
+
 
 \subsection{RQ1 Answer}  
 RQ1: What drives API evolution?
 
+Our results show that the major driving force for change in APIs is the push (!!!reword) for functionality. The classification of the types of software evolution and software maintenance showed that enhancive changes which either aimed to add brand-new (!!!reword) modules or adding functionality to existing modules were the most common. We also think that it is interesting to note that a majority of the changes which did not affect functionality, such as the updative changes, were spurred because of previous changes which were related to functionality. Following this line of thought, the hunger (!!!reword?) for functionality can be seen as a catalyst for other driving forces to occur (!!!reword). The view of considering functionality to be a major driver for change is supported by the analysis with Lehman's laws. In the law of Continuing Change, Lehman concludes that ``an E-type system must be continually adapted or it becomes progressively less satisfactory". The results of our work supports this view, as the changes did not only add functionality, but it was also found that the application developers most major concern were updates to functionality. 
+
+
+
 
 1. 
+
        %Answer to RQ
        Functionality is the main driver for change, and it catalyses other changes
 
        %Point to results
-       relate to enhanicve types
-       relate to functuonality related laws
+       relate to enhancive types
+       relate to functionality related laws
 
        %Relate to literature
        Refute refactorings paper
