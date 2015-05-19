@@ -101,19 +101,17 @@ As the software industry and the open-source movement continue to grow, the numb
 %Software Evolution 
 In the discipline of software evolution, such updates to software are studied from an evolutionary standpoint. Software can be updated for different reasons and these motives can be grouped into corrective, adaptive, perfective and preventive changes \cite{lientz1980software}. 
 
-%Gap in Literature
-Studies that explore the intent behind API modifications exist \cite{hou2011exploring}. The area of programming language APIs is well-explored \cite{hou2011exploring, shi2011empirical}, but few studies that explore platform APIs exist \cite{robbes2012developers}. To the best of our knowledge, no studies that explore API evolution have until now been performed on embedded platform APIs. 
-
-%switch places between ^ and v
-
 %Purpose
 Modifications to deployed APIs may negatively impact its users. It is therefore important to investigate why these changes occur. Understanding the motives behind the changes could help API designers to  prevent potential future changes to their APIs. Before industry can safely include such information in their feedback loop, we must critically assess to what degree we can reverse engineer such motives. 
 
-%Method %wrong tense %include RQs in here %include clear contribution (to johanna)
-In order to achieve this, an exploratory case study will be undertaken to investigate the underlying motives behind changes to APIs. Empirical analysis of the changes between two major versions of an API will be undertaken, following which, an interview with the architects will be used to validate the findings of our analysis. 
+%Gap in Literature
+Studies that explore the intent behind API modifications exist \cite{hou2011exploring}. The area of programming language APIs is well-explored \cite{hou2011exploring, shi2011empirical}, but few studies that explore platform APIs exist \cite{robbes2012developers}. To the best of our knowledge, no studies that explore API evolution have until now been performed on embedded platform APIs. 
 
-%Can't find a place for this - it's repeated in the Purpose
-%Reverse engineering design decisions is a challenging yet interesting problem. The better we can understand why changes occur and what problems they are trying to solve, the better we can design around these problems to avoid them cropping up in the future.
+%Purpose of the study
+The goal of the study was twofold. Firstly, the aim was to explore what are the driving forces behind API evolution and secondly, to validate the results' level of correctness by comparing our findings with the case company's explanation of the changes. With this information, we could determine to what extent these change decisions can be reverse engineered. 
+%Why this is important for the case company.
+Understanding what drives the evolution of their API could be significant value to the case company. Being aware of what types of changes occur more frequently can help the case company design their APIs to mitigate or assist these types of change. Furthermore, understanding which software evolution theories apply to APIs can help the case company control the evolution of their API and could help them better prepare for change in the future. 
+
 
 
 \subsection{Research Questions} \label{rqs}
@@ -129,21 +127,18 @@ In order to achieve this, an exploratory case study will be undertaken to invest
 The sections following the Introduction are structured as follows: In Section \ref{background}, we present the background and previously published work that is related to our study. Section \ref{case_company_description} describes the case company and the API which was studied. A description of our methodology is introduced in Section \ref{methodology}. In Section \ref{results}, the results of our study are presented and in Section \ref{discussion}, we discuss the findings of our study. In Section \ref{conclusion} we propose the potential impact of our work and give suggestions for future work that builds on our research. 
 
 \section{Background} \label{background}
-This section will introduce the fields of API design and software evolution, and provide a review of studies that are directly related to our study. Follow that, we will introduce the company and API examined in this study. 
-
+This section will introduce the fields of API design, software evolution and it will provide a review of studies that are related to our study. The subsequent section will introduce the case company with a description of the API used in this study.  
 
 \subsection{API Design} \label{api_design}
-API design is notoriously difficult, as a myriad of design and performance decisions must be taken into consideration when creating APIs \cite{afonso2012evaluating, bloch2008effective, stylos2006comparing}.
 
-Examples of such design decisions include how to structure an object's constructor parameters or if the API should display errors at compilation or at runtime \cite{stylos2006comparing}. More trivial design problems, such as assigning names to API features or correctly naming user-defined types, can have a significant impact on the usability of an API \cite{shi2011empirical}. When facing such design challenges, the following four factors are important to consider: a) The API must be understandable through good documentation, b) the API must not be overly abstract, c) the API must be reusable and d) the API must be easy to learn \cite{shi2011empirical}. One of the most important qualities in an API is that the intent of the API must be clear to the user \cite{stylos2006comparing, shi2011empirical}. The design decisions reached during development of an API will affect the overall usability of the API. Measuring such an effect can be done by investigating the twelve cognitive dimensions that are impacted by interactions between the API and its users \cite{clarke2004measuring}. 
+API design is notoriously difficult, a myriad of design and performance decisions must be taken into consideration when creating APIs \cite{afonso2012evaluating, bloch2008effective, stylos2006comparing}. Examples of such design decisions include how to structure an object's constructor parameters or if the API should display errors at compilation or at runtime \cite{stylos2006comparing}. More trivial design problems, such as assigning names to API features or correctly naming user-defined types, can have a significant impact on the usability of an API \cite{shi2011empirical}. When facing such design challenges, the following four factors are important to consider: a) The API must be understandable through good documentation, b) the API must not be overly abstract, c) the API must be reusable and d) the API must be easy to learn \cite{shi2011empirical}. One of the most important qualities in an API is that the intent of the API must be clear to the user \cite{stylos2006comparing, shi2011empirical}. The design decisions reached during development of an API will affect the overall usability of the API. Measuring such an effect can be done by investigating the twelve cognitive dimensions that are impacted by interactions between the API and its users \cite{clarke2004measuring}. 
 
 
 \subsection{Software Evolution} \label{software_evolution}
 %%Types of maintenance and types of maintenance
 Software evolution is a field that studies the application of software maintenance activities, changes in software processes and the resulting, evolved versions of the software. The concept of software maintenance has existed since the 1960s when it was first introduced to the software development community \cite{lientz1980software}. A set of four categories describing different types of software maintenance \cite{lientz1980software} became the basis upon which twelve new types were developed \cite{chapin2001types}. The twelve types of software evolution and software maintenance, as seen in Table \ref{table:expl_types}, describe a software evolution activity that relates to one of three particular areas; the code, the software and the customer-experienced functionality. 
 
-%Re-write this section... it's wrong
-Software evolution theory suggests that changes to software must obey one of eight laws \cite{lehman90sview}. The laws, known as Lehman's laws, are: 1) Continuing Change, 2) Increasing Complexity, 3) Self Regulation, 4) Conservation of Organisational Stability, 5) Conservation of Familiarity, 6) Continuing Growth, 7) Declining Quality and 8) Feedback System. The laws are said to only apply to E-type systems, which are programs that solve problems or address applications in the real world.     
+Software evolution theory suggests that changes to software must obey one of eight laws \cite{lehman90sview}, known as Lehman's laws. They are presented in table \ref{table:expl_laws}. The laws are said to only apply to E-type systems, which are programs that solve problems or address applications in the real world.     
 
 \begin{table}
        \centering
@@ -170,26 +165,30 @@ Software evolution theory suggests that changes to software must obey one of eig
        \label{table:expl_types}
 \end{table}
 
-
-
-
 \begin{table}
        \centering
-       \begin{tabular}[ht]{l|c}
-              \toprule
+       \begin{tabular}[ht]{p{3in}}
+       \toprule
+              \begin{enumerate}
+              \item \textbf{Continuing Change} \newline
+              E-Type systems must be continually adapted else they become progressively less satisfactory.                     
+              \item \textbf{Increasing Complexity}\newline 
+              As an E-Type system evolves its complexity increases unless work is done to maintain or reduce it.                  
+              \item \textbf{Self Regulation}\newline 
+              E-Type system evolution process is self regulation with distribution of product and process measures close to normal.                     
+              \item \textbf{Conservation of Organisational Stability}\newline 
+              The average effective global rate in an evolving E-Type system is invariant over product lifetime.                     
+              \item \textbf{Conservation of Familiarity}\newline 
+              As an E-type system evolves all associated with it, developers, sales, personnel, users, for example, must maintain mastery of its content and behaviour to achieve satisfactory evolution. Excessive growth diminishes that mastery. Hence the average incremental growth remains invariant as the system evolves.                     
+              \item \textbf{Continuing Growth}\newline 
+              The functional content of E-Type systems must be continually increased to maintain user satisfaction over their lifetime.                
+              \item \textbf{Declining Quality}\newline 
+              The quality of E-Type systems will appear to be declining unless they are rigorously maintained and adapted to operational environment changes.                     
+              \item \textbf{Feedback System}\newline 
+              E-Type evolution process constitute multi-level, multi-loop, multi-agent feedback systems and must be treated as such to achieve significant improvement over any reasonable base.
 
-              \textbf{Law}                              & \textbf{Explanation}    \\ \midrule
-              Continuing Change                         & [Explanation]                      \\ \hline
-              Increasing Complexity                     & [Explanation]                     \\ \hline
-              Self Regulation                           & [Explanation]                      \\ \hline
-              Conservation of Organisational Stability  & [Explanation]                     \\ \hline
-              Conservation of Familiarity               & [Explanation]                      \\ \hline
-              Continuing Growth                         & [Explanation]                      \\ \hline
-              Declining Quality                         & [Explanation]                     \\ \hline
-              Feedback System                           & [Explanation]                      \\ 
-
+              \end{enumerate} \\
               \bottomrule
-
        \end{tabular}
        \caption{Explanation of Lehman's Laws}
        \label{table:expl_laws}
@@ -215,10 +214,7 @@ The API analysed in this study is written in the programming language C and has 
 
 \section{Methodology} \label{methodology}
 %Intro and summary
-This study has been conducted using the case study methodology \cite{runeson2009guidelines}. The goal of the study was twofold. Firstly, the aim was to empirically explore the motives behind changes to APIs and secondly, to validate the results' level of correctness by comparing our findings with the case company's explanation of their motives. Our research can be classified as an embedded case study \cite{yin2013case}, since both the API code and API documentation have been used as units of analysis. 
-
-%Reasons for choosing case study
-The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing literature \cite{benbasat1987case, runeson2009guidelines, yin2013case, robson2002real}. An alternative approach that was considered was design research, but if a prototype API was to be used instead of one which is tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines}. An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change and that input from the industry is vital to the success of the research, especially to be able to answer \textbf{RQ3}. 
+This study has been conducted using the case study methodology \cite{runeson2009guidelines}. Our research can be classified as an embedded case study \cite{yin2013case}, since both the API code and API documentation have been used as units of analysis. The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing literature \cite{benbasat1987case, runeson2009guidelines, yin2013case, robson2002real}. An alternative approach that was considered was design research, but if a prototype API was to be used instead of one which is tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines}. An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change and that input from the industry is vital to the success of the research, especially to be able to answer \textbf{RQ3}. 
 
 The study was conducted in two major phases \cite{andersson2007spiral}. The aim of the first phase was to generate hypotheses and to formulate clear research questions. This was achieved by using a data-driven approach to analysing the code and documentation. The second phase included analysis of the interviews, during which we aimed to confirm the hypotheses that were formulated in the first phase. Both phases were performed iteratively. This created the opportunity to improve the data analysis as the study progressed, as well as allowing us to adapt to possible changes in direction, due to the hypothesis generating approach of the first phase. 
 
