@@ -220,7 +220,7 @@ This study has been conducted using the case study methodology \cite{runeson2009
 %Reasons for choosing case study
 The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing literature \cite{benbasat1987case, runeson2009guidelines, yin2013case, robson2002real}. An alternative approach that was considered was design research, but if a prototype API was to be used instead of one which is tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines}. An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change and that input from the industry is vital to the success of the research, especially to be able to answer \textbf{RQ3}. 
 
-The study was conducted in two major phases \cite{andersson2007spiral}. The aim of the first phase was to generate hyptheses and to formulate clear research questions. This was achieved by using a data-driven approach to analysing the code and documentation. The second phase included analysis of the interviews, during which we aimed to confirm the hypotheses that were formulated in the first phsae. Both phases were performed iteratively. This created the opportunity to improve the data analysis as the study progressed, as well as allowing us to adapt to possible changes in direction, due to the hypothesis generating approach of the first phase. 
+The study was conducted in two major phases \cite{andersson2007spiral}. The aim of the first phase was to generate hypotheses and to formulate clear research questions. This was achieved by using a data-driven approach to analysing the code and documentation. The second phase included analysis of the interviews, during which we aimed to confirm the hypotheses that were formulated in the first phase. Both phases were performed iteratively. This created the opportunity to improve the data analysis as the study progressed, as well as allowing us to adapt to possible changes in direction, due to the hypothesis generating approach of the first phase. 
 
 The process used for examining the code and documentation was inspired by grounded theory analysis \cite{seaman1999qualitative}, as it is recommended for hypothesis generating studies \cite{runeson2009guidelines, seaman1999qualitative}. 
 
@@ -387,7 +387,7 @@ Given that over half of the changes were identified to be enhancive, we conclude
 %Define what kinds of changes these are
 Corrective changes are identified as types of change that fix broken functionality.
 %Data and explanation
-No corrective changes were identified between v1.4 and v2.0. There are two main reasons that we did not find any changes of this type. Firstly, the majority of changes were additions or re-implementations of functionality. This meant that most of the existing code was either removed, replaced or deprecated, resulting in little to no obvious fixes. Secondly, we only had access to the public facing API and not the implementation itself. We therefore could not inspect the inner workings of the functionality that has remained between versions to determine if any corrective change took place.
+No corrective changes were identified between version 1.4 and version 2.0. There are two main reasons that we did not find any changes of this type. Firstly, the majority of changes were additions or re-implementations of functionality. This meant that most of the existing code was either removed, replaced or deprecated, resulting in little to no obvious fixes. Secondly, we only had access to the public facing API and not the implementation itself. We therefore could not inspect the inner workings of the functionality that has remained between versions to determine if any corrective change took place.
 %Conclusion
 We therefore conclude that the evolution of the API was not driven by corrective changes.
 
@@ -423,7 +423,7 @@ This therefore leads us to conclude that API evolution is not driven by performa
 %Define
 Preventive changes are defined to be changes that attempt to avoid future maintenance. This should not be confused with changes that attempt to make the current state of the system more maintainable.
 %Data and examples
-Two changes were identified to be preventive types of change. A new error handling system was one of these changes. Version 2.0 of the API added specific error handling modules and functions which replaced the pre-existing error-handling in v1.4 of the API. The redesign of the system to make use of interfaces was also classified as a preventive change. Using interfaces to access modules helps to make them more maintainable and more easily extendable.
+Two changes were identified to be preventive types of change. A new error handling system was one of these changes. Version 2.0 of the API added specific error handling modules and functions which replaced the pre-existing error-handling in v1.4 of the API. The redesign of the system to make use of interfaces was also classified as a preventive change. Using interfaces to access modules helps to make them more maintainable and more easily extensible.
 %Concusion
 Preventive types of change appear to drive the evolution of an API more strongly than other types of change. This could be due to the fact that as the API grows, the need for higher maintenance also increase, a fact that also seems to be supported by Lehman's laws.
 
@@ -450,7 +450,7 @@ Updative changes have very little impact on the functionality of the API yet the
 %Define
 Reformative changes are defined to be changes that update the documentation to the stakeholders needs.
 %Data and Example
-One reformative change was identified between v1.4 and v2.0; a redesign of the existing example programs. The aim of this change was to update the examples to illustrate the new functionality in the API, showing how the modules interact and at the same time, presenting a standard for how to use the API.
+One reformative change was identified between version 1.4 and version 2.0; a redesign of the existing example programs. The aim of this change was to update the examples to illustrate the new functionality in the API, showing how the modules interact and at the same time, presenting a standard for how to use the API.
 %Conclusion
 We therefore conclude that reformative changes, while important for the usability of the API, do not drive the evolution of the API.
 
@@ -521,6 +521,7 @@ In this section, we will, based on the results of our study, answer the research
 RQ1: What drives API evolution?
 
 Our results show that the major driving force for change in APIs is the push (!!!reword) for functionality. The classification of the types of software evolution and software maintenance showed that enhancive changes which either aimed to add brand-new (!!!reword) modules or adding functionality to existing modules were the most common. We also think that it is interesting to note that a majority of the changes which did not affect functionality, such as the updative changes, were spurred because of previous changes which were related to functionality. Following this line of thought, the hunger (!!!reword?) for functionality can be seen as a catalyst for other driving forces to occur (!!!reword). The view of considering functionality to be a major driver for change is supported by the analysis with Lehman's laws. In the law of Continuing Change, Lehman concludes that ``an E-type system must be continually adapted or it becomes progressively less satisfactory". The results of our work supports this view, as the changes did not only add functionality, but it was also found that the application developers most major concern were updates to functionality. 
+
 
 
 
