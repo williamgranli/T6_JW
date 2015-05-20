@@ -108,7 +108,7 @@ Modifications to deployed APIs may negatively impact its users. It is therefore 
 Studies that explore the intent behind API modifications exist \cite{hou2011exploring}. The area of programming language APIs is well-explored \cite{hou2011exploring, shi2011empirical}, but few studies that explore platform APIs exist \cite{robbes2012developers}. To the best of our knowledge, no studies that explore API evolution have until now been performed on embedded platform APIs. 
 
 %5Purpose of the study
-The goal of the study was twofold. Firstly, the aim was to explore what are the driving forces behind API evolution and secondly, to validate the results' level of correctness by comparing our findings with the case company's explanation of the changes. With this information, we could determine to what extent these change decisions can be reverse engineered. 
+The goal of the study was twofold. Firstly, the aim was to explore what the driving forces behind API evolution are, and secondly, to validate the results' level of correctness by comparing our findings with the case company's explanation of the changes. With this information, we could determine to what extent these change decisions can be reverse engineered. 
 %6Why this is important for the case company.
 This study has many potential benefits for the case company. Identifying the types of changes that occur when an API evolves will improve communication and discussions regarding maintenance and evolution tasks. This improved communication could provide a common language that developers, users and management can use to discuss potential evolution of the APIs. Understanding the evolution theories could further assist understanding of how change will occur and how to plan for it. Lastly, by keeping a history of changes to an API over time, trends can be identified which could help with future API design.
 
@@ -121,11 +121,7 @@ This study has many potential benefits for the case company. Identifying the typ
 %Otherwise really good... like the #6 a lot
 
 
-\subsection{Research Questions} \label{rqs}
-\begin{description}
-\item[\textbf{RQ1}] What drives API evolution?
-\item[\textbf{RQ2}] To what extent can we reverse engineer API change decisions?
-\end{description}
+
 
 %Structure of the paper
 The sections following the Introduction are structured as follows: In Section \ref{background}, we present the background and previously published work that is related to our study. Section \ref{case_company_description} describes the case company and the API which was studied. A description of our methodology is introduced in Section \ref{methodology}. In Section \ref{results}, the results of our study are presented and in Section \ref{discussion}, we discuss the findings of our study. In Section \ref{conclusion} we propose the potential impact of our work and give suggestions for future work that builds on our research. 
@@ -225,7 +221,11 @@ The study was conducted in two major phases \cite{andersson2007spiral}. The aim 
 The process used for examining the code and documentation was inspired by grounded theory analysis \cite{seaman1999qualitative}, as it is recommended for hypothesis generating studies \cite{runeson2009guidelines, seaman1999qualitative}. 
 
 
-
+\subsection{Research Questions} \label{rqs}
+\begin{description}
+\item[\textbf{RQ1}] What drives API evolution?
+\item[\textbf{RQ2}] To what extent can we reverse engineer API change decisions?
+\end{description}
 
 
 
