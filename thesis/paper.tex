@@ -114,9 +114,8 @@ This study has many potential benefits for the case company. Identifying the typ
 
 \subsection{Research Questions} \label{rqs}
 \begin{description}
-\item[\textbf{RQ1}] How do companies actively drive API evolution?
-\item[\textbf{RQ2}] How do APIs ``passively'' evolve?
-\item[\textbf{RQ3}] To what extent can we reverse engineer API change decisions?
+\item[\textbf{RQ1}] What are the driving forces to API evoltion?
+\item[\textbf{RQ2}] To what extent can we reverse engineer API change decisions?
 
 
 \end{description}
@@ -212,7 +211,7 @@ The API analysed in this study is written in the programming language C and has 
 
 \section{Methodology} \label{methodology}
 %Intro and summary
-This study has been conducted using the case study methodology \cite{runeson2009guidelines}. Our research can be classified as an embedded case study \cite{yin2013case}, since both the API code and API documentation have been used as units of analysis. The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing literature \cite{benbasat1987case, runeson2009guidelines, yin2013case, robson2002real}. An alternative approach that was considered was design research, but if a prototype API was to be used instead of one which is tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines}. An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change and that input from the industry is vital to the success of the research, especially to be able to answer \textbf{RQ3}. 
+This study has been conducted using the case study methodology \cite{runeson2009guidelines}. Our research can be classified as an embedded case study \cite{yin2013case}, since both the API code and API documentation have been used as units of analysis. The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing literature \cite{benbasat1987case, runeson2009guidelines, yin2013case, robson2002real}. An alternative approach that was considered was design research, but if a prototype API was to be used instead of one which is tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines}. An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of motives behind API change and that input from the industry is vital to the success of the research, especially to be able to answer \textbf{RQ2}. 
 
 The study was conducted in two major phases \cite{andersson2007spiral}. The aim of the first phase was to generate hypotheses and to formulate clear research questions. This was achieved by using a data-driven approach to analysing the code and documentation. The second phase included analysis of the interviews, during which we aimed to confirm the hypotheses that were formulated in the first phase. Both phases were performed iteratively. This created the opportunity to improve the data analysis as the study progressed, as well as allowing us to adapt to possible changes in direction, due to the hypothesis generating approach of the first phase. 
 
@@ -251,13 +250,10 @@ These concepts were then grouped into categories based on common patterns betwee
 These categories were then used to identify the most notable trends in the evolution of the API. These trends were later used as a basis for discussion during the interview.
 
 %RQ1
-The trends identified previously were then classified according to the software maintenance types \cite{chapin2001types}. The process followed the decision tree used for classifying the types of software evolution and software maintenance \cite{chapin2001types}. Each of the previously identified trends were given a main type of maintenance and, if appropriate, a secondary type. This material, as well as the results of the interview, were then used as the basis for answering \textbf{RQ1}.
+The trends identified previously were then classified according to the software maintenance types \cite{chapin2001types}. The process followed the decision tree used for classifying the types of software evolution and software maintenance \cite{chapin2001types}. Each of the previously identified trends were given a main type of maintenance and, if appropriate, a secondary type. In addition to this, we analysed the trends based on Lehman's Laws, to determine if they applied to the changes made to the API. This material, as well as the results of the interview, were then used as the basis for answering \textbf{RQ1}.
 
 %RQ2
-The analysis of the changes and trends, combined with the information gathered from the interview, allowed us to answer \textbf{RQ2} by determining if Lehman's Laws apply to the changes made to the API. 
-
-%RQ3
-To allow us to answer \textbf{RQ3}, we compared our analysis and interpretation of the trends identified prior, against what was expressed by the API architect, during the interview. Success was determined by comparing the inter-rater reliability, by calculating Cohen's kappa \cite{cohen1968weighted} for the gathered data. 
+To allow us to answer \textbf{RQ2}, we compared our analysis and interpretation of the trends identified prior, against what was expressed by the API architect, during the interview. Success was determined by comparing the inter-rater reliability, by calculating Cohen's kappa \cite{cohen1968weighted} for the gathered data. 
 
 
 
@@ -358,9 +354,7 @@ Following this section, we will discuss the results related to each type of chan
 
 
 
-
-
-\subsubsection{Types 1by1}
+\subsubsection{Types of Change}
 
 \smallskip \noindent
 \textbf{Enhancive  }
@@ -453,7 +447,7 @@ None of the aforementioned activities occurred as part of the APIs evolution as 
 We can therefore conclude that these change types are not important for API evolution.
 
 
-\subsubsection{Laws 1by1} 
+\subsubsection{Lehman's Laws} 
 
 \smallskip \noindent
 \textbf{Continuing Change  } 
@@ -489,9 +483,9 @@ One of the future goals of improvement of the case company is to better include 
 
 
 
-\subsection{RQ3 Results}
+\subsection{RQ2 Results}
 \noindent
-RQ3: \textbf{To what extent can we reverse engineer API change decisions?}
+RQ2: \textbf{To what extent can we reverse engineer API change decisions?}
 \smallskip
 
 After cross-examining our initial analysis with the interviewee's responses, we found that 85\% of our main type predictions matched the actual motive of the change and that 85\% of our secondary type predictions were correct. The kappa value \cite{cohen1968weighted} for the predictions was 0.812, which shows that there is a high level of agreement between the predictions and the change decisions. 
