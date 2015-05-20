@@ -483,14 +483,39 @@ One of the future goals of improvement of company A is to better include the API
 
 
 \subsection{Reverse Engineering API Change Decisions}
-
-
-After cross-examining our initial analysis with the interviewee's responses, we found that 85\% of our main type predictions matched the actual motive of the change and that 85\% of our secondary type predictions were correct. The kappa value \cite{cohen1968weighted} for the predictions was 0.812, which shows that there is a high level of agreement between the predictions and the change decisions. 
+After cross-examining our initial analysis with the interviewee's responses, we found that 85\% of our main type predictions matched the actual motive of the change and that 85\% of our secondary type predictions were correct. The kappa value \cite{cohen1968weighted} for the predictions was 0.812, which shows that there is a high level of agreement between the predictions and the change decisions. In Table \ref{table:reverse_engineering}, a detailed view of each prediction juxtaposed against the actual change decision can be found for both the main and secondary types.  
 
 The changes related to functionality being added, modified (deprecated) or removed were predicted with a 100\% accuracy. These changes were deemed the most significant by the interviewee, and it was expressed during the interview that the these types of changes were the main driving factor behind the development of the new version. On the contrary, three out of five changes which were unrelated to functionality were correctly predicted. The two changes which were not predicted correctly were inaccurate because the main type was confused with the secondary type. This shows that, although the prediction was incorrect, the general reasoning was correct. The changes which had no secondary type were all predicted correctly, which further shows that changes with several types can be diffuse. 
 
 
 
+\begin{table}
+       \centering
+       \begin{tabular}[ht]{  c | c !{\vrule width 1.5pt} c|c} 
+              \toprule
+
+              \multicolumn{2}{c !{\vrule width 1.5pt} }{\textbf{Main}}       & \multicolumn{2}{c}{\textbf{Sub}}        \\ \hline
+
+              \textbf{Prediction}         & \textbf{Actual}            & \textbf{Prediction}       & \textbf{Actual}         \\ \Xhline{2\arrayrulewidth}
+              Enhancive                   & Enhancive                 & N/A                       & N/A                \\ \hline
+              Enhancive                   & Enhancive                 & N/A                       & N/A                \\ \hline
+              Enhancive                   & Enhancive                 & N/A                       & N/A                \\ \hline
+              Enhancive                   & Enhancive                 & N/A                       & N/A                \\ \hline
+              Enhancive                   & Enhancive                 & Groomative                & Groomative         \\ \hline
+              Enhancive                   & Enhancive                 & Groomative                & Groomative         \\ \hline
+              Enhancive                   & Enhancive                 & Groomative                & Groomative         \\ \hline
+              Reductive                   & Reductive                 & N/A                       & N/A                \\ \hline
+              Adaptive                    & Adaptive                  & N/A                       & N/A                \\ \hline
+              Preventive                  & Preventive                & Groomative                & Groomative         \\ \hline 
+              Updative                    & Updative                  & Reformative               & Reformative        \\ \hline
+              Updative                    & Reformative               & Reformative               & Updative           \\ \hline
+              Groomative                  & Preventive                & Preventive                & Groomative         \\
+
+              \bottomrule
+       \end{tabular}
+       \caption{Categorisation of Changes }
+       \label{table:reverse_engineering}
+\end{table}
 
 
 \section{Discussion} \label{discussion}
