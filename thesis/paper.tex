@@ -298,37 +298,64 @@ The remainder of the changes were defined as general trends. These changes were 
 \subsection{RQ1 Results} \label{results_rq1}
 
 %Types intro
-The results show that certain types of change are more prevalent than others, these results are shown in \ref{table:type_counts}. Analysis of the results showed that enhancive changes were the primary types of change that drive API evolution and that they act as a catalyst for many of the other changes in the API. Updative changes were found to be consequences of enhancive changes, rather than being drivers of evolution. Supporting the users of the API through the combination of preventive and groomative types of change, together formed another strong driver of API evolution. Reductive and adaptive changes, while important, did not strongly drive the evolution of the API. No evidence was found for corrective, performance types of change. Similarly, there was no evidence found for evaluative, consultive nor training activities.    
+The results show that certain types of change are more prevalent than others, these results are shown in Table \ref{table:type_counts}. Analysis of the results showed that enhancive changes were the primary types of change that drive API evolution and that they act as a catalyst for many of the other changes in the API. Updative changes were found to be consequences of enhancive changes, rather than being drivers of evolution. Supporting the users of the API through the combination of preventive and groomative types of change, together formed another strong driver of API evolution. Reductive and adaptive changes, while important, did not strongly drive the evolution of the API. No evidence was found for corrective, performance types of change. Similarly, there was no evidence found for evaluative, consultive nor training activities.    
+
+\begin{table}
+       \centering
+       \begin{tabular}[ht]{l|c|c}
+              \toprule
+
+              \textbf{Type}        & \textbf{Main Types}       &\textbf{Secondary Types}   \\ \midrule
+              Enhancive            & 7                         & -                         \\ \hline
+              Corrective           & -                         & -                         \\ \hline
+              Reductive            & 1                         & -                         \\ \hline
+              Adaptive             & 1                         & -                         \\ \hline
+              Performance          & -                         & -                         \\ \hline
+              Preventive           & 2                         & -                         \\ \hline
+              Groomative           & -                         & 5                         \\ \hline
+              Updative             & 1                         & 1                         \\ \hline
+              Reformative          & 1                         & 1                         \\ \hline
+              Evaluative           & -                         & -                         \\ \hline
+              Consultive           & -                         & -                         \\ \hline
+              Training             & -                         & -                         \\ 
+
+              \bottomrule
+
+       \end{tabular}
+       \caption{Identified Types of Change}
+       \label{table:type_counts}
+\end{table}
 
 %Lehman Intro
 Our analysis of the results related to \textbf{RQ1} showed that seven out of the eight laws \cite{lehman90sview} do apply to APIs. A summary of our findings can be seen in Table \ref{table:lehman}. The evidence found for the laws of continuing change, self regulation, conservation of familiarity, continuing growth and feedback system mainly relate to enhancive changes that add functionality to the API. It was also found that the laws of increasing complexity and declining quality do apply, but that the changes which support these laws usually had a secondary intent related to complexity or quality. The only law which was found not to apply to the API analysed in this study was the law of conservation of organisational stability. Our results rather show the opposite, that the work rate is variant. 
+
+%Lehman Table
+\begin{table}
+       \centering
+       \begin{tabular}[ht]{l|c}
+              \toprule
+
+              \textbf{Law}                              & \textbf{Applicability}    \\ \midrule
+              Continuing Change                         & True                      \\ \hline
+              Increasing Complexity                     & True                     \\ \hline
+              Self Regulation                           & True                      \\ \hline
+              Conservation of Organisational Stability  & False                     \\ \hline
+              Conservation of Familiarity               & True                      \\ \hline
+              Continuing Growth                         & True                      \\ \hline
+              Declining Quality                         & True                     \\ \hline
+              Feedback System                           & True                      \\ 
+
+              \bottomrule
+
+       \end{tabular}
+       \caption{The applicability of Lehman's laws}
+       \label{table:lehman}
+\end{table}
 
 In the remainder of this section we will discuss the results related to each type of change category, discussing the results for each of them with examples from the changes identified between the two versions of the API. Subsequently, each of Lehman's laws will be discussed and our results will be presented showing if the laws apply to APIs or not.
 
 
 
-%Lehman Table
-% \begin{table}
-%        \centering
-%        \begin{tabular}[ht]{l|c}
-%               \toprule
-
-%               \textbf{Law}                              & \textbf{Applicability}    \\ \midrule
-%               Continuing Change                         & True                      \\ \hline
-%               Increasing Complexity                     & True                     \\ \hline
-%               Self Regulation                           & True                      \\ \hline
-%               Conservation of Organisational Stability  & False                     \\ \hline
-%               Conservation of Familiarity               & True                      \\ \hline
-%               Continuing Growth                         & True                      \\ \hline
-%               Declining Quality                         & True                     \\ \hline
-%               Feedback System                           & True                      \\ 
-
-%               \bottomrule
-
-%        \end{tabular}
-%        \caption{The applicability of Lehman's laws}
-%        \label{table:lehman}
-% \end{table}
 
 
 %Re-write this intro a bit (since I moved it)
@@ -338,32 +365,6 @@ Functionality is a prime driver of API evolution // Hardware is not a driving fa
 Maintainability does not drive change // Documentation does not drive change
 Standardising application development
 Removing functionality
-
-% \begin{table}
-%        \centering
-%        \begin{tabular}[ht]{l|c|c}
-%               \toprule
-
-%               \textbf{Type}        & \textbf{Main Types}       &\textbf{Secondary Types}   \\ \midrule
-%               Enhancive            & 7                         & -                         \\ \hline
-%               Corrective           & -                         & -                         \\ \hline
-%               Reductive            & 1                         & -                         \\ \hline
-%               Adaptive             & 1                         & -                         \\ \hline
-%               Performance          & -                         & -                         \\ \hline
-%               Preventive           & 2                         & -                         \\ \hline
-%               Groomative           & -                         & 5                         \\ \hline
-%               Updative             & 1                         & 1                         \\ \hline
-%               Reformative          & 1                         & 1                         \\ \hline
-%               Evaluative           & -                         & -                         \\ \hline
-%               Consultive           & -                         & -                         \\ \hline
-%               Training             & -                         & -                         \\ 
-
-%               \bottomrule
-
-%        \end{tabular}
-%        \caption{Identified Types of Change}
-%        \label{table:type_counts}
-% \end{table}
 
 
 \subsubsection{Types 1by1}
