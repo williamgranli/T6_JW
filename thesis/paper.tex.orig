@@ -63,6 +63,7 @@ William Granli\\
 \begin{abstract}
 
 
+<<<<<<< HEAD
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 % %Background and need for study, make it interesting
 % Evolving a software system is a precipitous activity. Many software evolution theories have been created to assist changing systems. However, as modern systems are making greater use of APIs, do these software evolution theories apply to them?
@@ -73,6 +74,7 @@ William Granli\\
 % % Our results and future suggestions
 % The results of this analysis showed that the largest driving force of API evolution is the desire for new functionality. It highlighted the fact that not all software evolution theories are applicable to APIs. We found that changes happen sporadically rather than slowly over time and the contradiction of a software evolution law that states the opposite is true. The research further supported the importance of a feedback loop of a software system, which is something that company A also wants. The study concludes by proposing suggestions for future studies based on our findings.
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 %What I did: 
        %Tried to make the motivation/purpose more clear/'''''''crisp''''''''''
@@ -106,6 +108,39 @@ The results of this analysis show that the largest driving force of API evolutio
        %Greater use = more ppl use?
        %does undertaken fit with attempt
        %It's 239 words now... should try to cut it to 200. (maybe 2nd sentence of method can be removed) (maybe results can be shortened a bit)
+=======
+% \textbf{Background  } %Give a feeling of the need of this study, answer why the case company needs what is in the Objective (+Context)
+% The driving forces of modifications to APIs have been investigated before, however, platform APIs are, until now, unexplored. Previous studies have not considered APIs from the perspective of well-established software evolution theories. 
+
+% \smallskip \noindent
+% \textbf{Objective  } %Done
+% In this study, we explore how companies actively evolve their APIs and 'how APIs evolve from a passive point of view'. We also aim to evaluate to what extent we are able to reverse engineer these evolutionary change decisions. The goal is to study these factors by evaluating them against existing software evolution theories. 
+
+% \smallskip \noindent
+% \textbf{Method  } %Done
+% This case study was conducted by analysing the changes between two versions of a platform API and its documentation. The results were analysed from a qualitative and investigative perspective, and were then reviewed and validated with the architects of the API. 
+
+% \smallskip \noindent
+% \textbf{Results  } %Done
+% We identified thirteen major changes which were introduced in the new version of the API. We concluded that the dominant driving force of the API evolution is demand for new functionality and that change decisions, to a large extent, are reverse engineerable. We also found that long-established software evolution laws were largely applicable to APIs. 
+
+% \smallskip \noindent
+% \textbf{Conclusion  }
+% This study has provided valuable insight into the evolution of platform APIs. The qualitative analysis can help other companies to improve their API maintenance process. The successful attempt to reverse engineer the change decisions should encourage similar studies to be conducted. The investigation of Lehman's laws show that APIs cannot be generalised and be compared to any type of system. 
+
+%Background and need for study, make it interesting
+Evolving a software system is a precipitous activity. Many software evolution theories have been created to assist changing systems, however, as modern systems make greater use of APIs, a question must be asked: do these theories apply to the evolution of APIs? (!!!what is driving the evolution of APIs? - Might fit better with the title?)
+%Other studies
+Studies have investigated why changes are made to APIs and how these changes affect systems, but they do not attempt to understand the driving forces behind the evolution of an API, according to software evolution theories. Understanding the driving forces of API evolution can potentially improve API design and aid communication between all aspects of a system's feedback loop.
+% How do we do it?
+Our study utilises a case-study to identify the types of changes that have driven the evolution of an existing API, belonging to a case company. 
+% Our results and future suggestions
+The results of this analysis showed that the largest driving force of API evolution is the desire for new functionality. It highlighted the fact that not all software evolution theories are applicable to APIs. We found that changes happen sporadically rather than slowly over time and the contradiction of a software evolution law that states the opposite is true. The research further supported the importance of a feedback loop of a software system, which is something that company A also wants. The study concludes by proposing suggestions for future studies based on our findings.
+
+
+
+
+>>>>>>> f7a0cd1ac87b9376cccc6fa6c22098c47dee05e9
 
 
 
