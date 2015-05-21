@@ -88,7 +88,7 @@ Modifications to deployed APIs may negatively impact its users. It is therefore 
 Identifying the types of changes that occur when an API evolves will improve communication and discussions regarding maintenance and evolution tasks for the case company. This improved communication could provide a common language that developers, users and management can use to discuss potential evolution of the APIs. Understanding the evolution theories could further assist understanding of how change will occur and how to plan for it. Lastly, by keeping a history of changes to an API over time, trends can be identified which could help with future API design.
 
 %Gap in Literature
-Previous studies have investigated programming language APIs, libraries or frameworks focusing on causes and affects of modifications to APIs \cite{dig2005role, hou2011exploring, shi2011empirical}. However, to the best of our knowledge, no studies have been performed on embedded platform APIs from a software evolution perspective. %!!! still needs to be improved/increased (consider space re 1st page) 
+Previous studies have investigated programming language APIs, libraries or frameworks focusing on causes and affects of modifications to APIs \cite{dig2005role, hou2011exploring, shi2011empirical}. However, to the best of our knowledge, no studies have been performed on embedded platform APIs from a software evolution perspective.  %!!! still needs to be improved/increased (consider space re 1st page) 
 
 %Goal of the study
 The goal of the study was twofold. Firstly, the aim was to explore what are the driving forces of API evolution and secondly, to validate the results' level of correctness by comparing our findings with the case company's explanation of the changes. With this information, we could determine to what extent these change decisions can be reverse engineered. 
@@ -220,7 +220,7 @@ The interview was conducted using a semi-structured approach \cite{robson2002rea
 %Codes
 To analyse the data each change identified in the spreadsheet was coded based on which module the change occurred in and two other characteristics: a) if the change added, removed or modified functionality, and b) if the change was a cosmetic change or not.
 %Concepts
-Grouping the codes by module allowed us to form general concepts of change. However, changes that affected the whole API were classified on their own. %"that affected the whole API" re-word this
+Grouping the codes by module allowed us to form general concepts of change. However, changes that affected multiple modules were classified on their own.
 %Categories
 These concepts were then grouped into categories based on common patterns between the concepts.
 %Theory
@@ -263,7 +263,7 @@ In total, thirteen unique changes were identified when analysing the source code
 
 Many of the changes were deprecations that were later re-implemented as new modules. Changes of these kinds were grouped into a single type instead of two. Such examples include the deprecation and re-implementation of an event system, dynamic web page generation and configuration utilities. Changes of this kind often had an accompanying secondary type of change.
 
-The remainder of the changes were defined as general trends. These changes were not changes to individual parts of the API, but were instead larger changes that affected the whole API. Such examples include a shift towards using interfaces to access features, a different error-handling approach and the inclusion of additional 3\textsuperscript{rd} party libraries. Typically, these general trends also have a secondary type of change attributed to them.
+The remainder of the changes were defined as general trends. These changes were not changes to individual parts of the API, but were instead broader changes. Such examples include a shift towards using interfaces to access features, a different error-handling approach and the inclusion of additional 3\textsuperscript{rd} party libraries. Typically, these general trends also have a secondary type of change attributed to them.
 
 
 
@@ -364,7 +364,7 @@ As this was the only reductive change found, we conclude that the evolution of t
 %Introduction and definition
 Adaptive changes are defined to be changes which involve changes to technology or resources used. 
 %Data and examples
-A single change was identified as being adaptive; the inclusion of new 3\textsuperscript{rd} party libraries. Libraries were added for audio and data communication. The pre-existing low-level library was further incorporated into whole API. (!!!)
+A single change was identified as being adaptive; the inclusion of new 3\textsuperscript{rd} party libraries. Libraries were added for audio and data communication. The pre-existing low-level library was incorporated into the API.
 %Conclusion 
 We therefore conclude that the evolution of the API has not been primarily driven by adaptive changes.
 
@@ -528,7 +528,7 @@ By analysing the API based on Lehman's laws, we were able to find that the law o
 
 
 \subsection{Implications for Company A}
-The changes introduced to the API are mainly based on the expertise and experiences of the API architects at company A. There has not been a scientific approach to maintaining the system and the knowledge from research has not directly affected the way that the API's evolution has been managed. With our work, we hope to provide further insight into how the API is maintained. Our analysis of the API based on Lehman's laws should further assure that company A is moving the evolution of the API in the right direction. Our research proposes a challenge (!!!reword cuz repeating) for company A in how to tackle challenges related to the law of Conservation of Organisational Stability. Determining if the benefits of continuously and frequently updating the API outweigh the side-effects that these updates could have on the application developers, is something that company A will need to consider.
+The changes introduced to the API are mainly based on the expertise and experiences of the API architects at company A. There has not been a scientific approach to maintaining the system and the knowledge from research has not directly affected the way that the API's evolution has been managed. With our work, we hope to provide further insight into how the API is maintained. Our analysis of the API based on Lehman's laws should further assure that company A is moving the evolution of the API in the right direction. Our research proposes a dilemma for company A in how to tackle challenges related to the law of Conservation of Organisational Stability. Determining if the benefits of continuously and frequently updating the API outweigh the side-effects that these updates could have on the application developers, is something that company A will need to consider.
 
 One way of finding the solution to this problem would be by including the application developers in the feedback loop. Since the application developers are on the receiving end of the changes, we believe that their needs have to be assessed before the problem can be solved. With our study we identified both that the law of Feedback System is of great importance to company A and that it is one of the key areas of API development that company A wishes to improve. One challenge of the challenges posed by software evolution is that the activities carried out are often intangible and non-objective \cite{chapin2001types, lientz1980software}. Based on this, we propose that our study which has granulated the activities is used as a basis for communicating the current stage of the evolution of their API. We hope that this classification can be used in its current form, to help quantify the activities and to provide an overview of them. We also hope that the approach we used can be used to predict which types of activities should be emphasised in the future evolution of the API. With our study we have also demonstrated that the classification of changes is achievable, which, in turn, should encourage company A to adopt this method of classifying change.
 
@@ -540,7 +540,7 @@ One way of finding the solution to this problem would be by including the applic
 \section{Conclusion} \label{conclusion}
 With this study, we conclude that studying API evolution with help of existing theories, provides a new and structured approach to the field of API evolution. Our study shows that functionality is the largest driving force of change in the evolution of APIs. It also concludes that APIs do not change invariantly, and that maintenance of an API rather is infrequent and sporadic. This finding lead us to invalidate Lehman's law of Conservation of Organisational Stability in the context of APIs. With this study we have also identified the importance of having a structured feedback loop when maintaining an API. We have also provided company A with a foundation for facilitating such a change. 
 
-To build on our study, we propose that a study on the eco-system's role in the evolution of APIs is conducted. We believe that this area is a major source of improvement for API maintenance, and that exploring the benefits including applications developers and additional entities of the eco-system in the feedback loop is a great place to start (!!!rephrase). In such a study, we would suggest that the types of software evolution and software maintenance \cite{chapin2001types} could be used as a mean of facilitating discussion between the entities. It could also be possible to study the effect that changes to APIs have on the application code, in such a study. 
+To build on our study, we propose that a study on the eco-system's role in the evolution of APIs is conducted. We believe that this area could be a major source of improvement for API evolution. Exploring the benefits of including application developers and additional entities of the eco-system in the feedback loop, is a good starting point for company A. In such a study, we would suggest that the types of software evolution and software maintenance \cite{chapin2001types} could be used as a mean of facilitating discussion between the entities. It could also be possible to study the effect that changes to APIs have on the application code, in such a study. 
 
 To further investigate what drives API evolution, we believe that API evolution has to be studied from a business point of view. We therefore suggest that a similar study is conducted, but with the goal of analysing the change of an API based on business motives. Positioning a study around business motives would help identifying the changes before they are formulated into technical changes, and it would provide a new and fresh angle to the field of API evolution. 
 
