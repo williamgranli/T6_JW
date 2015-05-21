@@ -77,28 +77,24 @@ The results of this analysis show that the largest driving force of API evolutio
 
 
 \section{Introduction} \label{introduction}
-%1API Design (and a little bit of ecosystems and a bit of problem statement)
+%API Design background
 As the software industry and the open-source movement continue to grow, the number of public APIs is steadily increasing. APIs can improve the development speed \cite{stylos2006comparing}, contribute to higher quality software \cite{stylos2006comparing} and increase the reusability of software \cite{afonso2012evaluating}. There is a consensus in that modifications to APIs could negatively impact the users of the API \cite{google_talk, henning2007api, mcdonnell2013empirical, robbes2012developers}. The main reason for this is that it requires the API users to update the application code, thus causing a disruption in the application's software ecosystem \cite{messerschmitt2005software}. 
-%2Software Evolution 
+%Software Evolution background
 In the discipline of software evolution, such updates to software are studied from an evolutionary standpoint. Software can be updated for different reasons and these motives can be grouped into corrective, adaptive, perfective and preventive changes \cite{lientz1980software}. 
 
-%3Purpose
+%Purpose, general
 Modifications to deployed APIs may negatively impact its users. It is therefore important to investigate why these changes occur. Understanding the motives behind the changes could help API designers to  prevent potential future changes to their APIs. Before industry can safely include such information in their feedback loop, we must critically assess to what degree we can reverse engineer such motives. 
-%3 cont.d - Why this is important for the case company.
-
+%Purpose, case company
 Identifying the types of changes that occur when an API evolves will improve communication and discussions regarding maintenance and evolution tasks for the case company. This improved communication could provide a common language that developers, users and management can use to discuss potential evolution of the APIs. Understanding the evolution theories could further assist understanding of how change will occur and how to plan for it. Lastly, by keeping a history of changes to an API over time, trends can be identified which could help with future API design.
 
-%4Gap in Literature
+%Gap in Literature
 Previous studies have investigated programming language APIs, libraries or frameworks focusing on causes and affects of modifications to APIs \cite{dig2005role, hou2011exploring, shi2011empirical}. However, to the best of our knowledge, no studies have been performed on embedded platform APIs from a software evolution perspective. 
 
 %Goal of the study
 The goal of the study was twofold. Firstly, the aim was to explore what are the driving forces of API evolution and secondly, to validate the results' level of correctness by comparing our findings with the case company's explanation of the changes. With this information, we could determine to what extent these change decisions can be reverse engineered. 
 
-
-
-
-%Structure of the paper
-The sections following the Introduction are structured as follows: In Section \ref{background}, we present the background and previously published work that is related to our study. Section \ref{case_company_description} describes the case company and the API which was studied. A description of our methodology is introduced in Section \ref{methodology}. In Section \ref{results}, the results of our study are presented and in Section \ref{discussion}, we discuss the findings of our study. In Section \ref{conclusion} we propose the potential impact of our work and give suggestions for future work that builds on our research. 
+%Structure of
+The sections following the Introduction are structured as follows: In Section \ref{background}, we present the background and previously published work that is related to our study and introduce the case company and their API. A description of our methodology is introduced in Section \ref{methodology}. In Section \ref{results}, the results of our study are presented and in Section \ref{discussion}, we discuss the implications of our work. In Section \ref{conclusion} summarise the study and give suggestions for future work that builds on our research. 
 
 \section{Background} \label{background}
 This section will introduce the fields of API design, software evolution and it will provide a review of studies that are related to our study. The subsequent section will introduce the case company with a description of the API used in this study.  
