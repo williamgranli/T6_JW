@@ -106,7 +106,7 @@ API design is notoriously difficult, a myriad of design and performance decision
 
 \subsection{Software Evolution} \label{software_evolution}
 %%Types of maintenance and types of maintenance
-Software evolution is a field that studies the application of software maintenance activities, changes in software processes and the resulting, evolved versions of the software. The concept of software maintenance has existed since the 1960s when it was first introduced to the software development community \cite{lientz1980software}. A set of four categories describing different types of software maintenance \cite{lientz1980software} became the basis upon which twelve new types were developed \cite{chapin2001types}. The twelve types of software evolution and software maintenance, as seen in Table \ref{table:expl_types}, describe a software evolution activity that relates to one of three particular areas; the code, the software and the customer-experienced functionality. 
+Software evolution is a field that studies the application of software maintenance activities, changes in software processes and the resulting, evolved versions of the software. The concept of software maintenance has existed since the 1960s when it was first introduced to the software development community \cite{lientz1980software}. A set of four categories describing different kinds of software maintenance \cite{lientz1980software} became the basis upon which twelve new types were developed \cite{chapin2001types}. The twelve types of software evolution and software maintenance, as seen in Table \ref{table:expl_types}, describe a software evolution activity that relates to one of three particular areas; the code, the software and the customer-experienced functionality. 
 
 \begin{table}
        \centering
@@ -129,7 +129,7 @@ Software evolution is a field that studies the application of software maintenan
               \bottomrule
 
        \end{tabular}
-       \caption{Explanation of Types of Software Maintenance}
+       \caption{Types of Software Evolution and Software Maintenance \cite{chapin2001types}}
        \label{table:expl_types}
 \end{table}
 
@@ -505,7 +505,7 @@ Our results show that the major driving force for change in APIs is the call for
 
 In relation to this, previous work has identified that refactorings make up a substantial part of the changes APIs undergo \cite{dig2005role, dig2006apis, henkel2005catchup, xing2006refactoring}. These results are not in line with ours, since our results show that groomative changes are uncommon and that changes related to quality are not primary drivers of change, rather, they are ripple-effects of changes to functionality \cite{robbes2012developers}.
 
-The results also showed that usability was the second-most important driver of API evolution. The classified updative, groomative and reformative changes all affected the maintainability and usability of the API and involved activities that have been found to improve the usability and maintainability of an API \cite{afonso2012evaluating, clarke2004measuring,piccioni2013empirical, shi2011empirical}. The interviewee discussed how company A wanted to aid developers creating applications by improving the interfaces that the developers are using. This improvement to the interfaces would better communicate the design and intentions to the developer. Improving the documentation of the API was also important for v2.0, as were improvements to the example code. These updates were intended to aid developers and create a set of standards that should be followed when creating applications. These changes correspond with three of Lehman's laws: Conservation of Familiarity, Declining Quality and the Feedback Loop.  
+The results also showed that usability was the second-most important driver of API evolution. The classified updative, groomative and reformative changes all affected the maintainability and usability of the API and involved activities that have been found to improve the usability and maintainability of an API \cite{afonso2012evaluating, clarke2004measuring, piccioni2013empirical, shi2011empirical}. The interviewee discussed how company A wanted to aid developers creating applications by improving the interfaces that the developers are using. This improvement to the interfaces would better communicate the design and intentions to the developer. Improving the documentation of the API was also important for v2.0, as were improvements to the example code. These updates were intended to aid developers and create a set of standards that should be followed when creating applications. These changes correspond with three of Lehman's laws: Conservation of Familiarity, Declining Quality and Feedback Loop.  
 
 Our results found that seven out of eight of Lehman's laws do apply to API evolution. The law of Conservation of Organisational Stability was found not to apply, since changes to APIs are unfavourable due to the potential disruption the applications using the API could face. This inertia to change in API evolution is supported by other research, which also conclude that the negative effect that changes to APIs may have is a major factor to be considered \cite{google_talk, henning2007api, mcdonnell2013empirical, robbes2012developers}. 
 
