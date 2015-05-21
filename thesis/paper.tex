@@ -75,7 +75,7 @@ The results of this analysis show that the largest driving force of API evolutio
 \keywords{API Design, Software Evolution, Software Maintenance}
 
 
-
+\newpage
 \section{Introduction} \label{introduction}
 %API Design background
 As the software industry and the open-source movement continue to grow, the number of public APIs is steadily increasing. APIs can improve the development speed \cite{stylos2006comparing}, contribute to higher quality software \cite{stylos2006comparing} and increase the reusability of software \cite{afonso2012evaluating}. There is a consensus in that modifications to APIs could negatively impact the users of the API \cite{google_talk, henning2007api, mcdonnell2013empirical, robbes2012developers}. The main reason for this is that it requires the API users to update the application code, thus causing a disruption in the application's software ecosystem \cite{messerschmitt2005software}. 
@@ -108,6 +108,10 @@ API design is notoriously difficult, a myriad of design and performance decision
 %%Types of maintenance and types of maintenance
 Software evolution is a field that studies the application of software maintenance activities, changes in software processes and the resulting, evolved versions of the software. The concept of software maintenance has existed since the 1960s when it was first introduced to the software development community \cite{lientz1980software}. A set of four categories describing different kinds of software maintenance \cite{lientz1980software} became the basis upon which twelve new types were developed \cite{chapin2001types}. The twelve types of software evolution and software maintenance, as seen in Table \ref{table:expl_types}, describe a software evolution activity that relates to one of three particular areas; the code, the software and the customer-experienced functionality. 
 
+Software evolution theory suggests that changes to software must obey one of eight laws \cite{lehman90sview}, known as Lehman's laws. They are presented in Table \ref{table:expl_laws}. The laws are said to only apply to E-type systems, which are programs that solve problems or address applications in the real world.     
+
+
+
 \begin{table}
        \centering
        \begin{tabular}[ht]{l|c}
@@ -129,12 +133,9 @@ Software evolution is a field that studies the application of software maintenan
               \bottomrule
 
        \end{tabular}
-       \caption{Types of Software Evolution and Software Maintenance \cite{chapin2001types}}
+       \caption{Types of Software Evolution  \cite{chapin2001types}}
        \label{table:expl_types}
 \end{table}
-
-Software evolution theory suggests that changes to software must obey one of eight laws \cite{lehman90sview}, known as Lehman's laws. They are presented in Table \ref{table:expl_laws}. The laws are said to only apply to E-type systems, which are programs that solve problems or address applications in the real world.     
-
 
 \begin{table}
        \centering
@@ -164,7 +165,6 @@ Software evolution theory suggests that changes to software must obey one of eig
        \caption{Lehman's Laws of Software Evolution \cite{lehman90sview}}
        \label{table:expl_laws}
 \end{table}
-
 
 \subsection{API Evolution} \label{related_work}
 The analysis of APIs in the context of software evolution has primarily focused on APIs that are part of large programming languages, such as Java \cite{hou2011exploring, shi2011empirical} and Smalltalk \cite{robbes2012developers}. Attempts to uncover the intents of the changes made in the AWT and Swing Java libraries have also been undertaken \cite{hou2011exploring}, leading to suggestions that the use of a strong architecture is vital for ensuring the successful evolution of an API \cite{hou2011exploring}.
