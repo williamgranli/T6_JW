@@ -62,7 +62,6 @@ William Granli\\
 
 \begin{abstract}
 
-
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 % %Background and need for study, make it interesting
 % Evolving a software system is a precipitous activity. Many software evolution theories have been created to assist changing systems. However, as modern systems are making greater use of APIs, do these software evolution theories apply to them?
@@ -106,7 +105,6 @@ The results of this analysis show that the largest driving force of API evolutio
        %Greater use = more ppl use?
        %does undertaken fit with attempt
        %It's 239 words now... should try to cut it to 200. (maybe 2nd sentence of method can be removed) (maybe results can be shortened a bit)
-
 
 
 \end{abstract}
@@ -384,11 +382,11 @@ Following this section, we will discuss the results related to each type of chan
 \smallskip \noindent
 \textbf{Enhancive  }
 %Define how we identified the change type
-Additions or re-implementations of functionality are defined to be enhancive changes. In addition to this, we have included deprecations that have then been re-implemented to also be enhancive.
+Additions or re-implementations of functionality are defined to be enhancive changes. In addition to this, we have included deprecations that have been re-implemented to also be enhancive changes.
 %Some Data and little explanation
-Seven of the identified changes were given the type of enhancive. The majority of which were additions of new functionality to the API. Two examples of added functionality are the addition of camera movement module and an audio analysis module. One example of a deprecation that was re-implemented is the event system.
+Seven of the identified changes were given the type of enhancive. The majority of which were additions of new functionality to the API. Two examples of added functionality are the addition of camera movement module and an audio analysis module. One example of a deprecation that was re-implemented, is the event system.
 %Conclusion
-Given that over half of the changes were identified to be enhancive, we conclude that the APIs evolution primary type of change was enhancive. 
+Given that over half of the changes were identified to be enhancive, we conclude that enhancive types of change are the primary drivers of API evolution. 
 
 \smallskip \noindent
 \textbf{Corrective  }
@@ -411,9 +409,9 @@ As this was the only reductive change found, we conclude that the evolution of t
 \smallskip \noindent
 \textbf{Adaptive  }
 %Introduction and definition
-Adaptive changes are defined to be changes which involve changes to technology or resources used. 
+Adaptive changes are defined to be changes involving the technologies or resources used by a system. 
 %Data and examples
-A single change was identified as being adaptive; the inclusion of new 3\textsuperscript{rd} party libraries. Libraries were added for audio and data communication. The pre-existing low-level library was further incorporated into whole API. (!!!)
+A single change was identified as being adaptive; the inclusion of new 3\textsuperscript{rd} party libraries. Libraries were added for audio and data communication. The pre-existing low-level library was further incorporated into the API.
 %Conclusion 
 We therefore conclude that the evolution of the API has not been primarily driven by adaptive changes.
 
@@ -431,14 +429,14 @@ This therefore leads us to conclude that API evolution is not driven by performa
 %Define
 Preventive changes are defined to be changes that attempt to avoid future maintenance. This should not be confused with changes that attempt to make the current state of the system more maintainable.
 %Data and examples
-Two changes were identified to be preventive types of change. A new error handling system was one of these changes. Version 2.0 of the API added specific error handling modules and functions which replaced the pre-existing error-handling in v1.4 of the API. The redesign of the system to make use of interfaces was also classified as a preventive change. Using interfaces to access modules helps to make them more maintainable and more easily extensible.
+Two changes were identified to be preventive. One example is the adoption of a new error handling system. Version 2.0 of the API added specific error handling modules and functions which replaced the pre-existing error-handling in v1.4 of the API. The redesign of the system to make use of interfaces was also classified as a preventive change. Using interfaces to access modules helps to make them more maintainable and more easily extensible.
 %Concusion
 Preventive types of change appear to drive the evolution of an API more strongly than other types of change. This could be due to the fact that as the API grows, the need for higher maintenance also increase, a fact that also seems to be supported by Lehman's laws.
 
 \smallskip \noindent
 \textbf{Groomative  }
 %Define
-Groomative changes are defined to be changes that aim to immediately make the code more maintainable.
+Groomative changes are defined to be changes that aim to immediately improve maintainability.
 %Data and examples
 While none of the change identified were primarily groomative changes, three of them were secondarily classified as being groomative. This indicates that the groomative nature of a change is often a positive affect of other types of change. The move towards using interfaces can be seen as an example of this. While the primary motive of change was to make the API more maintainable in the future, making the API more maintainable immediately was also a reason for the change.
 %Conclusion
@@ -476,7 +474,7 @@ We can therefore conclude that these change types are not important for API evol
 
 \smallskip \noindent
 \textbf{Continuing Change  } 
-Company A described that including new functional content was one of the top priorities for the release of version 2.0. This is supported by the characteristic of the changes identified in this study. 4 of the 13 changes were additions of new modules, and additional functionality was also added to re-implemented modules. It was also mentioned that the API users had previously requested more frequent updates to the API, despite the drawbacks this could cause. One of the main reasons for continuously adapting the API is also to control the way API users use the API. Prior to version 2.0 being released, a number of API users used workarounds to implement applications which contained functionality which was not yet offered from the API. These applications were fully functional, but there existed no standard method of implementation. We therefore conclude that the law of continuing change holds for APIs. 
+Company A described that including new functional content was one of the top priorities for the release of version 2.0. This is supported by the characteristic of the changes identified in this study. Four of the thirteen changes were additions of new modules, and additional functionality was also added to re-implemented modules. It was also mentioned that the API users had previously requested more frequent updates to the API, despite the drawbacks this could cause. One of the main reasons for continuously adapting the API is also to control the way API users use the API. Prior to version 2.0 being released, a number of API users used workarounds to implement applications which contained functionality which was not yet offered from the API. These applications were fully functional, but there existed no standard method of implementation. We therefore conclude that the law of continuing change holds for APIs. 
 
 \smallskip \noindent
 \textbf{Increasing Complexity  } \label{sec:law2} 
@@ -550,7 +548,7 @@ The changes related to functionality being added, modified (deprecated) or remov
 RQ1: \textbf{What drives API evolution?}
 \smallskip
 
-Our results show that the major driving force for change in APIs is the call for increased functionality. The classification of the types of software evolution and software maintenance showed that enhancive changes which either aimed to add modules or new functionality to existing modules were the most common. We also think that it is interesting to note that a majority of the changes which did not affect functionality, such as the updative changes, were spurred because of previous changes that were related to functionality. Following this line of thought, the desire for new functionality can be seen as a catalyst that allows new change to occur. The view of considering functionality to be a major driver for change is supported by the analysis with Lehman's laws. In the law of Continuing Change, Lehman concludes that ``an E-type system must be continually adapted or it becomes progressively less satisfactory". The results of our work supports this view, as the changes did not only add functionality, but it was also found that the application developers most major concern were updates to functionality. 
+Our results show that the major driving force for change in APIs is the call for increased functionality. The classification of the types of software evolution and software maintenance showed that enhancive changes which either aimed to add modules or new functionality to existing modules were the most common. We also think that it is interesting to note that a majority of the changes that did not affect functionality, such as the updative changes, were spurred because of previous changes that were related to functionality. Following this line of thought, the desire for new functionality can be seen as a catalyst that allows new change to occur. The view of considering functionality to be a major driver for change is supported by the analysis with Lehman's laws. In the law of Continuing Change, Lehman concludes that ``an E-type system must be continually adapted or it becomes progressively less satisfactory". The results of our work supports this view, as the changes did not only add functionality, but it was also found that the application developers most major concern were updates to functionality. 
 
 In relation to this, previous work has identified that refactorings make up a substantial part of the changes APIs undergo \cite{dig2005role, dig2006apis, henkel2005catchup, xing2006refactoring}. These results are not in line with ours, since our results show that groomative changes are uncommon and that changes related to quality are not primary drivers of change, rather, they are ripple-effects of changes to functionality \cite{robbes2012developers}.  
 
@@ -575,7 +573,7 @@ By analysing the API based on Lehman's laws, we were able to find that the law o
 
 
 \subsection{Implications for Company A}
-The changes introduced to the API are mainly based on the expertise and experiences of the API architects at company A. There has not been a scientific approach to maintaining the system and the knowledge from research has not directly affected the way that the API's evolution has been managed. With our work, we hope to provide further insight into how the API is maintained. Our analysis of the API based on Lehman's laws should further assure that company A is moving the evolution of the API in the right direction. Our research proposes a challenge (!!!reword cuz repeating) for company A in how to tackle challenges related to the law of Conservation of Organisational Stability. Determining if the benefits of continuously and frequently updating the API outweigh the side-effects that these updates could have on the application developers, is something that company A will need to consider.
+The changes introduced to the API are mainly based on the expertise and experiences of the API architects at company A. There has not been a scientific approach to maintaining the system and the knowledge from research has not directly affected the way that the API's evolution has been managed. With our work, we hope to provide further insight into how the API is maintained. Our analysis of the API based on Lehman's laws should further assure company A that they are moving the evolution of the API in the right direction. Our research proposes a challenge (!!!reword cuz repeating) for company A in how to tackle challenges related to the law of Conservation of Organisational Stability. Determining if the benefits of continuously and frequently updating the API outweigh the side-effects that these updates could have on the application developers, is something that company A will need to consider.
 
 One way of finding the solution to this problem would be by including the application developers in the feedback loop. Since the application developers are on the receiving end of the changes, we believe that their needs have to be assessed before the problem can be solved. With our study we identified both that the law of Feedback System is of great importance to company A and that it is one of the key areas of API development that company A wishes to improve. One challenge of the challenges posed by software evolution is that the activities carried out are often intangible and non-objective \cite{chapin2001types, lientz1980software}. Based on this, we propose that our study which has granulated the activities is used as a basis for communicating the current stage of the evolution of their API. We hope that this classification can be used in its current form, to help quantify the activities and to provide an overview of them. We also hope that the approach we used can be used to predict which types of activities should be emphasised in the future evolution of the API. With our study we have also demonstrated that the classification of changes is achievable, which, in turn, should encourage company A to adopt this method of classifying change.
 
