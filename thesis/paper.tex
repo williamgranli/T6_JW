@@ -62,7 +62,7 @@ William Granli\\
 
 \begin{abstract}
 %Motivation
-Evolving an Application Programming Interface (API) is a precipitous activity, mainly because of the great implications modifications can have on the users of it. As the usage of APIs increases, software development organisations must take an empirical and scientific approach to the way they manage the evolution of their APIs. 
+Evolving an Application Programming Interface (API) is a precipitous activity since(!!!) modifying an API can significantly impact its users. As the usage of APIs increases, software development organisations must therefore take an empirical and scientific approach to the way they manage the evolution of their APIs. 
 %Problem
 If no attempt at analysing or quantifying the evolution of an API is made, there will be a lacking understanding of the evolution, and possible improvements to the maintenance strategy will be difficult to identify. We believe, that long-standing software evolution theories can provide additional insight to the field of APIs, and be of great use to companies maintaining APIs. 
 %Method
@@ -182,44 +182,6 @@ Investigations of three frameworks and one library indicated that 80\% of refact
 The case company of this study will from here on be referred to as \textit{company A}. Company A operates in the domain of video surveillance. The company's headquarters is located in Lund, Sweden, with offices in 49 countries worldwide. Company A is the global market leader in the markets of network cameras and video encoders. They develop embedded software for security cameras. The cameras are designed to be accessible through APIs that are developed and maintained by the company. 
 
 The API analysed in this study is written in the programming language C and has been deployed for several years. It was recently updated from v1.4 to version 2.0, which is the current active version. The changes between these two versions is what has been analysed in this study. Between the release of version 1.0 and 1.4, no functionality was added, as it only added additional build options for other hardware platforms. Prior to v1.4 being released, updates were only made to include additional built options and did not include any additional functionality. The API is used by company partners, which are other companies which develop applications for the cameras. These applications are, in turn, used by the end-users of the cameras. The API is developed for a wide range of camera types that offer different functionality and are used for different purposes. 
-
-
-
-
-\section{Methodology} \label{methodology}
-\begin{table}
-       \centering
-       \begin{tabular}[ht]{p{3in}}
-              \toprule
-
-              \textbf{Phase 1: Generate Hypotheses}
-              
-              \begin{enumerate}
-              \item Inspect source code  
-              \item Inspect accompanying documentation 
-              \item Generate Hypotheses 
-              \item Conduct Interview 
-              \item Analyse source code
-              \end{enumerate} \\ 
-
-
-              
-              \textbf{Phase 2: Confirm Hypotheses} 
-              
-              \begin{enumerate}
-              \item Analyse interviews 
-              \item Classify trends according to types 
-              \item Compare classifications against interview responses 
-              \item Analyse from software evolution theory point of view 
-              \item Validate Hypotheses 
-              \end{enumerate} \\
-              
-              \bottomrule
-       \end{tabular}
-       \caption{Methodology Steps}
-       \label{table:meth_steps}
-\end{table} 
-
 
 
 \section{Methodology} \label{methodology}
