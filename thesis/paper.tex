@@ -68,8 +68,7 @@ If no attempt at analysing or quantifying the evolution of an API is made, there
 %Method
 In this case study, we conduct a qualitative investigation to understand what drives the evolution of an industry company's existing API, by examining two versions of the API code. The changes were analysed based on two software evolution theories, and the extent to which we could reverse engineer the change decisions was determined by interviewing the architect of the API. 
 %Results
-The results of this analysis show that the largest driving force of API evolution is the desire for new functionality. Our findings which show that changes happen sporadically, rather than continuously, invalidate a law of software evolution in the context of APIs \eric{name of the law?}. 
-We also found that it is possible to reverse engineer change decisions and in doing so, identified that the feedback loop of an API is the most important area of improvement. 
+The results of this analysis show that the largest driving force of API evolution is the desire for new functionality. Our findings which show that changes happen sporadically, rather than continuously, invalidate the law of Conservation of Organisational Stability in the context of APIs. We also found that it is possible to reverse engineer change decisions and in doing so, identified that the feedback loop of an API is the most important area of improvement. 
 \end{abstract}
 
 \category{D.2.7}{Software Engineering}{Distribution, Maintenance, Enhancement}[Restructuring, reverse engineering, and re-engineering]
@@ -294,10 +293,8 @@ In this section we discuss possible threats to construct validity, internal vali
 
 \newpage
 \section{Results} \label{results} 
-%%Write new
 
-%%Small intro to this section. Mention that : In total, thirteen unique changes were found.
-This section \chg{will present}{presents} the results of our study and is structured around the research questions. Each section begins with a summary of the results and a subsequent in depth description of the findings.
+This section presents the results of our study and is structured around the research questions. Each section begins with a summary of the results and a subsequent in depth description of the findings.
 
 In total, thirteen unique changes were identified when analysing the source code, the majority of which were additions of functionality of the API. Such additions include added functionality to allow mechanical and digital control of the camera, to utilise additional storage devices, to allow serial connectivity and to allow audio analysis on the cameras. Changes that were pure additions the API were not attributed with any secondary types of change.
 
@@ -339,7 +336,7 @@ The results show that certain types of change are more prevalent than others, th
 \end{table}
 
 %Lehman Intro
-Our analysis of the results related to \textbf{RQ1} showed that seven out of the eight laws \ins{of Lehman} \cite{lehman90sview} do apply to APIs. 
+Our analysis of the results related to \textbf{RQ1} showed that seven out of the eight of Lehman's laws \cite{lehman90sview} do apply to APIs. 
 A summary of our findings can be seen in Table \ref{table:lehman}. 
 The evidence found for the laws of Continuing Change, Self Regulation, Conservation of Familiarity, Continuing Growth and Feedback System mainly relate to enhancive changes that add functionality to the API. 
 It was also found that the laws of Increasing Complexity and Declining Quality do apply, but that the changes which support these laws usually had a secondary intent related to complexity or quality. The only law which was found not to apply to the API analysed in this study was the law of Conservation of Organisational Stability. Our results rather show the opposite, that the work rate is variant. 
