@@ -89,17 +89,10 @@ The sections following the Introduction are structured as follows: In Section \r
 \section{Background} \label{background}
 This section will introduce the fields of API design, software evolution and it will provide a review of studies that are related to our study. The subsequent section will introduce the case company with a description of the API used in this study.  
 
-\subsection{APIs} 
+\subsection{APIs} \label{api_design}
 %what is an API
 An API offers an interface through which developers can access programmatic functionality. APIs can be seen as having three interacting layers; the public interface, the actual implementation of the functionality and an intersecting layer which provides utilities such as error handling, third party libraries and additional auxiliary features. Typically, the interfaces provide the definitions of functions and data structures while the implementation realises those interfaces.
-%we consider APIs to be systems because x y z \cite{761853,5733835}
-Given that there is a combination of different interacting elements that do not only concern interfaces to implementations, we would argue that an API can be described as a system \cite{761853,5733835}.
-%Introduce different layers of an API.
-%Headers / Interfaces
-%Implementation
-%"Middle Layer"
 
-\subsubsection{API Design} \label{api_design}
 API design is notoriously difficult, as a myriad of design and performance decisions must be taken into consideration when creating APIs \cite{afonso2012evaluating, bloch2008effective, stylos2006comparing}. Examples of such design decisions include how to structure an object's constructor parameters or if the API should display errors at compilation or at runtime \cite{stylos2006comparing}. More trivial design problems, such as assigning names to API features or correctly naming user-defined types, can have a significant impact on the usability of an API \cite{shi2011empirical}. When facing such design challenges, the following four factors are important to consider: a) The API must be understandable through good documentation, b) the API must not be overly abstract, c) the API must be reusable and d) the API must be easy to learn \cite{shi2011empirical}. One of the most important qualities in an API is that the intent of the API must be clear to the user \cite{shi2011empirical, stylos2006comparing}. The design decisions reached during development of an API will affect the overall usability of the API. Measuring such an effect can be done by investigating the twelve cognitive dimensions that are impacted by interactions between the API and its users \cite{clarke2004measuring}. 
 
 
@@ -175,7 +168,9 @@ The analysis of APIs in the context of software evolution has primarily focused 
 \subsection{Case Company Description} \label{case_company_description}
 The case company of this study will from here on be referred to as \textit{company A}. Company A operates in the domain of video surveillance. The company's headquarters is located in Lund, Sweden, with offices in 49 countries worldwide. Company A is the global market leader in the markets of network cameras and video encoders. They develop embedded software for security cameras. The cameras are designed to be accessible through APIs that are developed and maintained by the company. 
 
-The API analysed in this study is written in the programming language C and has been deployed for several years. It was recently updated from v1.4 to v2.0, which is the current active version. The changes between these two versions is what has been analysed in this study. Between the release of v1.0 and v1.4, no functionality was added, as it only added additional build options for other hardware platforms. Prior to v1.4 being released, updates were only made to include additional built options and did not include any additional functionality. The API is used by company partners, which are other companies which develop applications for the cameras. These applications are, in turn, used by the end-users of the cameras. The API is developed for a wide range of camera types that offer different functionality and are used for different purposes. 
+The API analysed in this study is written in the programming language C and has been deployed for several years. It was recently updated from v1.4 to v2.0, which is the current active version. The changes between these two versions are what has been analysed in this study. Between the release of v1.0 and v1.4, no functionality was added, as it only added additional build options for other hardware platforms. Prior to v1.4 being released, updates were only made to include additional built options and did not include any additional functionality. The API is used by company partners, which are other companies which develop applications for the cameras. These applications are, in turn, used by the end-users of the cameras. The API is developed for a wide range of camera types that offer different functionality and are used for different purposes. 
+
+% Given that there is a combination of different interacting elements that do not only concern interfaces to implementations, we would argue that an API can be described as a system \cite{761853,5733835}.
 
 \subsubsection{APIs as E-Type Systems}
 %Specifics about program type etc here
