@@ -168,13 +168,25 @@ The analysis of APIs in the context of software evolution has primarily focused 
 \subsection{Case Company Description} \label{case_company_description}
 The case company of this study will from here on be referred to as \textit{company A}. Company A operates in the domain of video surveillance. The company's headquarters is located in Lund, Sweden, with offices in 49 countries worldwide. Company A is the global market leader in the markets of network cameras and video encoders. They develop embedded software for security cameras. The cameras are designed to be accessible through APIs that are developed and maintained by the company. 
 
-The API analysed in this study is written in the programming language C and has been deployed for several years. It was recently updated from v1.4 to v2.0, which is the current active version. The changes between these two versions are what has been analysed in this study. Between the release of v1.0 and v1.4, no functionality was added, as it only added additional build options for other hardware platforms. Prior to v1.4 being released, updates were only made to include additional built options and did not include any additional functionality. The API is used by company partners, which are other companies which develop applications for the cameras. These applications are, in turn, used by the end-users of the cameras. The API is developed for a wide range of camera types that offer different functionality and are used for different purposes. 
+The API analysed in this study is written in the programming language C and has been deployed for several years. It was recently updated from v1.4 to v2.0, which is the current active version. The changes between these two versions are what has been analysed in this study. Between the release of v1.0 and v1.4, no functionality was added, as it only added additional build options for other hardware platforms. Prior to v1.4 being released, updates were only made to include additional build options and did not include any additional functionality. The API is used by company partners, which are other companies developing applications for the cameras. These applications are, in turn, used by the end-users of the cameras. The API is compatible with a wide range of camera types that offer different functionality and are used for different purposes. 
 
 % Given that there is a combination of different interacting elements that do not only concern interfaces to implementations, we would argue that an API can be described as a system \cite{761853,5733835}.
 
-\subsubsection{APIs as E-Type Systems}
+\subsubsection{APIs as Systems}
+1. Clear up how "complex" API is. Explain error handling, 3rd party libs.
+2. Explain that our study strictly includes the interface and middle-layer parts (don't refer to it as middle-layer)
+3. Also explain that the documentation (SDK) and example code were studied
+4. We consider these "artefacts" as the system of our study
+...transition...
+1. Defnition of system
+2. Relate to previously made points
+...transition...
+1. Refer back to background (e-type)
+2. Make the case for why our API is an e-program
+
 %Specifics about program type etc here
-Based on this, we consider APIs to be E-type systems, since they are heavily dependant on the environment and its changes. It is therefore not possible to create an exact specification of any non-trivial API. 
+Based on this, we consider APIs to be E-type systems, since they are heavily dependant on the environment and its changes. 
+It is therefore not possible to create an exact specification of any non-trivial API. 
 
 
 
