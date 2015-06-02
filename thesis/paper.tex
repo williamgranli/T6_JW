@@ -94,12 +94,12 @@ API design is notoriously difficult as a myriad of design and performance decisi
 
 \subsubsection{APIs as Systems}
 Motivate why APIs are systems
+\cite{761853,5733835}
 
 \subsection{Software Evolution} \label{software_evolution}
 %%Types of maintenance and types of maintenance
 Software evolution is a field that studies the application of software maintenance activities, changes in software processes and the resulting, evolved versions of the software. The concept of software maintenance has existed since the 1960s when it was first introduced to the software development community \cite{lientz1980software}. 
 
-\subsubsection{Types of Software Evolution}
 A set of four categories describing different kinds of software maintenance \cite{lientz1980software} became the basis upon which twelve new types were developed \cite{chapin2001types}. The twelve types of software evolution and software maintenance, as seen in Table \ref{table:expl_types}, describe a software evolution activity that relates to one of three particular areas; the code, the software and the customer-experienced functionality. 
 
 
@@ -157,20 +157,14 @@ A set of four categories describing different kinds of software maintenance \cit
        \label{table:expl_laws}
 \end{table}
 
-\subsubsection{Lehman’s Laws}
-Software evolution theory suggests that changes to software must obey one of eight laws \cite{lehman90sview}, known as Lehman's laws. The laws are presented in Table \ref{table:expl_laws}. The laws are said to only apply to E-type systems, which are programs that solve problems or address applications in the real world. Two other types of systems are also identified; S-type systems and P-type systems. S-type systems are programs which are exactly derivable from a specification. An example of such a program is one which finds the lowest common denominator for two integers. An example of a P-type system is a chess program. These types of programs can be derived from a specification, but the rules of the program have to be abstracted. In the case of a chess program, the possible moves have to be abstracted, since exactly specifying all the possible permutations would be virtually impossible. Based on this, we consider APIs to be E-type systems, since they are heavily dependant on the environment and its changes. It is therefore not possible to create an exact specification of any non-trivial API. 
-
-
-
+Software evolution theory suggests that changes to software must obey one of eight laws \cite{lehman90sview}, known as Lehman's laws. The laws are presented in Table \ref{table:expl_laws}. The laws are said to only apply to E-type systems, which are programs that solve problems or address applications in the real world. Two other types of systems are also identified; S-type systems and P-type systems. S-type systems are programs which are exactly derivable from a specification. An example of such a program is one which finds the lowest common denominator for two integers. An example of a P-type system is a chess program. These types of programs can be derived from a specification, but the rules of the program have to be abstracted. In the case of a chess program, the possible moves have to be abstracted, since exactly specifying all the possible permutations would be virtually impossible. 
 
 
 \subsection{API Evolution} \label{related_work}
-The analysis of APIs in the context of software evolution has primarily focused on APIs that are part of large programming languages, such as Java \cite{hou2011exploring, shi2011empirical} and Smalltalk \cite{robbes2012developers}. Attempts to uncover the intents of the changes made in the Java libraries, AWT and Swing, have also been undertaken \cite{hou2011exploring}, leading to suggestions that the use of a strong architecture is vital for ensuring the successful evolution of an API \cite{hou2011exploring}.
+The analysis of APIs in the context of software evolution has primarily focused on APIs that are part of large programming languages, such as Java \cite{hou2011exploring, shi2011empirical} and Smalltalk \cite{robbes2012developers}. Attempts to uncover the intents of the changes made in the Java libraries, AWT and Swing, have also been undertaken \cite{hou2011exploring}, leading to suggestions that the use of a strong architecture is vital for ensuring the successful evolution of an API \cite{hou2011exploring}. Investigations of three frameworks and one library indicated that 80\% of refactoring changes to APIs negatively affected existing applications \cite{dig2005role}. The changes, sometimes referred to as ripple effects \cite{robbes2012developers} indicate that negative effects of changes can propagate throughout a software ecosystem. It was found that 14\% of non-trivial API deprecations caused errors in at least one project, with the worst case of 79 projects being affected \cite{robbes2012developers}.
 
-
-Investigations of three frameworks and one library indicated that 80\% of refactoring changes to APIs negatively affected existing applications \cite{dig2005role}. The changes, sometimes referred to as ripple effects \cite{robbes2012developers} indicate that negative effects of changes can propagate throughout a software ecosystem. It was found that 14\% of non-trivial API deprecations caused errors in at least one project, with the worst case of 79 projects being affected \cite{robbes2012developers}.
-
- 
+\subsubsection{APIs as E-Type Systems}
+Based on this, we consider APIs to be E-type systems, since they are heavily dependant on the environment and its changes. It is therefore not possible to create an exact specification of any non-trivial API. 
 
 
 \subsection{Case Company Description} \label{case_company_description}
