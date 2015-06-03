@@ -63,7 +63,7 @@ The results of this analysis show that the largest driving force of the APIs evo
 \category{D.2.7}{Software Engineering}{Distribution, Maintenance, Enhancement}[Restructuring, reverse engineering, and re-engineering]
 \keywords{API Design, Software Evolution, Software Maintenance}
 
-
+\newpage
  
 \section{Introduction} \label{introduction}
 %API Design background
@@ -82,12 +82,12 @@ Previous studies have investigated programming language APIs, libraries or frame
 %Goal of the study
 The goal of the study was twofold. Firstly, the aim was to explore what are the driving forces of API evolution and secondly, to validate the results' level of correctness by comparing our findings with the case company's explanation of the changes. With this information, we could determine to what extent these change decisions can be reverse engineered. 
 
- 
+ \newpage
 %Structure ofpaper
-The sections following the Introduction are structured as follows: In Section \ref{background}, we present the background and previously published work that is related to our study and introduce the case company and their API. A description of our methodology is introduced in Section \ref{methodology}. In Section \ref{results}, the results of our study are presented and in Section \ref{discussion}, we discuss the implications of our work. In Section \ref{conclusion} summarise the study and give suggestions for future work that builds on our research. 
+The sections following the Introduction are structured as follows: In Section \ref{background}, we present the background and previously published work that is related to our study and introduce the case company and their API. A description of our methodology is introduced in Section \ref{methodology}. In Section \ref{results}, the results of our study are presented and in Section \ref{discussion}, we discuss the implications of our work. In Section \ref{conclusion} we summarise the study and give suggestions for future work that builds on our research. 
 
 \section{Background} \label{background}
-This section will introduce the fields of API design, software evolution and it will provide a review of studies that are related to our study. The subsequent section will introduce the case company with a description of the API used in this study.  
+This section will introduce the fields of APIs, software evolution and it will provide a review of studies that are related to our study. The subsequent section will introduce the case company with a description of the API used in this study.  
 
 \subsection{APIs} \label{api_design}
 %what is an API
@@ -157,6 +157,8 @@ A set of four categories describing different kinds of software maintenance \cit
        \label{table:expl_laws}
 \end{table}
 
+\newpage
+
 Software evolution theory suggests that software programs can be grouped into three different types of systems, namely S-programs, P-programs and E-programs \cite{lehman1980programs}. S-programs are programs which are exactly derivable from a specification. An example of such a program is one which finds the lowest common denominator for two integers. A key characteristic of an S-program is that if its functionality is changed, the end product will be a new program and not an evolved version of the previous program, since the mapping between specification and program is exact. P-programs are programs which are inherently more complex, and ``solve a problem which can be precisely formulated, but whose solution must inevitably reflect an approximation of the real world''. Furthermore, P-programs are programs which are centred around the perception of users, analysts or programmers. This perception is often commonly a mathematical model of the problem. An example of such a program is a program which predicts weather, since it is derived from a set of hydrodynamic equations. E-programs are described as ``inherently even more change prone [than S-programs and P-programs]. They are programs that mechanize a human or societal activity''. These factors can be explained by the difference between P-programs and a E-programs which is that E-programs ``change the very nature of the problem to be solved'' by ``becoming a part of the world it models''. Further, a characteristic of E-programs is that, during development, the specification must be developed by involving predictions of the consequences of the deployment of that system will have, since once the program is deployed ``questions of correctness, appropriateness, and satisfaction arise which inevitably leads to additional pressure for change". Lehman's eight laws of software evolution are said to apply to such E-programs. The laws are presented in Table \ref{table:expl_laws}. 
 
 
@@ -181,6 +183,8 @@ Building on this, we regard the API examined in this study to be an E-type syste
 
 \section{Methodology} \label{methodology}
 This study has been conducted using the case study methodology \cite{runeson2009guidelines}. Our research can be classified as an embedded case study \cite{yin2013case}, since both the API code and API documentation have been used as units of analysis. The reason the selected methodology was used is that it is essential to study the phenomenon of API change in its natural context. The applicability of case studies in such scenarios is supported by existing literature \cite{benbasat1987case, robson2002real, runeson2009guidelines, yin2013case}. An alternative approach that was considered was design research, but if a prototype API was to be used instead of one which is tried and tested in an industry setting, the study would lack real-life context \cite{runeson2009guidelines}. An additional motivation for why the case study approach was used is that there is little existing research conducted in the area of drivers of API change and that input from the industry is vital to the success of the research. 
+
+\newpage
 
 The study was conducted in two phases. The aim of the first phase was to generate hypotheses and to formulate clear research questions. This was achieved by using a data-driven approach to analysing the code and documentation. The second phase included analysis of the interviews, during which we aimed to confirm the hypotheses that were formulated in the first phase. Both phases were performed iteratively. This created the opportunity to improve the data analysis as the study progressed, as well as, allowing us to adapt to possible changes in direction, due to the hypothesis generating approach of the first phase. An overview of the methodology can be found in Table \ref{table:meth_steps}.
 
@@ -262,6 +266,7 @@ These categories were then used to identify the most notable trends in the evolu
 %RQ1
 The trends identified previously were then classified with help of the decision tree used for classifying the types of software evolution and software maintenance \cite{chapin2001types}. Each of the previously identified trends were given a main type of change and, if appropriate, a secondary type. Main types of change identify the primary motive for a trend, whereas the secondary types are additional motivations for a trend. For example, if an identified trend was the re-implementation of an old module that included new functionality and made use of a new interface, it would be classified as mainly enhancive and secondarily groomative. In addition to this, we analysed the trends based on Lehman's Laws, to determine if they applied to the changes made to the API. This information, as well as the results of the interview, were then used as the basis for answering \textbf{RQ1}.
 
+\newpage
 %RQ2
 To allow us to answer \textbf{RQ2}, we compared our analysis and interpretation of the trends identified prior, against what was expressed by the API architect, during the interview. Success was determined by comparing the inter-rater reliability, by calculating Cohen's kappa \cite{cohen1968weighted} for the gathered data. 
 
@@ -329,12 +334,6 @@ The results show that certain types of change are more prevalent than others, th
        \label{table:type_counts}
 \end{table}
 
-%Lehman Intro
-Our analysis of the results related to \textbf{RQ1} showed that seven out of the eight of Lehman's laws \cite{lehman90sview} are present in the API. 
-A summary of our findings can be seen in Table \ref{table:lehman}. 
-The evidence found for the laws of Continuing Change, Self Regulation, Conservation of Familiarity, Continuing Growth and Feedback System mainly relate to enhancive changes that add functionality to the API. 
-It was also found that the laws of Increasing Complexity and Declining Quality do apply, but that the changes which support these laws usually had a secondary intent related to complexity or quality. The only law which was found to have little effect in the evolution of the API analysed in this study was the law of Conservation of Organisational Stability. Our results rather show the opposite, that the work rate is variant. 
-
 %Lehman Table
 \begin{table}
        \centering
@@ -357,6 +356,15 @@ It was also found that the laws of Increasing Complexity and Declining Quality d
        \caption{The Applicability of Lehman's laws}
        \label{table:lehman}
 \end{table}
+
+\newpage
+
+%Lehman Intro
+Our analysis of the results related to \textbf{RQ1} showed that seven out of the eight of Lehman's laws \cite{lehman90sview} are present in the API. 
+A summary of our findings can be seen in Table \ref{table:lehman}. 
+The evidence found for the laws of Continuing Change, Self Regulation, Conservation of Familiarity, Continuing Growth and Feedback System mainly relate to enhancive changes that add functionality to the API. 
+It was also found that the laws of Increasing Complexity and Declining Quality do apply, but that the changes which support these laws usually had a secondary intent related to complexity or quality. The only law which was found to have little effect in the evolution of the API analysed in this study was the law of Conservation of Organisational Stability. 
+
 
 Following this section, we will discuss the results related to each type of change category, discussing the results for each of them with examples from the changes identified between the two versions of the API. Subsequently, each of Lehman's laws will be discussed and our results will be presented showing if the laws were observed.
 
