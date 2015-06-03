@@ -173,16 +173,7 @@ The API analysed in this study is written in the programming language C and has 
 % Given that there is a combination of different interacting elements that do not only concern interfaces to implementations, we would argue that an API can be described as a system \cite{761853,5733835}.
 
 \subsubsection{APIs as Systems}
-% 1. Clear up how "complex" API is. Explain error handling, 3rd party libs.
-% 2. Explain that our study strictly includes the interface and middle-layer parts (don't refer to it as middle-layer)
-% 3. Also explain that the documentation (SDK) and example code were studied
-% 4. We consider these "artefacts" as the system of our study
-% ...transition...
-The case company's API is a complex API. When studying the API, we have focused on the interfaces and the intersecting layer of the API. (!!! expand?). Given that the implementation of the API is usually hidden and irrelevant from the users perspective, we will not be inspecting it for changes. We are also inspecting the entire SDK which was made available to us by company A. The SDK includes artefacts such as the API documentation, user manuals and other miscellaneous documentation. We therefore believe that the use of third party libraries, error handling, daemons and an extensive interconnected API, combined with an extensive SDK, indicates to us that this API can be considered as a system.
-% 1. Definition of system
-% 2. Relate to previously made points
-% ...transition...
-The IEEE defines a system to be ``A combination of interacting elements organised to achieve one or more stated purposes...Organised to accomplish a specific function or set of functions within a specific environment". The combination of the interacting parts of the API, coupled with the specific nature of the problem the API is addressing and the fact that this API is developed for embedded systems, allows us to argue that this definition accurately supports our intent to classify this API as a system.
+The API is rather complex, and in addition to the API interface and implementation code, it includes a middle-layer which manages error handling and the access to various 3\textsuperscript{rd} party libraries. In this study, we use the API interface and the middle-layers as units of analysis. Examples of where the responsibilites exceed those of a primitive API interface is that it includes functionality such as error handling and a daemon which facilitates communication between hardware entities. In addition to that, the SDK which includes the API documentation, user manuals and example applications that utilise the API code. Based on these characteristics and the IEEE definition of a system, which reads as follows; ``A combination of interacting elements organised to achieve one or more stated purposes... Organised to accomplish a specific function or set of functions within a specific environment", we consider the API to be a system because of the combination of the interacting parts of the API, coupled with the specific nature of the problem the API is addressing.
 
 % 1. Refer back to background (e-type)
 % 2. Make the case for why our API is an e-program
