@@ -427,7 +427,7 @@ Preventive changes are defined to be changes that attempt to avoid future mainte
 %Data and examples
 Two changes were identified to be preventive types of change. A new error handling system was one of these changes. v2.0 of the API added specific error handling modules and functions which replaced the pre-existing error-handling in v1.4 of the API. The redesign of the system to make use of interfaces was also classified as a preventive change. Using interfaces to access modules helps to make them more maintainable and more easily extensible.
 %Concusion
-Preventive types of change appear to drive the evolution this API more strongly than other types of change. This could be due to the fact that as the API grows, the need for higher maintenance also increase, a fact that also seems to be supported by Lehman's laws.
+Preventive types of change appear to drive the evolution this API more strongly than other types of change. This could be due to the fact that as the API grows, the need for higher maintenance also increase, a fact that also is supported by Lehman's laws.
 
 \smallskip \noindent
 \textbf{Groomative  }
@@ -455,6 +455,8 @@ Reformative changes are defined to be changes that update the documentation to t
 One reformative change was identified between v1.4 and v2.0; a redesign of the existing example programs. The aim of this change was to update the examples to illustrate the new functionality in the API, showing how the modules interact and at the same time, presenting a standard for how to use the API.
 %Conclusion
 We therefore conclude that reformative changes, while important for the usability of the API, did not drive the evolution of the API.
+
+\newpage
 
 \smallskip \noindent
 \textbf{Evaluative, Consultive and Training  }
@@ -496,9 +498,11 @@ Large parts of the changes between the versions were strictly additions of new f
 \textbf{Declining Quality  } 
 The interviews established that a groomative motive was not the primary reason for implementing any change. The changes to the example code and the documentation, as well as the re-designed modules are examples of these, where the main motive behind the change was to either prevent unwanted usage or to increase the functional content. These changes did, however, also increase the quality and were a substantial part of the update. Our analysis also shows that changes related to quality are bound to happen, as other types of changes often incorporate quality related aspects. We therefore settle that the law of Declining Quality was a driving force for the evolution of the API. 
 
+\newpage
+
 \smallskip \noindent
 \textbf{Feedback System  } 
-One of the future goals of improvement of company A is to better include the API users and end-users of the applications in their feedback loop. Currently, only the API users are included in this feedback loop and the API architect expressed the desire to also include the end-users. The reasoning for this was to increase the quality, and to be able to deliver content which is useful for the users and which leads to good applications being developed. Prior to v2.0 being released, an example of how the API users were included in the feedback loop was when they implemented functionality related to sound, despite the fact there was no interface for this.  The experiences of this API user, were later considered when developing the axsound module. One benefit of having a more structured feedback loop, would be that the API developers would have greater awareness of potential errors in the implementation of the API. Another ambition which was mentioned, was to bring scientific theories and best practices from research into consideration when developing the API. This would aim to complement the current strategy which is largely based around the expertise and experiences of the API architects. Based on these factors and clearly expressed ambitions, we conclude that the law of Feedback System was of significant important during the evolution of the API. 
+One of the future goals of improvement of company A is to better include the API users and end-users of the applications in their feedback loop. Currently, only the API users are included in this feedback loop and the API architect expressed the desire to also include the end-users. The reasoning for this was to increase the quality, and to be able to deliver content which is useful for the users and which leads to good applications being developed. Prior to v2.0 being released, an example of how the API users were included in the feedback loop was when they implemented functionality related to sound, despite the fact there was no interface for this.  The experiences of this API user, were later considered when developing the axsound module. One benefit of having a more structured feedback loop, would be that the API developers would have greater awareness of potential errors in the implementation of the API. Another ambition which was mentioned, was to bring scientific theories and best practices from research into consideration when developing the API. This would aim to complement the current strategy which is largely based around the expertise and experiences of the API architects. Based on these factors and clearly expressed ambitions, we conclude that the law of Feedback System was of significant importance during the evolution of the API. 
 
 
 
@@ -567,7 +571,7 @@ We conclude that we were able to reverse engineer the change decisions to a larg
 \subsection{Implications for Research} 
 The implications of our findings should encourage research to further study APIs by relating them to existing software evolution theories. Considering that we were able to successfully reverse engineer the changes made to the API in this study, it opens up possibilities to base future research on, for example, the types of software evolution and software maintenance. Since the kappa analysis showed that there was a high level of agreement between our predictions and the actual motives to the change, it shows that the types of software evolution and software maintenance could even be used as the basis for a large-scale quantitative analysis to map the types of changes made to APIs. 
 
-By analysing the API based on Lehman's laws, we were able to find that the law of Conservation of Organisational Stability had little impact upon the API investigated in this study. Our results show that the opposite of what the law suggests, in its current form, is true for this API. However, since only a single API was studied, we cannot generalise this finding for all APIs. Research should therefore be wary of assuming that this law is true for APIs and future work could be undertaken to fully determine it's validity in regards to APIs.
+By analysing the API based on Lehman's laws, we were able to find that the law of Conservation of Organisational Stability had little impact upon the API investigated in this study. Our results show that the opposite of what the law suggests, in its current form, is true for this API. However, since only a single API was studied, we cannot generalise this finding for all APIs. Research should therefore be wary of assuming that this law is true for APIs and future work could be undertaken to fully determine its validity in regards to APIs.
 
  
 
@@ -582,7 +586,7 @@ One way of finding the solution to this problem would be by including the applic
 
 
 \section{Conclusion} \label{conclusion}
-With this study, we conclude that studying API evolution with help of existing theories, provides a new and structured approach to the field of API evolution. Our study shows that functionality is the largest driving force of change in the evolution of the studied API. It also concludes that this API did not change invariantly, and that its maintenance was infrequent and sporadic. This seems to indicate that the law of Conservation of Organisational Stability did not play a significant role in the evolution of this API. However, given that this study was on performed on a single API, we cannot generalise this finding. Furthermore, we have identified the importance of having a structured feedback loop when maintaining an API. We have also provided company A with a foundation for facilitating such a change. 
+With this study, we conclude that studying API evolution with help of existing theories, provides a new and structured approach to the field of API evolution. Our study shows that functionality is the largest driving force of change in the evolution of the studied API. It also suggests that changes to APIs occur infrequently and sporadically. This indicates that the law of Conservation of Organisational Stability did not play a significant role in the evolution of this API. However, given that this study was on performed on a single API, we cannot generalise this finding. Furthermore, we have identified the importance of having a structured feedback loop when maintaining an API. We have also provided company A with a foundation for facilitating such a change. 
 
 To build on our study, we propose that a study on the eco-system's role in the evolution of APIs is conducted. We believe that this area could be a major source of improvement for API evolution. Exploring the benefits of including application developers and additional entities of the eco-system in the feedback loop, is a good starting point for company A. In such a study, we would suggest that the types of software evolution and software maintenance \cite{chapin2001types} could be used as a mean of facilitating discussion between the entities. It could also be possible to study the effect that changes to APIs have on the application code, in such a study. 
 
