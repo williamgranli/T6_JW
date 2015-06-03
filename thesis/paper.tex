@@ -57,7 +57,7 @@ If no attempt at analysing or quantifying the evolution of an API is made, there
 %Method
 In this case study, we conduct a qualitative investigation to understand what drives the evolution of an industry company's existing API, by examining two versions of the API code. The changes were analysed based on two software evolution theories, and the extent to which we could reverse engineer the change decisions was determined by interviewing an architect of the API. 
 %Results
-The results of this analysis show that the largest driving force of the APIs evolution was the desire for new functionality. Our findings which show that changes happen sporadically, rather than continuously, appear to contradict the law of Conservation of Organisational Stability in the context of APIs. We also found that it is possible to reverse engineer change decisions and in doing so, identified that the feedback loop of an API is an important area of improvement. 
+The results of this analysis show that the largest driving force of the APIs evolution was the desire for new functionality. Our findings which show that changes happen sporadically, rather than continuously, appear to show that the law of Conservation of Organisational Stability was not a considerable factor for the evolution of the API. We also found that it is possible to reverse engineer change decisions and in doing so, identified that the feedback loop of an API is an important area of improvement. 
 \end{abstract}
 
 \category{D.2.7}{Software Engineering}{Distribution, Maintenance, Enhancement}[Restructuring, reverse engineering, and re-engineering]
@@ -330,10 +330,10 @@ The results show that certain types of change are more prevalent than others, th
 \end{table}
 
 %Lehman Intro
-Our analysis of the results related to \textbf{RQ1} showed that seven out of the eight of Lehman's laws \cite{lehman90sview} do apply to APIs. 
+Our analysis of the results related to \textbf{RQ1} showed that seven out of the eight of Lehman's laws \cite{lehman90sview} are present in the API. 
 A summary of our findings can be seen in Table \ref{table:lehman}. 
 The evidence found for the laws of Continuing Change, Self Regulation, Conservation of Familiarity, Continuing Growth and Feedback System mainly relate to enhancive changes that add functionality to the API. 
-It was also found that the laws of Increasing Complexity and Declining Quality do apply, but that the changes which support these laws usually had a secondary intent related to complexity or quality. The only law which was found not to apply to the API analysed in this study was the law of Conservation of Organisational Stability. Our results rather show the opposite, that the work rate is variant. 
+It was also found that the laws of Increasing Complexity and Declining Quality do apply, but that the changes which support these laws usually had a secondary intent related to complexity or quality. The only law which was found to have little effect in the evolution of the API analysed in this study was the law of Conservation of Organisational Stability. Our results rather show the opposite, that the work rate is variant. 
 
 %Lehman Table
 \begin{table}
@@ -358,7 +358,7 @@ It was also found that the laws of Increasing Complexity and Declining Quality d
        \label{table:lehman}
 \end{table}
 
-Following this section, we will discuss the results related to each type of change category, discussing the results for each of them with examples from the changes identified between the two versions of the API. Subsequently, each of Lehman's laws will be discussed and our results will be presented showing if the laws apply to the API or not.
+Following this section, we will discuss the results related to each type of change category, discussing the results for each of them with examples from the changes identified between the two versions of the API. Subsequently, each of Lehman's laws will be discussed and our results will be presented showing if the laws were observed.
 
 
 
@@ -470,11 +470,11 @@ A majority of the changes introduced in v2.0 aimed to improve the structure and 
 
 \smallskip \noindent
 \textbf{Self Regulation  } \label{sec:law3} 
-The release of v1.4 did not include any changes related to the API interface. v1.0 through to v1.4 strictly added support for additional build target platforms. When comparing the changes introduced in v2.0 to the ones in previous versions, it is clear that the growth of the API has gradually increased. During the interview it was also mentioned that the future plans for the API did not include any major changes and that only a few minor changes were planned in the near future. The future updates to the API will also be made incrementally and there will not be a big bang update similar to that of v2.0. This supports that the law of Self Regulation applies was a driving force of the API's evolution, assuming that v2.0 can be considered to be the peak of the normal distribution curve of the APIs growth. 
+The release of v1.4 did not include any changes related to the API interface. v1.0 through to v1.4 strictly added support for additional build target platforms. When comparing the changes introduced in v2.0 to the ones in previous versions, it is clear that the growth of the API has gradually increased. During the interview it was also mentioned that the future plans for the API did not include any major changes and that only a few minor changes were planned in the near future. The future updates to the API will also be made incrementally and there will not be a big bang update similar to that of v2.0. This supports that the law of Self Regulation was observed in the API's evolution, assuming that v2.0 can be considered to be the peak of the normal distribution curve of the APIs growth. 
 
 \smallskip \noindent
 \textbf{Conservation of Organisational Stability  } 
-The changes to the API have been made very sporadically, where only two new versions have been released since the deployment of v1.0. As mentioned in Section \ref{sec:law3}, the changes introduced in v1.4 did not involve any changes to the existing API functions. Consequently, the only significant update to the API was made in the transition to v2.0. The internal development of the API has also been made sporadically and there have been periods where the API has not been actively developed. This suggests that the law of Conservation of Organisational Stability did not drive the evolution of the API. 
+The changes to the API have been made very sporadically, where only two new versions have been released since the deployment of v1.0. As mentioned in Section \ref{sec:law3}, the changes introduced in v1.4 did not involve any changes to the existing API functions. Consequently, the only significant update to the API was made in the transition to v2.0. The internal development of the API has also been made sporadically and there have been periods where the API has not been actively developed. This suggests that the law of Conservation of Organisational Stability was not a considerable factor in the evolution of the API. 
 
 \smallskip \noindent
 \textbf{Conservation of Familiarity  } 
@@ -574,7 +574,7 @@ One way of finding the solution to this problem would be by including the applic
 
 
 \section{Conclusion} \label{conclusion}
-With this study, we conclude that studying API evolution with help of existing theories, provides a new and structured approach to the field of API evolution. Our study shows that functionality is the largest driving force of change in the evolution of the studied API. It also concludes that this API did not change invariantly, and that its maintenance was infrequent and sporadic which appears to contradict one of Lehman's law; the law of Conservation of Organisational Stability. However, given that this study was on performed on a single API, we cannot generalise this finding. Furthermore, we have identified the importance of having a structured feedback loop when maintaining an API. We have also provided company A with a foundation for facilitating such a change. 
+With this study, we conclude that studying API evolution with help of existing theories, provides a new and structured approach to the field of API evolution. Our study shows that functionality is the largest driving force of change in the evolution of the studied API. It also concludes that this API did not change invariantly, and that its maintenance was infrequent and sporadic. This seems to indicate that the law of Conservation of Organisational Stability was not held in the evolution of this API. However, given that this study was on performed on a single API, we cannot generalise this finding. Furthermore, we have identified the importance of having a structured feedback loop when maintaining an API. We have also provided company A with a foundation for facilitating such a change. 
 
 To build on our study, we propose that a study on the eco-system's role in the evolution of APIs is conducted. We believe that this area could be a major source of improvement for API evolution. Exploring the benefits of including application developers and additional entities of the eco-system in the feedback loop, is a good starting point for company A. In such a study, we would suggest that the types of software evolution and software maintenance \cite{chapin2001types} could be used as a mean of facilitating discussion between the entities. It could also be possible to study the effect that changes to APIs have on the application code, in such a study. 
 
