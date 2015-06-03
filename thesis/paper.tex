@@ -64,7 +64,7 @@ The results of this analysis show that the largest driving force of the APIs evo
 \keywords{API Design, Software Evolution, Software Maintenance}
 
 
-\newpage
+ 
 \section{Introduction} \label{introduction}
 %API Design background
 As the software industry and the open-source movement continue to grow, the number of public Application Programming Interfaces (APIs) is steadily increasing. APIs can improve the development speed \cite{stylos2006comparing}, contribute to higher quality software \cite{stylos2006comparing} and increase the reusability of software \cite{afonso2012evaluating}. There is a consensus in that modifications to APIs could negatively impact the users of the API \cite{google_talk, henning2007api, mcdonnell2013empirical, robbes2012developers}. The main reason being that API users are required to update their application code, thus causing a disruption in the application's software ecosystem \cite{messerschmitt2005software}. 
@@ -82,7 +82,7 @@ Previous studies have investigated programming language APIs, libraries or frame
 %Goal of the study
 The goal of the study was twofold. Firstly, the aim was to explore what are the driving forces of API evolution and secondly, to validate the results' level of correctness by comparing our findings with the case company's explanation of the changes. With this information, we could determine to what extent these change decisions can be reverse engineered. 
 
-\newpage
+ 
 %Structure ofpaper
 The sections following the Introduction are structured as follows: In Section \ref{background}, we present the background and previously published work that is related to our study and introduce the case company and their API. A description of our methodology is introduced in Section \ref{methodology}. In Section \ref{results}, the results of our study are presented and in Section \ref{discussion}, we discuss the implications of our work. In Section \ref{conclusion} summarise the study and give suggestions for future work that builds on our research. 
 
@@ -229,7 +229,7 @@ The process used for examining the code and documentation was inspired by ground
 \item[\textbf{RQ2}] To what extent can we reverse engineer API change decisions?
 \end{description}
 
-\newpage
+ 
 
 
 \subsection{Data Collection} \label{data_collection}  
@@ -285,7 +285,7 @@ In this section we discuss possible threats to construct validity, internal vali
 \textbf{Reliability  } Due to restricted access to company A's source code, we were not able to include versions prior to v1.4 in our analysis. This means that the evolution of the API was studied during a rather short period of its lifetime. It was also not possible to analyse the implementation of the API, something which might have contributed to more accurate predictions of the motives behind the changes. We consider these factors to be the remaining threats to reliability. Reliability has been increased by conducting the study according to an accredited guide to case studies \cite{runeson2009guidelines}. In addition to that, strategies from additional well-established papers \cite{andersson2007spiral, robson2002real, seaman1999qualitative} have been used to increase the trustworthiness of the data gathering and data analysis. 
 
 
-\newpage
+ 
 \section{Results} \label{results} 
 
 This section presents the results of our study and is structured around the research questions. Each section begins with a summary of the results and a subsequent in depth description of the findings.
@@ -384,7 +384,7 @@ No corrective changes were identified between v1.4 and v2.0. There are two main 
 %Conclusion
 We therefore conclude that the evolution of the API was not driven by corrective changes.
 
-\newpage
+ 
 \smallskip \noindent
 \textbf{Reductive  }
 %Definition
@@ -529,7 +529,7 @@ The changes related to functionality being added, modified (deprecated) or remov
        \label{table:reverse_engineering}
 \end{table}
 
-\newpage
+ 
 
 \section{Discussion} \label{discussion}
 
@@ -561,7 +561,7 @@ The implications of our findings should encourage research to further study APIs
 
 By analysing the API based on Lehman's laws, we were able to find that the law of Conservation of Organisational Stability did not apply to the API examined in this study. Our results suggest that the opposite of what the law suggests, in its current form, is more applicable for APIs. However, since only a single API was studied, we cannot generalise this finding for all APIs. Research should therefore be wary of assuming that this law is true for APIs and future work could be undertaken to fully determine it's validity in regards to APIs.
 
-\newpage
+ 
 
 \subsection{Implications for Company A}
 The changes introduced to the API are mainly based on the expertise and experiences of the API architects at company A. There has not been a scientific approach to maintaining the system and the knowledge from research has not directly affected the way that the API's evolution has been managed. With our work, we hope to provide further insight into how the API is maintained. Our analysis of the API based on Lehman's laws should further assure that company A is moving the evolution of the API in the right direction. Our research proposes a dilemma for company A in how to tackle challenges related to the law of Conservation of Organisational Stability. Determining if the benefits of continuously and frequently updating the API outweigh the side-effects that these updates could have on the application developers, is something that company A will need to consider.
