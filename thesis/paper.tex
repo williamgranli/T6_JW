@@ -1,6 +1,15 @@
 
 
 \documentclass{sig-alternate}
+
+% Set letter paper size:
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\usepackage[
+  pass,% keep layout unchanged 
+  % showframe,% show the layout
+]{geometry}
+
 \usepackage{blindtext}
 \usepackage[english]{babel}
 
@@ -21,6 +30,7 @@
 \begin{document}
 
 
+
 \conferenceinfo{14th IWPSE} {'15 Bergamo, Italy}
 \CopyrightYear{2015}
 
@@ -38,6 +48,7 @@
 William Granli and John Burchell\\
        \affaddr{Computer Science and Engineering}\\
        \affaddr{University of Gothenburg}\\
+       \affaddr{Gothenburg, Sweden}\\
        \email{william.granli@gmail.com},  \email{john.a.burchell@gmail.com}
 % 2nd. author
 %\alignauthor
@@ -47,10 +58,12 @@ William Granli and John Burchell\\
 %       \email{william.granli@gmail.com}
 %\and
 % 3rd. author
-\alignauthor Imed Hammouda and Eric Knauss\\
-\affaddr{Computer Science and Engineering}\\
-\affaddr{Chalmers $\mid$ University of Gothenburg}\\
-\email{\{imed.hammouda,eric.knauss\}@cse.gu.se}
+\alignauthor 
+Imed Hammouda and Eric Knauss\\
+       \affaddr{Computer Science and Engineering}\\
+       \affaddr{Chalmers $\mid$ University of Gothenburg}\\
+       \affaddr{Gothenburg, Sweden}\\
+       \email{\{imed.hammouda,eric.knauss\}@cse.gu.se}
 % 4th 
 %\alignauthor Eric Knauss\titlenote{Co-author}\\
 %       \affaddr{Computer Science and Engineering}\\
@@ -113,11 +126,13 @@ Software evolution is a field that studies the application of software maintenan
 
 A set of four categories describing different kinds of software maintenance \cite{lientz1980software} became the basis upon which twelve new types were developed \cite{chapin2001types}. The twelve types of software evolution and software maintenance, as seen in Table \ref{table:expl_types}, describe a software evolution activity that relates to one of three particular areas; the code, the software and the customer-experienced functionality. 
 
+\vspace{2mm}
+\vspace{2mm}
+
 
 \begin{table}
        \centering
        \begin{tabular}[ht]{l|c}
-              \toprule
 
               \textbf{Type}                              & \textbf{Explanation}    \\ \midrule
               Enhancive     & Inclusion of new functionality                 \\ \hline
@@ -133,7 +148,6 @@ A set of four categories describing different kinds of software maintenance \cit
               Consultive    & Consultations activities                       \\ \hline
               Training      & Training activities                            \\ 
 
-              \bottomrule
 
        \end{tabular}
        \caption{Types of Software Evolution  \cite{chapin2001types}}
@@ -200,10 +214,14 @@ This study has been conducted using the case study meth-odology \cite{runeson200
 
 The study was conducted in two phases. The aim of the first phase was to generate hypotheses and to formulate clear research questions. This was achieved by using a data-driven approach to analysing the interface code and documentation. The second phase included analysis of the interviews, during which we aimed to confirm the hypotheses that were formulated in the first phase. Both phases were performed iteratively. This created the opportunity to improve the data analysis as the study progressed, as well as, allowing us to adapt to possible changes in direction, due to the hypothesis generating approach of the first phase. An overview of the methodology can be found in Table \ref{table:meth_steps}.
 
+\vspace{2mm}
+\vspace{2mm}
+
+
 \begin{table}
        \centering
        \begin{tabular}[ht]{p{3in}}
-              \toprule
+              
 
               \textbf{Phase 1: Data Collection}
               
@@ -230,7 +248,6 @@ The study was conducted in two phases. The aim of the first phase was to generat
               \item Validate hypotheses
               \end{enumerate} \\
               
-              \bottomrule
        \end{tabular}
        \caption{Methodology Overview}
        \label{table:meth_steps}
@@ -278,7 +295,7 @@ These categories were then used to identify the most notable trends in the evolu
 %RQ1
 The trends identified previously were then classified with the help of the decision tree used for classifying the types of software evolution and software maintenance \cite{chapin2001types}. Each of the previously identified trends were given a main type of change and, if appropriate, a secondary type. Main types of change identify the primary motive for a trend, whereas the secondary types are additional motivations for a trend. For example, if an identified trend was the re-implementation of an old module that included new functionality and made use of a new interface, it would be classified as mainly enhancive and secondarily groomative. In addition to this, we analysed the trends based on Lehman's Laws, to determine if they applied to the changes made to the API. This information, as well as the results of the interview, were then used as the basis for answering \textbf{RQ1}.
 
-\newpage
+
 %RQ2
 To allow us to answer \textbf{RQ2}, we compared our analysis and interpretation of the trends identified prior, against what was expressed by the API architect, during the interview. Success was determined by comparing the inter-rater reliability, by calculating Cohen's kappa \cite{cohen1968weighted} for the gathered data. 
 
@@ -320,10 +337,14 @@ The remainder of the changes were defined as general trends. These changes were 
 %Types intro
 The results show that certain types of change are more prevalent than others, these results are shown in Table \ref{table:type_counts}. Analysis of the results showed that enhancive changes were the primary types of change that drove the evolution of this API and that they acted as a catalyst for many of the other changes in the API. Updative changes were found to be consequences of enhancive changes, rather than being drivers of evolution themselves. Supporting the users of the API through the combination of preventive and groomative types of change, together formed another strong driver of the API's evolution. Reductive and adaptive changes, while important, did not strongly drive the evolution of the API. No evidence was found for corrective or performance types of change. Similarly, there was no evidence found for evaluative, consultive or training activities.    
 
+\vspace{2mm}
+\vspace{2mm}
+
+
 \begin{table}
        \centering
        \begin{tabular}[ht]{l|c|c}
-              \toprule
+              
 
               \textbf{Type}        & \textbf{Main Types}       &\textbf{Secondary Types}   \\ \midrule
               Enhancive            & 7                         & -                         \\ \hline
@@ -339,18 +360,21 @@ The results show that certain types of change are more prevalent than others, th
               Consultive           & -                         & -                         \\ \hline
               Training             & -                         & -                         \\ 
 
-              \bottomrule
 
        \end{tabular}
        \caption{Identified Types of Change}
        \label{table:type_counts}
 \end{table}
 
+\vspace{2mm}
+\vspace{2mm}
+
+
 %Lehman Table
 \begin{table}
        \centering
        \begin{tabular}[ht]{l|c}
-              \toprule
+              
 
               \textbf{Law}                              & \textbf{Applicability}    \\ \midrule
               Continuing Change                         & True                      \\ \hline
@@ -362,7 +386,7 @@ The results show that certain types of change are more prevalent than others, th
               Declining Quality                         & True                     \\ \hline
               Feedback System                           & True                      \\ 
 
-              \bottomrule
+              
 
        \end{tabular}
        \caption{The Applicability of Lehman's laws}
@@ -526,12 +550,14 @@ After cross-examining our initial analysis with the interviewee's responses, we 
 
 The changes related to functionality being added, modified (deprecated) or removed were predicted with a 100\% accuracy. These changes were deemed the most significant by the interviewee, and it was expressed during the interview that the these types of changes were the main driving factor of the development of the new version. Contrary to this, three out of five changes which were unrelated to functionality were accurately predicted. The two changes which were not predicted accurately were inaccurate because the main type was confused with the secondary type. This shows that, although the prediction was incorrect, the general reasoning was correct. The changes which had no secondary type were all predicted accurately, which further shows that changes with several types can be diffuse. 
 
+\vspace{2mm}
+\vspace{2mm}
 
 
 \begin{table}
        \centering
        \begin{tabular}[ht]{  c | c !{\vrule width 1.5pt} c|c} 
-              \toprule
+              
 
               \multicolumn{2}{c !{\vrule width 1.5pt} }{\textbf{Main}}       & \multicolumn{2}{c}{\textbf{Secondary}}        \\ \hline
 
@@ -550,7 +576,6 @@ The changes related to functionality being added, modified (deprecated) or remov
               Updative                    & Reformative               & Reformative               & Updative           \\ \hline
               Groomative                  & Preventive                & Preventive                & Groomative         \\
 
-              \bottomrule
        \end{tabular}
        \caption{Categorisation of Changes }
        \label{table:reverse_engineering}
